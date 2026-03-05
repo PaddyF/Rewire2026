@@ -2044,7 +2044,7 @@
       "display_name": "Actress & Suzanne Ciani",
       "day": "Thu",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "actress",
@@ -2099,7 +2099,7 @@
       "display_name": "Beatrice Dillon & Explore Ensemble",
       "day": "Sun",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "beatrice-dillon",
@@ -2149,7 +2149,7 @@
       "display_name": "Caterina Barbieri & MFO",
       "day": "Thu",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "caterina-barbieri",
@@ -2161,7 +2161,7 @@
       "display_name": "Caterina Barbieri with ONCEIM",
       "day": "Thu",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "caterina-barbieri",
@@ -2173,7 +2173,7 @@
       "display_name": "Civilistjävel! & Mayssa Jallad",
       "day": "Sun",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "civilistjavel",
@@ -2216,7 +2216,8 @@
       "display_name": "ex_libris",
       "day": "Sat",
       "wave": "W1",
-      "type": "World Premiere Live A/V",
+      "world_premiere": true,
+      "type": "Live A/V",
       "is_collab": false,
       "artist_ids": [
         "ex-libris"
@@ -2445,7 +2446,7 @@
       "display_name": "ØKSE feat. billy woods",
       "day": "Sun",
       "wave": "W1",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "okse",
@@ -2666,7 +2667,7 @@
       "display_name": "Kim Gordon",
       "day": "Sat",
       "wave": "W2",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": false,
       "artist_ids": [
         "kim-gordon"
@@ -2676,7 +2677,8 @@
       "display_name": "KMRU & Nick Verstand",
       "day": "Sun",
       "wave": "W2",
-      "type": "World Premiere A/V",
+      "world_premiere": true,
+      "type": "A/V",
       "is_collab": true,
       "artist_ids": [
         "kmru",
@@ -2689,7 +2691,7 @@
       "display_name": "Laurel Halo & Julian Charrière",
       "day": "Sat",
       "wave": "W2",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "laurel-halo",
@@ -2864,7 +2866,8 @@
       "display_name": "Supersilent & Lawrence Abu Hamdan",
       "day": "Sun",
       "wave": "W2",
-      "type": "World Premiere A/V",
+      "world_premiere": true,
+      "type": "A/V",
       "is_collab": true,
       "artist_ids": [
         "supersilent",
@@ -3005,7 +3008,7 @@
       "display_name": "Cello Octet Amsterdam feat. Shishani & Moor Mother",
       "day": "Sun",
       "wave": "W3",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "cello-octet-amsterdam",
@@ -3077,7 +3080,7 @@
         "Sun"
       ],
       "wave": "W3",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "felix-bell",
@@ -3447,7 +3450,7 @@
       "display_name": "Sól Ey & Modelo62",
       "day": "Sat",
       "wave": "W3",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "sol-ey",
@@ -3578,7 +3581,7 @@
       "display_name": "Zeno van den Broek, Les Percussions de Strasbourg & HIIIT",
       "day": "Sun",
       "wave": "W3",
-      "type": "World Premiere",
+      "world_premiere": true,
       "is_collab": true,
       "artist_ids": [
         "zeno-van-den-broek",

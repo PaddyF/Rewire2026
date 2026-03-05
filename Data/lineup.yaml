@@ -1687,7 +1687,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - actress
@@ -1737,7 +1737,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - beatrice-dillon
@@ -1782,7 +1782,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - caterina-barbieri
@@ -1793,7 +1793,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - caterina-barbieri
@@ -1804,7 +1804,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - civilistjavel
@@ -1843,7 +1843,8 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere Live A/V
+  world_premiere: true
+  type: Live A/V
   is_collab: false
   artist_ids:
   - ex-libris
@@ -2047,7 +2048,7 @@ slots:
   time: null
   stage: null
   wave: W1
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - okse
@@ -2246,7 +2247,7 @@ slots:
   time: null
   stage: null
   wave: W2
-  type: World Premiere
+  world_premiere: true
   is_collab: false
   artist_ids:
   - kim-gordon
@@ -2255,7 +2256,8 @@ slots:
   time: null
   stage: null
   wave: W2
-  type: World Premiere A/V
+  world_premiere: true
+  type: A/V
   is_collab: true
   artist_ids:
   - kmru
@@ -2267,7 +2269,7 @@ slots:
   time: null
   stage: null
   wave: W2
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - laurel-halo
@@ -2424,7 +2426,8 @@ slots:
   time: null
   stage: null
   wave: W2
-  type: World Premiere A/V
+  world_premiere: true
+  type: A/V
   is_collab: true
   artist_ids:
   - supersilent
@@ -2544,7 +2547,7 @@ slots:
   time: null
   stage: null
   wave: W3
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - cello-octet-amsterdam
@@ -2603,7 +2606,7 @@ slots:
   time: null
   stage: null
   wave: W3
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - felix-bell
@@ -2916,7 +2919,7 @@ slots:
   time: null
   stage: null
   wave: W3
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - sol-ey
@@ -3032,7 +3035,7 @@ slots:
   time: null
   stage: null
   wave: W3
-  type: World Premiere
+  world_premiere: true
   is_collab: true
   artist_ids:
   - zeno-van-den-broek

@@ -36,6 +36,15 @@ import urllib.request
 import anthropic
 import yaml
 
+# Load .env from repo root if present
+_env_path = pathlib.Path(__file__).parent.parent / ".env"
+if _env_path.exists():
+    for _line in _env_path.read_text().splitlines():
+        _line = _line.strip()
+        if _line and not _line.startswith("#") and "=" in _line:
+            _k, _, _v = _line.partition("=")
+            os.environ.setdefault(_k.strip(), _v.strip())
+
 ROOT  = pathlib.Path(__file__).parent
 SRC   = ROOT / "lineup.yaml"
 MODEL = "claude-sonnet-4-20250514"
@@ -242,6 +251,123 @@ def search_genres(artist: dict) -> dict | None:
         return None
 
 
+NOTES_SYSTEM_PROMPT = """You are writing short artist bios for a festival app.
+Given an artist name and their genre(s), write a 1–2 sentence description suitable for
+a music festival programme. Return ONLY a JSON object (no markdown, no preamble):
+
+{"notes": "Your 1-2 sentence bio here."}
+
+Rules:
+- Be specific and vivid — mention sonic character, key collaborators, cultural context, or what makes them distinctive.
+- Do NOT use marketing superlatives ("groundbreaking", "visionary", "pioneering").
+- Keep it under 160 characters if possible.
+- If you genuinely cannot find anything about this artist, return:
+  {"not_found": true, "reason": "brief explanation"}
+"""
+
+
+def search_notes(artist: dict) -> dict | None:
+    name = artist["name"]
+    genres = artist.get("genres", "")
+    prompt = (
+        f"Artist: {name}\nGenres: {genres}\n\n"
+        "Search for this artist and write a short bio as instructed."
+    )
+    try:
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=300,
+            system=NOTES_SYSTEM_PROMPT,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = ""
+        for block in response.content:
+            if hasattr(block, "text"):
+                text += block.text
+        text = text.strip()
+        text = re.sub(r"^```(?:json)?\s*", "", text)
+        text = re.sub(r"\s*```$", "", text)
+        result = json.loads(text)
+        if result.get("not_found"):
+            print(f"  ↳ not found: {result.get('reason', 'no reason given')}")
+            return None
+        return result
+    except json.JSONDecodeError as e:
+        print(f"  ✗ JSON parse error: {e}")
+        return None
+    except Exception as e:
+        print(f"  ✗ API error: {e}")
+        return None
+
+
+NOTES_MIN_LENGTH = 60  # notes shorter than this are treated as gaps
+NOTES_SKIP_PHRASES = ["minimal public discography", "laak club programme", "proximity music"]
+
+
+def needs_notes_fill(artist: dict) -> bool:
+    notes = (artist.get("notes") or "").strip()
+    if not notes:
+        return True
+    if len(notes) < NOTES_MIN_LENGTH:
+        return True
+    return False
+
+
+def run_notes(data: dict, args):
+    """Fill missing or stub artist notes/descriptions using web_search."""
+    artists = data["artists"]
+
+    if args.artist:
+        targets = {s: a for s, a in artists.items() if args.artist.lower() in a["name"].lower()}
+        if not targets:
+            print(f"No artist matching '{args.artist}' found.")
+            sys.exit(1)
+    else:
+        targets = artists
+
+    to_process = [
+        (slug, a) for slug, a in targets.items()
+        if needs_notes_fill(a)
+        and not any(p in (a.get("notes") or "").lower() for p in NOTES_SKIP_PHRASES)
+    ]
+
+    if not to_process:
+        print("✓ No notes gaps found!")
+        return
+
+    print(f"Found {len(to_process)} artist(s) with missing or short notes:\n")
+    total_changes = 0
+
+    for i, (slug, artist) in enumerate(to_process, 1):
+        name = artist["name"]
+        existing = (artist.get("notes") or "").strip()
+        status = f"(missing)" if not existing else f"(short: {existing!r})"
+        print(f"[{i}/{len(to_process)}] {name} ({slug}) {status}")
+
+        if args.dry_run:
+            print("  (dry-run — skipping API call)")
+            continue
+
+        result = search_notes(artist)
+        if result and "notes" in result:
+            artist["notes"] = result["notes"]
+            print(f"  ✓ notes = {result['notes']!r}")
+            total_changes += 1
+        else:
+            print("  ↳ skipping")
+
+        if i < len(to_process):
+            time.sleep(1)
+
+    if not args.dry_run and total_changes > 0:
+        save_yaml(data)
+        print(f"\n✓ Wrote notes for {total_changes} artist(s) → {SRC}")
+        print("  Run  python build.py  to regenerate lineup.json")
+    elif not args.dry_run:
+        print("\n↳ No changes to write.")
+
+
 REWIRE_DAY_URLS = {
     "Thu": "https://www.rewirefestival.nl/line/up/2026?date=Thu%209%20April",
     "Fri": "https://www.rewirefestival.nl/line/up/2026?date=Fri%2010%20April",
@@ -302,7 +428,17 @@ def run_genres(data: dict, args):
     else:
         targets = artists
 
-    to_process = [(slug, a) for slug, a in targets.items() if not a.get("genres")]
+    THIN_THRESHOLD = 3
+
+    def needs_genre_fill(artist: dict) -> bool:
+        g = artist.get("genres") or ""
+        if not g:
+            return True
+        if is_visual_artist(artist):
+            return False
+        return len([x for x in g.split(",") if x.strip()]) < THIN_THRESHOLD
+
+    to_process = [(slug, a) for slug, a in targets.items() if needs_genre_fill(a)]
 
     if not to_process:
         print("✓ No genre gaps — all artists have genres!")
@@ -406,6 +542,103 @@ def run_timetable(data: dict, args):
         print("\n↳ No changes to write.")
 
 
+PERF_TYPE_SYSTEM_PROMPT = """You are a music festival researcher.
+Given a performer or ensemble appearing at Rewire 2026 in The Hague (April 2026),
+determine the format of their performance.
+
+Return ONLY a JSON object (no markdown, no preamble):
+{"type": "Live A/V"}
+
+Valid type values include: Live, Live A/V, DJ Set, Installation, Performance,
+Lecture, Film Screening, Live Set, Audiovisual Performance, etc.
+Use the most specific accurate term you can find.
+
+If you genuinely cannot determine the performance format, return:
+{"not_found": true, "reason": "brief explanation"}
+"""
+
+
+def search_perf_type(slot: dict) -> dict | None:
+    """Call Claude with web_search to find the real performance type for a WP slot."""
+    name = slot["display_name"]
+    notes = slot.get("collab_notes") or slot.get("project") or ""
+    prompt = (
+        f"Performer: {name}\n"
+        f"Context: World Premiere performance at Rewire 2026 (The Hague, April 2026)\n"
+        + (f"Notes: {notes}\n" if notes else "")
+        + "\nWhat is the performance format (Live, Live A/V, DJ Set, Installation, etc.)? "
+        "Search the Rewire 2026 website and any press coverage, then return the JSON."
+    )
+    try:
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=200,
+            system=PERF_TYPE_SYSTEM_PROMPT,
+            tools=[{"type": "web_search_20250305", "name": "web_search"}],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = ""
+        for block in response.content:
+            if hasattr(block, "text"):
+                text += block.text
+        text = text.strip()
+        text = re.sub(r"^```(?:json)?\s*", "", text)
+        text = re.sub(r"\s*```$", "", text)
+        result = json.loads(text)
+        if result.get("not_found"):
+            print(f"  ↳ not found: {result.get('reason', 'no reason given')}")
+            return None
+        return result
+    except json.JSONDecodeError as e:
+        print(f"  ✗ JSON parse error: {e}")
+        return None
+    except Exception as e:
+        print(f"  ✗ API error: {e}")
+        return None
+
+
+def run_perf_type(data: dict, args):
+    """Find World Premiere slots with no performance type and fill them in."""
+    slots = data["slots"]
+
+    to_fill = [s for s in slots if s.get("world_premiere") and not s.get("type")]
+
+    if not to_fill:
+        print("✓ All World Premiere slots already have a performance type!")
+        return
+
+    print(f"Found {len(to_fill)} World Premiere slot(s) with no performance type:\n")
+    for s in to_fill:
+        print(f"  {s['display_name']}")
+
+    if args.dry_run:
+        return
+
+    print()
+    total_changes = 0
+    for i, slot in enumerate(to_fill, 1):
+        name = slot["display_name"]
+        print(f"[{i}/{len(to_fill)}] {name}")
+
+        result = search_perf_type(slot)
+        if result and "type" in result:
+            slot["type"] = result["type"]
+            print(f"  ✓ type = {result['type']!r}")
+            total_changes += 1
+        else:
+            print("  ↳ skipping")
+
+        if i < len(to_fill):
+            time.sleep(1)
+
+    if total_changes > 0:
+        save_yaml(data)
+        print(f"\n✓ Wrote {total_changes} performance type(s) → {SRC}")
+        print("  Run  python build.py  to regenerate lineup.json")
+    else:
+        print("\n↳ No changes to write.")
+
+
 # ─── Main loop ────────────────────────────────────────────────────────────────
 
 def apply_result(artist: dict, result: dict) -> dict:
@@ -433,6 +666,12 @@ def run(args):
         return
     if args.field == "timetable":
         run_timetable(data, args)
+        return
+    if args.field == "notes":
+        run_notes(data, args)
+        return
+    if args.field == "perf_type":
+        run_perf_type(data, args)
         return
 
     artists = data["artists"]
@@ -501,7 +740,7 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run",  action="store_true", help="Print gaps without calling API")
     parser.add_argument("--artist",   type=str, default=None, help="Target a single artist by name (substring match)")
     parser.add_argument("--field",    type=str, default=None,
-                        choices=["latest", "top_rated", "genres", "timetable"],
+                        choices=["latest", "top_rated", "genres", "timetable", "notes", "perf_type"],
                         help="Only fill the specified field (genres and timetable use separate data sources)")
     args = parser.parse_args()
     run(args)
