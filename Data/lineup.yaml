@@ -1556,6 +1556,11 @@ artists:
       title: Orchards of a Futile Heaven
       year: 2024
       artist: Dis Fig & The Body
+    top_rated:
+      title: PURGE
+      year: 2019
+      rating: 3.24
+      votes: 469
   shackleton:
     name: Shackleton
     genres: Tribal Ambient, Dubstep, Drone, UK Bass
@@ -1569,7 +1574,16 @@ artists:
       votes: 1155
   wac-aw-zimpel:
     name: Wacław Zimpel
-    genres: Free Jazz, Contemporary Classical, Minimalism
+    genres: Free Jazz, Contemporary Classical, Minimalism, Post-Minimalism
+    latest:
+      title: Japanese Journal Vol.1
+      year: 2024
+      label: The State51 Conspiracy
+    top_rated:
+      title: Lines
+      year: 2016
+      label: Instant Classic
+      note: '#564 of 2016'
   siddhartha-belmannu:
     name: Siddhartha Belmannu
     genres: Carnatic, Percussion
@@ -1581,17 +1595,45 @@ artists:
     genres: Performance, Electronic, Experimental
   pavel-milyakov:
     name: Pavel Milyakov
-    genres: Outsider House, Dub Techno, Electro
+    genres: Outsider House, Dub Techno, Electro, Ambient
+    latest:
+      title: HEAL
+      year: 2025
+      artist: Pavel Milyakov & Lucas Dupuy
+      note: '#905 of 2025'
+    top_rated:
+      title: Pavel Milyakov & Bendik Giske
+      year: 2021
+      artist: Pavel Milyakov & Bendik Giske
+      note: '#1419 of 2021'
   valentina-magaletti:
     name: Valentina Magaletti
     genres: Free Improvisation, Percussion, Electroacoustic
     latest:
       title: Kansai Bruises
       year: 2025
-      note: self-released
+      artist: Valentina Magaletti & YPY
+      rating: 3.42
+      votes: 245
+    top_rated:
+      title: Kansai Bruises
+      year: 2025
+      artist: Valentina Magaletti & YPY
+      rating: 3.42
+      votes: 245
   ypy:
     name: YPY
     genres: IDM, Noise, Electroacoustic
+    latest:
+      title: Kansai Bruises
+      year: 2025
+      artist: Valentina Magaletti & YPY
+      rating: 3.42
+      votes: 245
+    top_rated:
+      title: Over Smiling Dub
+      year: 2020
+      rating: 3.50
   waqwaq-kingdom:
     name: WaqWaq Kingdom
     genres: Electronic, Neo-Psychedelia, Footwork, Bass Music
@@ -1618,14 +1660,24 @@ artists:
       year: 2025
       label: Deprerreo
       note: '#87 of 2025'
+      rating: 3.60
+      votes: 2887
     notes: Venezuelan collective (formed Oct 2021). Blend reggaetón, sound collage, and Venezuelan culture into politically
       charged sonic document.
   zeno-van-den-broek:
     name: Zeno van den Broek
     genres: Contemporary Classical, Electronic, Sound Art
+    latest:
+      title: Relatum
+      year: 2024
   les-percussions-de-strasbourg:
     name: Les Percussions de Strasbourg
-    genres: Contemporary Classical, Percussion
+    genres: Contemporary Classical, Percussion, Stochastic Music
+    top_rated:
+      title: "Pléïades / Persephassa"
+      year: 1987
+      label: Harmonia Mundi
+      note: 'Xenakis; #270 of 1987'
   hiiit:
     name: HIIIT
     genres: Club Music, Electronic
