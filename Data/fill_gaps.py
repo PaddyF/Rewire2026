@@ -85,6 +85,15 @@ def save_yaml(data: dict):
         f.write(header + dumped)
 
 
+def rewire_slug(name: str) -> str:
+    """Convert a name to a Rewire website URL slug."""
+    slug = name.lower()
+    slug = re.sub(r"[',\.]", "", slug)
+    slug = slug.replace(" & ", "--")
+    slug = re.sub(r"\s+", "-", slug)
+    return slug
+
+
 def is_visual_artist(artist: dict) -> bool:
     """Return True if the artist is primarily a visual/installation artist."""
     genres = (artist.get("genres") or "").lower()
@@ -251,32 +260,49 @@ def search_genres(artist: dict) -> dict | None:
         return None
 
 
-NOTES_SYSTEM_PROMPT = """You are writing short artist bios for a festival app.
-Given an artist name and their genre(s), write a 1–2 sentence description suitable for
-a music festival programme. Return ONLY a JSON object (no markdown, no preamble):
+NOTES_SYSTEM_PROMPT = """You are compiling artist data for a music festival app.
+Given an artist name, search for their Rewire 2026 festival page first
+(https://www.rewirefestival.nl/artist/...) then any other reliable sources.
 
-{"notes": "Your 1-2 sentence bio here."}
+Return ONLY a JSON object (no markdown, no preamble):
 
-Rules:
-- Be specific and vivid — mention sonic character, key collaborators, cultural context, or what makes them distinctive.
+{
+  "notes": "1-2 sentence bio here.",
+  "genres": "Genre1, Genre2, Genre3"
+}
+
+Rules for notes:
+- Be specific and vivid — mention sonic character, key influences, cultural context, or what makes them distinctive.
 - Do NOT use marketing superlatives ("groundbreaking", "visionary", "pioneering").
-- Keep it under 160 characters if possible.
-- If you genuinely cannot find anything about this artist, return:
+- Prefer information from the Rewire festival page where available.
+- Write in present tense, third person. Aim for under 200 characters.
+
+Rules for genres:
+- Use RateYourMusic genre terminology (e.g. "IDM", "Deconstructed Club", "Electroacoustic", "Noise").
+- List 2–5 genres, comma-separated, most prominent first.
+- Only include "genres" if you find reliable genre information — omit the key if uncertain.
+- If the existing genres supplied look correct, you may omit the key.
+
+If you genuinely cannot find anything about this artist, return:
   {"not_found": true, "reason": "brief explanation"}
 """
 
 
-def search_notes(artist: dict) -> dict | None:
+def search_notes(artist: dict, slug: str) -> dict | None:
     name = artist["name"]
     genres = artist.get("genres", "")
+    rewire_url = f"https://www.rewirefestival.nl/artist/{slug}"
     prompt = (
-        f"Artist: {name}\nGenres: {genres}\n\n"
-        "Search for this artist and write a short bio as instructed."
+        f"Artist: {name}\n"
+        f"Current genres in our database: {genres or '(none)'}\n"
+        f"Rewire 2026 page: {rewire_url}\n\n"
+        "Search their Rewire page and other sources. Return the JSON as instructed, "
+        "correcting genres if the page shows something different from what we have."
     )
     try:
         response = client.messages.create(
             model=MODEL,
-            max_tokens=300,
+            max_tokens=400,
             system=NOTES_SYSTEM_PROMPT,
             tools=[{"type": "web_search_20250305", "name": "web_search"}],
             messages=[{"role": "user", "content": prompt}],
@@ -356,18 +382,22 @@ def run_notes(data: dict, args):
     for i, (slug, artist) in enumerate(to_process, 1):
         name = artist["name"]
         existing = (artist.get("notes") or "").strip()
-        status = f"(missing)" if not existing else f"(short: {existing!r})"
+        status = "(missing)" if not existing else f"(short: {existing!r})"
         print(f"[{i}/{len(to_process)}] {name} ({slug}) {status}")
 
         if args.dry_run:
             print("  (dry-run — skipping API call)")
             continue
 
-        result = search_notes(artist)
+        result = search_notes(artist, rewire_slug(name))
         if result and "notes" in result:
             artist["notes"] = result["notes"]
             print(f"  ✓ notes = {result['notes']!r}")
             total_changes += 1
+            if "genres" in result and result["genres"] != artist.get("genres"):
+                old_genres = artist.get("genres") or "(none)"
+                artist["genres"] = result["genres"]
+                print(f"  ✓ genres updated: {old_genres!r} → {result['genres']!r}")
         else:
             print("  ↳ skipping")
 
