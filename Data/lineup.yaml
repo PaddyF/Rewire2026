@@ -1,0 +1,2797 @@
+# Rewire 2026 Lineup — source of truth
+# 9–12 April · The Hague · 15th Anniversary
+#
+# Two top-level collections:
+#
+#   artists:
+#     <slug>:
+#       name:       display name
+#       genres:     comma-separated string
+#       latest:     { title, year, label, artist, note, rating, votes }
+#       top_rated:  { title, year, label, artist, note, rating, votes }
+#       notes:      free-text paragraph
+#
+#   slots:
+#     - display_name:  how it appears on the poster
+#       day:           Thu | Fri | Sat | Sun  (or null if TBA)
+#       time:          "HH:MM" 24h format (or null if TBA)
+#       stage:         venue/stage name (or null if TBA)
+#       wave:          W1 | W2 | W3
+#       type:          Live | DJ Set | Installation | World Premiere | etc.
+#       is_collab:     true if this slot features a collaboration between artists
+#       artist_ids:    list of artist slugs (references artists.<slug>)
+#       project:       subtitle / project name (optional)
+#       collab_notes:  notes specific to the collaboration (optional)
+#       collab_latest: release by the collab itself, not by individuals (optional)
+#       collab_top_rated: top-rated collab release (optional)
+
+artists:
+  actress:
+    name: Actress
+    genres: IDM, Microhouse, Ambient, R&B Concrète
+    latest:
+      title: Darren J. Cunningham / Statik
+      year: 2024
+      label: Smalltown Supersound
+    top_rated:
+      title: Splazsh
+      year: 2010
+      rating: 3.47
+      votes: 3494
+  suzanne-ciani:
+    name: Suzanne Ciani
+    genres: New Age, Modular Synth, Electronic
+    latest:
+      title: Live Quadraphonic
+      year: 2018
+    top_rated:
+      title: Seven Waves
+      year: 1982
+  alejandra-cardenas:
+    name: Alejandra Cárdenas
+    genres: Electroacoustic, Tribal Ambient, Post-Rock, Drone
+    latest:
+      title: A Body Like a Home
+      year: 2025
+      label: Other People
+      note: Nov 2025
+      rating: 3.36
+      votes: 52
+    top_rated:
+      title: Agua dulce
+      year: 2023
+      label: Buh
+      artist: Alejandra Cárdenas & Laura Robles
+      rating: 3.28
+      votes: 556
+    notes: Peruvian-born, Berlin-based. 15 poems about Peru under Fujimori. Live A/V with violin & guitar.
+  apparitions:
+    name: Apparitions
+    genres: Drone Metal, Minimalism, Experimental Rock, Post-Metal
+    latest:
+      title: Volcanic Reality
+      year: 2025
+      label: Deathbomb Arc
+      rating: 3.57
+      votes: 184
+    top_rated:
+      title: Volcanic Reality
+      year: 2025
+      rating: 3.57
+      votes: 184
+      note: Bandcamp AOTD
+    notes: Houston trio. Mastered by Matt Colton; artwork by Faith Coloccia.
+  armand-hammer:
+    name: Armand Hammer
+    genres: Abstract Hip Hop, Experimental Hip Hop, Hardcore Hip Hop
+    latest:
+      title: Mercy
+      year: 2025
+      label: Backwoodz
+      artist: Armand Hammer & The Alchemist
+      rating: 3.69
+      votes: 4577
+    top_rated:
+      title: We Buy Diabetic Test Strips
+      year: 2023
+      rating: 3.78
+      votes: 10501
+    notes: ELUCID + billy woods. billy woods also performs separately with ØKSE.
+  ash-fure:
+    name: Ash Fure
+    genres: Sound Art, New Music, Electroacoustic, Acousmatic, Spectral Music
+    latest:
+      title: Animal
+      year: 2025
+      rating: 3.35
+      votes: 26
+    top_rated:
+      title: Animal
+      year: 2025
+      rating: 3.35
+      votes: 26
+    notes: Kinetic A/V — polycarbonate sheet simultaneously filters sound & light through speaker cones.
+  beatrice-dillon:
+    name: Beatrice Dillon
+    genres: Electroacoustic, IDM, Dub Techno, Footwork, UK Bass
+    latest:
+      title: Artomatic
+      year: 2025
+    top_rated:
+      title: Workaround
+      year: 2020
+      rating: 3.18
+      votes: 1671
+  explore-ensemble:
+    name: Explore Ensemble
+    genres: Contemporary Classical, Acoustic Ensemble
+  beverly-glenn-copeland:
+    name: Beverly Glenn-Copeland
+    genres: New Age, Progressive Electronic, Singer-Songwriter, Folk
+    latest:
+      title: Keyboard Fantasies Reimagined
+      year: 2021
+      note: remixes
+    top_rated:
+      title: Keyboard Fantasies
+      year: 1986
+      rating: 3.67
+      votes: 1607
+    notes: Rare performance spanning full catalogue + new material, with partner Elizabeth Copeland.
+  blawan:
+    name: Blawan
+    genres: Industrial Techno, UK Bass, Deconstructed Club, Minimal Techno
+    latest:
+      title: SickElixir
+      year: 2025
+      label: XL Recordings
+      rating: 3.5
+      votes: 1402
+    top_rated:
+      title: SickElixir
+      year: 2025
+      rating: 3.5
+      votes: 1402
+      note: Debut XL album
+    notes: Special live set (not DJ). Fuzzed-out club music full of clamouring beats and distortion-drenched bass.
+  cara-tolmie:
+    name: Cara Tolmie
+    genres: Voice, Performance Art
+  rian-treanor:
+    name: Rian Treanor
+    genres: Footwork, IDM, UK Bass
+    top_rated:
+      title: ATAXIA
+      year: 2019
+      label: Planet Mu
+      rating: 3.62
+      votes: 800
+  caterina-barbieri:
+    name: Caterina Barbieri
+    genres: Progressive Electronic, Ambient, Drone, Post-Minimalism
+    latest:
+      title: Myuthafoo
+      year: 2023
+    top_rated:
+      title: Ecstatic Computation
+      year: 2019
+      rating: 3.35
+      votes: 1158
+  mfo:
+    name: MFO
+    genres: Visual Art
+  onceim:
+    name: ONCEIM
+    genres: Contemporary Classical, New Music, Large Ensemble
+  civilistjavel:
+    name: Civilistjävel!
+    genres: Ambient, Tech-Ambient, Drone
+  mayssa-jallad:
+    name: Mayssa Jallad
+    genres: Singer-Songwriter, Arabic Music, Art Song, Ambient Dub
+    latest:
+      title: 'Marjaa: The Battle of the Hotels (Versions)'
+      year: 2025
+      label: Ruptured/Six of Swords
+    top_rated:
+      title: 'Marjaa: The Battle of the Hotels'
+      year: 2023
+      rating: 3.3
+      votes: 96
+  einsturzende-neubauten:
+    name: Einstürzende Neubauten
+    genres: Industrial, Post-Industrial, Art Pop, Post-Punk, Neue Deutsche Welle
+    latest:
+      title: 'Rampen (apm: alien pop music)'
+      year: 2024
+      label: Potomak
+    top_rated:
+      title: ½ Mensch
+      year: 1985
+      note: '#31 of year'
+    notes: Rewire debut. Sun 12 Apr. Plus Ticket required.
+  eliana-glass:
+    name: Eliana Glass
+    genres: Vocal Jazz, Singer-Songwriter
+    latest:
+      title: E
+      year: 2025
+      label: Shelter Press
+      rating: 3.39
+      votes: 299
+      note: debut full-length
+    top_rated:
+      title: E
+      year: 2025
+      rating: 3.39
+      votes: 299
+    notes: Debut full-length. Mastered by Stephan Mathieu. Features Francis Harris (producer).
+  xiu-xiu:
+    name: Xiu Xiu
+    genres: Experimental Rock, Post-Industrial, Noise
+    latest:
+      title: 13'' Frank Beltrame Italian Stiletto with Bison Horn Grips
+      year: 2024
+    top_rated:
+      title: Fabulous Muscles
+      year: 2004
+      rating: 3.71
+      votes: 4000
+  ex-libris:
+    name: ex_libris
+    genres: Dub Techno, Future Garage, Ambient Dub, IDM
+    latest:
+      title: ex_libris - 002
+      year: 2025
+      note: EP
+    top_rated:
+      title: ex_libris - 001
+      year: 2025
+    notes: Dave Huismans, formerly 2562 & A Made Up Sound. Live A/V with graphic designer Bernie van Vlijmen.
+  feeo:
+    name: feeo
+    genres: Drone, Ambient, Electroacoustic, Minimalism
+    latest:
+      title: Goodness
+      year: 2025
+      label: AD93
+      note: debut
+    top_rated:
+      title: Goodness
+      year: 2025
+    notes: Debut album on AD93. "Wrinkled synth lines bit-crushed into insectoid murmurs, organ chords stretched into boundless
+      waves."
+  fine:
+    name: Fine
+    genres: Dream Pop, Singer-Songwriter, Hypnagogic Pop, Slacker Rock
+    latest:
+      title: Rocky Top Ballads
+      year: 2024
+      rating: 3.47
+      votes: 637
+    top_rated:
+      title: Rocky Top Ballads
+      year: 2024
+      rating: 3.47
+      votes: 637
+    notes: Dean Blunt collaborator; formerly fronted The Crying Nudes.
+  flur:
+    name: Flur
+    genres: ECM Style Jazz, Ambient Jazz
+    latest:
+      title: Plunge
+      year: 2025
+      label: Latency
+      note: Latency 033 · debut
+      rating: 3.41
+      votes: 105
+    top_rated:
+      title: Plunge
+      year: 2025
+      rating: 3.41
+      votes: 105
+    notes: London trio — Miriam Adefris (harp), Isaac Robertson (sax), Dillon Harrison (perc). Cover art by Julie Mehretu.
+  ganavya:
+    name: ganavya
+    genres: Spiritual Jazz, New Age, Indo Jazz, Hindustani Classical, Carnatic Classical
+    latest:
+      title: Nilam
+      year: 2025
+      label: LEITER
+      artist: ganavya & Nils Frahm
+    top_rated:
+      title: Flowers in the Dark
+      year: 2023
+      artist: ganavya & Kofi Flexxx
+      rating: 3.54
+      votes: 1531
+    notes: Chennai-born vocalist. Hindu storytelling tradition of harikatha into the 21st century.
+  hayden-pedigo:
+    name: Hayden Pedigo
+    genres: American Primitive, Acoustic Guitar, Ambient, Neo-Classical
+    latest:
+      title: Getting Better
+      year: 2021
+      rating: 3.63
+      votes: 500
+    top_rated:
+      title: Getting Better
+      year: 2021
+      rating: 3.63
+      votes: 500
+    notes: Performs twice — once solo, once with string quartet.
+  hilary-woods:
+    name: Hilary Woods
+    genres: Ethereal Wave, Dark Ambient, Drone, Neoclassical Darkwave
+    latest:
+      title: Night CRIÚ
+      year: 2025
+      label: Sacred Bones
+      note: '#600 of 2025'
+      rating: 3.53
+      votes: 250
+    top_rated:
+      title: Night CRIÚ
+      year: 2025
+      rating: 3.53
+      votes: 250
+    notes: Sacred Bones debut. Previous — Acts of Light (2023), Birthmarks (2020), Colt (2018).
+  james-k:
+    name: james K
+    genres: Ambient Pop, Downtempo, Ethereal Wave, Trip Hop, Indietronica
+    latest:
+      title: Friend
+      year: 2025
+      label: AD 93
+      note: '#342 of 2025'
+    top_rated:
+      title: Friend
+      year: 2025
+    notes: NYC. "Immersive, silky and drifting dream pop." Influences — Sneaker Pimps, Dido, Julianna Barwick.
+  jim-o-rourke:
+    name: Jim O'Rourke
+    genres: EAI, Electroacoustic, Drone, Ambient, Post-Rock
+    latest:
+      title: Pareidolia
+      year: 2025
+      label: Drag City
+  eiko-ishibashi:
+    name: Eiko Ishibashi
+    genres: Contemporary Folk, Electroacoustic, Art Pop
+    top_rated:
+      title: For McCoy
+      year: 2023
+      rating: 3.88
+      votes: 1000
+  jjjjjerome-ellis:
+    name: JJJJJerome Ellis
+    genres: Spoken Word, Ambient, Free Jazz, Contemporary Classical
+    latest:
+      title: Compline in Nine Movements
+      year: 2023
+      label: NNA Tapes
+    top_rated:
+      title: The Clearing
+      year: 2021
+      label: NNA Tapes
+    notes: Grenadian-Jamaican-American. Explores stuttering, blackness & disabled speech through music. Anna Rabinowitz Prize
+      2022.
+  joanne-robertson:
+    name: Joanne Robertson
+    genres: Lo-Fi Folk, Drone
+    latest:
+      title: Blurrr
+  oliver-coates:
+    name: Oliver Coates
+    genres: Contemporary Classical, Electroacoustic, Drone
+    top_rated:
+      title: Shelley's on Zenn-La
+      year: 2022
+  joshua-chuquimia-crampton:
+    name: Joshua Chuquimia Crampton
+    genres: Experimental Rock, Neo-Psychedelia, Post-Rock, Indigenous Andean Music
+    latest:
+      title: Anata
+      year: 2026
+      label: Puro Fantasía
+      note: '#7 of 2026'
+    top_rated:
+      title: Profundo amor
+      year: 2023
+      label: Puro Fantasía
+      rating: 3.58
+      votes: 309
+    notes: Peruvian-born. Also performs as Los Thuthanaka (w/ Elysia Crampton). Own Puro Fantasía label.
+  juana-molina:
+    name: Juana Molina
+    genres: Folktronica, Art Pop, Singer-Songwriter, Psychedelic
+    latest:
+      title: DOGA
+      year: 2025
+    top_rated:
+      title: Un día
+      year: 2008
+      note: '#113 of year'
+      rating: 3.82
+      votes: 3000
+    notes: Argentine. A career spanning 20+ years of acclaimed folktronica.
+  katalin-ladik:
+    name: Katalin Ladik
+    genres: Sound Poetry, Performance Art, Avant-Garde
+  svetlana-mara:
+    name: Svetlana Maraš
+    genres: Electroacoustic, Sound Art
+  kavari:
+    name: KAVARI
+    genres: Deconstructed Club, Post-Industrial, Dark Ambient, Noise
+    latest:
+      title: Plague Music
+      year: 2026
+      label: XL Recordings
+    top_rated:
+      title: Suture
+      year: 2022
+      rating: 3.51
+      votes: 522
+    notes: Liverpool-born, Glasgow-based. Co-signed by Aphex Twin. XL debut.
+  kuntari:
+    name: KUNTARI
+    genres: Post-Industrial, Primal-core, Ritual Percussion, Field Recording, Electroacoustic
+    latest:
+      title: LAHAR
+      year: 2025
+      label: Artetetra
+      note: recorded in 13th-century stone tunnel
+    top_rated:
+      title: LAHAR
+      year: 2025
+    notes: Bandung-based Indonesian duo (Tesla Manaf + Rio Abror). "Primitive voices producing animal mating calls mixed with
+      Indonesian tribal rhythms."
+  la-rat:
+    name: La Rat
+    genres: Experimental Hip Hop, Dutch Underground Hip Hop, Electronic
+    latest:
+      title: La Rat
+      year: 2025
+      label: South of North / Rush Hour
+      note: debut LP
+    top_rated:
+      title: La Rat
+      year: 2025
+    notes: The Hague duo. "Pitch-shifted vocals with Madlib-esque beats, drenched in the murky Dutch canals."
+  los-thuthanaka:
+    name: Los Thuthanaka
+    genres: Latin Electronic, Indigenous Andean Music, Experimental Rock, Neo-Psychedelia
+    latest:
+      title: Los Thuthanaka
+      year: 2025
+      note: '#20 of 2025'
+      rating: 3.75
+      votes: 5278
+    top_rated:
+      title: Los Thuthanaka
+      year: 2025
+      note: '#20 of 2025'
+      rating: 3.75
+      votes: 5278
+    notes: Sibling duo — Chuquimamani-Condori (Elysia Crampton) + Joshua Chuquimia Crampton. One of the most acclaimed albums
+      of 2025.
+  malibu:
+    name: Malibu
+    genres: Ambient, Chillout, Ambient Trance
+    latest:
+      title: Vanities
+      year: 2025
+      label: YEAR0001
+      note: '#242 of 2025'
+      rating: 3.42
+      votes: 1379
+    top_rated:
+      title: One Life
+      year: 2019
+      note: EP
+      rating: 3.64
+      votes: 1489
+    notes: French composer/vocalist. "Euphoric ambient musing on cities, seas, and the self."
+  milkweed:
+    name: Milkweed
+    genres: Avant-Folk, Sound Collage
+    latest:
+      title: Remscéla
+      year: 2025
+      label: Broadside Hacks
+      note: '#796 of 2025'
+    top_rated:
+      title: Remscéla
+      year: 2025
+    notes: British. "Part slacker-trad and part crust-academic — explorations in folk, ritual, and tradition."
+  okse:
+    name: ØKSE
+    genres: Free Jazz, Avant-Garde
+  billy-woods:
+    name: billy woods
+    genres: Abstract Hip Hop, Experimental Hip Hop, Hardcore Hip Hop
+    latest:
+      title: Maps
+      year: 2023
+      artist: billy woods & Kenny Segal
+      rating: 3.91
+      votes: 3000
+    top_rated:
+      title: Maps
+      year: 2023
+      artist: billy woods & Kenny Segal
+      rating: 3.91
+      votes: 3000
+  oneohtrix-point-never:
+    name: Oneohtrix Point Never
+    genres: Progressive Electronic, Ambient, Sound Collage, Glitch
+    latest:
+      title: Tranquilizer
+      year: 2025
+      label: Warp
+      note: '#5 of 2025 · #697 all-time'
+      rating: 3.89
+      votes: 5775
+    top_rated:
+      title: Tranquilizer
+      year: 2025
+      rating: 3.89
+      votes: 5775
+    notes: Fri 10 Apr. Plus Ticket. New A/V show built around Tranquilizer, with visual artist Freeka Tet.
+  purelink:
+    name: Purelink
+    genres: Ambient Dub, Dub Techno, Downtempo
+    latest:
+      title: Faith
+      year: 2025
+      label: Peak Oil
+      rating: 3.41
+      votes: 710
+    top_rated:
+      title: Faith
+      year: 2025
+      rating: 3.41
+      votes: 710
+    notes: Chicago trio. Features Loraine James, Angelina Nonaj, mastered by Joshua Eustis. Mika Oki adds kinetic visuals.
+  raul-refree:
+    name: Raúl Refree
+    genres: Avant-Folk, Flamenco Nuevo, Electroacoustic
+  ni-o-de-elche:
+    name: Niño de Elche
+    genres: Avant-Garde, Flamenco Nuevo, Art Pop
+  smerz:
+    name: Smerz
+    genres: Art Pop, Alternative R&B, UK Bass
+    latest:
+      title: Big City Life
+      year: 2025
+      label: Escho
+      note: '#959 of 2025'
+    top_rated:
+      title: Big City Life
+      year: 2025
+    notes: Norwegian duo (Catharina Stoltenberg + Henriette Motzfeldt). Deadpan minimal art-pop. Often compared to Tirzah.
+  sumac:
+    name: Sumac
+    genres: Atmospheric Sludge Metal, Post-Metal, Noise Rock
+    top_rated:
+      title: Love in Shadow
+      year: 2018
+      rating: 3.57
+      votes: 1152
+  moor-mother:
+    name: Moor Mother
+    genres: Experimental Hip Hop, Spoken Word, Noise, Free Jazz
+    top_rated:
+      title: Jazz Codes
+      year: 2022
+    latest:
+      title: The Great Bailout
+      year: 2024
+  tortoise:
+    name: Tortoise
+    genres: Post-Rock, Post-Minimalism, Krautrock, IDM, Experimental Rock
+    latest:
+      title: Touch
+      year: 2025
+      label: International Anthem
+    top_rated:
+      title: Millions Now Living Will Never Die
+      year: 1996
+      note: '#34 of year'
+    notes: Chicago legends. All-time post-rock classics. Long-awaited return with Touch (2025).
+  tracey:
+    name: Tracey
+    genres: Post-Dubstep, Deconstructed Club, Grime, Experimental Electronic
+    latest:
+      title: Tracey EP
+      year: 2025
+      label: AD 93
+    top_rated:
+      title: Tracey EP
+      year: 2025
+    notes: London duo. "Raunchy yet thoughtful, bassy yet subtle." Features Riko Dan. Dutch premiere.
+  wrens:
+    name: WRENS
+    genres: Free Jazz, Experimental Hip Hop, Noise
+    latest:
+      title: Half of What You See
+      year: 2025
+    top_rated:
+      title: Half of What You See
+      year: 2025
+    notes: Ryan Easter + Jason Nazary + Elias Stemeseder + Lester St. Louis. "Noise-encrusted free jazz rich in diabolic rap
+      sonics."
+  aaron-dilloway:
+    name: Aaron Dilloway
+    genres: Noise, Tape Music, Musique Concrète, Industrial, Drone, Dark Ambient
+    latest:
+      title: The Gag File
+      year: 2017
+      label: Dais
+      note: '#616 of 2017'
+    top_rated:
+      title: Lip Syncing to Verme
+      year: 2011
+      rating: 3.45
+      votes: 1763
+    notes: Former Wolf Eyes member. Prolific tape/experimental noise artist; runs own Hanson Records label.
+  acopia:
+    name: Acopia
+    genres: Dream Pop, Indietronica, Downtempo, Jangle Pop
+    latest:
+      title: Blush Response
+      year: 2025
+    top_rated:
+      title: Acopia
+      year: 2023
+      note: '#1518 of 2023'
+    notes: Australian trio. Jangle pop, breaks-laden trip hop, and electronic pop.
+  chunky-move:
+    name: Chunky Move
+    genres: Contemporary Dance, Electronic, Gabber
+    notes: Melbourne dance company. Cybernetic performance with Gabber Modus Operandi soundtrack and animatronic robotics.
+  dagmar-zuniga:
+    name: Dagmar Zuniga
+    genres: Psychedelic Folk, Singer-Songwriter, Lo-Fi
+    latest:
+      title: In Filth Your Mystery Is Kingdom
+      year: 2025
+      note: '#1790 of 2025'
+    top_rated:
+      title: In Filth Your Mystery Is Kingdom
+      year: 2025
+    notes: TASCAM virtuoso. "Haunted, absurd, touching." In the tradition of Norma Tanega and Linda Perhacs.
+  drew-mcdowall:
+    name: Drew McDowall
+    genres: Post-Industrial, Dark Ambient, Drone, Industrial
+    latest:
+      title: A Thread, Silvered and Trembling
+      year: 2024
+      label: Dais
+      rating: 3.5
+      votes: 410
+    top_rated:
+      title: Agalma
+      year: 2020
+      label: Dais
+      rating: 3.44
+      votes: 393
+  pedro-maia:
+    name: Pedro Maia
+    genres: Visual Art, Film
+  dumama:
+    name: Dumama
+    genres: Southern African Music, Avant-Folk, Electroacoustic
+    latest:
+      title: debut solo album
+      note: performing new material at Rewire 2026
+    top_rated:
+      title: Buffering Juju
+      year: 2020
+      artist: dumama+kechou
+      rating: 3.42
+      votes: 86
+    notes: South African composer/vocalist. Performing debut solo album material with her band.
+  elischa-heller:
+    name: Elischa Heller
+    genres: Electroacoustic, Experimental Electronic, Art Pop, Performance Art
+    latest:
+      title: Spellwork
+      year: 2026
+      label: unvague
+    top_rated:
+      title: Spellwork
+      year: 2026
+    notes: Swiss, Zurich-based. SHAPE+ Platform artist. "Rapid beats, forlorn drones, and poppy melodies."
+  everything-is-psychedelic:
+    name: Everything Is Psychedelic
+    genres: Abstract Hip Hop, No Wave, UK Hip Hop, Experimental
+    latest:
+      title: The Beautiful Malaise
+      year: 2025
+      label: Live at the Clinic
+    top_rated:
+      title: The Beautiful Malaise
+      year: 2025
+    notes: Birmingham MC Tony Bontana + London producer psychedelic ensemble (Damien Biggs). Inspired by Kathy Acker.
+  eye:
+    name: ∈Y∋
+    genres: Noise, Avant-Garde, Psychedelic Rock, No Wave
+  c-o-l-o:
+    name: C.O.L.O
+    genres: Visual Art, A/V
+  jennifer-walton:
+    name: Jennifer Walton
+    genres: Hyperpop, Experimental Pop, Deconstructed Pop
+    latest:
+      title: Daughters
+      note: debut
+    top_rated:
+      title: Daughters
+      note: debut
+    notes: Debut album tackles grief and absence. "Jovial maximalism, warmly distorted and crunchy with compression."
+  kim-gordon:
+    name: Kim Gordon
+    genres: Noise Rock, Art Rock, Industrial Hip Hop, Experimental
+    latest:
+      title: PLAY ME
+      year: 2026
+      note: world premiere at Rewire
+    top_rated:
+      title: The Collective
+      year: 2024
+      label: Matador
+      rating: 3.38
+      votes: 6567
+    notes: Sat 11 Apr. World premiere of PLAY ME — industrial barrages, massive bass drums, trap snares.
+  kmru:
+    name: KMRU
+    genres: Ambient, Electroacoustic, Field Recording
+    top_rated:
+      title: Peel
+      year: 2020
+      rating: 3.79
+      votes: 1000
+  nick-verstand:
+    name: Nick Verstand
+    genres: Light Art, Installation, Visual Art
+  laurel-halo:
+    name: Laurel Halo
+    genres: Ambient, Electronic, Minimalism, Musique Concrète
+    latest:
+      title: Possessed
+      year: 2023
+    top_rated:
+      title: Quarantine
+      year: 2012
+      rating: 3.61
+      votes: 2500
+  julian-charri-re:
+    name: Julian Charrière
+    genres: Visual Art, Film
+  mark-fell:
+    name: Mark Fell
+    genres: IDM, Glitch, EAI
+    top_rated:
+      title: Multistability
+      year: 2011
+      rating: 3.51
+      votes: 700
+  pat-thomas:
+    name: Pat Thomas
+    genres: Free Jazz, Free Improvisation, Piano
+  my-new-band-believe:
+    name: My New Band Believe
+    genres: Art Rock, Folk Rock, Indie Rock
+    latest:
+      title: My New Band Believe
+      year: 2026
+      label: Rough Trade
+      note: debut — releasing during Rewire week!
+    top_rated:
+      title: My New Band Believe
+      year: 2026
+      note: debut
+    notes: Cameron Picton (Black Midi). Lyrics co-written with Dennis Cooper. Debut album drops during festival week.
+  nihiloxica:
+    name: Nihiloxica
+    genres: East African Music, Baganda Music, Electronic, Industrial Techno
+    latest:
+      title: Source of Denial
+      year: 2023
+      label: Crammed Discs
+    top_rated:
+      title: Kaloli
+      year: 2020
+      label: Crammed Discs
+    notes: Ugandan Nilotika Cultural Ensemble + UK producers pq & Spooky-J. Bugandan drumming + technoid synths. Tipped by
+      Aphex Twin.
+  park-jiha:
+    name: Park Jiha
+    genres: Post-Minimalism, Fusion Gugak, Ambient
+    latest:
+      title: The Gleam
+      year: 2022
+      label: tak:til
+    top_rated:
+      title: Communion
+      year: 2018
+      label: tak:til
+      note: '#305 of year'
+    notes: Korean. Plays piri, saenghwang, and yanggeum. Meditative soundscapes fusing Korean court music with minimalism.
+  raisa-k:
+    name: Raisa K
+    genres: Neo-Psychedelia, Art Pop, Hypnagogic Pop, Slacker Rock
+    latest:
+      title: Affectionately
+      year: 2025
+      label: 15 love
+    top_rated:
+      title: Conduit
+      year: 2022
+      note: critic score 80
+    notes: Member of Good Sad Happy Bad (Mica Levi's group). "Dark textural pop with shoegazey noise and dreamy vocals."
+  rakta:
+    name: RAKTA
+    genres: Post-Punk, Noise Rock, Deathrock, Experimental Rock
+    latest:
+      title: Falha comum
+      year: 2019
+      rating: 3.33
+      votes: 576
+    top_rated:
+      title: Rakta
+      year: 2013
+      rating: 3.44
+      votes: 160
+    notes: São Paulo trio. Performs twice — once as trio, and again as RAKTA & Mette Rasmussen.
+  mette-rasmussen:
+    name: Mette Rasmussen
+    genres: Free Improvisation, Free Jazz, Saxophone
+  sacred-lodge:
+    name: Sacred Lodge
+    genres: Horrorcore, Post-Industrial, Trap Metal
+    latest:
+      title: Ambam
+      year: 2025
+      label: Avon Terror Corps
+      note: second album
+    top_rated:
+      title: Ambam
+      year: 2025
+    notes: Matthieu Ruben N'Dongo. Equato-Guinean/French. "Scream as vocal act of liberation."
+  sary-moussa-trio:
+    name: Sary Moussa Trio
+    genres: Drone, Electroacoustic, Folk, Ambient
+    latest:
+      title: Wind, Again
+      year: 2025
+    top_rated:
+      title: Wind, Again
+      year: 2025
+    notes: Lebanese/French. Features buzuq. Spans drone-driven electroacoustic to dancefloor electronics.
+  shapednoise:
+    name: Shapednoise
+    genres: Industrial Techno, Noise, Dark Techno
+  sevi-iko-domochevsky:
+    name: Sevi Iko Dømochevsky
+    genres: Visual Art, A/V
+  sombat-simla:
+    name: Sombat Simla
+    genres: Thai Traditional Music, Ritual, Folk
+    notes: Thai traditional artist. Limited Western RYM presence.
+  stemeseder-lillinger:
+    name: Stemeseder Lillinger
+    genres: Electroacoustic, Free Jazz, Contemporary Classical, Free Improvisation
+    latest:
+      title: Umbra III
+      year: 2025
+      label: Intakt
+      artist: Stemeseder Lillinger & Craig Taborn
+    top_rated:
+      title: Antumbra
+      year: 2024
+      label: Plaist
+    notes: Austrian-German duo. Piano/spinet/synth (Stemeseder) + drums/sampler/synth (Lillinger).
+  susu-laroche:
+    name: Susu Laroche
+    genres: Post-Industrial, Darkwave
+    latest:
+      title: War Against The Lie
+      year: 2025
+      label: Doyenne
+    top_rated:
+      title: Incivility
+      year: 2020
+      rating: 3.46
+      votes: 32
+    notes: London-based. "Ceremonial procession of droning ecstasy and percussion." Also designs album artwork.
+  suzan-peeters:
+    name: Suzan Peeters
+    genres: Electroacoustic, Accordion, Improvised Music, Musique Concrète
+    latest:
+      title: Cassotto
+      year: 2025
+      label: blickwinkel
+      note: debut album
+    top_rated:
+      title: Cassotto
+      year: 2025
+    notes: Belgian, Brussels-based. Mastered by Stephan Mathieu. Studies Live Electronics at Brussels Conservatory.
+  supersilent:
+    name: Supersilent
+    genres: Free Improvisation, EAI, Avant-Garde Jazz
+    latest:
+      title: '13'
+      year: 2022
+      label: Rune Grammofon
+    top_rated:
+      title: '6'
+      year: 2003
+  lawrence-abu-hamdan:
+    name: Lawrence Abu Hamdan
+    genres: Sound Research, Sound Art
+  thomas-ankersmit:
+    name: Thomas Ankersmit
+    genres: Modular Synthesis, Electroacoustic, Minimalism, Serge Synthesis
+    latest:
+      title: Perceptual Geography
+      year: 2020
+      rating: 3.64
+      votes: 400
+    top_rated:
+      title: Perceptual Geography
+      year: 2020
+      rating: 3.64
+      votes: 400
+    notes: Live on own Serge system + recorded material from a global network of Serge synthesisers. Named after Serge Tcherepnin.
+  '33':
+    name: '33'
+    genres: Electronic, DJ
+    notes: Emerging local DJ. Minimal public discography.
+  aernoudt-jacobs:
+    name: Aernoudt Jacobs
+    genres: Sound Art, Electroacoustic, Acousmatic
+    notes: Belgian sound artist. Explores acoustic phenomenon of ultrasound and inaudible frequencies. Proximity Music.
+  anais-lossouarn:
+    name: Anaïs Lossouarn
+    genres: Sound Art, Electroacoustic, Choral
+    notes: French sound artist. Proximity Music installation.
+  arnold-dreyblatt:
+    name: Arnold Dreyblatt
+    genres: Minimalism, Totalism, Just Intonation, Post-Minimalism
+    latest:
+      title: Descendants
+      year: 2026
+    top_rated:
+      title: Animal Magnetism
+      year: 1995
+      rating: 3.56
+      votes: 450
+  horse-lords:
+    name: Horse Lords
+    genres: Avant-Rock, Post-Minimalism, Just Intonation, Krautrock
+  asian-dope-boys:
+    name: Asian Dope Boys
+    genres: Electronic, Noise, Art Rock, Rave, Acid
+    notes: Eight-hour durational performance Sat 11 Apr. Filthy rave percussion, noisy ambient, gnarly art rock, lucid acid
+      bass.
+  awichas:
+    name: AWICHAS
+    genres: Andean, Microtonal, Electronic, Ritual, Club Music
+    notes: New project by Ibelisse Guardia Ferragutti (Bolivian/Brazilian) + Jochem van Tol. Andean cosmologies + club music.
+  bby-eco:
+    name: Bby Eco
+    genres: Progressive Electronic, Bubblegum Bass, Art Pop
+    latest:
+      title: O₂O
+      year: 2023
+    top_rated:
+      title: Grow!
+      year: 2021
+      votes: 200
+    notes: Amsterdam-based.
+  berlinde-deman:
+    name: Berlinde Deman
+    genres: Free Improvisation, Avant-Garde Jazz, Electroacoustic
+    latest:
+      title: Plank 9
+      year: 2025
+      label: Relative Pitch
+      note: solo debut
+    top_rated:
+      title: Plank 9
+      year: 2025
+    notes: Belgian serpent/tuba player. Member of Flat Earth Society. Also — Stuutjes (2022, w/ Machinefabriek).
+  buttechno:
+    name: Buttechno
+    genres: Outsider House, Dub Techno, Electro
+    latest:
+      title: In Your Head / Ялта
+  torus:
+    name: Torus
+    genres: Ambient, Mashup, Electronic
+    top_rated:
+      title: The Flash
+  by-storm:
+    name: By Storm
+    genres: Experimental Hip Hop, Neo-Psychedelia, Abstract Hip Hop, Electronic
+    latest:
+      title: My Ghosts Go Ghost
+      year: 2026
+      rating: 3.93
+      votes: 4700
+    top_rated:
+      title: Double Trio 2
+      note: EP
+      rating: 4.13
+      votes: 959
+    notes: Parker Corey + RiTchie (formerly Injury Reserve, following the death of Stepa J. Groggs).
+  cello-octet-amsterdam:
+    name: Cello Octet Amsterdam
+    genres: Contemporary Classical, Chamber Music
+  shishani:
+    name: Shishani
+    genres: Folk, Singer-Songwriter
+  cerys-hafana:
+    name: Cerys Hafana
+    genres: Welsh Folk Music, Chamber Folk, Minimalism, Harp
+    latest:
+      title: Angel
+      year: 2025
+    top_rated:
+      title: Edyf
+      year: 2022
+    notes: Welsh triple harpist. Minimalism, traditional folk, avant-folk.
+  colleen:
+    name: Colleen
+    genres: Ambient, Folktronica, Dub Folk, Electroacoustic
+    latest:
+      title: Libres antes del final
+      year: 2026
+      label: Thrill Jockey
+    top_rated:
+      title: A Flame My Love, a Frequency
+      year: 2017
+      label: Thrill Jockey
+      rating: 3.34
+      votes: 375
+    notes: French. 8 albums since 2003. Treble viola da gamba through dub production lens. Captain of None (2015) — Metacritic
+      79.
+  devon-rexi:
+    name: Devon Rexi
+    genres: Experimental Dub, Electronic
+  john-t-gast:
+    name: John T. Gast
+    genres: Ambient, Electronic
+  dim-garden:
+    name: Dim Garden
+    genres: Electronic, DJ
+    notes: Local Hague DJ. Laak club programme. Minimal public discography.
+  felix-bell:
+    name: Felix Bell
+    genres: Electroacoustic, Experimental
+  gaia-d-arrigo:
+    name: Gaia D'Arrigo
+    genres: Performance, Experimental
+  nuno-lobo:
+    name: Nuno Lobo
+    genres: Electroacoustic, Experimental
+  floris-vanhoof:
+    name: Floris Vanhoof
+    genres: Sound Art, Electroacoustic, Film, Visual Art
+    notes: Belgian audiovisual artist. Installation explores radio waves and transmission. Proximity Music.
+  frankie:
+    name: FRANKIE
+    genres: Art Pop, Cello, Electroacoustic
+  kelman-duran:
+    name: Kelman Duran
+    genres: Latin Electronic, Deconstructed Club, Neoperreo
+    top_rated:
+      title: 13th Month
+      year: 2018
+      rating: 3.38
+      votes: 391
+  hulubalang:
+    name: Hulubalang
+    genres: Post-Industrial, Gabber, Noise, Harsh Noise
+    latest:
+      title: Bunyi Bunyi Tumbal
+      year: 2023
+      rating: 3.34
+      votes: 157
+    top_rated:
+      title: Bunyi Bunyi Tumbal
+      year: 2023
+      rating: 3.34
+      votes: 157
+    notes: Bali-based solo project of Kasimyn. Also connected to Chunky Move's PHYSIS (GMO soundtrack) at same festival.
+  hxh:
+    name: HxH
+    genres: Free Improvisation, Electroacoustic
+    latest:
+      title: STARK PHENOMENA
+      year: 2025
+      label: OFNOT
+    top_rated:
+      title: STARK PHENOMENA
+      year: 2025
+    notes: Cello/electronics + trumpet/electronics. Lester St. Louis also performs in WRENS.
+  hieroglyphic-being:
+    name: Hieroglyphic Being
+    genres: Acid Techno, Noise, Post-Industrial, Cosmic
+    latest:
+      title: RELENTLESS VOL 1
+      year: 2025
+  jessica-ekomane:
+    name: Jessica Ekomane
+    genres: Minimalism, Electronic, Electroacoustic
+    latest:
+      title: Manifolds
+      year: 2024
+      note: split w/ Laurel Halo
+    top_rated:
+      title: Multivocal
+      year: 2019
+      note: debut
+  joachim-badenhorst-s-youran:
+    name: Joachim Badenhorst's Youran
+    genres: Experimental Jazz, Contemporary Classical, Electroacoustic
+    latest:
+      title: Youran
+      year: 2025
+    top_rated:
+      title: Youran
+      year: 2025
+    notes: Belgian clarinettist/saxophonist with large ensemble incl. Machinefabriek (electronics), taiko, koto, church organ.
+  johannes-kreidler:
+    name: Johannes Kreidler
+    genres: Contemporary Classical, Conceptual Music, Sound Art, Music Theatre
+    latest:
+      title: Selbstauslöser (Self-Timer)
+      year: 2020
+    top_rated:
+      title: Product Placements
+      year: 2008
+      note: conceptual work
+    notes: Major German conceptual music composer. Prof. of composition at Basel. Donaueschingen, Darmstadt, Huddersfield.
+      Kranichstein Prize 2012.
+  kee-avil:
+    name: Kee Avil
+    genres: Experimental, Art Pop, Glitch Pop
+    latest:
+      title: Spine
+      year: 2024
+    top_rated:
+      title: Crease
+      year: 2022
+      note: '#759 of 2022'
+    notes: Montreal.
+  khrystyna-kirik:
+    name: Khrystyna Kirik
+    genres: Sound Art, Electroacoustic
+  emma-rubikaite-milasiute:
+    name: Emma Rubikaite-Milasiute
+    genres: Performance, Electroacoustic
+  kode9:
+    name: Kode9
+    genres: Dubstep, UK Bass, Grime
+    top_rated:
+      title: Memories of the Future
+      year: 2006
+  deena-abdelwahed:
+    name: Deena Abdelwahed
+    genres: Hard Drum, Deconstructed Club
+    latest:
+      title: Jbal Rrsas
+      year: 2023
+  koenraad-de-groot:
+    name: Koenraad de Groot
+    genres: Sound Art, Electroacoustic
+    notes: Dutch sound artist. Installation exploring colour and acoustic perception. Proximity Music.
+  leila-bordreuil:
+    name: Leila Bordreuil
+    genres: Free Improvisation, Drone, Dark Ambient, Electroacoustic, Cello
+    latest:
+      title: 1991, Summer, Huntington Garage Fire
+      year: 2024
+    top_rated:
+      title: Not an Elegy
+      year: 2021
+      rating: 3.4
+      votes: 139
+  lena-kuzmich:
+    name: Lena Kuzmich
+    genres: Sound Art, Bioart, Electroacoustic
+    notes: Multidisciplinary artist. Installation using plant-generated sounds and biological processes. Proximity Music.
+  m-alberto:
+    name: M Alberto
+    genres: Experimental, Spoken Word, Improvisation, Music Theatre
+    notes: Curaçao-born, NL-based. Black/queer/anarchist/sex worker activism via spiritual performance art. Premiered Gaudeamus
+      2025.
+  mammo:
+    name: Mammo
+    genres: Dub Techno, Ambient, Experimental Electronic
+    latest:
+      title: Lateral
+      year: 2026
+      label: Short Span
+      note: triple-LP · mastered & cut by Rashad Becker
+    top_rated:
+      title: General Patterns
+      year: 2025
+      label: Short Span
+    notes: Amsterdam-based producer (Fabiano). Also active as Heaven Smile, Puddlerunner, and other aliases.
+  mariska-de-groot:
+    name: Mariska de Groot
+    genres: Sound Art, Electroacoustic, Drone
+    notes: Dutch sound artist. Installation exploring humming and resonance. Proximity Music.
+  mireia-varon-gallofre:
+    name: Mireia Varón Gallofré
+    genres: Performance Art, Sound Art, Experimental
+    notes: Interdisciplinary performance work. New project for Rewire 2026.
+  moritz-von-oswald:
+    name: Moritz von Oswald
+    genres: Minimal Techno, Dub Techno
+    latest:
+      title: Silencio
+      year: 2023
+    top_rated:
+      title: Recomposed by Carl Craig & Moritz von Oswald
+      year: 2008
+      rating: 3.57
+      votes: 1500
+  the-hague-vocal-ensemble:
+    name: The Hague Vocal Ensemble
+    genres: Choral, Contemporary Classical
+  natasha-pirard:
+    name: Natasha Pirard
+    genres: Experimental Electronic, Electroacoustic, Ambient, Tape Music
+    latest:
+      title: Fernande, Cécile
+      year: 2025
+      label: DEEWEE
+      note: debut album
+    top_rated:
+      title: Fernande, Cécile
+      year: 2025
+    notes: Belgian, Ghent-based. Developed within DEEWEE (Soulwax/2manydjs). Analogue synthesis, tape loops, violin, voice.
+  nazar:
+    name: Nazar
+    genres: Kuduro, Deconstructed Club, Post-Industrial, Post-Dubstep, Batida
+    latest:
+      title: Demilitarize
+      year: 2025
+      note: '#469 of 2025'
+    top_rated:
+      title: Guerrilla
+      year: 2020
+      note: '#650 of 2020'
+      rating: 3.4
+      votes: 987
+  nono-gigsta:
+    name: Nono Gigsta
+    genres: Electronic, DJ
+    notes: DJ. Laak club programme. Minimal public discography.
+  nvst:
+    name: NVST
+    genres: Industrial Dub, Experimental Techno, Breaks, Ghettotech, Club
+    latest:
+      title: Filled With Oil
+      year: 2023
+      label: Big Science Records
+    top_rated:
+      title: Drum in the Bass of Attention
+      year: 2022
+      label: Big Science Records
+    notes: Swiss, Lausanne-based. Three albums on Big Science Records. Key figure in Swiss rave scene.
+  ok-williams:
+    name: OK Williams
+    genres: Electro, Deconstructed Club, Jungle, Techno, Garage
+    notes: London DJ/selectress. NTS Radio DJ. Laak club programme.
+  ouri:
+    name: Ouri
+    genres: Alternative R&B, Art Pop, UK Bass, Electronic, Tech House
+    latest:
+      title: Daisy Cutter
+      year: 2025
+    top_rated:
+      title: Frame of a Fauna
+      year: 2021
+      rating: 3.42
+      votes: 228
+  polina-medvedeva:
+    name: Polina Medvedeva
+    genres: Performance Art, Sound Art
+  andreas-kuhne:
+    name: Andreas Kühne
+    genres: Sound Art, Electroacoustic
+  sam-slater:
+    name: Sam Slater
+    genres: Drone, Minimalism, Experimental, Electroacoustic
+  sanam:
+    name: SANAM
+    genres: Arabic Music, Post-Rock, Experimental Rock, Psychedelic, Avant-Garde Jazz
+    latest:
+      title: Sametou Sawtan
+      year: 2025
+      label: Constellation
+    top_rated:
+      title: Aykathani Malakon
+    notes: Beirut-based sextet. Psych/kraut, electronics, goth, jazz + traditional Egyptian song and Arabic poetry.
+  sol-ey:
+    name: Sól Ey
+    genres: Contemporary Classical, Microtonal Classical
+  modelo62:
+    name: Modelo62
+    genres: Contemporary Classical, Ensemble
+  standing-on-the-corner:
+    name: Standing on the Corner
+    genres: Hypnagogic Pop, Neo-Soul, Avant-Garde Jazz, Sound Collage, Hip Hop
+    latest:
+      title: May God Bless Your Hustle
+      year: 2021
+    top_rated:
+      title: Red Burns
+      year: 2017
+      note: '#17 of year · #2001 all-time'
+      rating: 3.84
+  state-offf:
+    name: State OFFF
+    genres: Gqom, Electronic, Dancefloor, Bass
+    latest:
+      title: Hard Currency
+      year: 2025
+    top_rated:
+      title: Hard Currency
+      year: 2025
+    notes: Amsterdam-based, born Zimbabwe. Combines Durban gqom, São Paulo funk, Baltimore club, London basslines.
+  the-bug:
+    name: The Bug
+    genres: Dubstep, Ragga, UK Bass, Dub
+    top_rated:
+      title: London Zoo
+      year: 2008
+      rating: 3.38
+      votes: 2699
+  dis-fig:
+    name: Dis Fig
+    genres: Post-Industrial, Death Industrial, Dark Ambient
+    latest:
+      title: Orchards of a Futile Heaven
+      year: 2024
+      artist: Dis Fig & The Body
+  shackleton:
+    name: Shackleton
+    genres: Tribal Ambient, Dubstep, Drone, UK Bass
+    latest:
+      title: Euphoria Bound
+      year: 2026
+    top_rated:
+      title: Music for the Quiet Hour / The Drawbar Organ EPs
+      rating: 3.48
+      votes: 1155
+  wac-aw-zimpel:
+    name: Wacław Zimpel
+    genres: Free Jazz, Contemporary Classical, Minimalism
+  siddhartha-belmannu:
+    name: Siddhartha Belmannu
+    genres: Carnatic, Percussion
+  giridhar-udupa:
+    name: Giridhar Udupa
+    genres: Carnatic, Percussion, Ghatam
+  ugn-uma:
+    name: Ugnė Uma
+    genres: Performance, Electronic, Experimental
+  pavel-milyakov:
+    name: Pavel Milyakov
+    genres: Outsider House, Dub Techno, Electro
+  valentina-magaletti:
+    name: Valentina Magaletti
+    genres: Free Improvisation, Percussion, Electroacoustic
+    latest:
+      title: Kansai Bruises
+      year: 2025
+      note: self-released
+  ypy:
+    name: YPY
+    genres: IDM, Noise, Electroacoustic
+  waqwaq-kingdom:
+    name: WaqWaq Kingdom
+    genres: Electronic, Neo-Psychedelia, Footwork, Bass Music
+    latest:
+      title: Hot Pot Totto
+      year: 2023
+    top_rated:
+      title: Essaka Hoisa
+      year: 2019
+      rating: 3.48
+      votes: 501
+  vj-kalma:
+    name: VJ Kalma
+    genres: Visual Art, A/V
+  weed420:
+    name: weed420
+    genres: Latin Electronic, Epic Collage, Sound Collage, Reggaetón, Hypnagogic Pop
+    latest:
+      title: Miren miren guayo…
+      year: 2025
+      note: '#5 DJ mix of 2025'
+    top_rated:
+      title: Amor de encava
+      year: 2025
+      label: Deprerreo
+      note: '#87 of 2025'
+    notes: Venezuelan collective (formed Oct 2021). Blend reggaetón, sound collage, and Venezuelan culture into politically
+      charged sonic document.
+  zeno-van-den-broek:
+    name: Zeno van den Broek
+    genres: Contemporary Classical, Electronic, Sound Art
+  les-percussions-de-strasbourg:
+    name: Les Percussions de Strasbourg
+    genres: Contemporary Classical, Percussion
+  hiiit:
+    name: HIIIT
+    genres: Club Music, Electronic
+slots:
+- display_name: Actress & Suzanne Ciani
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - actress
+  - suzanne-ciani
+  project: '''Concrète Waves'''
+  collab_notes: World premiere collab. Actress's R&B concrète meets Ciani's Buchla synthesis.
+- display_name: Alejandra Cárdenas
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live A/V
+  is_collab: false
+  artist_ids:
+  - alejandra-cardenas
+  project: '''A Body Like a Home'''
+- display_name: Apparitions
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live (EU Debut)
+  is_collab: false
+  artist_ids:
+  - apparitions
+- display_name: Armand Hammer
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - armand-hammer
+- display_name: Ash Fure
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live / Performance
+  is_collab: false
+  artist_ids:
+  - ash-fure
+  project: '''Animal'''
+- display_name: Beatrice Dillon & Explore Ensemble
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - beatrice-dillon
+  - explore-ensemble
+  collab_notes: Rewire commission. Dillon's digital synthesis with Explore Ensemble's acoustic instrumentation.
+- display_name: Beverly Glenn-Copeland
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - beverly-glenn-copeland
+  project: (w/ Elizabeth Copeland)
+- display_name: Blawan
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live Set
+  is_collab: false
+  artist_ids:
+  - blawan
+- display_name: Cara Tolmie & Rian Treanor
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: true
+  artist_ids:
+  - cara-tolmie
+  - rian-treanor
+  collab_notes: Latest collab Body Lapse (2025) performed live. Treanor's crisp productions + Tolmie's vocal pillars.
+  collab_latest:
+    title: Body Lapse
+    year: 2025
+    label: Planet Mu
+- display_name: Caterina Barbieri & MFO
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - caterina-barbieri
+  - mfo
+  collab_notes: World premiere solo show with visual artist MFO.
+- display_name: Caterina Barbieri with ONCEIM
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - caterina-barbieri
+  - onceim
+  collab_notes: World premiere new composition for ONCEIM — Paris new music ensemble of 30+ musicians.
+- display_name: Civilistjävel! & Mayssa Jallad
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - civilistjavel
+  - mayssa-jallad
+  collab_notes: World premiere. Icy tech-ambience of Civilistjävel! meets the warmth of Jallad's voice.
+- display_name: Einstürzende Neubauten
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live (Plus Ticket)
+  is_collab: false
+  artist_ids:
+  - einsturzende-neubauten
+- display_name: Eliana Glass
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - eliana-glass
+- display_name: Eraserhead x Xiu Xiu
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live Reinterpretation
+  is_collab: true
+  artist_ids:
+  - xiu-xiu
+  collab_notes: Live radical reinterpretation of Eraserhead soundtrack. Tribute to David Lynch. Not a film screening.
+- display_name: ex_libris
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere Live A/V
+  is_collab: false
+  artist_ids:
+  - ex-libris
+- display_name: feeo
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - feeo
+  project: (Theodora Laird)
+- display_name: Fine
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - fine
+- display_name: Flur
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - flur
+- display_name: ganavya
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - ganavya
+- display_name: Hayden Pedigo
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Two Shows
+  is_collab: false
+  artist_ids:
+  - hayden-pedigo
+  project: (solo + w/ string quartet)
+- display_name: Hilary Woods
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - hilary-woods
+- display_name: james K
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - james-k
+  project: (Jamie Krasner)
+- display_name: Jim O'Rourke & Eiko Ishibashi
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: true
+  artist_ids:
+  - jim-o-rourke
+  - eiko-ishibashi
+  collab_notes: Long-time collaborators. O'Rourke solo — Insignificance (2001), Eureka (1999) are all-time classics.
+  collab_latest:
+    title: Pareidolia
+    year: 2025
+    label: Drag City
+- display_name: JJJJJerome Ellis
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - jjjjjerome-ellis
+- display_name: Joanne Robertson & Oliver Coates
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: true
+  artist_ids:
+  - joanne-robertson
+  - oliver-coates
+  collab_notes: Robertson's album Blurrr brought to life with long-time collaborator Coates.
+- display_name: Joshua Chuquimia Crampton
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - joshua-chuquimia-crampton
+- display_name: Juana Molina
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - juana-molina
+- display_name: Katalin Ladik & Svetlana Maraš
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: true
+  artist_ids:
+  - katalin-ladik
+  - svetlana-mara
+  collab_notes: Yugoslav/Hungarian legend Ladik (b.1942) + Serbian composer/sound artist Maraš. Intergenerational performance.
+- display_name: KAVARI
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live A/V
+  is_collab: false
+  artist_ids:
+  - kavari
+  project: (live A/V)
+- display_name: KUNTARI
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - kuntari
+- display_name: La Rat
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - la-rat
+- display_name: Los Thuthanaka
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - los-thuthanaka
+- display_name: Malibu
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - malibu
+  project: (Barbara Braccini)
+- display_name: Mayssa Jallad
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live (trio)
+  is_collab: false
+  artist_ids:
+  - mayssa-jallad
+- display_name: Milkweed
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - milkweed
+- display_name: ØKSE feat. billy woods
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - okse
+  - billy-woods
+  collab_notes: World premiere — ØKSE all-star ensemble (Savannah Harris, Mette Rasmussen, Val Jeanty, Petter Eldh) + billy
+    woods.
+- display_name: Oneohtrix Point Never
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live A/V (Plus Ticket)
+  is_collab: false
+  artist_ids:
+  - oneohtrix-point-never
+- display_name: Purelink
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - purelink
+  project: (with Mika Oki)
+- display_name: Raúl Refree & Niño de Elche
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live (Dutch Premiere)
+  is_collab: true
+  artist_ids:
+  - raul-refree
+  - ni-o-de-elche
+  collab_notes: '"Dreamlike electronic reimagining of flamenco and beyond." Dutch premiere.'
+  collab_latest:
+    title: Cru+es
+    year: 2025
+    label: Sony
+  collab_top_rated:
+    title: Antología del cante flamenco heterodoxo
+    year: 2018
+    note: '#190 of year'
+- display_name: Smerz
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - smerz
+- display_name: Sumac & Moor Mother
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: true
+  artist_ids:
+  - sumac
+  - moor-mother
+  collab_notes: Collab album The Film (2025) is the basis for the performance — Sumac's crushing metal + Moor Mother's spoken
+    word.
+  collab_latest:
+    title: The Film
+    year: 2025
+    rating: 3.53
+    votes: 1552
+- display_name: Tortoise
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - tortoise
+- display_name: Tracey
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live (Dutch Premiere)
+  is_collab: false
+  artist_ids:
+  - tracey
+- display_name: WRENS
+  day: null
+  time: null
+  stage: null
+  wave: W1
+  type: Live
+  is_collab: false
+  artist_ids:
+  - wrens
+- display_name: Aaron Dilloway
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - aaron-dilloway
+- display_name: Acopia
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - acopia
+- display_name: Chunky Move
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Dance Performance
+  is_collab: false
+  artist_ids:
+  - chunky-move
+  project: '''U>N>I>T>E>D'''
+- display_name: Dagmar Zuniga
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (with band)
+  is_collab: false
+  artist_ids:
+  - dagmar-zuniga
+- display_name: Drew McDowall & Pedro Maia
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live A/V
+  is_collab: true
+  artist_ids:
+  - drew-mcdowall
+  - pedro-maia
+  collab_notes: Former Psychic TV/Coil member. Album inspired by Scottish pibroch tradition. Live A/V with filmmaker Pedro
+    Maia.
+- display_name: Dumama
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (with band)
+  is_collab: false
+  artist_ids:
+  - dumama
+- display_name: Elischa Heller
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - elischa-heller
+- display_name: Everything Is Psychedelic
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - everything-is-psychedelic
+- display_name: ∈Y∋ + C.O.L.O
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live A/V
+  is_collab: true
+  artist_ids:
+  - eye
+  - c-o-l-o
+  collab_notes: Yamantaka Eye (Boredoms/Hanatarash) + C.O.L.O visuals (Cosmic Lab, Osaka). "Face-melting and mind-warping."
+- display_name: Jennifer Walton
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (with band)
+  is_collab: false
+  artist_ids:
+  - jennifer-walton
+- display_name: Kim Gordon
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: World Premiere
+  is_collab: false
+  artist_ids:
+  - kim-gordon
+- display_name: KMRU & Nick Verstand
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: World Premiere A/V
+  is_collab: true
+  artist_ids:
+  - kmru
+  - nick-verstand
+  project: '''As Nature'''
+  collab_notes: KMRU's ambient soundscapes + Verstand's fabrics manipulated by airflow, lasers, LEDs, and smoke.
+- display_name: Laurel Halo & Julian Charrière
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - laurel-halo
+  - julian-charri-re
+  project: '''Midnight Zone'''
+  collab_notes: Charrière's film on deep-sea mining threats with live Halo score. Minimalism, ambient, musique concrète, jazz.
+- display_name: Mark Fell & Pat Thomas
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: true
+  artist_ids:
+  - mark-fell
+  - pat-thomas
+  collab_notes: '"Algorithmic and improvised music for computer and piano." First recorded collaboration between the two.'
+  collab_latest:
+    title: Reality Is Not a Theory
+    year: 2025
+    label: Black Truffle
+- display_name: My New Band Believe
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - my-new-band-believe
+- display_name: Nihiloxica
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - nihiloxica
+- display_name: Park Jiha
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (solo)
+  is_collab: false
+  artist_ids:
+  - park-jiha
+- display_name: Raisa K
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - raisa-k
+  project: (Raisa Khan)
+- display_name: RAKTA
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (performs twice)
+  is_collab: false
+  artist_ids:
+  - rakta
+- display_name: RAKTA & Mette Rasmussen
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live (2nd set)
+  is_collab: true
+  artist_ids:
+  - rakta
+  - mette-rasmussen
+  collab_notes: Norwegian-born Rasmussen — boundary-pushing sax improvisation. RAKTA's noise + improv sax pairing.
+- display_name: Sacred Lodge
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - sacred-lodge
+- display_name: Sary Moussa Trio
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - sary-moussa-trio
+  project: (w/ Julia Sabra + Abed Kobeissi)
+- display_name: Shapednoise & Sevi Iko Dømochevsky
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live A/V
+  is_collab: true
+  artist_ids:
+  - shapednoise
+  - sevi-iko-domochevsky
+  project: '''Absurd Matter Continuum'''
+  collab_notes: Noisy horrorcore, dark techno beats, corrupted two-step. Visualisations by Barcelona-based Dømochevsky.
+  collab_latest:
+    title: Absurd Matter 2
+    year: 2025
+  collab_top_rated:
+    title: Absurd Matter 2
+    year: 2025
+- display_name: Sombat Simla
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - sombat-simla
+- display_name: Stemeseder Lillinger
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - stemeseder-lillinger
+- display_name: Susu Laroche
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - susu-laroche
+- display_name: Suzan Peeters
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - suzan-peeters
+- display_name: Supersilent & Lawrence Abu Hamdan
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: World Premiere A/V
+  is_collab: true
+  artist_ids:
+  - supersilent
+  - lawrence-abu-hamdan
+  collab_notes: Norwegian quartet (feat. Deathprod) + Turner Prize-winning sonic researcher Abu Hamdan. World premiere.
+- display_name: Thomas Ankersmit
+  day: null
+  time: null
+  stage: null
+  wave: W2
+  type: Live
+  is_collab: false
+  artist_ids:
+  - thomas-ankersmit
+  project: '''The Tcherepnin Series'''
+- display_name: '33'
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ Set
+  is_collab: false
+  artist_ids:
+  - '33'
+- display_name: Aernoudt Jacobs
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - aernoudt-jacobs
+  project: '''Humming the Ubique'''
+- display_name: Anaïs Lossouarn
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - anais-lossouarn
+  project: '''DE CŒUR EN CHOEURS'''
+- display_name: Arnold Dreyblatt & Horse Lords
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - arnold-dreyblatt
+  - horse-lords
+  collab_notes: Collab FRKWYS Vol. 18 — Extended Field (Nov 2025, Rvng Intl). Intergenerational just intonation exploration.
+- display_name: Asian Dope Boys
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: 8-hour Performance
+  is_collab: false
+  artist_ids:
+  - asian-dope-boys
+  project: '''PHYSIS'''
+- display_name: AWICHAS
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - awichas
+- display_name: Bby Eco
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - bby-eco
+  project: (Joris Benjamins)
+- display_name: Berlinde Deman
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - berlinde-deman
+- display_name: Buttechno b2b Torus
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ B2B
+  is_collab: true
+  artist_ids:
+  - buttechno
+  - torus
+  collab_notes: Laak club programme (Sat night). Pavel Milyakov + Joeri Woudstra. Milyakov also performs as Ugnė Uma & Pavel
+    Milyakov.
+- display_name: By Storm
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - by-storm
+- display_name: Cello Octet Amsterdam feat. Shishani & Moor Mother
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - cello-octet-amsterdam
+  - shishani
+  - moor-mother
+  project: '''Borrowed Time'''
+  collab_notes: New collab for eight celli, featuring Shishani's warm folk voice and Moor Mother's incisive spoken word.
+- display_name: Cerys Hafana
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - cerys-hafana
+- display_name: Colleen
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - colleen
+  project: (Cécile Schott)
+- display_name: Devon Rexi meets John T. Gast
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - devon-rexi
+  - john-t-gast
+  collab_notes: Amsterdam trio Devon Rexi's dub experimentation meets London-based Gast's atmospheric ambient electronics.
+  collab_latest:
+    title: Breathstep
+    year: 2026
+    label: Accidental Meetings
+  collab_top_rated:
+    title: Breathstep
+    year: 2026
+- display_name: Dim Garden
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ Set
+  is_collab: false
+  artist_ids:
+  - dim-garden
+- display_name: Felix Bell, Gaia D'Arrigo & Nuno Lobo
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - felix-bell
+  - gaia-d-arrigo
+  - nuno-lobo
+  project: '''What''s left speaks'''
+  collab_notes: New commission for Rewire 2026. No prior recordings as this configuration.
+- display_name: Floris Vanhoof
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - floris-vanhoof
+  project: '''Antenna'''
+- display_name: FRANKIE & Kelman Duran
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - frankie
+  - kelman-duran
+  collab_notes: Collab inspired by LA's MacArthur Park. FRANKIE — cello/vocals. Kelman Duran — Latin electronic/neoperreo.
+    Debuted Berlin Atonal 2024.
+  collab_latest:
+    title: McArthur
+    year: 2026
+    note: collab album
+- display_name: Hulubalang
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - hulubalang
+  project: (Kasimyn of Gabber Modus Operandi)
+- display_name: HxH
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - hxh
+  project: (Lester St. Louis + Chris Williams)
+- display_name: Immaculate Deception Of History
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live (Sunday)
+  is_collab: true
+  artist_ids:
+  - moor-mother
+  - hieroglyphic-being
+  project: (Moor Mother & Hieroglyphic Being)
+  collab_notes: Moor Mother's urgent poetics + Hieroglyphic Being's riotous cosmic techno/house. Deep spiritual grooves.
+- display_name: Jessica Ekomane
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - jessica-ekomane
+- display_name: Joachim Badenhorst's Youran
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - joachim-badenhorst-s-youran
+- display_name: Johannes Kreidler
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - johannes-kreidler
+  project: '''Jet Whistles / The Grand Exhalation'''
+- display_name: Kee Avil
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - kee-avil
+  project: (Vicky Mettler)
+- display_name: Khrystyna Kirik & Emma Rubikaite-Milasiute
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Performance
+  is_collab: true
+  artist_ids:
+  - khrystyna-kirik
+  - emma-rubikaite-milasiute
+  project: '''Biophilic Vision'''
+  collab_notes: Collaborative performance/installation. New commission for Rewire 2026.
+- display_name: Kode9 b2b Deena Abdelwahed
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ B2B
+  is_collab: true
+  artist_ids:
+  - kode9
+  - deena-abdelwahed
+  collab_notes: Kode9's dubstep/UK bass legacy meets Abdelwahed's hard drum and deconstructed club.
+- display_name: Koenraad de Groot
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - koenraad-de-groot
+  project: '''The Colour of Kameleon'''
+- display_name: Leila Bordreuil
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - leila-bordreuil
+- display_name: Lena Kuzmich
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - lena-kuzmich
+  project: '''Photosynthesizer'''
+- display_name: M Alberto
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Performance / Music Theatre
+  is_collab: false
+  artist_ids:
+  - m-alberto
+  project: '''Radio Vitó'''
+- display_name: Mammo
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - mammo
+- display_name: Mariska de Groot
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Installation
+  is_collab: false
+  artist_ids:
+  - mariska-de-groot
+  project: '''BROM'''
+- display_name: Mireia Varón Gallofré
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Performance
+  is_collab: false
+  artist_ids:
+  - mireia-varon-gallofre
+  project: '''Not To Be Senseless: Skin Hunger'''
+- display_name: Moritz von Oswald
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live (Fri 10 Apr, Grote Kerk)
+  is_collab: true
+  artist_ids:
+  - moritz-von-oswald
+  - the-hague-vocal-ensemble
+  project: '''Silencio'' w/ The Hague Vocal Ensemble'
+  collab_notes: 16 voices (human + synthesiser). Known for Basic Channel, Maurizio, and Rhythm & Sound.
+  collab_latest:
+    title: Silencio
+    year: 2023
+  collab_top_rated:
+    title: Recomposed by Carl Craig & Moritz von Oswald
+    year: 2008
+    rating: 3.57
+    votes: 1500
+- display_name: Natasha Pirard
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - natasha-pirard
+- display_name: Nazar
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - nazar
+- display_name: Nono Gigsta
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ Set
+  is_collab: false
+  artist_ids:
+  - nono-gigsta
+- display_name: NVST
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - nvst
+- display_name: OK Williams
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: DJ Set
+  is_collab: false
+  artist_ids:
+  - ok-williams
+  project: (Kanyin)
+- display_name: Ouri
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - ouri
+- display_name: Polina Medvedeva & Andreas Kühne
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Performance
+  is_collab: true
+  artist_ids:
+  - polina-medvedeva
+  - andreas-kuhne
+  project: '''Facing the Spills'''
+  collab_notes: Collaborative performance work. New project for Rewire 2026.
+- display_name: Sam Slater & guests
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live (Fri 10 Apr, Amare)
+  is_collab: true
+  artist_ids:
+  - sam-slater
+  project: '''Lunng'''
+  collab_notes: Guests — Lucy Railton (cello), Maria W. Horn (vocals), Hilary Jeffrey (trombone), Andrew Bernstein (saxophone).
+  collab_latest:
+    title: Lunng
+    year: 2026
+  collab_top_rated:
+    title: Lunng
+    year: 2026
+- display_name: SANAM
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - sanam
+- display_name: Sól Ey & Modelo62
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - sol-ey
+  - modelo62
+  project: '''Becoming'''
+  collab_notes: Icelandic composer Sól Ey + The Hague ensemble Modelo62 (associated residency 2024–2026). New music theatre
+    commission.
+- display_name: Standing on the Corner
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - standing-on-the-corner
+- display_name: State OFFF
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - state-offf
+  project: '''Umzimba'''
+- display_name: The Bug & Dis Fig
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - the-bug
+  - dis-fig
+  collab_notes: Existing collab — In Blue (2020). Two major experimental music figures performing together.
+- display_name: The Silver Thread
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - shackleton
+  - wac-aw-zimpel
+  - siddhartha-belmannu
+  - giridhar-udupa
+  project: (Shackleton + Zimpel + Belmannu + Udupa)
+  collab_notes: Shackleton + Wacław Zimpel + Siddhartha Belmannu + Giridhar Udupa. Visuals by Pedro Maia.
+- display_name: Ugnė Uma & Pavel Milyakov
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Performance
+  is_collab: true
+  artist_ids:
+  - ugn-uma
+  - pavel-milyakov
+  collab_notes: Collaborative performance pairing. Milyakov also performs as Buttechno b2b Torus at Laak.
+- display_name: Valentina Magaletti & YPY
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: true
+  artist_ids:
+  - valentina-magaletti
+  - ypy
+  collab_notes: Abrasive drums and handcrafted Japanese electronics. Between Mark Fell and Milford Graves.
+  collab_latest:
+    title: Kansai Bruises
+    year: 2025
+    note: self-released
+  collab_top_rated:
+    title: Kansai Bruises
+    year: 2025
+- display_name: WaqWaq Kingdom feat. VJ Kalma
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live A/V
+  is_collab: true
+  artist_ids:
+  - waqwaq-kingdom
+  - vj-kalma
+  project: '''Amanogawa 天の川'''
+  collab_notes: Kiki Hitomi + DJ Scotch Egg. VJ Kalma visuals. 'Amanogawa' (天の川) = Milky Way.
+  collab_latest:
+    title: Hot Pot Totto
+    year: 2023
+  collab_top_rated:
+    title: Essaka Hoisa
+    year: 2019
+    note: '#587 of year'
+    rating: 3.48
+    votes: 501
+- display_name: weed420
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: Live
+  is_collab: false
+  artist_ids:
+  - weed420
+- display_name: Zeno van den Broek, Les Percussions de Strasbourg & HIIIT
+  day: null
+  time: null
+  stage: null
+  wave: W3
+  type: World Premiere
+  is_collab: true
+  artist_ids:
+  - zeno-van-den-broek
+  - les-percussions-de-strasbourg
+  - hiiit
+  project: '''Ways of [ ]'''
+  collab_notes: Cross-genre world premiere — Van den Broek + legendary French percussion ensemble (founded 1961) + electronic/club
+    HIIIT.

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rewire 2026 Lineup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --bg: #0a0a0a; --surface: #111; --border: #222;
+    --text: #e8e8e0; --muted: #666;
+    --w1: #c8ff00; --w2: #00d4ff; --w3: #ff6b35;
+    --collab: #e066ff;
+    --row-hover: #1a1a1a;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; line-height: 1.5; min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .header {
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .title-row { display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap; }
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--w1);
+  }
+  .subtitle {
+    font-family: 'Space Mono', monospace;
+    font-size: .7rem; color: var(--muted);
+    letter-spacing: .05em; text-transform: uppercase;
+  }
+  .controls { display: flex; gap: .75rem; flex-wrap: wrap; align-items: center; }
+
+  /* ── Search ── */
+  .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
+  .search-wrap svg {
+    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    color: var(--muted); pointer-events: none;
+  }
+  input[type="text"] {
+    width: 100%; background: var(--surface); border: 1px solid var(--border);
+    color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px;
+    padding: 7px 12px 7px 34px; outline: none; transition: border-color .15s;
+  }
+  input[type="text"]:focus { border-color: var(--w1); }
+  input[type="text"]::placeholder { color: var(--muted); }
+
+  /* ── Filter buttons ── */
+  .filter-group { display: flex; gap: 4px; }
+  button {
+    font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase;
+    border: 1px solid var(--border); background: transparent; color: var(--muted);
+    cursor: pointer; padding: 6px 12px; transition: all .12s;
+  }
+  button:hover { border-color: #444; color: var(--text); }
+  button.active-all { border-color: var(--text); color: var(--text); background: #1a1a1a; }
+  button.active-w1  { border-color: var(--w1); color: var(--w1); background: rgba(200,255,0,.06); }
+  button.active-w2  { border-color: var(--w2); color: var(--w2); background: rgba(0,212,255,.06); }
+  button.active-w3  { border-color: var(--w3); color: var(--w3); background: rgba(255,107,53,.06); }
+  button.active-collab { border-color: var(--collab); color: var(--collab); background: rgba(224,102,255,.06); }
+
+  .stats {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--muted); letter-spacing: .04em; text-transform: uppercase;
+    padding-left: 4px; align-self: center;
+  }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  thead { position: sticky; top: 0; z-index: 10; background: var(--surface); }
+  th {
+    font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
+    padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border);
+    white-space: nowrap; user-select: none; cursor: pointer; transition: color .12s;
+  }
+  th:hover { color: var(--text); }
+  th.sorted { color: var(--w1); }
+  th .si { opacity: .4; margin-left: 4px; font-size: 9px; }
+  th.sorted .si { opacity: 1; }
+
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr.slot-row:hover td { background: var(--row-hover); }
+  tr:last-child td { border-bottom: none; }
+
+  /* ── Cell types ── */
+  .cn { font-weight: 500; font-size: 13.5px; color: #f0f0e8; min-width: 160px; max-width: 220px; }
+  .proj { font-size: 11px; color: var(--muted); margin-top: 2px; font-style: italic; }
+
+  .wb {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 9px; font-weight: 700; letter-spacing: .08em;
+    padding: 2px 7px; border: 1px solid;
+  }
+  .wb-W1 { color: var(--w1); border-color: var(--w1); background: rgba(200,255,0,.06); }
+  .wb-W2 { color: var(--w2); border-color: var(--w2); background: rgba(0,212,255,.06); }
+  .wb-W3 { color: var(--w3); border-color: var(--w3); background: rgba(255,107,53,.06); }
+
+  .cb {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 9px; font-weight: 700; letter-spacing: .06em;
+    padding: 2px 7px; border: 1px solid var(--collab);
+    color: var(--collab); background: rgba(224,102,255,.06);
+    margin-left: 6px;
+  }
+
+  .tt {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 9px; letter-spacing: .05em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid #2a2a2a; padding: 2px 7px; white-space: nowrap;
+  }
+  .tt.pr  { color: #ffd166; border-color: rgba(255,209,102,.3); }
+  .tt.ins { color: #a0c4ff; border-color: rgba(160,196,255,.3); }
+  .tt.dj  { color: #caffbf; border-color: rgba(202,255,191,.3); }
+
+  .sched {
+    font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted);
+    white-space: nowrap; min-width: 90px;
+  }
+  .sched .day { color: var(--text); font-weight: 500; }
+
+  .gen { font-size: 12px; color: #aaa; min-width: 140px; max-width: 200px; line-height: 1.5; }
+
+  .rel { font-size: 12px; min-width: 140px; max-width: 200px; line-height: 1.7; color: #bbb; }
+  .rel .ti { color: #e0e0d8; font-style: italic; }
+  .rel .rt { display: block; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--w1); }
+  .rel .meta { color: var(--muted); font-size: 11px; }
+  .rel .dash { color: #444; }
+
+  .no { font-size: 12px; color: #888; min-width: 160px; max-width: 280px; line-height: 1.6; }
+
+  /* ── Collab participant rows ── */
+  .participant-row td {
+    padding: 4px 14px 4px 14px;
+    border-bottom: 1px solid #1a1a1a;
+    background: #0d0d0d;
+    font-size: 12px;
+  }
+  .participant-row:last-child td {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .p-name {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    color: var(--collab); letter-spacing: .03em; padding-left: 16px;
+  }
+  .p-name::before {
+    content: '└ '; color: #333;
+  }
+
+  .nores {
+    text-align: center; padding: 4rem 2rem; color: var(--muted);
+    font-family: 'Space Mono', monospace; font-size: 12px;
+    letter-spacing: .05em; text-transform: uppercase;
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #444; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="title-row">
+    <h1>Rewire 2026</h1>
+    <span class="subtitle">9–12 Apr · The Hague · 15th Anniversary</span>
+  </div>
+  <div class="controls">
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="search" placeholder="Search artists, genres, albums…">
+    </div>
+    <div class="filter-group">
+      <button id="btn-all" class="active-all" onclick="setWave('all')">All</button>
+      <button id="btn-w1"  onclick="setWave('W1')">W1</button>
+      <button id="btn-w2"  onclick="setWave('W2')">W2</button>
+      <button id="btn-w3"  onclick="setWave('W3')">W3</button>
+      <button id="btn-collab" onclick="setWave('collab')">Collabs</button>
+    </div>
+    <span class="stats" id="stats"></span>
+  </div>
+</div>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sb('name')"      id="th-name">Artist <span class="si" id="si-name">↕</span></th>
+        <th onclick="sb('schedule')"   id="th-schedule">Schedule <span class="si" id="si-schedule">↕</span></th>
+        <th onclick="sb('wave')"      id="th-wave">Wave <span class="si" id="si-wave">↕</span></th>
+        <th onclick="sb('type')"      id="th-type">Type <span class="si" id="si-type">↕</span></th>
+        <th onclick="sb('genres')"    id="th-genres">Genres <span class="si" id="si-genres">↕</span></th>
+        <th onclick="sb('latest')"    id="th-latest">Latest Release <span class="si" id="si-latest">↕</span></th>
+        <th onclick="sb('top_rated')" id="th-top_rated">Top Rated <span class="si" id="si-top_rated">↕</span></th>
+        <th onclick="sb('notes')"     id="th-notes">Notes <span class="si" id="si-notes">↕</span></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<script>
+// ─── State ───────────────────────────────────────────────────────────────────
+let ARTISTS = {};
+let SLOTS = [];
+let cw = 'all';
+let cs = { col: 'wave', dir: 1 };
+let sv = '';
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function typeClass(t) {
+  const l = (t || '').toLowerCase();
+  if (l.includes('premiere') || l.includes('commission')) return 'pr';
+  if (l.includes('installation')) return 'ins';
+  if (l.includes('dj') || l.includes('b2b')) return 'dj';
+  return '';
+}
+
+function renderRelease(rel) {
+  if (!rel || (!rel.title && !rel.year)) {
+    return '<span class="dash">—</span>';
+  }
+  let html = '';
+  const titleArtist = rel.artist ? `${rel.artist} — ` : '';
+  html += `<span class="ti">${titleArtist}${rel.title || ''}</span>`;
+  const metaParts = [rel.year, rel.label, rel.note].filter(Boolean);
+  if (metaParts.length) {
+    html += `<br><span class="meta">${metaParts.join(' · ')}</span>`;
+  }
+  if (rel.rating) {
+    const votes = rel.votes ? ` / ${rel.votes.toLocaleString()}` : '';
+    html += `<span class="rt">${rel.rating}${votes}</span>`;
+  }
+  return html;
+}
+
+function renderSchedule(slot) {
+  if (!slot.day && !slot.time) return '<span class="dash">TBA</span>';
+  const day = slot.day ? `<span class="day">${slot.day}</span>` : '';
+  const time = slot.time || '';
+  const stage = slot.stage ? `<br><span class="meta">${slot.stage}</span>` : '';
+  return `<span class="sched">${day} ${time}${stage}</span>`;
+}
+
+/** Get combined genres for a slot by merging all participant genres. */
+function slotGenres(slot) {
+  if (!slot.is_collab) {
+    const a = ARTISTS[slot.artist_ids[0]];
+    return a ? (a.genres || '') : '';
+  }
+  // For collabs, combine unique genres from all participants
+  const allGenres = new Set();
+  for (const aid of slot.artist_ids) {
+    const a = ARTISTS[aid];
+    if (a && a.genres) {
+      a.genres.split(',').map(g => g.trim()).forEach(g => allGenres.add(g));
+    }
+  }
+  return [...allGenres].join(', ');
+}
+
+/** Get the "main" latest release for a slot. */
+function slotLatest(slot) {
+  if (slot.collab_latest) return slot.collab_latest;
+  if (!slot.is_collab) {
+    const a = ARTISTS[slot.artist_ids[0]];
+    return a ? a.latest : null;
+  }
+  // For collabs without a collab release, pick the first participant with one
+  for (const aid of slot.artist_ids) {
+    const a = ARTISTS[aid];
+    if (a && a.latest) return { ...a.latest, artist: a.latest.artist || a.name };
+  }
+  return null;
+}
+
+/** Get the "main" top rated for a slot. */
+function slotTopRated(slot) {
+  if (slot.collab_top_rated) return slot.collab_top_rated;
+  if (!slot.is_collab) {
+    const a = ARTISTS[slot.artist_ids[0]];
+    return a ? a.top_rated : null;
+  }
+  // For collabs, pick the highest rated across participants
+  let best = null;
+  let bestRating = 0;
+  for (const aid of slot.artist_ids) {
+    const a = ARTISTS[aid];
+    if (a && a.top_rated && (a.top_rated.rating || 0) > bestRating) {
+      best = { ...a.top_rated, artist: a.top_rated.artist || a.name };
+      bestRating = a.top_rated.rating || 0;
+    }
+  }
+  return best;
+}
+
+/** Get notes for a slot. */
+function slotNotes(slot) {
+  if (slot.collab_notes) return slot.collab_notes;
+  if (!slot.is_collab) {
+    const a = ARTISTS[slot.artist_ids[0]];
+    return a ? (a.notes || '') : '';
+  }
+  return '';
+}
+
+/** Build searchable text for a slot. */
+function searchHay(slot) {
+  const parts = [
+    slot.display_name, slot.project, slot.wave, slot.type,
+    slotGenres(slot), slotNotes(slot),
+  ];
+  // Add all participant data
+  for (const aid of slot.artist_ids) {
+    const a = ARTISTS[aid];
+    if (!a) continue;
+    parts.push(a.name, a.genres, a.notes);
+    const relText = r => r ? [r.title, r.artist, r.label, r.note, r.year].filter(Boolean).join(' ') : '';
+    parts.push(relText(a.latest), relText(a.top_rated));
+  }
+  // Add collab release data
+  if (slot.collab_latest) {
+    parts.push([slot.collab_latest.title, slot.collab_latest.artist, slot.collab_latest.year].filter(Boolean).join(' '));
+  }
+  return parts.join(' ').toLowerCase();
+}
+
+function sortKey(slot) {
+  const col = cs.col;
+  if (col === 'name') return slot.display_name.toLowerCase();
+  if (col === 'schedule') {
+    const dayOrder = { Thu: 0, Fri: 1, Sat: 2, Sun: 3 };
+    const d = slot.day ? dayOrder[slot.day] ?? 9 : 9;
+    const t = slot.time || 'zz:zz';
+    return `${d}-${t}`;
+  }
+  if (col === 'wave') return slot.wave || '';
+  if (col === 'type') return (slot.type || '').toLowerCase();
+  if (col === 'genres') return slotGenres(slot).toLowerCase();
+  if (col === 'latest') {
+    const r = slotLatest(slot);
+    return r ? String(r.year || r.title || '').toLowerCase() : '';
+  }
+  if (col === 'top_rated') {
+    const r = slotTopRated(slot);
+    return r && r.rating ? String(r.rating) : '';
+  }
+  if (col === 'notes') return slotNotes(slot).toLowerCase();
+  return '';
+}
+
+// ─── Core render ─────────────────────────────────────────────────────────────
+
+function render() {
+  const q = sv.toLowerCase();
+
+  let rows = SLOTS.filter(s => {
+    if (cw === 'collab' && !s.is_collab) return false;
+    if (cw !== 'all' && cw !== 'collab' && s.wave !== cw) return false;
+    if (!q) return true;
+    return searchHay(s).includes(q);
+  });
+
+  rows.sort((a, b) => {
+    const ka = sortKey(a), kb = sortKey(b);
+    return ka < kb ? -cs.dir : ka > kb ? cs.dir : 0;
+  });
+
+  document.getElementById('stats').textContent =
+    `${rows.length} of ${SLOTS.length} slots · ${Object.keys(ARTISTS).length} artists`;
+
+  const tbody = document.getElementById('tbody');
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="8"><div class="nores">No results for "${q}"</div></td></tr>`;
+    return;
+  }
+
+  let html = '';
+  for (const s of rows) {
+    const genres = slotGenres(s);
+    const latest = slotLatest(s);
+    const topRated = slotTopRated(s);
+    const notes = slotNotes(s);
+
+    html += `
+    <tr class="slot-row">
+      <td class="cn">
+        ${s.display_name}
+        ${s.is_collab ? '<span class="cb">COLLAB</span>' : ''}
+        ${s.project ? `<div class="proj">${s.project}</div>` : ''}
+      </td>
+      <td>${renderSchedule(s)}</td>
+      <td><span class="wb wb-${s.wave}">${s.wave}</span></td>
+      <td><span class="tt ${typeClass(s.type)}">${s.type || ''}</span></td>
+      <td class="gen">${genres}</td>
+      <td class="rel">${renderRelease(latest)}</td>
+      <td class="rel">${renderRelease(topRated)}</td>
+      <td class="no">${notes}</td>
+    </tr>`;
+
+    // For collabs, render participant sub-rows
+    if (s.is_collab && s.artist_ids.length > 1) {
+      for (const aid of s.artist_ids) {
+        const a = ARTISTS[aid];
+        if (!a) continue;
+        html += `
+        <tr class="participant-row">
+          <td class="p-name">${a.name}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="gen" style="font-size:11px;color:#777">${a.genres || ''}</td>
+          <td class="rel" style="font-size:11px">${renderRelease(a.latest)}</td>
+          <td class="rel" style="font-size:11px">${renderRelease(a.top_rated)}</td>
+          <td class="no" style="font-size:11px">${a.notes || ''}</td>
+        </tr>`;
+      }
+    }
+  }
+
+  tbody.innerHTML = html;
+}
+
+// ─── Sort & filter controls ───────────────────────────────────────────────────
+
+function sb(col) {
+  if (cs.col === col) { cs.dir *= -1; }
+  else { cs.col = col; cs.dir = 1; }
+
+  document.querySelectorAll('th').forEach(th => {
+    th.classList.remove('sorted');
+    const id = th.id.replace('th-', '');
+    const si = document.getElementById('si-' + id);
+    if (si) si.textContent = '↕';
+  });
+
+  const el = document.getElementById('th-' + col);
+  if (el) {
+    el.classList.add('sorted');
+    const si = document.getElementById('si-' + col);
+    if (si) si.textContent = cs.dir === 1 ? '↑' : '↓';
+  }
+  render();
+}
+
+function setWave(wave) {
+  cw = wave;
+  ['all', 'w1', 'w2', 'w3', 'collab'].forEach(w => {
+    const btn = document.getElementById('btn-' + w);
+    if (!btn) return;
+    btn.className = '';
+    if (w === wave.toLowerCase()) btn.className = 'active-' + w;
+  });
+  render();
+}
+
+document.getElementById('search').addEventListener('input', e => {
+  sv = e.target.value;
+  render();
+});
+
+// ─── Load data ────────────────────────────────────────────────────────────────
+
+fetch('lineup.json')
+  .then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then(data => {
+    ARTISTS = data.artists || {};
+    SLOTS = data.slots || [];
+    // Initial sort by wave
+    document.getElementById('th-wave').classList.add('sorted');
+    document.getElementById('si-wave').textContent = '↑';
+    render();
+  })
+  .catch(err => {
+    document.getElementById('tbody').innerHTML = `
+      <tr><td colspan="8"><div class="nores">
+        Could not load lineup.json<br>
+        <small style="font-size:10px;color:#555">
+          Run: python build.py — then serve this directory (e.g. python -m http.server 8000)
+        </small>
+      </div></td></tr>`;
+    console.error(err);
+  });
+</script>
+</body>
+</html>
