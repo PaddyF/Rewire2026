@@ -576,7 +576,17 @@ artists:
     notes: British. "Part slacker-trad and part crust-academic — explorations in folk, ritual, and tradition."
   okse:
     name: ØKSE
-    genres: Free Jazz, Avant-Garde
+    genres: Free Jazz, Avant-Garde Jazz, Experimental Hip Hop
+    latest:
+      title: ØKSE
+      year: 2024
+      label: Backwoodz
+      note: '#197 of 2024'
+    top_rated:
+      title: ØKSE
+      year: 2024
+      label: Backwoodz
+      note: '#197 of 2024'
   billy-woods:
     name: billy woods
     genres: Abstract Hip Hop, Experimental Hip Hop, Hardcore Hip Hop
@@ -626,9 +636,28 @@ artists:
   raul-refree:
     name: Raúl Refree
     genres: Avant-Folk, Flamenco Nuevo, Electroacoustic
+    latest:
+      title: 'Cru+es'
+      year: 2025
+      artist: Niño de Elche & Raúl Refree
+    top_rated:
+      title: Lina_Raül Refree
+      year: 2020
+      artist: Lina_Raül Refree
+      rating: 3.27
+      votes: 209
   ni-o-de-elche:
     name: Niño de Elche
     genres: Avant-Garde, Flamenco Nuevo, Art Pop
+    latest:
+      title: 'Cru+es'
+      year: 2025
+      artist: Niño de Elche & Raúl Refree
+    top_rated:
+      title: "Antología del cante flamenco heterodoxo"
+      year: 2018
+      label: Sony
+      note: '#190 of 2018'
   smerz:
     name: Smerz
     genres: Art Pop, Alternative R&B, UK Bass
@@ -640,6 +669,8 @@ artists:
     top_rated:
       title: Big City Life
       year: 2025
+      rating: 3.42
+      votes: 203
     notes: Norwegian duo (Catharina Stoltenberg + Henriette Motzfeldt). Deadpan minimal art-pop. Often compared to Tirzah.
   sumac:
     name: Sumac
@@ -724,10 +755,14 @@ artists:
     latest:
       title: Blush Response
       year: 2025
+      rating: 3.38
+      votes: 334
     top_rated:
       title: Acopia
       year: 2023
       note: '#1518 of 2023'
+      rating: 3.38
+      votes: 286
     notes: Australian trio. Jangle pop, breaks-laden trip hop, and electronic pop.
   chunky-move:
     name: Chunky Move
