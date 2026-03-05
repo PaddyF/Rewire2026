@@ -195,6 +195,12 @@ artists:
   onceim:
     name: ONCEIM
     genres: Contemporary Classical, New Music, Large Ensemble
+    top_rated:
+      title: Occam Ocean 2
+      year: 2019
+      label: Shiiin
+      rating: 3.66
+      votes: 188
   civilistjavel:
     name: Civilistjävel!
     genres: Ambient, Tech-Ambient, Drone
@@ -229,6 +235,8 @@ artists:
     top_rated:
       title: ½ Mensch
       year: 1985
+      rating: 3.75
+      votes: 8175
       note: '#31 of year'
     notes: Rewire debut. Sun 12 Apr. Plus Ticket required.
   eliana-glass:
@@ -280,6 +288,8 @@ artists:
     top_rated:
       title: Goodness
       year: 2025
+      rating: 3.20
+      votes: 521
     notes: Debut album on AD93. "Wrinkled synth lines bit-crushed into insectoid murmurs, organ chords stretched into boundless
       waves."
   fine:
@@ -464,9 +474,18 @@ artists:
   katalin-ladik:
     name: Katalin Ladik
     genres: Sound Poetry, Performance Art, Avant-Garde
+    latest:
+      title: Phonopoetics
+      year: 2019
+      label: Alga Marghen
+      note: compilation of archival recordings
   svetlana-mara:
     name: Svetlana Maraš
     genres: Electroacoustic, Sound Art
+    latest:
+      title: Live Performance 2019-2020
+      year: 2023
+      label: Bandcamp
   kavari:
     name: KAVARI
     genres: Deconstructed Club, Post-Industrial, Dark Ambient, Noise
@@ -491,6 +510,8 @@ artists:
     top_rated:
       title: LAHAR
       year: 2025
+      rating: 3.23
+      votes: 16
     notes: Bandung-based Indonesian duo (Tesla Manaf + Rio Abror). "Primitive voices producing animal mating calls mixed with
       Indonesian tribal rhythms."
   la-rat:
