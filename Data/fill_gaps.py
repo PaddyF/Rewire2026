@@ -1,28 +1,23 @@
 #!/usr/bin/env python3
 """
-fill_gaps.py — uses Claude + web_search to fill missing RYM data in lineup.yaml
+fill_gaps.py — gap detection and data filling for lineup.yaml
 
-What it does:
-  - Reads lineup.yaml (artists + slots structure)
-  - Finds artists where top_rated.rating (or top_rated.votes) is missing
-  - Fires a focused Anthropic API call with web_search for each
-  - Writes structured results back into the YAML (preserves comments & ordering)
-  - Prints a diff summary of what changed
+Two workflows are supported:
 
-Usage:
-    python fill_gaps.py                   # fill all gaps (latest + top_rated)
-    python fill_gaps.py --dry-run         # print what would change, don't write
-    python fill_gaps.py --artist "Colleen"  # target a single artist by name
-    python fill_gaps.py --field latest    # only fill missing 'latest' entries
-    python fill_gaps.py --field top_rated # only fill missing 'top_rated' entries
-    python fill_gaps.py --field genres    # fill missing artist genres
-    python fill_gaps.py --field timetable # fill missing slot day/time/stage
+  A) Claude Code workflow (no API credits needed — uses Claude Max subscription):
+       python fill_gaps.py --dry-run              # show all gaps across all fields
+       python fill_gaps.py --field notes --export gaps.json
+       # → Claude Code reads gaps.json, researches each entry, writes results.json
+       python fill_gaps.py --field notes --apply results.json
 
-Requirements:
-    pip install anthropic pyyaml
+  B) Anthropic API workflow (requires API credits):
+       python fill_gaps.py --field notes          # fill via API calls
 
-The script expects ANTHROPIC_API_KEY to be set in your environment,
-which Claude Code provides automatically.
+  --export <file>   Write gap data as JSON for Claude Code to research
+  --apply  <file>   Read filled JSON from Claude Code and write to lineup.yaml
+  --dry-run         Show gap summary without writing anything
+  --field           One of: latest, top_rated, genres, timetable, notes, perf_type
+  --artist          Target a single artist by name (substring match)
 """
 
 import json
@@ -33,7 +28,6 @@ import time
 import pathlib
 import argparse
 import urllib.request
-import anthropic
 import yaml
 
 # Load .env from repo root if present
@@ -49,7 +43,15 @@ ROOT  = pathlib.Path(__file__).parent
 SRC   = ROOT / "lineup.yaml"
 MODEL = "claude-sonnet-4-20250514"
 
-client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+
+def _get_client():
+    """Lazy-load Anthropic client — only needed for API workflow."""
+    try:
+        import anthropic
+        return anthropic.Anthropic()
+    except ImportError:
+        print("anthropic package not installed. API workflow unavailable.")
+        sys.exit(1)
 
 
 # ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -178,7 +180,7 @@ def search_rym(artist: dict, missing_fields: list[str]) -> dict | None:
     )
 
     try:
-        response = client.messages.create(
+        response = _get_client().messages.create(
             model=MODEL,
             max_tokens=1000,
             system=SYSTEM_PROMPT,
@@ -232,7 +234,7 @@ def search_genres(artist: dict) -> dict | None:
         "Search RateYourMusic and any relevant sources, then return the JSON as instructed."
     )
     try:
-        response = client.messages.create(
+        response = _get_client().messages.create(
             model=MODEL,
             max_tokens=300,
             system=GENRES_SYSTEM_PROMPT,
@@ -300,7 +302,7 @@ def search_notes(artist: dict, slug: str) -> dict | None:
         "correcting genres if the page shows something different from what we have."
     )
     try:
-        response = client.messages.create(
+        response = _get_client().messages.create(
             model=MODEL,
             max_tokens=400,
             system=NOTES_SYSTEM_PROMPT,
@@ -443,7 +445,7 @@ def fetch_artists_for_day(day: str, url: str) -> list[str]:
         html = html[:60000]
 
     try:
-        response = client.messages.create(
+        response = _get_client().messages.create(
             model=MODEL,
             max_tokens=1000,
             messages=[{"role": "user", "content": f"{PARSE_DAY_PROMPT}\n\nHTML:\n{html}"}],
@@ -604,7 +606,7 @@ def search_perf_type(slot: dict) -> dict | None:
         "Search the Rewire 2026 website and any press coverage, then return the JSON."
     )
     try:
-        response = client.messages.create(
+        response = _get_client().messages.create(
             model=MODEL,
             max_tokens=200,
             system=PERF_TYPE_SYSTEM_PROMPT,
@@ -755,6 +757,13 @@ def apply_result(artist: dict, result: dict) -> dict:
 def run(args):
     data = load_yaml()
 
+    if args.export:
+        run_export(data, args)
+        return
+    if args.apply:
+        run_apply(data, args)
+        return
+
     if args.dry_run and args.field is None:
         run_summary(data)
         return
@@ -831,14 +840,167 @@ def run(args):
         print("\n↳ No changes to write.")
 
 
+# ─── Export / Apply (Claude Code workflow) ────────────────────────────────────
+
+def run_export(data: dict, args):
+    """Write gap data to a JSON file for Claude Code to research and fill."""
+    field = args.field
+    if not field:
+        print("--export requires --field to be specified.")
+        sys.exit(1)
+
+    artists = data["artists"]
+    slots   = data["slots"]
+    out_path = pathlib.Path(args.export)
+
+    if field == "notes":
+        targets = {s: a for s, a in artists.items() if args.artist is None or args.artist.lower() in a["name"].lower()}
+        rows = [
+            {
+                "slug": slug,
+                "name": a["name"],
+                "existing_notes": (a.get("notes") or "").strip(),
+                "existing_genres": (a.get("genres") or "").strip(),
+                "rewire_url": f"https://www.rewirefestival.nl/artist/{rewire_slug(a['name'])}",
+            }
+            for slug, a in targets.items()
+            if needs_notes_fill(a)
+            and not any(p in (a.get("notes") or "").lower() for p in NOTES_SKIP_PHRASES)
+        ]
+        desc = f"{len(rows)} artist(s) needing notes"
+
+    elif field == "genres":
+        targets = {s: a for s, a in artists.items() if args.artist is None or args.artist.lower() in a["name"].lower()}
+        rows = [
+            {
+                "slug": slug,
+                "name": a["name"],
+                "existing_genres": (a.get("genres") or "").strip(),
+                "rewire_url": f"https://www.rewirefestival.nl/artist/{rewire_slug(a['name'])}",
+            }
+            for slug, a in targets.items()
+            if needs_genre_fill(a)
+        ]
+        desc = f"{len(rows)} artist(s) needing genres"
+
+    elif field == "perf_type":
+        rows = [
+            {
+                "display_name": s["display_name"],
+                "rewire_url": f"https://www.rewirefestival.nl/artist/{rewire_slug(s['display_name'])}",
+                "collab_notes": s.get("collab_notes") or "",
+                "project": s.get("project") or "",
+            }
+            for s in slots
+            if needs_perf_type_fill(s)
+        ]
+        desc = f"{len(rows)} slot(s) needing performance type"
+
+    elif field in ("latest", "top_rated"):
+        targets = {s: a for s, a in artists.items() if args.artist is None or args.artist.lower() in a["name"].lower()}
+        rows = [
+            {
+                "slug": slug,
+                "name": a["name"],
+                "existing_genres": (a.get("genres") or "").strip(),
+                "missing": gaps_for(a, field),
+                "existing_latest": a.get("latest"),
+                "existing_top_rated": a.get("top_rated"),
+            }
+            for slug, a in targets.items()
+            if gaps_for(a, field)
+        ]
+        desc = f"{len(rows)} artist(s) with RYM gaps"
+
+    else:
+        print(f"--export not supported for --field {field}")
+        sys.exit(1)
+
+    out_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"✓ Exported {desc} → {out_path}")
+    print(f"\nNext step: have Claude Code research each entry and produce a results JSON,")
+    print(f"then run:  python fill_gaps.py --field {field} --apply <results.json>")
+
+
+def run_apply(data: dict, args):
+    """Read a Claude-Code-filled JSON file and write results to lineup.yaml."""
+    field = args.field
+    if not field:
+        print("--apply requires --field to be specified.")
+        sys.exit(1)
+
+    in_path = pathlib.Path(args.apply)
+    if not in_path.exists():
+        print(f"File not found: {in_path}")
+        sys.exit(1)
+
+    results = json.loads(in_path.read_text(encoding="utf-8"))
+    artists = data["artists"]
+    slots   = data["slots"]
+    total_changes = 0
+
+    if field in ("notes", "genres"):
+        for entry in results:
+            slug = entry.get("slug")
+            if slug not in artists:
+                print(f"  ? Unknown slug: {slug!r} — skipping")
+                continue
+            artist = artists[slug]
+            if "notes" in entry and entry["notes"]:
+                old = artist.get("notes") or ""
+                artist["notes"] = entry["notes"]
+                print(f"  ✓ {artist['name']}: notes updated")
+                if old:
+                    print(f"      was: {old!r}")
+                total_changes += 1
+            if "genres" in entry and entry["genres"] and entry["genres"] != artist.get("genres"):
+                print(f"  ✓ {artist['name']}: genres {artist.get('genres')!r} → {entry['genres']!r}")
+                artist["genres"] = entry["genres"]
+                total_changes += 1
+
+    elif field == "perf_type":
+        slot_map = {s["display_name"]: s for s in slots}
+        for entry in results:
+            name = entry.get("display_name")
+            if name not in slot_map:
+                print(f"  ? Unknown slot: {name!r} — skipping")
+                continue
+            if "type" in entry and entry["type"]:
+                slot_map[name]["type"] = entry["type"]
+                print(f"  ✓ {name}: type = {entry['type']!r}")
+                total_changes += 1
+
+    elif field in ("latest", "top_rated"):
+        for entry in results:
+            slug = entry.get("slug")
+            if slug not in artists:
+                print(f"  ? Unknown slug: {slug!r} — skipping")
+                continue
+            changes = apply_result(artists[slug], entry)
+            for k, v in changes.items():
+                print(f"  ✓ {artists[slug]['name']}: {k} = {v!r}")
+            total_changes += len(changes)
+
+    if total_changes > 0:
+        save_yaml(data)
+        print(f"\n✓ Applied {total_changes} update(s) → {SRC}")
+        print("  Run  python build.py  to regenerate lineup.json")
+    else:
+        print("\n↳ No changes to write.")
+
+
 # ─── CLI ──────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fill RYM data gaps in lineup.yaml")
-    parser.add_argument("--dry-run",  action="store_true", help="Print gaps without calling API")
+    parser.add_argument("--dry-run",  action="store_true", help="Print gap summary without writing anything")
     parser.add_argument("--artist",   type=str, default=None, help="Target a single artist by name (substring match)")
     parser.add_argument("--field",    type=str, default=None,
                         choices=["latest", "top_rated", "genres", "timetable", "notes", "perf_type"],
-                        help="Only fill the specified field (genres and timetable use separate data sources)")
+                        help="Field to fill")
+    parser.add_argument("--export",   type=str, default=None, metavar="FILE",
+                        help="Export gap data as JSON for Claude Code to research (use with --field)")
+    parser.add_argument("--apply",    type=str, default=None, metavar="FILE",
+                        help="Apply Claude Code research results from JSON file (use with --field)")
     args = parser.parse_args()
     run(args)
