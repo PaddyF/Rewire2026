@@ -1369,6 +1369,12 @@ artists:
     latest:
       title: Jbal Rrsas
       year: 2023
+    top_rated:
+      title: Khonnar
+      year: 2018
+      label: Infiné
+      rating: 3.24
+      votes: 528
   koenraad-de-groot:
     name: Koenraad de Groot
     genres: Sound Art, Electroacoustic
@@ -1405,6 +1411,8 @@ artists:
       title: General Patterns
       year: 2025
       label: Short Span
+      rating: 3.37
+      votes: 158
     notes: Amsterdam-based producer (Fabiano). Also active as Heaven Smile, Puddlerunner, and other aliases.
   mariska-de-groot:
     name: Mariska de Groot
@@ -1502,6 +1510,8 @@ artists:
       label: Constellation
     top_rated:
       title: Aykathani Malakon
+      year: 2023
+      label: Mais Um
     notes: Beirut-based sextet. Psych/kraut, electronics, goth, jazz + traditional Egyptian song and Arabic poetry.
   sol-ey:
     name: Sól Ey
@@ -1520,6 +1530,7 @@ artists:
       year: 2017
       note: '#17 of year · #2001 all-time'
       rating: 3.84
+      votes: 6830
   state-offf:
     name: State OFFF
     genres: Gqom, Electronic, Dancefloor, Bass
@@ -1553,6 +1564,7 @@ artists:
       year: 2026
     top_rated:
       title: Music for the Quiet Hour / The Drawbar Organ EPs
+      year: 2012
       rating: 3.48
       votes: 1155
   wac-aw-zimpel:
