@@ -1,10 +1,10 @@
 # Rewire 2026
 
-Native SwiftUI iOS app for tracking the [Rewire festival](https://rewire.nl) lineup — The Hague, April 2026.
+Native SwiftUI iOS app for tracking the [Rewire festival](https://rewire.nl) lineup — The Hague, 9–12 April 2026.
 
 ## Features
 
-- **Lineup** — searchable, filterable list of 128+ artists with wave badges, genre tags, and performance types
+- **Lineup** — searchable, filterable list of 166 artists with wave badges, genre tags, and performance types
 - **My List** — bookmarked and rated artists, sorted by Must See rating
 - **Planner** — shows your picks now; switches to a day-by-day schedule grid once the timetable drops
 
@@ -12,7 +12,7 @@ Each artist detail view has:
 - 5-star "Must See" rating (persists across app restarts)
 - Personal notes text field (persists across app restarts)
 - Bookmark toggle
-- Release info, description, Plus Ticket warning
+- Release info (latest + top-rated), bio, Plus Ticket warning, World Premiere badge
 
 ## Requirements
 
@@ -24,7 +24,6 @@ Each artist detail view has:
 
 ```bash
 cd ~/Developer/Rewire2026
-xcodegen generate        # regenerate .xcodeproj after any project.yml changes
 open Rewire2026.xcodeproj
 ```
 
@@ -37,9 +36,9 @@ Rewire2026/
 ├── RewireApp.swift              # Entry point, SwiftData model container
 ├── ContentView.swift            # TabView (Lineup / My List / Planner)
 ├── Models/
-│   ├── Artist.swift             # Codable struct — loaded from JSON
+│   ├── Artist.swift             # Codable structs — Slot, Artist, Release, Lineup
 │   ├── UserArtistData.swift     # SwiftData model — ratings, notes, bookmarks
-│   └── ArtistStore.swift        # Loads artists.json, EnvironmentObject
+│   └── ArtistStore.swift        # Loads lineup.json, EnvironmentObject
 ├── Views/
 │   ├── Lineup/
 │   │   ├── LineupView.swift     # Searchable list with wave filter chips
@@ -51,72 +50,78 @@ Rewire2026/
 │   │   └── MyListView.swift     # Bookmarked/rated artists
 │   ├── Planner/
 │   │   └── PlannerView.swift    # Pre/post timetable views
+│   ├── Schedule/
+│   │   └── ScheduleView.swift   # Day-by-day grid (shown once timetable drops)
 │   └── Shared/
-│       └── Components.swift     # WaveBadge, TypeBadge, FilterChip, GenreTag…
+│       └── Components.swift     # WorldPremiereBadge, TypeBadge, DayBadge, WaveBadge…
 ├── Theme/
 │   └── AppTheme.swift           # Color palette, Color(hex:) extension
 └── Resources/
-    └── artists.json             # Artist data — single source of truth
+    └── lineup.json              # Compiled artist + slot data (generated from Data/)
 ```
 
 ## Updating Artist Data
 
-All artist data lives in `Rewire2026/Resources/artists.json`. The source HTML is at `~/Downloads/rewire_2026_table.html`.
+All source data lives in `Data/lineup.yaml`. The pipeline is:
 
-### Adding new announcement waves
+```
+Data/lineup.yaml  →  Data/fill_gaps.py  →  Data/lineup.json  →  Rewire2026/Resources/lineup.json
+```
 
-1. Update `~/Downloads/rewire_2026_table.html` with the new artist rows
-2. Run the parser:
-   ```bash
-   cd ~/Developer/Rewire2026
-   python3 scripts/parse_lineup.py 2>/dev/null > Rewire2026/Resources/artists.json
-   ```
-3. Rebuild in Xcode (⌘R)
+See `Data/README.md` for full workflow details.
+
+### Quick update
+
+```bash
+cd ~/Developer/Rewire2026/Data
+# edit lineup.yaml as needed, then:
+python build.py
+cp lineup.json ../Rewire2026/Resources/lineup.json
+# rebuild in Xcode (⌘R)
+```
 
 ### When the timetable drops
 
-1. Update `artists.json` manually (or extend the Python parser) to populate these fields on each artist:
-   ```json
-   "day": "Friday",
-   "stage": "Korzo",
-   "startTime": "22:30",
-   "endTime": "23:30"
-   ```
-2. Rebuild — the Planner tab automatically switches from the "coming soon" placeholder to a schedule grid once any artist has a `day` value.
+Populate `day`, `time`, and `stage` on each slot in `lineup.yaml`, then rebuild. The Planner tab automatically switches from the "coming soon" placeholder to a schedule grid once any slot has a `day` value.
 
 ## Data Model
 
-### Artist (from JSON — static, updatable by rebuilding)
+### Slot (from JSON — one per performance)
 
 | Field | Type | Notes |
 |---|---|---|
-| `id` | String | Slugified name, stable unique key |
+| `displayName` | String | Billing name for the performance |
+| `wave` | String | "W1" / "W2" / "W3" |
+| `type` | String? | Live / DJ Set / Installation / Live A/V… |
+| `worldPremiere` | Bool | True if a world premiere |
+| `day` | String? | "Thu" / "Fri" / "Sat" / "Sun" — nil until timetable |
+| `stage` | String? | Venue/stage name — nil until timetable |
+| `time` | String? | "22:30" format — nil until timetable |
+| `isCollab` | Bool | Two or more artists sharing a slot |
+| `artistIds` | [String] | Slugs referencing entries in `artists` dict |
+| `project` | String? | Collab project name if named |
+| `collabNotes` | String? | Short description of the collaboration |
+
+### Artist (from JSON — one per individual, reused across slots)
+
+| Field | Type | Notes |
+|---|---|---|
 | `name` | String | Display name |
-| `subtitle` | String | Project name or alias |
-| `wave` | Int | 1, 2, or 3 |
-| `performanceType` | String | Live / DJ Set / Installation / World Premiere… |
-| `genres` | [String] | Comma-split from source |
-| `latestRelease` | String | Most recent record |
-| `recommendedRelease` | String | Best entry point |
-| `description` | String | Notes/context |
-| `day` | String? | nil until timetable drops |
-| `stage` | String? | nil until timetable drops |
-| `startTime` | String? | "22:30" format |
-| `endTime` | String? | "23:30" format |
-| `requiresPlusTicket` | Bool | Einstürzende Neubauten, OPN |
+| `genres` | String? | Comma-separated genre tags |
+| `notes` | String? | Bio paragraph |
+| `latest` | Release? | Most recent record |
+| `topRated` | Release? | Highest-rated record (RYM data) |
 
 ### UserArtistData (SwiftData — persisted on device)
 
 | Field | Type | Notes |
 |---|---|---|
-| `artistId` | String | Foreign key → `Artist.id` |
+| `artistId` | String | Foreign key → `Slot.displayName` |
 | `mustSeeRating` | Int | 0 = unrated, 1–5 |
 | `personalNotes` | String | Free text, saves on type |
 | `isBookmarked` | Bool | Appears in My List and Planner |
 
 ## Design
-
-Matches the HTML table's aesthetic:
 
 | Token | Value |
 |---|---|
@@ -128,7 +133,3 @@ Matches the HTML table's aesthetic:
 | Text | `#e8e8e0` |
 | Muted | `#666666` |
 | Font | SF Mono (headers/labels), SF Pro (body) |
-
-## Future: Remote JSON
-
-If rebuilding for data updates becomes annoying, the architecture already supports remote JSON. Change `ArtistStore.load()` to fetch from a URL (e.g. a GitHub Gist) instead of `Bundle.main` — the `Artist` model is identical, so nothing else needs to change.
