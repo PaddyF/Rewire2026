@@ -303,6 +303,7 @@ def search_notes(artist: dict) -> dict | None:
 
 NOTES_MIN_LENGTH = 60  # notes shorter than this are treated as gaps
 NOTES_SKIP_PHRASES = ["minimal public discography", "laak club programme", "proximity music"]
+THIN_THRESHOLD = 3
 
 
 def needs_notes_fill(artist: dict) -> bool:
@@ -312,6 +313,19 @@ def needs_notes_fill(artist: dict) -> bool:
     if len(notes) < NOTES_MIN_LENGTH:
         return True
     return False
+
+
+def needs_genre_fill(artist: dict) -> bool:
+    g = artist.get("genres") or ""
+    if not g:
+        return True
+    if is_visual_artist(artist):
+        return False
+    return len([x for x in g.split(",") if x.strip()]) < THIN_THRESHOLD
+
+
+def needs_perf_type_fill(slot: dict) -> bool:
+    return bool(slot.get("world_premiere")) and not slot.get("type")
 
 
 def run_notes(data: dict, args):
@@ -427,16 +441,6 @@ def run_genres(data: dict, args):
             sys.exit(1)
     else:
         targets = artists
-
-    THIN_THRESHOLD = 3
-
-    def needs_genre_fill(artist: dict) -> bool:
-        g = artist.get("genres") or ""
-        if not g:
-            return True
-        if is_visual_artist(artist):
-            return False
-        return len([x for x in g.split(",") if x.strip()]) < THIN_THRESHOLD
 
     to_process = [(slug, a) for slug, a in targets.items() if needs_genre_fill(a)]
 
@@ -639,6 +643,66 @@ def run_perf_type(data: dict, args):
         print("\n↳ No changes to write.")
 
 
+# ─── Full gap summary ─────────────────────────────────────────────────────────
+
+def run_summary(data: dict):
+    """Print a gap summary across all fields."""
+    artists = data["artists"]
+    slots   = data["slots"]
+
+    # RYM gaps
+    rym_gaps = [
+        (a["name"], gaps_for(a, None))
+        for a in artists.values()
+        if gaps_for(a, None)
+    ]
+    # Genre gaps
+    genre_gaps = [a["name"] for a in artists.values() if needs_genre_fill(a)]
+    # Notes gaps
+    notes_gaps = [
+        a["name"] for a in artists.values()
+        if needs_notes_fill(a)
+        and not any(p in (a.get("notes") or "").lower() for p in NOTES_SKIP_PHRASES)
+    ]
+    # Perf type gaps
+    perf_gaps = [s["display_name"] for s in slots if needs_perf_type_fill(s)]
+    # Timetable gaps
+    day_gaps   = [s["display_name"] for s in slots if s.get("day")   is None]
+    time_gaps  = [s["display_name"] for s in slots if s.get("time")  is None]
+    stage_gaps = [s["display_name"] for s in slots if s.get("stage") is None]
+
+    print("═" * 60)
+    print("  GAP SUMMARY")
+    print("═" * 60)
+
+    print(f"\n▸ RYM (latest / top_rated)  — {len(rym_gaps)} artist(s)")
+    for name, missing in rym_gaps:
+        print(f"    {name}  [{', '.join(missing)}]")
+
+    print(f"\n▸ Genres (< {THIN_THRESHOLD})  — {len(genre_gaps)} artist(s)")
+    for name in genre_gaps:
+        print(f"    {name}")
+
+    print(f"\n▸ Notes (missing / short)  — {len(notes_gaps)} artist(s)")
+    for name in notes_gaps:
+        print(f"    {name}")
+
+    print(f"\n▸ Perf type (World Premiere, no type)  — {len(perf_gaps)} slot(s)")
+    for name in perf_gaps:
+        print(f"    {name}")
+
+    print(f"\n▸ Timetable")
+    print(f"    day  : {len(day_gaps)} slot(s) missing")
+    print(f"    time : {len(time_gaps)} slot(s) missing")
+    print(f"    stage: {len(stage_gaps)} slot(s) missing")
+
+    total = len(rym_gaps) + len(genre_gaps) + len(notes_gaps) + len(perf_gaps)
+    print(f"\n{'═' * 60}")
+    print(f"  {total} artist/slot gaps across RYM, genres, notes, perf_type")
+    print(f"  (timetable gaps excluded — awaiting official release)")
+    print("═" * 60)
+
+
 # ─── Main loop ────────────────────────────────────────────────────────────────
 
 def apply_result(artist: dict, result: dict) -> dict:
@@ -660,6 +724,10 @@ def apply_result(artist: dict, result: dict) -> dict:
 
 def run(args):
     data = load_yaml()
+
+    if args.dry_run and args.field is None:
+        run_summary(data)
+        return
 
     if args.field == "genres":
         run_genres(data, args)
