@@ -21,6 +21,7 @@
 		A5EDE7EE05FD7BFDA90B7AAC /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272501D4238772FEA1B3A054 /* ArtistDetailView.swift */; };
 		AE0B8634046CAD3AC8A1FC52 /* ArtistDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C93A3AC6B183311DC1EFE /* ArtistDataTests.swift */; };
 		C9ACBB07F5DCBD03EF0BF461 /* MustSeeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B65FC28ACDF205E293B4 /* MustSeeRatingView.swift */; };
+		540A66B941F04F5880EBBB96 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */; };
 		DE175B0FB2A6536808CB9B2A /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF97AB1313BE4F33A9D4D4 /* MyListView.swift */; };
 		F2202653E39BBAF49B526E98 /* lineup.json in Resources */ = {isa = PBXBuildFile; fileRef = D8A411123AC5629CDDDB6E7F /* lineup.json */; };
 		FDF25325E562E379DC5CB7CD /* ArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895BFB9BB5E35B84251CCC3 /* ArtistRowView.swift */; };
@@ -49,6 +50,7 @@
 		8CDD91797FBB1F6CC852CEE5 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		A00C93A3AC6B183311DC1EFE /* ArtistDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDataTests.swift; sourceTree = "<group>"; };
 		A86C59F36A4BD08C42A5D552 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
+		BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		BEC6B65FC28ACDF205E293B4 /* MustSeeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustSeeRatingView.swift; sourceTree = "<group>"; };
 		C0C7A15D9E005A7732565A16 /* Rewire2026.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Rewire2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835E8890EAF01C9D15E0671 /* UserArtistDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtistDataTests.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = MyList;
 			sourceTree = "<group>";
 		};
+		A185831B248544FBBA44D8A5 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		A349E8B850C8747A73379889 /* Planner */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 				8C97E7F92E4B5D485C3973B5 /* Lineup */,
 				9F95908EA91D0AF16914B089 /* MyList */,
 				A349E8B850C8747A73379889 /* Planner */,
+				A185831B248544FBBA44D8A5 /* Schedule */,
 				04B10C7B1472E72716F26472 /* Shared */,
 			);
 			path = Views;
@@ -308,6 +319,7 @@
 				DE175B0FB2A6536808CB9B2A /* MyListView.swift in Sources */,
 				915FC63F6F11E193195395CB /* PlannerView.swift in Sources */,
 				54C0D5B0A0371506796D9FF3 /* RewireApp.swift in Sources */,
+				540A66B941F04F5880EBBB96 /* ScheduleView.swift in Sources */,
 				753FA025C715C928657B21B7 /* UserArtistData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

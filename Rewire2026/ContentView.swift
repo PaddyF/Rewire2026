@@ -13,6 +13,11 @@ struct ContentView: View {
                     Label("My List", systemImage: "star.fill")
                 }
 
+            ScheduleView()
+                .tabItem {
+                    Label("Schedule", systemImage: "clock")
+                }
+
             PlannerView()
                 .tabItem {
                     Label("Planner", systemImage: "calendar")
