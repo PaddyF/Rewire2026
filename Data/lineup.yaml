@@ -13,7 +13,7 @@
 #
 #   slots:
 #     - display_name:  how it appears on the poster
-#       day:           Thu | Fri | Sat | Sun  (or null if TBA)
+#       day:           Thu | Fri | Sat | Sun  (or null if TBA); array for multi-day slots e.g. [Sat, Sun]
 #       time:          "HH:MM" 24h format (or null if TBA)
 #       stage:         venue/stage name (or null if TBA)
 #       wave:          W1 | W2 | W3
@@ -1152,6 +1152,7 @@ artists:
     top_rated:
       title: Grow!
       year: 2021
+      rating: 3.07
       votes: 200
     notes: Amsterdam-based.
   berlinde-deman:
@@ -1170,12 +1171,17 @@ artists:
     name: Buttechno
     genres: Outsider House, Dub Techno, Electro
     latest:
-      title: In Your Head / Ялта
+      title: In Your Head
+      year: 2023
+      artist: Buttechno & Triš
   torus:
     name: Torus
     genres: Ambient, Mashup, Electronic
     top_rated:
       title: The Flash
+      year: 2020
+      artist: DJ Lostboi & Torus
+      note: '#651 of 2020'
   by-storm:
     name: By Storm
     genres: Experimental Hip Hop, Neo-Psychedelia, Abstract Hip Hop, Electronic
@@ -1250,6 +1256,9 @@ artists:
   kelman-duran:
     name: Kelman Duran
     genres: Latin Electronic, Deconstructed Club, Neoperreo
+    latest:
+      title: Daily News
+      year: 2025
     top_rated:
       title: 13th Month
       year: 2018
@@ -1297,6 +1306,8 @@ artists:
       title: Multivocal
       year: 2019
       note: debut
+      rating: 2.89
+      votes: 15
   joachim-badenhorst-s-youran:
     name: Joachim Badenhorst's Youran
     genres: Experimental Jazz, Contemporary Classical, Electroacoustic
@@ -1329,6 +1340,8 @@ artists:
       title: Crease
       year: 2022
       note: '#759 of 2022'
+      rating: 3.11
+      votes: 244
     notes: Montreal.
   khrystyna-kirik:
     name: Khrystyna Kirik
@@ -1808,7 +1821,7 @@ slots:
   artist_ids:
   - ganavya
 - display_name: Hayden Pedigo
-  day: null
+  day: [Sat, Sun]
   time: null
   stage: null
   wave: W1
@@ -2069,7 +2082,7 @@ slots:
   artist_ids:
   - wrens
 - display_name: Aaron Dilloway
-  day: null
+  day: [Sat, Sun]
   time: null
   stage: null
   wave: W2
@@ -2373,7 +2386,7 @@ slots:
   artist_ids:
   - '33'
 - display_name: Aernoudt Jacobs
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2383,7 +2396,7 @@ slots:
   - aernoudt-jacobs
   project: '''Humming the Ubique'''
 - display_name: Anaïs Lossouarn
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2485,7 +2498,7 @@ slots:
   artist_ids:
   - cerys-hafana
 - display_name: Colleen
-  day: null
+  day: [Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2522,7 +2535,7 @@ slots:
   artist_ids:
   - dim-garden
 - display_name: Felix Bell, Gaia D'Arrigo & Nuno Lobo
-  day: null
+  day: [Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2535,7 +2548,7 @@ slots:
   project: '''What''s left speaks'''
   collab_notes: New commission for Rewire 2026. No prior recordings as this configuration.
 - display_name: Floris Vanhoof
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2611,7 +2624,7 @@ slots:
   artist_ids:
   - joachim-badenhorst-s-youran
 - display_name: Johannes Kreidler
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2654,7 +2667,7 @@ slots:
   - deena-abdelwahed
   collab_notes: Kode9's dubstep/UK bass legacy meets Abdelwahed's hard drum and deconstructed club.
 - display_name: Koenraad de Groot
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2673,7 +2686,7 @@ slots:
   artist_ids:
   - leila-bordreuil
 - display_name: Lena Kuzmich
-  day: null
+  day: [Thu, Fri, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2702,7 +2715,7 @@ slots:
   artist_ids:
   - mammo
 - display_name: Mariska de Groot
-  day: null
+  day: [Thu, Sat, Sun]
   time: null
   stage: null
   wave: W3
@@ -2848,7 +2861,7 @@ slots:
   collab_notes: Icelandic composer Sól Ey + The Hague ensemble Modelo62 (associated residency 2024–2026). New music theatre
     commission.
 - display_name: Standing on the Corner
-  day: null
+  day: [Sat, Sun]
   time: null
   stage: null
   wave: W3

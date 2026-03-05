@@ -69,8 +69,11 @@ def load_and_validate(path: pathlib.Path) -> dict:
                     errors.append(f"{label}: artist_id '{aid}' not found in artists")
 
         day = slot.get("day")
-        if day is not None and day not in valid_days:
-            errors.append(f"{label}: day must be Thu/Fri/Sat/Sun or null (got {day!r})")
+        if day is not None:
+            days = day if isinstance(day, list) else [day]
+            for d in days:
+                if d not in valid_days:
+                    errors.append(f"{label}: day must be Thu/Fri/Sat/Sun or null (got {d!r})")
 
     if errors:
         print("⚠️  Validation errors:")
