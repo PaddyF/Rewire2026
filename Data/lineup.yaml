@@ -47,6 +47,8 @@ artists:
     top_rated:
       title: Seven Waves
       year: 1982
+      rating: 3.66
+      votes: 2491
   alejandra-cardenas:
     name: Alejandra Cárdenas
     genres: Electroacoustic, Tribal Ambient, Post-Rock, Drone
@@ -157,9 +159,19 @@ artists:
   cara-tolmie:
     name: Cara Tolmie
     genres: Voice, Performance Art
+    latest:
+      title: Body Lapse
+      year: 2025
+      label: Planet Mu
+      artist: Rian Treanor & Cara Tolmie
   rian-treanor:
     name: Rian Treanor
     genres: Footwork, IDM, UK Bass
+    latest:
+      title: Body Lapse
+      year: 2025
+      label: Planet Mu
+      artist: Rian Treanor & Cara Tolmie
     top_rated:
       title: ATAXIA
       year: 2019
@@ -186,6 +198,15 @@ artists:
   civilistjavel:
     name: Civilistjävel!
     genres: Ambient, Tech-Ambient, Drone
+    latest:
+      title: Brödföda
+      year: 2024
+      label: FELT
+    top_rated:
+      title: Brödföda
+      year: 2024
+      rating: 3.27
+      votes: 156
   mayssa-jallad:
     name: Mayssa Jallad
     genres: Singer-Songwriter, Arabic Music, Art Song, Ambient Dub
@@ -355,6 +376,12 @@ artists:
       title: Pareidolia
       year: 2025
       label: Drag City
+    top_rated:
+      title: Insignificance
+      year: 2001
+      label: Drag City
+      rating: 3.65
+      votes: 1902
   eiko-ishibashi:
     name: Eiko Ishibashi
     genres: Contemporary Folk, Electroacoustic, Art Pop
@@ -504,6 +531,8 @@ artists:
     top_rated:
       title: Remscéla
       year: 2025
+      rating: 3.44
+      votes: 187
     notes: British. "Part slacker-trad and part crust-academic — explorations in folk, ritual, and tradition."
   okse:
     name: ØKSE
@@ -586,6 +615,9 @@ artists:
     top_rated:
       title: Jazz Codes
       year: 2022
+      label: Anti-
+      rating: 3.38
+      votes: 1741
     latest:
       title: The Great Bailout
       year: 2024
@@ -600,6 +632,8 @@ artists:
       title: Millions Now Living Will Never Die
       year: 1996
       note: '#34 of year'
+      rating: 3.68
+      votes: 12246
     notes: Chicago legends. All-time post-rock classics. Long-awaited return with Touch (2025).
   tracey:
     name: Tracey
@@ -875,6 +909,16 @@ artists:
   shapednoise:
     name: Shapednoise
     genres: Industrial Techno, Noise, Dark Techno
+    latest:
+      title: Absurd Matter 2
+      year: 2025
+      label: WEIGHT LOOMING
+    top_rated:
+      title: Absurd Matter
+      year: 2023
+      label: WEIGHT LOOMING
+      rating: 3.44
+      votes: 120
   sevi-iko-domochevsky:
     name: Sevi Iko Dømochevsky
     genres: Visual Art, A/V
@@ -973,6 +1017,16 @@ artists:
   horse-lords:
     name: Horse Lords
     genres: Avant-Rock, Post-Minimalism, Just Intonation, Krautrock
+    latest:
+      title: 'As It Happened: Horse Lords Live'
+      year: 2024
+      label: RVNG
+    top_rated:
+      title: Comradely Objects
+      year: 2022
+      label: RVNG
+      rating: 3.52
+      votes: 2226
   asian-dope-boys:
     name: Asian Dope Boys
     genres: Electronic, Noise, Art Rock, Rave, Acid
@@ -1178,9 +1232,17 @@ artists:
   kode9:
     name: Kode9
     genres: Dubstep, UK Bass, Grime
+    latest:
+      title: Nothing
+      year: 2015
+      label: Hyperdub
     top_rated:
       title: Memories of the Future
       year: 2006
+      label: Hyperdub
+      artist: Kode9 + The Spaceape
+      rating: 3.36
+      votes: 1273
   deena-abdelwahed:
     name: Deena Abdelwahed
     genres: Hard Drum, Deconstructed Club
