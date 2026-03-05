@@ -385,6 +385,11 @@ artists:
   eiko-ishibashi:
     name: Eiko Ishibashi
     genres: Contemporary Folk, Electroacoustic, Art Pop
+    latest:
+      title: Evil Does Not Exist
+      year: 2024
+      label: Drag City
+      note: film score for Ryusuke Hamaguchi
     top_rated:
       title: For McCoy
       year: 2023
@@ -401,6 +406,8 @@ artists:
       title: The Clearing
       year: 2021
       label: NNA Tapes
+      rating: 3.37
+      votes: 65
     notes: Grenadian-Jamaican-American. Explores stuttering, blackness & disabled speech through music. Anna Rabinowitz Prize
       2022.
   joanne-robertson:
@@ -408,12 +415,24 @@ artists:
     genres: Lo-Fi Folk, Drone
     latest:
       title: Blurrr
+      year: 2025
+    top_rated:
+      title: Blurrr
+      year: 2025
+      rating: 3.52
+      votes: 2022
   oliver-coates:
     name: Oliver Coates
     genres: Contemporary Classical, Electroacoustic, Drone
+    latest:
+      title: Throb, Shiver, Arrow of Time
+      year: 2024
+      label: RVNG
     top_rated:
       title: Shelley's on Zenn-La
       year: 2022
+      rating: 3.54
+      votes: 80
   joshua-chuquimia-crampton:
     name: Joshua Chuquimia Crampton
     genres: Experimental Rock, Neo-Psychedelia, Post-Rock, Indigenous Andean Music
@@ -604,6 +623,13 @@ artists:
   sumac:
     name: Sumac
     genres: Atmospheric Sludge Metal, Post-Metal, Noise Rock
+    latest:
+      title: The Film
+      year: 2025
+      label: Thrill Jockey
+      artist: SUMAC and Moor Mother
+      rating: 3.48
+      votes: 44
     top_rated:
       title: Love in Shadow
       year: 2018
@@ -783,6 +809,9 @@ artists:
   kmru:
     name: KMRU
     genres: Ambient, Electroacoustic, Field Recording
+    latest:
+      title: Kin
+      year: 2026
     top_rated:
       title: Peel
       year: 2020
