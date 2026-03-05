@@ -2,7 +2,7 @@
   "artists": {
     "actress": {
       "name": "Actress",
-      "genres": "IDM, Microhouse, Ambient, R&B Concrète",
+      "genres": "IDM, Dub Techno, Glitch, Ambient, Abstract Hip-Hop",
       "latest": {
         "title": "Darren J. Cunningham / Statik",
         "year": 2024,
@@ -13,11 +13,12 @@
         "year": 2010,
         "rating": 3.47,
         "votes": 3494
-      }
+      },
+      "notes": "Darren Cunningham makes claustrophobic, decayed electronic music that splinters Detroit techno, dub, and noise into disorienting abstract forms, releasing on his own Werkdiscs label since 2004."
     },
     "suzanne-ciani": {
       "name": "Suzanne Ciani",
-      "genres": "New Age, Modular Synth, Electronic",
+      "genres": "New Age, Electronic, Modular Synth, Electroacoustic",
       "latest": {
         "title": "Live Quadraphonic",
         "year": 2018
@@ -27,7 +28,8 @@
         "year": 1982,
         "rating": 3.66,
         "votes": 2491
-      }
+      },
+      "notes": "Pioneering American composer and Buchla synthesizer specialist whose 1970s commercial sound design — including the Coca-Cola pour — led to a Grammy-nominated career spanning new age and modular live performance."
     },
     "alejandra-cardenas": {
       "name": "Alejandra Cárdenas",
@@ -117,11 +119,13 @@
         "year": 2020,
         "rating": 3.18,
         "votes": 1671
-      }
+      },
+      "notes": "London-based producer whose debut album Workaround (2020, PAN) fuses electroacoustic percussion, dub, and IDM into intricate rhythmic structures, named album of the year by The Wire."
     },
     "explore-ensemble": {
       "name": "Explore Ensemble",
-      "genres": "Contemporary Classical, Acoustic Ensemble"
+      "genres": "Contemporary Classical, Acoustic Ensemble",
+      "notes": "London sextet founded in 2012 at the Royal College of Music, presenting UK premieres of Saariaho, Sciarrino, and Romitelli alongside new commissions that often incorporate electronics."
     },
     "beverly-glenn-copeland": {
       "name": "Beverly Glenn-Copeland",
@@ -166,7 +170,8 @@
         "year": 2025,
         "label": "Planet Mu",
         "artist": "Rian Treanor & Cara Tolmie"
-      }
+      },
+      "notes": "Glasgow-born, Stockholm-based artist whose practice centres on the voice and body, developing Internal Singing — a technique exploring breath, touch, and the inhale as sonic material."
     },
     "rian-treanor": {
       "name": "Rian Treanor",
@@ -183,11 +188,12 @@
         "label": "Planet Mu",
         "rating": 3.62,
         "votes": 800
-      }
+      },
+      "notes": "Leeds-based artist and Planet Mu producer whose hyperkinetic electronic music collides footwork, singeli, and bleep-techno with Fluxus cut-up logic into fractured club structures."
     },
     "caterina-barbieri": {
       "name": "Caterina Barbieri",
-      "genres": "Progressive Electronic, Ambient, Drone, Post-Minimalism",
+      "genres": "Modular Synth, Minimalism, Drone, Ambient, Post-Minimalism",
       "latest": {
         "title": "Myuthafoo",
         "year": 2023
@@ -197,11 +203,13 @@
         "year": 2019,
         "rating": 3.35,
         "votes": 1158
-      }
+      },
+      "notes": "Italian composer based in Milan who uses modular synthesizers to build hypnotic, pattern-driven pieces exploring repetition and altered consciousness; appointed Artistic Director of Venice Biennale music for 2025–2026."
     },
     "mfo": {
       "name": "MFO",
-      "genres": "Visual Art"
+      "genres": "Visual Art",
+      "notes": "Berlin-based visual artist Marcel Weber creating audiovisual performances and installations that juxtapose analogue projectors, lenses, and mirrors with generative software; closely associated with Caterina Barbieri and Berlin Atonal."
     },
     "onceim": {
       "name": "ONCEIM",
@@ -212,11 +220,12 @@
         "label": "Shiiin",
         "rating": 3.66,
         "votes": 188
-      }
+      },
+      "notes": "Paris-based 35-piece experimental orchestra founded by pianist Frédéric Blondy in 2011, uniting musicians from jazz, free improvisation, and contemporary classical for collective sonic research."
     },
     "civilistjavel": {
       "name": "Civilistjävel!",
-      "genres": "Ambient, Tech-Ambient, Drone",
+      "genres": "Ambient, Ambient Dub, Dark Ambient",
       "latest": {
         "title": "Brödföda",
         "year": 2024,
@@ -227,7 +236,8 @@
         "year": 2024,
         "rating": 3.27,
         "votes": 156
-      }
+      },
+      "notes": "Anonymous Uppsala-based producer who spent decades making textured ambient and dub music on private tapes and CD-Rs before London's Low Company issued his archive on vinyl in 2018."
     },
     "mayssa-jallad": {
       "name": "Mayssa Jallad",
@@ -242,7 +252,8 @@
         "year": 2023,
         "rating": 3.3,
         "votes": 96
-      }
+      },
+      "notes": "Beirut-based Lebanese singer-songwriter and architect whose debut album Marjaa: The Battle of the Hotels (2023, Ruptured Records) reconstructs Lebanese Civil War urban battles through song and spatial research."
     },
     "einsturzende-neubauten": {
       "name": "Einstürzende Neubauten",
@@ -259,7 +270,7 @@
         "votes": 8175,
         "note": "#31 of year"
       },
-      "notes": "Rewire debut. Sun 12 Apr. Plus Ticket required."
+      "notes": "West Berlin group formed in 1980 around Blixa Bargeld, whose use of scrap metal, power tools, and custom percussion alongside vocals made them foundational figures of industrial and post-punk."
     },
     "eliana-glass": {
       "name": "Eliana Glass",
@@ -282,7 +293,7 @@
     },
     "xiu-xiu": {
       "name": "Xiu Xiu",
-      "genres": "Experimental Rock, Post-Industrial, Noise",
+      "genres": "Experimental Rock, Art Pop, Noise, Post-Industrial",
       "latest": {
         "title": "13'' Frank Beltrame Italian Stiletto with Bison Horn Grips",
         "year": 2024
@@ -292,7 +303,8 @@
         "year": 2004,
         "rating": 3.71,
         "votes": 4000
-      }
+      },
+      "notes": "California experimental band led by Jamie Stewart since 2002, building emotionally raw songs from noise, drum machines, and electronics influenced equally by Nina Simone and The Birthday Party."
     },
     "ex-libris": {
       "name": "ex_libris",
@@ -340,7 +352,7 @@
         "rating": 3.47,
         "votes": 637
       },
-      "notes": "Dean Blunt collaborator; formerly fronted The Crying Nudes."
+      "notes": "Copenhagen-based singer Fine Glindvad, former lead of CHINAH, releases solo music blending dream pop with folk, country, and trip-hop textures; a collaborator with Dean Blunt on The Crying Nudes."
     },
     "flur": {
       "name": "Flur",
@@ -394,7 +406,7 @@
         "rating": 3.63,
         "votes": 500
       },
-      "notes": "Performs twice — once solo, once with string quartet."
+      "notes": "Amarillo, Texas guitarist who channels the American Primitive fingerpicking of John Fahey into spacious, panhandle-inflected soundscapes, and has collaborated with Fred Frith, Charles Hayward, and Chat Pile."
     },
     "hilary-woods": {
       "name": "Hilary Woods",
@@ -432,7 +444,7 @@
     },
     "jim-o-rourke": {
       "name": "Jim O'Rourke",
-      "genres": "EAI, Electroacoustic, Drone, Ambient, Post-Rock",
+      "genres": "EAI, Electroacoustic, Ambient, Drone, Art Rock",
       "latest": {
         "title": "Pareidolia",
         "year": 2025,
@@ -444,7 +456,8 @@
         "label": "Drag City",
         "rating": 3.65,
         "votes": 1902
-      }
+      },
+      "notes": "Chicago-born, Tokyo-based composer and producer whose work spans EAI, songcraft, and production for Sonic Youth and Wilco, with extensive solo records on Drag City."
     },
     "eiko-ishibashi": {
       "name": "Eiko Ishibashi",
@@ -460,7 +473,8 @@
         "year": 2023,
         "rating": 3.88,
         "votes": 1000
-      }
+      },
+      "notes": "Japanese pianist, drummer, and composer who moves between chamber jazz, prog, and noise; known for film scores for Ryusuke Hamaguchi and collaborations with Jim O'Rourke."
     },
     "jjjjjerome-ellis": {
       "name": "JJJJJerome Ellis",
@@ -481,7 +495,7 @@
     },
     "joanne-robertson": {
       "name": "Joanne Robertson",
-      "genres": "Lo-Fi Folk, Drone",
+      "genres": "Lo-Fi Folk, Avant-Folk, Drone, Experimental",
       "latest": {
         "title": "Blurrr",
         "year": 2025
@@ -491,7 +505,8 @@
         "year": 2025,
         "rating": 3.52,
         "votes": 2022
-      }
+      },
+      "notes": "Glasgow-based singer and painter whose albums blur lo-fi folk intimacy with improvisation and experimental texture, drawing comparisons to Grouper and Cat Power."
     },
     "oliver-coates": {
       "name": "Oliver Coates",
@@ -506,7 +521,8 @@
         "year": 2022,
         "rating": 3.54,
         "votes": 80
-      }
+      },
+      "notes": "London Contemporary Orchestra cellist who manipulates his instrument through electronics to conjure textures ranging from 20th-century minimalism to 90s pirate radio rhythms."
     },
     "joshua-chuquimia-crampton": {
       "name": "Joshua Chuquimia Crampton",
@@ -544,13 +560,14 @@
     },
     "katalin-ladik": {
       "name": "Katalin Ladik",
-      "genres": "Sound Poetry, Performance Art, Avant-Garde",
+      "genres": "Sound Poetry, Vocal Music, Performance Art, Experimental Music",
       "latest": {
         "title": "Phonopoetics",
         "year": 2019,
         "label": "Alga Marghen",
         "note": "compilation of archival recordings"
-      }
+      },
+      "notes": "Novi Sad-born poet and performer whose voice spans bass to overtone screams; a central figure of international sound poetry since the 1970s with works in MoMA and the Tate."
     },
     "svetlana-mara": {
       "name": "Svetlana Maraš",
@@ -559,7 +576,8 @@
         "title": "Live Performance 2019-2020",
         "year": 2023,
         "label": "Bandcamp"
-      }
+      },
+      "notes": "Belgrade-born composer and Basel Electronic Studio co-director working across electroacoustic composition, radiophonic art, and sound installation."
     },
     "kavari": {
       "name": "KAVARI",
@@ -667,7 +685,7 @@
     },
     "okse": {
       "name": "ØKSE",
-      "genres": "Free Jazz, Avant-Garde Jazz, Experimental Hip Hop",
+      "genres": "Free Jazz, Experimental Hip Hop, Electronic",
       "latest": {
         "title": "ØKSE",
         "year": 2024,
@@ -679,7 +697,8 @@
         "year": 2024,
         "label": "Backwoodz",
         "note": "#197 of 2024"
-      }
+      },
+      "notes": "International quartet of Mette Rasmussen, Savannah Harris, Petter Eldh, and Val Jeanty whose self-titled 2024 album merges free jazz and hip-hop, winning the 2025 German Jazzpreis."
     },
     "billy-woods": {
       "name": "billy woods",
@@ -697,7 +716,8 @@
         "artist": "billy woods & Kenny Segal",
         "rating": 3.91,
         "votes": 3000
-      }
+      },
+      "notes": "New York-based rapper and Backwoodz Studioz founder whose dense, allusive lyricism draws on his upbringing across Washington D.C., Jamaica, and Zimbabwe."
     },
     "oneohtrix-point-never": {
       "name": "Oneohtrix Point Never",
@@ -738,7 +758,7 @@
     },
     "raul-refree": {
       "name": "Raúl Refree",
-      "genres": "Avant-Folk, Flamenco Nuevo, Electroacoustic",
+      "genres": "Avant-Folk, Flamenco Nuevo, Experimental, Electroacoustic",
       "latest": {
         "title": "Cru+es",
         "year": 2025,
@@ -750,11 +770,12 @@
         "artist": "Lina_Raül Refree",
         "rating": 3.27,
         "votes": 209
-      }
+      },
+      "notes": "Barcelona producer and composer who fuses flamenco and fado with experimental electronics; produced Rosalía's debut and collaborates closely with Niño de Elche."
     },
     "ni-o-de-elche": {
       "name": "Niño de Elche",
-      "genres": "Avant-Garde, Flamenco Nuevo, Art Pop",
+      "genres": "Avant-Folk, Flamenco Nuevo, Avant-Garde",
       "latest": {
         "title": "Cru+es",
         "year": 2025,
@@ -765,7 +786,8 @@
         "year": 2018,
         "label": "Sony",
         "note": "#190 of 2018"
-      }
+      },
+      "notes": "Elche-born cantaor Francisco Contreras who fragments traditional flamenco through minimalism, noise, and political provocation into what he calls heterodox cante."
     },
     "smerz": {
       "name": "Smerz",
@@ -786,7 +808,7 @@
     },
     "sumac": {
       "name": "Sumac",
-      "genres": "Atmospheric Sludge Metal, Post-Metal, Noise Rock",
+      "genres": "Post-Metal, Sludge Metal, Free Improvisation, Noise Rock",
       "latest": {
         "title": "The Film",
         "year": 2025,
@@ -800,7 +822,8 @@
         "year": 2018,
         "rating": 3.57,
         "votes": 1152
-      }
+      },
+      "notes": "Seattle trio of Aaron Turner, Brian Cook, and Nick Yacyshyn who push post-metal into free improvisation; their 2025 collaboration with Moor Mother is titled The Film."
     },
     "moor-mother": {
       "name": "Moor Mother",
@@ -815,7 +838,8 @@
       "latest": {
         "title": "The Great Bailout",
         "year": 2024
-      }
+      },
+      "notes": "Philadelphia poet and musician Camae Ayewa whose work spans noise, free jazz, and Afrofuturist hip-hop through projects including Irreversible Entanglements and 700bliss."
     },
     "tortoise": {
       "name": "Tortoise",
@@ -917,7 +941,7 @@
     },
     "drew-mcdowall": {
       "name": "Drew McDowall",
-      "genres": "Post-Industrial, Dark Ambient, Drone, Industrial",
+      "genres": "Dark Ambient, Drone, Industrial, Post-Industrial",
       "latest": {
         "title": "A Thread, Silvered and Trembling",
         "year": 2024,
@@ -931,11 +955,13 @@
         "label": "Dais",
         "rating": 3.44,
         "votes": 393
-      }
+      },
+      "notes": "Scottish musician who joined Coil in 1990 and has since developed a solo practice of modular synth drone and industrial collage rooted in analogue synthesis."
     },
     "pedro-maia": {
       "name": "Pedro Maia",
-      "genres": "Visual Art, Film"
+      "genres": "Live Cinema, Experimental Film, Visual Music",
+      "notes": "Portuguese filmmaker based in Berlin who performs live cinema with 16mm and 8mm film, manipulating analogue footage in real time alongside electronic musicians."
     },
     "dumama": {
       "name": "Dumama",
@@ -983,11 +1009,13 @@
     },
     "eye": {
       "name": "∈Y∋",
-      "genres": "Noise, Avant-Garde, Psychedelic Rock, No Wave"
+      "genres": "Noise Rock, No Wave, Psychedelic Rock, Noise",
+      "notes": "Osaka-born vocalist Yamantaka Eye, frontman of Boredoms and Hanatarash, whose performances combine noise, psychedelic shamanism, and chaotic vocal extremes since the early 1980s."
     },
     "c-o-l-o": {
       "name": "C.O.L.O",
-      "genres": "Visual Art, A/V"
+      "genres": "Visual Art, A/V",
+      "notes": "VJ and director Colo Muller founded Osaka's Cosmic Lab, creating immersive audiovisual work rooted in that city's underground scene; at Rewire he performs in collaboration with Yamantaka Eye of the Boredoms."
     },
     "jennifer-walton": {
       "name": "Jennifer Walton",
@@ -1023,7 +1051,7 @@
     },
     "kmru": {
       "name": "KMRU",
-      "genres": "Ambient, Electroacoustic, Field Recording",
+      "genres": "Ambient, Drone, Electroacoustic, Field Recording",
       "latest": {
         "title": "Kin",
         "year": 2026
@@ -1033,11 +1061,13 @@
         "year": 2020,
         "rating": 3.79,
         "votes": 1000
-      }
+      },
+      "notes": "Nairobi-born, Berlin-based Joseph Kamaru weaves field recordings from East Africa into billowing drone and electroacoustic compositions; his 2020 debut Peel on Editions Mego brought him wide attention."
     },
     "nick-verstand": {
       "name": "Nick Verstand",
-      "genres": "Light Art, Installation, Visual Art"
+      "genres": "Light Art, Installation, Visual Art",
+      "notes": "Dutch artist Nick Verstand creates spatial audiovisual installations that translate biometric data—brainwaves, heart rate—into sculpted light, probing the boundary between the material and immaterial."
     },
     "laurel-halo": {
       "name": "Laurel Halo",
@@ -1051,15 +1081,17 @@
         "year": 2012,
         "rating": 3.61,
         "votes": 2500
-      }
+      },
+      "notes": "Ann Arbor-born composer and producer Laurel Halo moves between electroacoustic abstraction, club production, and orchestral scoring; her 2026 LP Midnight Zone is the OST to Julian Charrière's deep-ocean film."
     },
     "julian-charri-re": {
       "name": "Julian Charrière",
-      "genres": "Visual Art, Film"
+      "genres": "Visual Art, Film",
+      "notes": "Franco-Swiss artist Julian Charrière undertakes fieldwork at ecologically charged sites—nuclear test zones, glaciers, active volcanoes—translating deep-time geology into film, sculpture, and photography."
     },
     "mark-fell": {
       "name": "Mark Fell",
-      "genres": "IDM, Glitch, EAI",
+      "genres": "Glitch, IDM, EAI, Electroacoustic, Minimal Techno",
       "latest": {
         "title": "Reality Is Not a Theory",
         "year": 2025,
@@ -1071,7 +1103,8 @@
         "year": 2011,
         "rating": 3.51,
         "votes": 700
-      }
+      },
+      "notes": "Sheffield-based electronic musician Mark Fell builds non-repetitive structures from algorithmic and pattern-generating systems, drawing equally on computational theory and the rhythmic logic of house and techno."
     },
     "pat-thomas": {
       "name": "Pat Thomas",
@@ -1088,7 +1121,8 @@
         "artist": "Derek Bailey, Pat Thomas, Steve Noble",
         "rating": 3.65,
         "votes": 45
-      }
+      },
+      "notes": "Oxford-born pianist Pat Thomas bridges free improvisation, jazz, dub, and electronic noise, having collaborated with Derek Bailey and developed an electronics practice alongside his acoustic work since the late 1980s."
     },
     "my-new-band-believe": {
       "name": "My New Band Believe",
@@ -1175,7 +1209,8 @@
     },
     "mette-rasmussen": {
       "name": "Mette Rasmussen",
-      "genres": "Free Improvisation, Free Jazz, Saxophone"
+      "genres": "Free Improvisation, Free Jazz, Saxophone",
+      "notes": "Danish saxophonist Mette Rasmussen, based in Trondheim, pushes the physical limits of her instrument through extended techniques and preparations, working across free jazz, noise, and textural improvisation."
     },
     "sacred-lodge": {
       "name": "Sacred Lodge",
@@ -1207,7 +1242,7 @@
     },
     "shapednoise": {
       "name": "Shapednoise",
-      "genres": "Industrial Techno, Noise, Dark Techno",
+      "genres": "Industrial Techno, Post-Industrial, Noise, Experimental Hip-Hop",
       "latest": {
         "title": "Absurd Matter 2",
         "year": 2025,
@@ -1219,16 +1254,18 @@
         "label": "WEIGHT LOOMING",
         "rating": 3.44,
         "votes": 120
-      }
+      },
+      "notes": "Italian producer and engineer Nino Pedone makes disassembled, distorted music as Shapednoise, fusing industrial techno with post-industrial sound design and, on recent records, experimental hip-hop production."
     },
     "sevi-iko-domochevsky": {
       "name": "Sevi Iko Dømochevsky",
-      "genres": "Visual Art, A/V"
+      "genres": "Visual Art, A/V",
+      "notes": "Seville-born, Barcelona-based 3D artist Sevi Iko Dømochevsky brings a background in VFX and game production to live AV performance, creating dense mutating visuals for artists including Arca and Aho Ssan."
     },
     "sombat-simla": {
       "name": "Sombat Simla",
-      "genres": "Thai Traditional Music, Ritual, Folk",
-      "notes": "Thai traditional artist. Limited Western RYM presence."
+      "genres": "Molam, Thai Traditional Music, Folk",
+      "notes": "Master khaen player Sombat Simla from Isan, Thailand—nicknamed 'the god of khene'—performs virtuosic molam folk music on the 16-pipe bamboo mouth organ, documented on Black Truffle in 2023."
     },
     "stemeseder-lillinger": {
       "name": "Stemeseder Lillinger",
@@ -1288,11 +1325,13 @@
       "top_rated": {
         "title": "6",
         "year": 2003
-      }
+      },
+      "notes": "Norwegian quartet Supersilent—Arve Henriksen, Ståle Storløkken, Helge Sten, and Jarle Vespestad—never rehearse or discuss their music, meeting only to record or perform fully improvised sets in real time."
     },
     "lawrence-abu-hamdan": {
       "name": "Lawrence Abu Hamdan",
-      "genres": "Sound Research, Sound Art"
+      "genres": "Sound Research, Sound Art",
+      "notes": "Amman-born artist and Turner Prize winner Lawrence Abu Hamdan uses forensic audio analysis as art practice, with his audio investigations serving as legal evidence in asylum courts and human rights cases."
     },
     "thomas-ankersmit": {
       "name": "Thomas Ankersmit",
@@ -1338,7 +1377,8 @@
         "year": 1995,
         "rating": 3.56,
         "votes": 450
-      }
+      },
+      "notes": "New York-born, Berlin-based composer Arnold Dreyblatt studied with La Monte Young and Pauline Oliveros and built his own re-strung instruments to explore just intonation tuned to the upper harmonic series."
     },
     "horse-lords": {
       "name": "Horse Lords",
@@ -1354,7 +1394,8 @@
         "label": "RVNG",
         "rating": 3.52,
         "votes": 2226
-      }
+      },
+      "notes": "Baltimore quartet Horse Lords plays muscular, polyrhythmic experimental rock on hand-modified just-intonation guitars, fusing minimalist composition, krautrock drive, and elements of African rhythmic tradition."
     },
     "asian-dope-boys": {
       "name": "Asian Dope Boys",
@@ -1368,7 +1409,7 @@
     },
     "bby-eco": {
       "name": "Bby Eco",
-      "genres": "Progressive Electronic, Bubblegum Bass, Art Pop",
+      "genres": "Art Pop, Progressive Electronic, Bubblegum Bass, Ambient Pop",
       "latest": {
         "title": "O₂O",
         "year": 2023
@@ -1379,7 +1420,7 @@
         "rating": 3.07,
         "votes": 200
       },
-      "notes": "Amsterdam-based."
+      "notes": "Joris Benjamins makes nature-inspired electronic pop under the Bby Eco alias, fusing melodic vocals with raw electronics in what he calls 'eco-pop.'"
     },
     "berlinde-deman": {
       "name": "Berlinde Deman",
@@ -1398,22 +1439,24 @@
     },
     "buttechno": {
       "name": "Buttechno",
-      "genres": "Outsider House, Dub Techno, Electro",
+      "genres": "Techno, Outsider House, Electro, Dub Techno",
       "latest": {
         "title": "In Your Head",
         "year": 2023,
         "artist": "Buttechno & Triš"
-      }
+      },
+      "notes": "Moscow-based Pavel Milyakov makes spacious, dystopian techno as Buttechno, drawing on the desolate suburban landscape and a lineage from Japanese noise to musique concrète."
     },
     "torus": {
       "name": "Torus",
-      "genres": "Ambient, Mashup, Electronic",
+      "genres": "Ambient, Trance, Experimental Club, Electronic",
       "top_rated": {
         "title": "The Flash",
         "year": 2020,
         "artist": "DJ Lostboi & Torus",
         "note": "#651 of 2020"
-      }
+      },
+      "notes": "The Hague artist Joeri Woudstra uses the Torus alias to reflect on pop culture politics through club music, blending trance and ambient into immersive, loop-driven sets."
     },
     "by-storm": {
       "name": "By Storm",
@@ -1434,11 +1477,13 @@
     },
     "cello-octet-amsterdam": {
       "name": "Cello Octet Amsterdam",
-      "genres": "Contemporary Classical, Chamber Music"
+      "genres": "Contemporary Classical, Chamber Music",
+      "notes": "Eight Amsterdam cellists committed to new music, with over 90 world premieres and collaborations ranging from Philip Glass to Michael Gordon and Kate Moore."
     },
     "shishani": {
       "name": "Shishani",
-      "genres": "Folk, Singer-Songwriter"
+      "genres": "Afro-Soul, Contemporary Folk, Jazz, World Music",
+      "notes": "Namibian-Belgian singer Shishani Vranckx weaves Oshiwambo traditions with soul, jazz, and indie, using her music as a platform for social and political commentary."
     },
     "cerys-hafana": {
       "name": "Cerys Hafana",
@@ -1472,11 +1517,13 @@
     },
     "devon-rexi": {
       "name": "Devon Rexi",
-      "genres": "Experimental Dub, Electronic"
+      "genres": "Post-Punk, Krautrock, Dub, No Wave, Psychedelic Funk",
+      "notes": "Amsterdam quintet Devon Rexi, a Mauskovic Dance Band spin-off, builds psych-funk grooves from pitch-shifted vocals, dub bass, and post-punk percussion."
     },
     "john-t-gast": {
       "name": "John T. Gast",
-      "genres": "Ambient, Electronic"
+      "genres": "Ambient, Electronic",
+      "notes": "Elusive London composer John T. Gast makes esoteric ambient and experimental electronic music, known for ties to Dean Blunt and releases on Planet Mu and Blackest Ever Black."
     },
     "dim-garden": {
       "name": "Dim Garden",
@@ -1485,15 +1532,18 @@
     },
     "felix-bell": {
       "name": "Felix Bell",
-      "genres": "Electroacoustic, Experimental"
+      "genres": "Electroacoustic, Experimental",
+      "notes": "Percussionist Felix Bell performs new music at the intersection of contemporary classical and electroacoustic sound, appearing at Rewire 2026 in the collaborative project 'What's Left Speaks.'"
     },
     "gaia-d-arrigo": {
       "name": "Gaia D'Arrigo",
-      "genres": "Performance, Experimental"
+      "genres": "Performance, Experimental",
+      "notes": "Gaia D'Arrigo (gaiadrr) is an electroacoustic composer and sound artist appearing at Rewire 2026 alongside Felix Bell and Nuno Lobo in the collaborative project 'What's Left Speaks.'"
     },
     "nuno-lobo": {
       "name": "Nuno Lobo",
-      "genres": "Electroacoustic, Experimental"
+      "genres": "Electroacoustic, Experimental",
+      "notes": "Porto-born composer and conductor Nuno Lobo, based in Amsterdam, works with surrealistic narratives and interdisciplinary forms, and orchestrated the Oscar-nominated short film 'Ice Merchants.'"
     },
     "floris-vanhoof": {
       "name": "Floris Vanhoof",
@@ -1516,7 +1566,8 @@
         "year": 2018,
         "rating": 3.38,
         "votes": 391
-      }
+      },
+      "notes": "Dominican-American producer Kelman Duran transplants dembow and Afro-Caribbean rhythms into avant-garde club contexts, known for contributions to Beyoncé's Renaissance album."
     },
     "hulubalang": {
       "name": "Hulubalang",
@@ -1555,7 +1606,8 @@
       "latest": {
         "title": "RELENTLESS VOL 1",
         "year": 2025
-      }
+      },
+      "notes": "Chicago South Side producer Jamal Moss channels the city's Ron Hardy lineage through acid house, industrial noise, free jazz, and EBM on his prolific Mathematics Recordings label."
     },
     "jessica-ekomane": {
       "name": "Jessica Ekomane",
@@ -1571,7 +1623,8 @@
         "note": "debut",
         "rating": 2.89,
         "votes": 15
-      }
+      },
+      "notes": "Berlin-based French composer Jessica Ekomane builds quadraphonic live performances from algorithmic synthesis, using psychoacoustics to probe the boundary between individual perception and collective experience."
     },
     "joachim-badenhorst-s-youran": {
       "name": "Joachim Badenhorst's Youran",
@@ -1602,7 +1655,7 @@
     },
     "kee-avil": {
       "name": "Kee Avil",
-      "genres": "Experimental, Art Pop, Glitch Pop",
+      "genres": "Avant-Folk, Electroacoustic, Glitch, Experimental Pop",
       "latest": {
         "title": "Spine",
         "year": 2024
@@ -1614,19 +1667,21 @@
         "rating": 3.11,
         "votes": 244
       },
-      "notes": "Montreal."
+      "notes": "Montreal guitarist and producer Vicky Mettler records as Kee Avil, combining deconstructed guitar, voice, and glitch electronics on acclaimed Constellation Records albums Crease and Spine."
     },
     "khrystyna-kirik": {
       "name": "Khrystyna Kirik",
-      "genres": "Sound Art, Electroacoustic"
+      "genres": "Electroacoustic Improvisation, Experimental Electronic, Sound Art, Free Improvisation",
+      "notes": "Berlin-based Ukrainian sound artist who transforms everyday sonority using electronic hardware, double bass samples, voice, and field recordings in improvised performance and installation."
     },
     "emma-rubikaite-milasiute": {
       "name": "Emma Rubikaite-Milasiute",
-      "genres": "Performance, Electroacoustic"
+      "genres": "Performance, Electroacoustic",
+      "notes": "Lithuanian multimedia artist and audiovisual performer who blends light, colour, and spatial design into immersive electronic performances, collaborating with Amsterdam collective Studio Raito."
     },
     "kode9": {
       "name": "Kode9",
-      "genres": "Dubstep, UK Bass, Grime",
+      "genres": "Dubstep, Dub Techno, UK Bass, Grime, Electronic",
       "latest": {
         "title": "Nothing",
         "year": 2015,
@@ -1639,11 +1694,12 @@
         "artist": "Kode9 + The Spaceape",
         "rating": 3.36,
         "votes": 1273
-      }
+      },
+      "notes": "Scottish producer and DJ Steve Goodman, founder of Hyperdub, whose work melds dubstep, dub, and speculative fiction, and who authored the MIT Press book Sonic Warfare."
     },
     "deena-abdelwahed": {
       "name": "Deena Abdelwahed",
-      "genres": "Hard Drum, Deconstructed Club",
+      "genres": "Deconstructed Club, North African Electronic, Experimental Club, Techno",
       "latest": {
         "title": "Jbal Rrsas",
         "year": 2023
@@ -1654,7 +1710,8 @@
         "label": "Infiné",
         "rating": 3.24,
         "votes": 528
-      }
+      },
+      "notes": "Tunis-born, Toulouse-based producer and DJ who fuses Arabic vocal traditions, North African rhythms, and deconstructed club electronics into politically charged, hypnotic sets."
     },
     "koenraad-de-groot": {
       "name": "Koenraad de Groot",
@@ -1673,7 +1730,8 @@
         "year": 2021,
         "rating": 3.4,
         "votes": 139
-      }
+      },
+      "notes": "French-American cellist based in Brooklyn who deploys extreme extended technique and unorthodox amplification to produce what the New York Times called 'steadily scathing, corrosive atonalities'."
     },
     "lena-kuzmich": {
       "name": "Lena Kuzmich",
@@ -1725,11 +1783,13 @@
         "year": 2008,
         "rating": 3.57,
         "votes": 1500
-      }
+      },
+      "notes": "German producer and percussionist who co-founded Basic Channel in 1993, defining dub techno's minimalist, delay-soaked aesthetic and later collaborating with Juan Atkins, Carl Craig, and others."
     },
     "the-hague-vocal-ensemble": {
       "name": "The Hague Vocal Ensemble",
-      "genres": "Choral, Contemporary Classical"
+      "genres": "Choral, Contemporary Classical",
+      "notes": "Dutch vocal ensemble presenting Silencio at Rewire 2026, a Moritz von Oswald work for 16 voices—human and synthesiser—exploring the boundary between acoustic and machine sound."
     },
     "natasha-pirard": {
       "name": "Natasha Pirard",
@@ -1748,7 +1808,7 @@
     },
     "nazar": {
       "name": "Nazar",
-      "genres": "Kuduro, Deconstructed Club, Post-Industrial, Post-Dubstep, Batida",
+      "genres": "Kuduro, Deconstructed Club, Electronic, Experimental Club",
       "latest": {
         "title": "Demilitarize",
         "year": 2025,
@@ -1760,7 +1820,8 @@
         "note": "#650 of 2020",
         "rating": 3.4,
         "votes": 987
-      }
+      },
+      "notes": "Manchester-based Angolan producer Alcides Simoes who coined 'rough kuduro', weaponising the Angolan dance genre to process his family's experience of the civil war on Hyperdub."
     },
     "nono-gigsta": {
       "name": "Nono Gigsta",
@@ -1789,7 +1850,7 @@
     },
     "ouri": {
       "name": "Ouri",
-      "genres": "Alternative R&B, Art Pop, UK Bass, Electronic, Tech House",
+      "genres": "Electroacoustic, Ambient, Deconstructed Club, Electronic, Contemporary Classical",
       "latest": {
         "title": "Daisy Cutter",
         "year": 2025
@@ -1799,19 +1860,23 @@
         "year": 2021,
         "rating": 3.42,
         "votes": 228
-      }
+      },
+      "notes": "French Guianan-born Montreal producer Ourielle Auvé, classically trained in cello and harp, who weaves orchestral composition into electronic and deconstructed club music."
     },
     "polina-medvedeva": {
       "name": "Polina Medvedeva",
-      "genres": "Performance Art, Sound Art"
+      "genres": "Performance Art, Sound Art",
+      "notes": "Dutch-Norwegian interdisciplinary artist whose work spans film, installation, and performance; at Rewire 2026 she presents the audiovisual project Facing The Spills with Andreas Kühne."
     },
     "andreas-kuhne": {
       "name": "Andreas Kühne",
-      "genres": "Sound Art, Electroacoustic"
+      "genres": "Electroacoustic, Free Improvisation, Sound Art, Experimental Electronic",
+      "notes": "Amsterdam-based composer, sound artist, and drummer who makes electroacoustic music through field improvisation, including site-specific recordings in Murmansk with nuclear submarines and decaying harbours."
     },
     "sam-slater": {
       "name": "Sam Slater",
-      "genres": "Drone, Minimalism, Experimental, Electroacoustic"
+      "genres": "Electroacoustic, Experimental Electronic, Contemporary Classical, Sound Art",
+      "notes": "Berlin-based British composer who studied experimental composition at Leeds, collaborated with Jóhann Jóhannsson, and won Grammy Awards as score producer for Joker and Chernobyl."
     },
     "sanam": {
       "name": "SANAM",
@@ -1830,15 +1895,17 @@
     },
     "sol-ey": {
       "name": "Sól Ey",
-      "genres": "Contemporary Classical, Microtonal Classical"
+      "genres": "Sound Art, Electroacoustic, New Music, Experimental Electronic",
+      "notes": "Icelandic composer and instrument designer based in The Hague, trained at the Institute of Sonology, who creates performances and installations exploring sound as spatial and physical phenomenon."
     },
     "modelo62": {
       "name": "Modelo62",
-      "genres": "Contemporary Classical, Ensemble"
+      "genres": "Contemporary Classical, Ensemble",
+      "notes": "Amsterdam ensemble founded in 2003 that commissions and premieres interdisciplinary new works, functioning as a laboratory where composers, visual artists, and performers build tailor-made pieces together."
     },
     "standing-on-the-corner": {
       "name": "Standing on the Corner",
-      "genres": "Hypnagogic Pop, Neo-Soul, Avant-Garde Jazz, Sound Collage, Hip Hop",
+      "genres": "Abstract Hip Hop, Free Jazz, Experimental Hip Hop, Art Ensemble",
       "latest": {
         "title": "May God Bless Your Hustle",
         "year": 2021
@@ -1849,7 +1916,8 @@
         "note": "#17 of year · #2001 all-time",
         "rating": 3.84,
         "votes": 6830
-      }
+      },
+      "notes": "Brooklyn art ensemble led by Gio Escobar of Puerto Rican heritage, making collage-like recordings that fold abstract hip-hop, free jazz, lo-fi indie, and salsa into unpredictable post-genre hybrids."
     },
     "state-offf": {
       "name": "State OFFF",
@@ -1872,11 +1940,12 @@
         "year": 2008,
         "rating": 3.38,
         "votes": 2699
-      }
+      },
+      "notes": "Kevin Martin's project blends maximalist dancehall vocals, sub-bass pressure and noise abrasion, with London Zoo (2008) on Ninja Tune cementing his reputation for brutal, speaker-destroying club music."
     },
     "dis-fig": {
       "name": "Dis Fig",
-      "genres": "Post-Industrial, Death Industrial, Dark Ambient",
+      "genres": "Industrial Noise, Noise, Club Music, Experimental Electronic",
       "latest": {
         "title": "Orchards of a Futile Heaven",
         "year": 2024,
@@ -1887,11 +1956,12 @@
         "year": 2019,
         "rating": 3.24,
         "votes": 469
-      }
+      },
+      "notes": "Felicia Chen is a New York-born, Berlin-based DJ, vocalist and performance artist whose work ranges from ballroom and Jersey club to scorching industrial noise, as heard on her debut LP PURGE."
     },
     "shackleton": {
       "name": "Shackleton",
-      "genres": "Tribal Ambient, Dubstep, Drone, UK Bass",
+      "genres": "Tribal Ambient, Dark Ambient, Dub Techno, Dub, Dubstep",
       "latest": {
         "title": "Euphoria Bound",
         "year": 2026
@@ -1901,7 +1971,8 @@
         "year": 2012,
         "rating": 3.48,
         "votes": 1155
-      }
+      },
+      "notes": "Sam Shackleton builds slow, coiling rhythms from African, Arabic and Indian percussion traditions layered over cavernous dub bass, releasing on his own Woe to the Septic Heart! label."
     },
     "wac-aw-zimpel": {
       "name": "Wacław Zimpel",
@@ -1916,23 +1987,27 @@
         "year": 2016,
         "label": "Instant Classic",
         "note": "#564 of 2016"
-      }
+      },
+      "notes": "Polish clarinetist Wacław Zimpel trained in free jazz before pivoting to drone and minimalism inspired by Terry Riley and LaMonte Young, frequently incorporating Indian, Japanese and Moroccan musical traditions."
     },
     "siddhartha-belmannu": {
       "name": "Siddhartha Belmannu",
-      "genres": "Carnatic, Percussion"
+      "genres": "Hindustani Classical, Carnatic Music, Indian Classical, Vocal",
+      "notes": "Siddhartha Belmannu is a Bengaluru-born Hindustani classical vocalist trained in the Gwalior-Kirana gharana, whose three-octave voice features on collaborative albums with Shackleton and Wacław Zimpel."
     },
     "giridhar-udupa": {
       "name": "Giridhar Udupa",
-      "genres": "Carnatic, Percussion, Ghatam"
+      "genres": "Carnatic, Percussion, Ghatam",
+      "notes": "Giridhar Udupa is a Carnatic ghatam master who has performed in over fifty countries, moving freely between South and North Indian classical traditions as well as jazz, flamenco and world music."
     },
     "ugn-uma": {
       "name": "Ugnė Uma",
-      "genres": "Performance, Electronic, Experimental"
+      "genres": "Experimental, Avant-Folk, Free Jazz, Electronic, Vocal",
+      "notes": "Ugnė Uma is a Vilnius-based vocalist and composer whose work draws on Lithuania's underground jazz and folk scenes, experimental poetry and electronics, including a 2023 album with saxophonist Sam Gendel."
     },
     "pavel-milyakov": {
       "name": "Pavel Milyakov",
-      "genres": "Outsider House, Dub Techno, Electro, Ambient",
+      "genres": "Post-Industrial, Ambient, Noise, Electronic, Techno",
       "latest": {
         "title": "HEAL",
         "year": 2025,
@@ -1944,7 +2019,8 @@
         "year": 2021,
         "artist": "Pavel Milyakov & Bendik Giske",
         "note": "#1419 of 2021"
-      }
+      },
+      "notes": "Moscow-born, Berlin-based Pavel Milyakov records experimental techno and gabber as Buttechno, while his real-name work spans ambient, noise and post-industrial composition across labels including Gost Zvuk."
     },
     "valentina-magaletti": {
       "name": "Valentina Magaletti",
@@ -1962,11 +2038,12 @@
         "artist": "Valentina Magaletti & YPY",
         "rating": 3.42,
         "votes": 245
-      }
+      },
+      "notes": "British-Italian drummer and percussionist Valentina Magaletti is a prolific collaborator active in Tomaga, Moin, Holy Tongue and UUUU, bridging free improvisation, post-punk and dub with restless eclecticism."
     },
     "ypy": {
       "name": "YPY",
-      "genres": "IDM, Noise, Electroacoustic",
+      "genres": "Techno, Noise, Experimental Electronic, Ambient, Minimalism",
       "latest": {
         "title": "Kansai Bruises",
         "year": 2025,
@@ -1978,11 +2055,12 @@
         "title": "Over Smiling Dub",
         "year": 2020,
         "rating": 3.5
-      }
+      },
+      "notes": "YPY is the solo project of Osaka-based multi-instrumentalist Koshiro Hino, who uses drum machines, synthesizers and magnetic tape to build improvisational sets moving between dancefloor techno and noise experimentation."
     },
     "waqwaq-kingdom": {
       "name": "WaqWaq Kingdom",
-      "genres": "Electronic, Neo-Psychedelia, Footwork, Bass Music",
+      "genres": "Digital Dancehall, Breakcore, Tribal, Experimental Electronic, Noise",
       "latest": {
         "title": "Hot Pot Totto",
         "year": 2023
@@ -1992,11 +2070,13 @@
         "year": 2019,
         "rating": 3.48,
         "votes": 501
-      }
+      },
+      "notes": "WaqWaq Kingdom pairs Kiki Hitomi (King Midas Sound) and Shigeru Ishihara (DJ Scotch Egg) to collide Japanese minyo folk, dancehall, 8-bit chip tones and breakcore into a singular tribal-digital hybrid."
     },
     "vj-kalma": {
       "name": "VJ Kalma",
-      "genres": "Visual Art, A/V"
+      "genres": "Visual Art, A/V",
+      "notes": "Cristina Moreno, known as VJ Kalma, is a Berlin-based audiovisual artist and NYU Berlin instructor who creates real-time generative visuals for live performances, clubs and large-scale projection mapping."
     },
     "weed420": {
       "name": "weed420",
@@ -2022,7 +2102,8 @@
       "latest": {
         "title": "Relatum",
         "year": 2024
-      }
+      },
+      "notes": "Rotterdam-born, Copenhagen-based composer Zeno van den Broek uses sine waves, noise and grids to blur boundaries between physical architecture and acoustic space in electroacoustic and sound-art installations."
     },
     "les-percussions-de-strasbourg": {
       "name": "Les Percussions de Strasbourg",
@@ -2032,11 +2113,13 @@
         "year": 1987,
         "label": "Harmonia Mundi",
         "note": "Xenakis; #270 of 1987"
-      }
+      },
+      "notes": "Founded in 1962, Les Percussions de Strasbourg is a six-percussionist French ensemble that has commissioned and premiered over 250 contemporary works, including Xenakis's Pléïades and pieces by Stockhausen."
     },
     "hiiit": {
       "name": "HIIIT",
-      "genres": "Club Music, Electronic"
+      "genres": "Contemporary Classical, Percussion Ensemble, Experimental, New Music",
+      "notes": "HIIIT (formerly Slagwerk Den Haag, est. 1977) is a Dutch percussion ensemble of four to six players that commissions contemporary works using instruments from traditional percussion to 3D-printed sound objects."
     }
   },
   "slots": [
@@ -2051,7 +2134,8 @@
         "suzanne-ciani"
       ],
       "project": "'Concrète Waves'",
-      "collab_notes": "World premiere collab. Actress's R&B concrète meets Ciani's Buchla synthesis."
+      "collab_notes": "World premiere collab. Actress's R&B concrète meets Ciani's Buchla synthesis.",
+      "type": "Live"
     },
     {
       "display_name": "Alejandra Cárdenas",
@@ -2105,7 +2189,8 @@
         "beatrice-dillon",
         "explore-ensemble"
       ],
-      "collab_notes": "Rewire commission. Dillon's digital synthesis with Explore Ensemble's acoustic instrumentation."
+      "collab_notes": "Rewire commission. Dillon's digital synthesis with Explore Ensemble's acoustic instrumentation.",
+      "type": "Live"
     },
     {
       "display_name": "Beverly Glenn-Copeland",
@@ -2155,7 +2240,8 @@
         "caterina-barbieri",
         "mfo"
       ],
-      "collab_notes": "World premiere solo show with visual artist MFO."
+      "collab_notes": "World premiere solo show with visual artist MFO.",
+      "type": "Live A/V"
     },
     {
       "display_name": "Caterina Barbieri with ONCEIM",
@@ -2167,7 +2253,8 @@
         "caterina-barbieri",
         "onceim"
       ],
-      "collab_notes": "World premiere new composition for ONCEIM — Paris new music ensemble of 30+ musicians."
+      "collab_notes": "World premiere new composition for ONCEIM — Paris new music ensemble of 30+ musicians.",
+      "type": "Live"
     },
     {
       "display_name": "Civilistjävel! & Mayssa Jallad",
@@ -2179,7 +2266,8 @@
         "civilistjavel",
         "mayssa-jallad"
       ],
-      "collab_notes": "World premiere. Icy tech-ambience of Civilistjävel! meets the warmth of Jallad's voice."
+      "collab_notes": "World premiere. Icy tech-ambience of Civilistjävel! meets the warmth of Jallad's voice.",
+      "type": "Live"
     },
     {
       "display_name": "Einstürzende Neubauten",
@@ -2452,7 +2540,8 @@
         "okse",
         "billy-woods"
       ],
-      "collab_notes": "World premiere — ØKSE all-star ensemble (Savannah Harris, Mette Rasmussen, Val Jeanty, Petter Eldh) + billy woods."
+      "collab_notes": "World premiere — ØKSE all-star ensemble (Savannah Harris, Mette Rasmussen, Val Jeanty, Petter Eldh) + billy woods.",
+      "type": "Live"
     },
     {
       "display_name": "Oneohtrix Point Never",
@@ -2671,7 +2760,8 @@
       "is_collab": false,
       "artist_ids": [
         "kim-gordon"
-      ]
+      ],
+      "type": "Live (with band)"
     },
     {
       "display_name": "KMRU & Nick Verstand",
@@ -2698,7 +2788,8 @@
         "julian-charri-re"
       ],
       "project": "'Midnight Zone'",
-      "collab_notes": "Charrière's film on deep-sea mining threats with live Halo score. Minimalism, ambient, musique concrète, jazz."
+      "collab_notes": "Charrière's film on deep-sea mining threats with live Halo score. Minimalism, ambient, musique concrète, jazz.",
+      "type": "Live A/V"
     },
     {
       "display_name": "Mark Fell & Pat Thomas",
@@ -3016,7 +3107,8 @@
         "moor-mother"
       ],
       "project": "'Borrowed Time'",
-      "collab_notes": "New collab for eight celli, featuring Shishani's warm folk voice and Moor Mother's incisive spoken word."
+      "collab_notes": "New collab for eight celli, featuring Shishani's warm folk voice and Moor Mother's incisive spoken word.",
+      "type": "Live"
     },
     {
       "display_name": "Cerys Hafana",
@@ -3088,7 +3180,8 @@
         "nuno-lobo"
       ],
       "project": "'What's left speaks'",
-      "collab_notes": "New commission for Rewire 2026. No prior recordings as this configuration."
+      "collab_notes": "New commission for Rewire 2026. No prior recordings as this configuration.",
+      "type": "Installation"
     },
     {
       "display_name": "Floris Vanhoof",
@@ -3457,7 +3550,8 @@
         "modelo62"
       ],
       "project": "'Becoming'",
-      "collab_notes": "Icelandic composer Sól Ey + The Hague ensemble Modelo62 (associated residency 2024–2026). New music theatre commission."
+      "collab_notes": "Icelandic composer Sól Ey + The Hague ensemble Modelo62 (associated residency 2024–2026). New music theatre commission.",
+      "type": "Installation"
     },
     {
       "display_name": "Standing on the Corner",
@@ -3589,7 +3683,8 @@
         "hiiit"
       ],
       "project": "'Ways of [ ]'",
-      "collab_notes": "Cross-genre world premiere — Van den Broek + legendary French percussion ensemble (founded 1961) + electronic/club HIIIT."
+      "collab_notes": "Cross-genre world premiere — Van den Broek + legendary French percussion ensemble (founded 1961) + electronic/club HIIIT.",
+      "type": "Live A/V"
     }
   ]
 }

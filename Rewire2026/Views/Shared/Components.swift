@@ -74,6 +74,9 @@ struct TypeBadge: View {
         if lower.contains("installation") {
             return Color.rewireBackground
         }
+        if lower.contains("dj") || lower.contains("b2b") {
+            return Color.rewireBackground
+        }
         return Color.rewireMuted
     }
 
