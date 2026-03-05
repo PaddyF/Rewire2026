@@ -24,7 +24,9 @@
       },
       "top_rated": {
         "title": "Seven Waves",
-        "year": 1982
+        "year": 1982,
+        "rating": 3.66,
+        "votes": 2491
       }
     },
     "alejandra-cardenas": {
@@ -158,11 +160,23 @@
     },
     "cara-tolmie": {
       "name": "Cara Tolmie",
-      "genres": "Voice, Performance Art"
+      "genres": "Voice, Performance Art",
+      "latest": {
+        "title": "Body Lapse",
+        "year": 2025,
+        "label": "Planet Mu",
+        "artist": "Rian Treanor & Cara Tolmie"
+      }
     },
     "rian-treanor": {
       "name": "Rian Treanor",
       "genres": "Footwork, IDM, UK Bass",
+      "latest": {
+        "title": "Body Lapse",
+        "year": 2025,
+        "label": "Planet Mu",
+        "artist": "Rian Treanor & Cara Tolmie"
+      },
       "top_rated": {
         "title": "ATAXIA",
         "year": 2019,
@@ -191,11 +205,29 @@
     },
     "onceim": {
       "name": "ONCEIM",
-      "genres": "Contemporary Classical, New Music, Large Ensemble"
+      "genres": "Contemporary Classical, New Music, Large Ensemble",
+      "top_rated": {
+        "title": "Occam Ocean 2",
+        "year": 2019,
+        "label": "Shiiin",
+        "rating": 3.66,
+        "votes": 188
+      }
     },
     "civilistjavel": {
       "name": "Civilistjävel!",
-      "genres": "Ambient, Tech-Ambient, Drone"
+      "genres": "Ambient, Tech-Ambient, Drone",
+      "latest": {
+        "title": "Brödföda",
+        "year": 2024,
+        "label": "FELT"
+      },
+      "top_rated": {
+        "title": "Brödföda",
+        "year": 2024,
+        "rating": 3.27,
+        "votes": 156
+      }
     },
     "mayssa-jallad": {
       "name": "Mayssa Jallad",
@@ -223,6 +255,8 @@
       "top_rated": {
         "title": "½ Mensch",
         "year": 1985,
+        "rating": 3.75,
+        "votes": 8175,
         "note": "#31 of year"
       },
       "notes": "Rewire debut. Sun 12 Apr. Plus Ticket required."
@@ -285,7 +319,9 @@
       },
       "top_rated": {
         "title": "Goodness",
-        "year": 2025
+        "year": 2025,
+        "rating": 3.2,
+        "votes": 521
       },
       "notes": "Debut album on AD93. \"Wrinkled synth lines bit-crushed into insectoid murmurs, organ chords stretched into boundless waves.\""
     },
@@ -401,11 +437,24 @@
         "title": "Pareidolia",
         "year": 2025,
         "label": "Drag City"
+      },
+      "top_rated": {
+        "title": "Insignificance",
+        "year": 2001,
+        "label": "Drag City",
+        "rating": 3.65,
+        "votes": 1902
       }
     },
     "eiko-ishibashi": {
       "name": "Eiko Ishibashi",
       "genres": "Contemporary Folk, Electroacoustic, Art Pop",
+      "latest": {
+        "title": "Evil Does Not Exist",
+        "year": 2024,
+        "label": "Drag City",
+        "note": "film score for Ryusuke Hamaguchi"
+      },
       "top_rated": {
         "title": "For McCoy",
         "year": 2023,
@@ -424,7 +473,9 @@
       "top_rated": {
         "title": "The Clearing",
         "year": 2021,
-        "label": "NNA Tapes"
+        "label": "NNA Tapes",
+        "rating": 3.37,
+        "votes": 65
       },
       "notes": "Grenadian-Jamaican-American. Explores stuttering, blackness & disabled speech through music. Anna Rabinowitz Prize 2022."
     },
@@ -432,15 +483,29 @@
       "name": "Joanne Robertson",
       "genres": "Lo-Fi Folk, Drone",
       "latest": {
-        "title": "Blurrr"
+        "title": "Blurrr",
+        "year": 2025
+      },
+      "top_rated": {
+        "title": "Blurrr",
+        "year": 2025,
+        "rating": 3.52,
+        "votes": 2022
       }
     },
     "oliver-coates": {
       "name": "Oliver Coates",
       "genres": "Contemporary Classical, Electroacoustic, Drone",
+      "latest": {
+        "title": "Throb, Shiver, Arrow of Time",
+        "year": 2024,
+        "label": "RVNG"
+      },
       "top_rated": {
         "title": "Shelley's on Zenn-La",
-        "year": 2022
+        "year": 2022,
+        "rating": 3.54,
+        "votes": 80
       }
     },
     "joshua-chuquimia-crampton": {
@@ -479,11 +544,22 @@
     },
     "katalin-ladik": {
       "name": "Katalin Ladik",
-      "genres": "Sound Poetry, Performance Art, Avant-Garde"
+      "genres": "Sound Poetry, Performance Art, Avant-Garde",
+      "latest": {
+        "title": "Phonopoetics",
+        "year": 2019,
+        "label": "Alga Marghen",
+        "note": "compilation of archival recordings"
+      }
     },
     "svetlana-mara": {
       "name": "Svetlana Maraš",
-      "genres": "Electroacoustic, Sound Art"
+      "genres": "Electroacoustic, Sound Art",
+      "latest": {
+        "title": "Live Performance 2019-2020",
+        "year": 2023,
+        "label": "Bandcamp"
+      }
     },
     "kavari": {
       "name": "KAVARI",
@@ -512,7 +588,9 @@
       },
       "top_rated": {
         "title": "LAHAR",
-        "year": 2025
+        "year": 2025,
+        "rating": 3.23,
+        "votes": 16
       },
       "notes": "Bandung-based Indonesian duo (Tesla Manaf + Rio Abror). \"Primitive voices producing animal mating calls mixed with Indonesian tribal rhythms.\""
     },
@@ -581,13 +659,27 @@
       },
       "top_rated": {
         "title": "Remscéla",
-        "year": 2025
+        "year": 2025,
+        "rating": 3.44,
+        "votes": 187
       },
       "notes": "British. \"Part slacker-trad and part crust-academic — explorations in folk, ritual, and tradition.\""
     },
     "okse": {
       "name": "ØKSE",
-      "genres": "Free Jazz, Avant-Garde"
+      "genres": "Free Jazz, Avant-Garde Jazz, Experimental Hip Hop",
+      "latest": {
+        "title": "ØKSE",
+        "year": 2024,
+        "label": "Backwoodz",
+        "note": "#197 of 2024"
+      },
+      "top_rated": {
+        "title": "ØKSE",
+        "year": 2024,
+        "label": "Backwoodz",
+        "note": "#197 of 2024"
+      }
     },
     "billy-woods": {
       "name": "billy woods",
@@ -646,11 +738,34 @@
     },
     "raul-refree": {
       "name": "Raúl Refree",
-      "genres": "Avant-Folk, Flamenco Nuevo, Electroacoustic"
+      "genres": "Avant-Folk, Flamenco Nuevo, Electroacoustic",
+      "latest": {
+        "title": "Cru+es",
+        "year": 2025,
+        "artist": "Niño de Elche & Raúl Refree"
+      },
+      "top_rated": {
+        "title": "Lina_Raül Refree",
+        "year": 2020,
+        "artist": "Lina_Raül Refree",
+        "rating": 3.27,
+        "votes": 209
+      }
     },
     "ni-o-de-elche": {
       "name": "Niño de Elche",
-      "genres": "Avant-Garde, Flamenco Nuevo, Art Pop"
+      "genres": "Avant-Garde, Flamenco Nuevo, Art Pop",
+      "latest": {
+        "title": "Cru+es",
+        "year": 2025,
+        "artist": "Niño de Elche & Raúl Refree"
+      },
+      "top_rated": {
+        "title": "Antología del cante flamenco heterodoxo",
+        "year": 2018,
+        "label": "Sony",
+        "note": "#190 of 2018"
+      }
     },
     "smerz": {
       "name": "Smerz",
@@ -663,13 +778,23 @@
       },
       "top_rated": {
         "title": "Big City Life",
-        "year": 2025
+        "year": 2025,
+        "rating": 3.42,
+        "votes": 203
       },
       "notes": "Norwegian duo (Catharina Stoltenberg + Henriette Motzfeldt). Deadpan minimal art-pop. Often compared to Tirzah."
     },
     "sumac": {
       "name": "Sumac",
       "genres": "Atmospheric Sludge Metal, Post-Metal, Noise Rock",
+      "latest": {
+        "title": "The Film",
+        "year": 2025,
+        "label": "Thrill Jockey",
+        "artist": "SUMAC and Moor Mother",
+        "rating": 3.48,
+        "votes": 44
+      },
       "top_rated": {
         "title": "Love in Shadow",
         "year": 2018,
@@ -682,7 +807,10 @@
       "genres": "Experimental Hip Hop, Spoken Word, Noise, Free Jazz",
       "top_rated": {
         "title": "Jazz Codes",
-        "year": 2022
+        "year": 2022,
+        "label": "Anti-",
+        "rating": 3.38,
+        "votes": 1741
       },
       "latest": {
         "title": "The Great Bailout",
@@ -700,7 +828,9 @@
       "top_rated": {
         "title": "Millions Now Living Will Never Die",
         "year": 1996,
-        "note": "#34 of year"
+        "note": "#34 of year",
+        "rating": 3.68,
+        "votes": 12246
       },
       "notes": "Chicago legends. All-time post-rock classics. Long-awaited return with Touch (2025)."
     },
@@ -753,12 +883,16 @@
       "genres": "Dream Pop, Indietronica, Downtempo, Jangle Pop",
       "latest": {
         "title": "Blush Response",
-        "year": 2025
+        "year": 2025,
+        "rating": 3.38,
+        "votes": 334
       },
       "top_rated": {
         "title": "Acopia",
         "year": 2023,
-        "note": "#1518 of 2023"
+        "note": "#1518 of 2023",
+        "rating": 3.38,
+        "votes": 286
       },
       "notes": "Australian trio. Jangle pop, breaks-laden trip hop, and electronic pop."
     },
@@ -860,10 +994,12 @@
       "genres": "Hyperpop, Experimental Pop, Deconstructed Pop",
       "latest": {
         "title": "Daughters",
+        "year": 2025,
         "note": "debut"
       },
       "top_rated": {
         "title": "Daughters",
+        "year": 2025,
         "note": "debut"
       },
       "notes": "Debut album tackles grief and absence. \"Jovial maximalism, warmly distorted and crunchy with compression.\""
@@ -888,6 +1024,10 @@
     "kmru": {
       "name": "KMRU",
       "genres": "Ambient, Electroacoustic, Field Recording",
+      "latest": {
+        "title": "Kin",
+        "year": 2026
+      },
       "top_rated": {
         "title": "Peel",
         "year": 2020,
@@ -920,6 +1060,12 @@
     "mark-fell": {
       "name": "Mark Fell",
       "genres": "IDM, Glitch, EAI",
+      "latest": {
+        "title": "Reality Is Not a Theory",
+        "year": 2025,
+        "label": "Black Truffle",
+        "artist": "Mark Fell & Pat Thomas"
+      },
       "top_rated": {
         "title": "Multistability",
         "year": 2011,
@@ -929,7 +1075,20 @@
     },
     "pat-thomas": {
       "name": "Pat Thomas",
-      "genres": "Free Jazz, Free Improvisation, Piano"
+      "genres": "Free Jazz, Free Improvisation, Piano",
+      "latest": {
+        "title": "Reality Is Not a Theory",
+        "year": 2025,
+        "label": "Black Truffle",
+        "artist": "Mark Fell & Pat Thomas"
+      },
+      "top_rated": {
+        "title": "And",
+        "year": 1997,
+        "artist": "Derek Bailey, Pat Thomas, Steve Noble",
+        "rating": 3.65,
+        "votes": 45
+      }
     },
     "my-new-band-believe": {
       "name": "My New Band Believe",
@@ -958,7 +1117,9 @@
       "top_rated": {
         "title": "Kaloli",
         "year": 2020,
-        "label": "Crammed Discs"
+        "label": "Crammed Discs",
+        "rating": 3.36,
+        "votes": 736
       },
       "notes": "Ugandan Nilotika Cultural Ensemble + UK producers pq & Spooky-J. Bugandan drumming + technoid synths. Tipped by Aphex Twin."
     },
@@ -974,7 +1135,9 @@
         "title": "Communion",
         "year": 2018,
         "label": "tak:til",
-        "note": "#305 of year"
+        "note": "#305 of year",
+        "rating": 3.49,
+        "votes": 857
       },
       "notes": "Korean. Plays piri, saenghwang, and yanggeum. Meditative soundscapes fusing Korean court music with minimalism."
     },
@@ -1044,7 +1207,19 @@
     },
     "shapednoise": {
       "name": "Shapednoise",
-      "genres": "Industrial Techno, Noise, Dark Techno"
+      "genres": "Industrial Techno, Noise, Dark Techno",
+      "latest": {
+        "title": "Absurd Matter 2",
+        "year": 2025,
+        "label": "WEIGHT LOOMING"
+      },
+      "top_rated": {
+        "title": "Absurd Matter",
+        "year": 2023,
+        "label": "WEIGHT LOOMING",
+        "rating": 3.44,
+        "votes": 120
+      }
     },
     "sevi-iko-domochevsky": {
       "name": "Sevi Iko Dømochevsky",
@@ -1167,7 +1342,19 @@
     },
     "horse-lords": {
       "name": "Horse Lords",
-      "genres": "Avant-Rock, Post-Minimalism, Just Intonation, Krautrock"
+      "genres": "Avant-Rock, Post-Minimalism, Just Intonation, Krautrock",
+      "latest": {
+        "title": "As It Happened: Horse Lords Live",
+        "year": 2024,
+        "label": "RVNG"
+      },
+      "top_rated": {
+        "title": "Comradely Objects",
+        "year": 2022,
+        "label": "RVNG",
+        "rating": 3.52,
+        "votes": 2226
+      }
     },
     "asian-dope-boys": {
       "name": "Asian Dope Boys",
@@ -1189,6 +1376,7 @@
       "top_rated": {
         "title": "Grow!",
         "year": 2021,
+        "rating": 3.07,
         "votes": 200
       },
       "notes": "Amsterdam-based."
@@ -1212,14 +1400,19 @@
       "name": "Buttechno",
       "genres": "Outsider House, Dub Techno, Electro",
       "latest": {
-        "title": "In Your Head / Ялта"
+        "title": "In Your Head",
+        "year": 2023,
+        "artist": "Buttechno & Triš"
       }
     },
     "torus": {
       "name": "Torus",
       "genres": "Ambient, Mashup, Electronic",
       "top_rated": {
-        "title": "The Flash"
+        "title": "The Flash",
+        "year": 2020,
+        "artist": "DJ Lostboi & Torus",
+        "note": "#651 of 2020"
       }
     },
     "by-storm": {
@@ -1314,6 +1507,10 @@
     "kelman-duran": {
       "name": "Kelman Duran",
       "genres": "Latin Electronic, Deconstructed Club, Neoperreo",
+      "latest": {
+        "title": "Daily News",
+        "year": 2025
+      },
       "top_rated": {
         "title": "13th Month",
         "year": 2018,
@@ -1371,7 +1568,9 @@
       "top_rated": {
         "title": "Multivocal",
         "year": 2019,
-        "note": "debut"
+        "note": "debut",
+        "rating": 2.89,
+        "votes": 15
       }
     },
     "joachim-badenhorst-s-youran": {
@@ -1411,7 +1610,9 @@
       "top_rated": {
         "title": "Crease",
         "year": 2022,
-        "note": "#759 of 2022"
+        "note": "#759 of 2022",
+        "rating": 3.11,
+        "votes": 244
       },
       "notes": "Montreal."
     },
@@ -1426,9 +1627,18 @@
     "kode9": {
       "name": "Kode9",
       "genres": "Dubstep, UK Bass, Grime",
+      "latest": {
+        "title": "Nothing",
+        "year": 2015,
+        "label": "Hyperdub"
+      },
       "top_rated": {
         "title": "Memories of the Future",
-        "year": 2006
+        "year": 2006,
+        "label": "Hyperdub",
+        "artist": "Kode9 + The Spaceape",
+        "rating": 3.36,
+        "votes": 1273
       }
     },
     "deena-abdelwahed": {
@@ -1437,6 +1647,13 @@
       "latest": {
         "title": "Jbal Rrsas",
         "year": 2023
+      },
+      "top_rated": {
+        "title": "Khonnar",
+        "year": 2018,
+        "label": "Infiné",
+        "rating": 3.24,
+        "votes": 528
       }
     },
     "koenraad-de-groot": {
@@ -1480,7 +1697,9 @@
       "top_rated": {
         "title": "General Patterns",
         "year": 2025,
-        "label": "Short Span"
+        "label": "Short Span",
+        "rating": 3.37,
+        "votes": 158
       },
       "notes": "Amsterdam-based producer (Fabiano). Also active as Heaven Smile, Puddlerunner, and other aliases."
     },
@@ -1603,7 +1822,9 @@
         "label": "Constellation"
       },
       "top_rated": {
-        "title": "Aykathani Malakon"
+        "title": "Aykathani Malakon",
+        "year": 2023,
+        "label": "Mais Um"
       },
       "notes": "Beirut-based sextet. Psych/kraut, electronics, goth, jazz + traditional Egyptian song and Arabic poetry."
     },
@@ -1626,7 +1847,8 @@
         "title": "Red Burns",
         "year": 2017,
         "note": "#17 of year · #2001 all-time",
-        "rating": 3.84
+        "rating": 3.84,
+        "votes": 6830
       }
     },
     "state-offf": {
@@ -1659,6 +1881,12 @@
         "title": "Orchards of a Futile Heaven",
         "year": 2024,
         "artist": "Dis Fig & The Body"
+      },
+      "top_rated": {
+        "title": "PURGE",
+        "year": 2019,
+        "rating": 3.24,
+        "votes": 469
       }
     },
     "shackleton": {
@@ -1670,13 +1898,25 @@
       },
       "top_rated": {
         "title": "Music for the Quiet Hour / The Drawbar Organ EPs",
+        "year": 2012,
         "rating": 3.48,
         "votes": 1155
       }
     },
     "wac-aw-zimpel": {
       "name": "Wacław Zimpel",
-      "genres": "Free Jazz, Contemporary Classical, Minimalism"
+      "genres": "Free Jazz, Contemporary Classical, Minimalism, Post-Minimalism",
+      "latest": {
+        "title": "Japanese Journal Vol.1",
+        "year": 2024,
+        "label": "The State51 Conspiracy"
+      },
+      "top_rated": {
+        "title": "Lines",
+        "year": 2016,
+        "label": "Instant Classic",
+        "note": "#564 of 2016"
+      }
     },
     "siddhartha-belmannu": {
       "name": "Siddhartha Belmannu",
@@ -1692,7 +1932,19 @@
     },
     "pavel-milyakov": {
       "name": "Pavel Milyakov",
-      "genres": "Outsider House, Dub Techno, Electro"
+      "genres": "Outsider House, Dub Techno, Electro, Ambient",
+      "latest": {
+        "title": "HEAL",
+        "year": 2025,
+        "artist": "Pavel Milyakov & Lucas Dupuy",
+        "note": "#905 of 2025"
+      },
+      "top_rated": {
+        "title": "Pavel Milyakov & Bendik Giske",
+        "year": 2021,
+        "artist": "Pavel Milyakov & Bendik Giske",
+        "note": "#1419 of 2021"
+      }
     },
     "valentina-magaletti": {
       "name": "Valentina Magaletti",
@@ -1700,12 +1952,33 @@
       "latest": {
         "title": "Kansai Bruises",
         "year": 2025,
-        "note": "self-released"
+        "artist": "Valentina Magaletti & YPY",
+        "rating": 3.42,
+        "votes": 245
+      },
+      "top_rated": {
+        "title": "Kansai Bruises",
+        "year": 2025,
+        "artist": "Valentina Magaletti & YPY",
+        "rating": 3.42,
+        "votes": 245
       }
     },
     "ypy": {
       "name": "YPY",
-      "genres": "IDM, Noise, Electroacoustic"
+      "genres": "IDM, Noise, Electroacoustic",
+      "latest": {
+        "title": "Kansai Bruises",
+        "year": 2025,
+        "artist": "Valentina Magaletti & YPY",
+        "rating": 3.42,
+        "votes": 245
+      },
+      "top_rated": {
+        "title": "Over Smiling Dub",
+        "year": 2020,
+        "rating": 3.5
+      }
     },
     "waqwaq-kingdom": {
       "name": "WaqWaq Kingdom",
@@ -1737,17 +2010,29 @@
         "title": "Amor de encava",
         "year": 2025,
         "label": "Deprerreo",
-        "note": "#87 of 2025"
+        "note": "#87 of 2025",
+        "rating": 3.6,
+        "votes": 2887
       },
       "notes": "Venezuelan collective (formed Oct 2021). Blend reggaetón, sound collage, and Venezuelan culture into politically charged sonic document."
     },
     "zeno-van-den-broek": {
       "name": "Zeno van den Broek",
-      "genres": "Contemporary Classical, Electronic, Sound Art"
+      "genres": "Contemporary Classical, Electronic, Sound Art",
+      "latest": {
+        "title": "Relatum",
+        "year": 2024
+      }
     },
     "les-percussions-de-strasbourg": {
       "name": "Les Percussions de Strasbourg",
-      "genres": "Contemporary Classical, Percussion"
+      "genres": "Contemporary Classical, Percussion, Stochastic Music",
+      "top_rated": {
+        "title": "Pléïades / Persephassa",
+        "year": 1987,
+        "label": "Harmonia Mundi",
+        "note": "Xenakis; #270 of 1987"
+      }
     },
     "hiiit": {
       "name": "HIIIT",
@@ -1757,6 +2042,7 @@
   "slots": [
     {
       "display_name": "Actress & Suzanne Ciani",
+      "day": "Thu",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -1769,6 +2055,7 @@
     },
     {
       "display_name": "Alejandra Cárdenas",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -1779,6 +2066,7 @@
     },
     {
       "display_name": "Apparitions",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live (EU Debut)",
       "is_collab": false,
@@ -1788,6 +2076,7 @@
     },
     {
       "display_name": "Armand Hammer",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1797,6 +2086,7 @@
     },
     {
       "display_name": "Ash Fure",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live / Performance",
       "is_collab": false,
@@ -1807,6 +2097,7 @@
     },
     {
       "display_name": "Beatrice Dillon & Explore Ensemble",
+      "day": "Sun",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -1818,6 +2109,7 @@
     },
     {
       "display_name": "Beverly Glenn-Copeland",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1828,6 +2120,7 @@
     },
     {
       "display_name": "Blawan",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live Set",
       "is_collab": false,
@@ -1837,6 +2130,7 @@
     },
     {
       "display_name": "Cara Tolmie & Rian Treanor",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -1853,6 +2147,7 @@
     },
     {
       "display_name": "Caterina Barbieri & MFO",
+      "day": "Thu",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -1864,6 +2159,7 @@
     },
     {
       "display_name": "Caterina Barbieri with ONCEIM",
+      "day": "Thu",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -1875,6 +2171,7 @@
     },
     {
       "display_name": "Civilistjävel! & Mayssa Jallad",
+      "day": "Sun",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -1886,6 +2183,7 @@
     },
     {
       "display_name": "Einstürzende Neubauten",
+      "day": "Sun",
       "wave": "W1",
       "type": "Live (Plus Ticket)",
       "is_collab": false,
@@ -1895,6 +2193,7 @@
     },
     {
       "display_name": "Eliana Glass",
+      "day": "Sun",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1904,6 +2203,7 @@
     },
     {
       "display_name": "Eraserhead x Xiu Xiu",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live Reinterpretation",
       "is_collab": true,
@@ -1914,6 +2214,7 @@
     },
     {
       "display_name": "ex_libris",
+      "day": "Sat",
       "wave": "W1",
       "type": "World Premiere Live A/V",
       "is_collab": false,
@@ -1923,6 +2224,7 @@
     },
     {
       "display_name": "feeo",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1933,6 +2235,7 @@
     },
     {
       "display_name": "Fine",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1942,6 +2245,7 @@
     },
     {
       "display_name": "Flur",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1951,6 +2255,7 @@
     },
     {
       "display_name": "ganavya",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1960,6 +2265,10 @@
     },
     {
       "display_name": "Hayden Pedigo",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
       "wave": "W1",
       "type": "Two Shows",
       "is_collab": false,
@@ -1970,6 +2279,7 @@
     },
     {
       "display_name": "Hilary Woods",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1979,6 +2289,7 @@
     },
     {
       "display_name": "james K",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -1989,6 +2300,7 @@
     },
     {
       "display_name": "Jim O'Rourke & Eiko Ishibashi",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2005,6 +2317,7 @@
     },
     {
       "display_name": "JJJJJerome Ellis",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2014,6 +2327,7 @@
     },
     {
       "display_name": "Joanne Robertson & Oliver Coates",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2025,6 +2339,7 @@
     },
     {
       "display_name": "Joshua Chuquimia Crampton",
+      "day": "Sun",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2034,6 +2349,7 @@
     },
     {
       "display_name": "Juana Molina",
+      "day": "Sun",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2043,6 +2359,7 @@
     },
     {
       "display_name": "Katalin Ladik & Svetlana Maraš",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2054,6 +2371,7 @@
     },
     {
       "display_name": "KAVARI",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -2064,6 +2382,7 @@
     },
     {
       "display_name": "KUNTARI",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2073,6 +2392,7 @@
     },
     {
       "display_name": "La Rat",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2082,6 +2402,7 @@
     },
     {
       "display_name": "Los Thuthanaka",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2091,6 +2412,7 @@
     },
     {
       "display_name": "Malibu",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2101,6 +2423,7 @@
     },
     {
       "display_name": "Mayssa Jallad",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live (trio)",
       "is_collab": false,
@@ -2110,6 +2433,7 @@
     },
     {
       "display_name": "Milkweed",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2119,6 +2443,7 @@
     },
     {
       "display_name": "ØKSE feat. billy woods",
+      "day": "Sun",
       "wave": "W1",
       "type": "World Premiere",
       "is_collab": true,
@@ -2130,6 +2455,7 @@
     },
     {
       "display_name": "Oneohtrix Point Never",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live A/V (Plus Ticket)",
       "is_collab": false,
@@ -2139,6 +2465,7 @@
     },
     {
       "display_name": "Purelink",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2149,6 +2476,7 @@
     },
     {
       "display_name": "Raúl Refree & Niño de Elche",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": true,
@@ -2170,6 +2498,7 @@
     },
     {
       "display_name": "Smerz",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2179,6 +2508,7 @@
     },
     {
       "display_name": "Sumac & Moor Mother",
+      "day": "Sat",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2196,6 +2526,7 @@
     },
     {
       "display_name": "Tortoise",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2205,6 +2536,7 @@
     },
     {
       "display_name": "Tracey",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": false,
@@ -2214,6 +2546,7 @@
     },
     {
       "display_name": "WRENS",
+      "day": "Fri",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2223,6 +2556,10 @@
     },
     {
       "display_name": "Aaron Dilloway",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2232,6 +2569,7 @@
     },
     {
       "display_name": "Acopia",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2241,6 +2579,7 @@
     },
     {
       "display_name": "Chunky Move",
+      "day": "Fri",
       "wave": "W2",
       "type": "Dance Performance",
       "is_collab": false,
@@ -2251,6 +2590,7 @@
     },
     {
       "display_name": "Dagmar Zuniga",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -2260,6 +2600,7 @@
     },
     {
       "display_name": "Drew McDowall & Pedro Maia",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -2271,6 +2612,7 @@
     },
     {
       "display_name": "Dumama",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -2280,6 +2622,7 @@
     },
     {
       "display_name": "Elischa Heller",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2289,6 +2632,7 @@
     },
     {
       "display_name": "Everything Is Psychedelic",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2298,6 +2642,7 @@
     },
     {
       "display_name": "∈Y∋ + C.O.L.O",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -2309,6 +2654,7 @@
     },
     {
       "display_name": "Jennifer Walton",
+      "day": "Sun",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -2318,6 +2664,7 @@
     },
     {
       "display_name": "Kim Gordon",
+      "day": "Sat",
       "wave": "W2",
       "type": "World Premiere",
       "is_collab": false,
@@ -2327,6 +2674,7 @@
     },
     {
       "display_name": "KMRU & Nick Verstand",
+      "day": "Sun",
       "wave": "W2",
       "type": "World Premiere A/V",
       "is_collab": true,
@@ -2339,6 +2687,7 @@
     },
     {
       "display_name": "Laurel Halo & Julian Charrière",
+      "day": "Sat",
       "wave": "W2",
       "type": "World Premiere",
       "is_collab": true,
@@ -2351,6 +2700,7 @@
     },
     {
       "display_name": "Mark Fell & Pat Thomas",
+      "day": "Sun",
       "wave": "W2",
       "type": "Live",
       "is_collab": true,
@@ -2367,6 +2717,7 @@
     },
     {
       "display_name": "My New Band Believe",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2376,6 +2727,7 @@
     },
     {
       "display_name": "Nihiloxica",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2385,6 +2737,7 @@
     },
     {
       "display_name": "Park Jiha",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live (solo)",
       "is_collab": false,
@@ -2394,6 +2747,7 @@
     },
     {
       "display_name": "Raisa K",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2404,6 +2758,7 @@
     },
     {
       "display_name": "RAKTA",
+      "day": "Sun",
       "wave": "W2",
       "type": "Live (performs twice)",
       "is_collab": false,
@@ -2413,6 +2768,7 @@
     },
     {
       "display_name": "RAKTA & Mette Rasmussen",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live (2nd set)",
       "is_collab": true,
@@ -2424,6 +2780,7 @@
     },
     {
       "display_name": "Sacred Lodge",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2433,6 +2790,7 @@
     },
     {
       "display_name": "Sary Moussa Trio",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2443,6 +2801,7 @@
     },
     {
       "display_name": "Shapednoise & Sevi Iko Dømochevsky",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -2463,6 +2822,7 @@
     },
     {
       "display_name": "Sombat Simla",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2472,6 +2832,7 @@
     },
     {
       "display_name": "Stemeseder Lillinger",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2481,6 +2842,7 @@
     },
     {
       "display_name": "Susu Laroche",
+      "day": "Fri",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2490,6 +2852,7 @@
     },
     {
       "display_name": "Suzan Peeters",
+      "day": "Sat",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2499,6 +2862,7 @@
     },
     {
       "display_name": "Supersilent & Lawrence Abu Hamdan",
+      "day": "Sun",
       "wave": "W2",
       "type": "World Premiere A/V",
       "is_collab": true,
@@ -2510,6 +2874,7 @@
     },
     {
       "display_name": "Thomas Ankersmit",
+      "day": "Sun",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -2520,6 +2885,7 @@
     },
     {
       "display_name": "33",
+      "day": "Sun",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -2529,6 +2895,12 @@
     },
     {
       "display_name": "Aernoudt Jacobs",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2539,6 +2911,12 @@
     },
     {
       "display_name": "Anaïs Lossouarn",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2549,6 +2927,7 @@
     },
     {
       "display_name": "Arnold Dreyblatt & Horse Lords",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -2560,6 +2939,7 @@
     },
     {
       "display_name": "Asian Dope Boys",
+      "day": "Sat",
       "wave": "W3",
       "type": "8-hour Performance",
       "is_collab": false,
@@ -2570,6 +2950,7 @@
     },
     {
       "display_name": "AWICHAS",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2579,6 +2960,7 @@
     },
     {
       "display_name": "Bby Eco",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2589,6 +2971,7 @@
     },
     {
       "display_name": "Berlinde Deman",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2598,6 +2981,7 @@
     },
     {
       "display_name": "Buttechno b2b Torus",
+      "day": "Sat",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -2609,6 +2993,7 @@
     },
     {
       "display_name": "By Storm",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2618,6 +3003,7 @@
     },
     {
       "display_name": "Cello Octet Amsterdam feat. Shishani & Moor Mother",
+      "day": "Sun",
       "wave": "W3",
       "type": "World Premiere",
       "is_collab": true,
@@ -2631,6 +3017,7 @@
     },
     {
       "display_name": "Cerys Hafana",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2640,6 +3027,10 @@
     },
     {
       "display_name": "Colleen",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2650,6 +3041,7 @@
     },
     {
       "display_name": "Devon Rexi meets John T. Gast",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -2679,6 +3071,11 @@
     },
     {
       "display_name": "Felix Bell, Gaia D'Arrigo & Nuno Lobo",
+      "day": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "World Premiere",
       "is_collab": true,
@@ -2692,6 +3089,12 @@
     },
     {
       "display_name": "Floris Vanhoof",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2702,6 +3105,7 @@
     },
     {
       "display_name": "FRANKIE & Kelman Duran",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -2718,6 +3122,7 @@
     },
     {
       "display_name": "Hulubalang",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2728,6 +3133,7 @@
     },
     {
       "display_name": "HxH",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2738,6 +3144,7 @@
     },
     {
       "display_name": "Immaculate Deception Of History",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live (Sunday)",
       "is_collab": true,
@@ -2750,6 +3157,7 @@
     },
     {
       "display_name": "Jessica Ekomane",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2759,6 +3167,7 @@
     },
     {
       "display_name": "Joachim Badenhorst's Youran",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2768,6 +3177,12 @@
     },
     {
       "display_name": "Johannes Kreidler",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2778,6 +3193,7 @@
     },
     {
       "display_name": "Kee Avil",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2788,6 +3204,7 @@
     },
     {
       "display_name": "Khrystyna Kirik & Emma Rubikaite-Milasiute",
+      "day": "Sun",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -2800,6 +3217,7 @@
     },
     {
       "display_name": "Kode9 b2b Deena Abdelwahed",
+      "day": "Fri",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -2811,6 +3229,12 @@
     },
     {
       "display_name": "Koenraad de Groot",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2821,6 +3245,7 @@
     },
     {
       "display_name": "Leila Bordreuil",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2830,6 +3255,12 @@
     },
     {
       "display_name": "Lena Kuzmich",
+      "day": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2840,6 +3271,7 @@
     },
     {
       "display_name": "M Alberto",
+      "day": "Sun",
       "wave": "W3",
       "type": "Performance / Music Theatre",
       "is_collab": false,
@@ -2850,6 +3282,7 @@
     },
     {
       "display_name": "Mammo",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2859,6 +3292,11 @@
     },
     {
       "display_name": "Mariska de Groot",
+      "day": [
+        "Thu",
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -2869,6 +3307,7 @@
     },
     {
       "display_name": "Mireia Varón Gallofré",
+      "day": "Sun",
       "wave": "W3",
       "type": "Performance",
       "is_collab": false,
@@ -2879,6 +3318,7 @@
     },
     {
       "display_name": "Moritz von Oswald",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Grote Kerk)",
       "is_collab": true,
@@ -2901,6 +3341,7 @@
     },
     {
       "display_name": "Natasha Pirard",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2910,6 +3351,7 @@
     },
     {
       "display_name": "Nazar",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2919,6 +3361,7 @@
     },
     {
       "display_name": "Nono Gigsta",
+      "day": "Sat",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -2928,6 +3371,7 @@
     },
     {
       "display_name": "NVST",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2937,6 +3381,7 @@
     },
     {
       "display_name": "OK Williams",
+      "day": "Sat",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -2947,6 +3392,7 @@
     },
     {
       "display_name": "Ouri",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2956,6 +3402,7 @@
     },
     {
       "display_name": "Polina Medvedeva & Andreas Kühne",
+      "day": "Fri",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -2968,6 +3415,7 @@
     },
     {
       "display_name": "Sam Slater & guests",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Amare)",
       "is_collab": true,
@@ -2987,6 +3435,7 @@
     },
     {
       "display_name": "SANAM",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -2996,6 +3445,7 @@
     },
     {
       "display_name": "Sól Ey & Modelo62",
+      "day": "Sat",
       "wave": "W3",
       "type": "World Premiere",
       "is_collab": true,
@@ -3008,6 +3458,10 @@
     },
     {
       "display_name": "Standing on the Corner",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3017,6 +3471,7 @@
     },
     {
       "display_name": "State OFFF",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3027,6 +3482,7 @@
     },
     {
       "display_name": "The Bug & Dis Fig",
+      "day": "Sun",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3038,6 +3494,7 @@
     },
     {
       "display_name": "The Silver Thread",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3052,6 +3509,7 @@
     },
     {
       "display_name": "Ugnė Uma & Pavel Milyakov",
+      "day": "Sun",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -3063,6 +3521,7 @@
     },
     {
       "display_name": "Valentina Magaletti & YPY",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3083,6 +3542,7 @@
     },
     {
       "display_name": "WaqWaq Kingdom feat. VJ Kalma",
+      "day": "Sat",
       "wave": "W3",
       "type": "Live A/V",
       "is_collab": true,
@@ -3106,6 +3566,7 @@
     },
     {
       "display_name": "weed420",
+      "day": "Fri",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3115,6 +3576,7 @@
     },
     {
       "display_name": "Zeno van den Broek, Les Percussions de Strasbourg & HIIIT",
+      "day": "Sun",
       "wave": "W3",
       "type": "World Premiere",
       "is_collab": true,
