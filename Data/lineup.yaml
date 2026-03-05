@@ -843,9 +843,11 @@ artists:
     genres: Hyperpop, Experimental Pop, Deconstructed Pop
     latest:
       title: Daughters
+      year: 2025
       note: debut
     top_rated:
       title: Daughters
+      year: 2025
       note: debut
     notes: Debut album tackles grief and absence. "Jovial maximalism, warmly distorted and crunchy with compression."
   kim-gordon:
@@ -893,6 +895,11 @@ artists:
   mark-fell:
     name: Mark Fell
     genres: IDM, Glitch, EAI
+    latest:
+      title: Reality Is Not a Theory
+      year: 2025
+      label: Black Truffle
+      artist: Mark Fell & Pat Thomas
     top_rated:
       title: Multistability
       year: 2011
@@ -901,6 +908,17 @@ artists:
   pat-thomas:
     name: Pat Thomas
     genres: Free Jazz, Free Improvisation, Piano
+    latest:
+      title: Reality Is Not a Theory
+      year: 2025
+      label: Black Truffle
+      artist: Mark Fell & Pat Thomas
+    top_rated:
+      title: And
+      year: 1997
+      artist: Derek Bailey, Pat Thomas, Steve Noble
+      rating: 3.65
+      votes: 45
   my-new-band-believe:
     name: My New Band Believe
     genres: Art Rock, Folk Rock, Indie Rock
@@ -925,6 +943,8 @@ artists:
       title: Kaloli
       year: 2020
       label: Crammed Discs
+      rating: 3.36
+      votes: 736
     notes: Ugandan Nilotika Cultural Ensemble + UK producers pq & Spooky-J. Bugandan drumming + technoid synths. Tipped by
       Aphex Twin.
   park-jiha:
@@ -939,6 +959,8 @@ artists:
       year: 2018
       label: tak:til
       note: '#305 of year'
+      rating: 3.49
+      votes: 857
     notes: Korean. Plays piri, saenghwang, and yanggeum. Meditative soundscapes fusing Korean court music with minimalism.
   raisa-k:
     name: Raisa K
@@ -1584,7 +1606,7 @@ artists:
     genres: Club Music, Electronic
 slots:
 - display_name: Actress & Suzanne Ciani
-  day: null
+  day: Thu
   time: null
   stage: null
   wave: W1
@@ -1596,7 +1618,7 @@ slots:
   project: '''Concrète Waves'''
   collab_notes: World premiere collab. Actress's R&B concrète meets Ciani's Buchla synthesis.
 - display_name: Alejandra Cárdenas
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1606,7 +1628,7 @@ slots:
   - alejandra-cardenas
   project: '''A Body Like a Home'''
 - display_name: Apparitions
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1615,7 +1637,7 @@ slots:
   artist_ids:
   - apparitions
 - display_name: Armand Hammer
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1624,7 +1646,7 @@ slots:
   artist_ids:
   - armand-hammer
 - display_name: Ash Fure
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1634,7 +1656,7 @@ slots:
   - ash-fure
   project: '''Animal'''
 - display_name: Beatrice Dillon & Explore Ensemble
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1645,7 +1667,7 @@ slots:
   - explore-ensemble
   collab_notes: Rewire commission. Dillon's digital synthesis with Explore Ensemble's acoustic instrumentation.
 - display_name: Beverly Glenn-Copeland
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1655,7 +1677,7 @@ slots:
   - beverly-glenn-copeland
   project: (w/ Elizabeth Copeland)
 - display_name: Blawan
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1664,7 +1686,7 @@ slots:
   artist_ids:
   - blawan
 - display_name: Cara Tolmie & Rian Treanor
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1679,7 +1701,7 @@ slots:
     year: 2025
     label: Planet Mu
 - display_name: Caterina Barbieri & MFO
-  day: null
+  day: Thu
   time: null
   stage: null
   wave: W1
@@ -1690,7 +1712,7 @@ slots:
   - mfo
   collab_notes: World premiere solo show with visual artist MFO.
 - display_name: Caterina Barbieri with ONCEIM
-  day: null
+  day: Thu
   time: null
   stage: null
   wave: W1
@@ -1701,7 +1723,7 @@ slots:
   - onceim
   collab_notes: World premiere new composition for ONCEIM — Paris new music ensemble of 30+ musicians.
 - display_name: Civilistjävel! & Mayssa Jallad
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1712,7 +1734,7 @@ slots:
   - mayssa-jallad
   collab_notes: World premiere. Icy tech-ambience of Civilistjävel! meets the warmth of Jallad's voice.
 - display_name: Einstürzende Neubauten
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1721,7 +1743,7 @@ slots:
   artist_ids:
   - einsturzende-neubauten
 - display_name: Eliana Glass
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1730,7 +1752,7 @@ slots:
   artist_ids:
   - eliana-glass
 - display_name: Eraserhead x Xiu Xiu
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1740,7 +1762,7 @@ slots:
   - xiu-xiu
   collab_notes: Live radical reinterpretation of Eraserhead soundtrack. Tribute to David Lynch. Not a film screening.
 - display_name: ex_libris
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1749,7 +1771,7 @@ slots:
   artist_ids:
   - ex-libris
 - display_name: feeo
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1759,7 +1781,7 @@ slots:
   - feeo
   project: (Theodora Laird)
 - display_name: Fine
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1768,7 +1790,7 @@ slots:
   artist_ids:
   - fine
 - display_name: Flur
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1777,7 +1799,7 @@ slots:
   artist_ids:
   - flur
 - display_name: ganavya
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1796,7 +1818,7 @@ slots:
   - hayden-pedigo
   project: (solo + w/ string quartet)
 - display_name: Hilary Woods
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1805,7 +1827,7 @@ slots:
   artist_ids:
   - hilary-woods
 - display_name: james K
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1815,7 +1837,7 @@ slots:
   - james-k
   project: (Jamie Krasner)
 - display_name: Jim O'Rourke & Eiko Ishibashi
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1830,7 +1852,7 @@ slots:
     year: 2025
     label: Drag City
 - display_name: JJJJJerome Ellis
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1839,7 +1861,7 @@ slots:
   artist_ids:
   - jjjjjerome-ellis
 - display_name: Joanne Robertson & Oliver Coates
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1850,7 +1872,7 @@ slots:
   - oliver-coates
   collab_notes: Robertson's album Blurrr brought to life with long-time collaborator Coates.
 - display_name: Joshua Chuquimia Crampton
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1859,7 +1881,7 @@ slots:
   artist_ids:
   - joshua-chuquimia-crampton
 - display_name: Juana Molina
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1868,7 +1890,7 @@ slots:
   artist_ids:
   - juana-molina
 - display_name: Katalin Ladik & Svetlana Maraš
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1879,7 +1901,7 @@ slots:
   - svetlana-mara
   collab_notes: Yugoslav/Hungarian legend Ladik (b.1942) + Serbian composer/sound artist Maraš. Intergenerational performance.
 - display_name: KAVARI
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1889,7 +1911,7 @@ slots:
   - kavari
   project: (live A/V)
 - display_name: KUNTARI
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1898,7 +1920,7 @@ slots:
   artist_ids:
   - kuntari
 - display_name: La Rat
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1907,7 +1929,7 @@ slots:
   artist_ids:
   - la-rat
 - display_name: Los Thuthanaka
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1916,7 +1938,7 @@ slots:
   artist_ids:
   - los-thuthanaka
 - display_name: Malibu
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1926,7 +1948,7 @@ slots:
   - malibu
   project: (Barbara Braccini)
 - display_name: Mayssa Jallad
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1935,7 +1957,7 @@ slots:
   artist_ids:
   - mayssa-jallad
 - display_name: Milkweed
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1944,7 +1966,7 @@ slots:
   artist_ids:
   - milkweed
 - display_name: ØKSE feat. billy woods
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W1
@@ -1956,7 +1978,7 @@ slots:
   collab_notes: World premiere — ØKSE all-star ensemble (Savannah Harris, Mette Rasmussen, Val Jeanty, Petter Eldh) + billy
     woods.
 - display_name: Oneohtrix Point Never
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1965,7 +1987,7 @@ slots:
   artist_ids:
   - oneohtrix-point-never
 - display_name: Purelink
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -1975,7 +1997,7 @@ slots:
   - purelink
   project: (with Mika Oki)
 - display_name: Raúl Refree & Niño de Elche
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -1994,7 +2016,7 @@ slots:
     year: 2018
     note: '#190 of year'
 - display_name: Smerz
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -2003,7 +2025,7 @@ slots:
   artist_ids:
   - smerz
 - display_name: Sumac & Moor Mother
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W1
@@ -2020,7 +2042,7 @@ slots:
     rating: 3.53
     votes: 1552
 - display_name: Tortoise
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -2029,7 +2051,7 @@ slots:
   artist_ids:
   - tortoise
 - display_name: Tracey
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -2038,7 +2060,7 @@ slots:
   artist_ids:
   - tracey
 - display_name: WRENS
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W1
@@ -2056,7 +2078,7 @@ slots:
   artist_ids:
   - aaron-dilloway
 - display_name: Acopia
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2065,7 +2087,7 @@ slots:
   artist_ids:
   - acopia
 - display_name: Chunky Move
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2075,7 +2097,7 @@ slots:
   - chunky-move
   project: '''U>N>I>T>E>D'''
 - display_name: Dagmar Zuniga
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2084,7 +2106,7 @@ slots:
   artist_ids:
   - dagmar-zuniga
 - display_name: Drew McDowall & Pedro Maia
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2096,7 +2118,7 @@ slots:
   collab_notes: Former Psychic TV/Coil member. Album inspired by Scottish pibroch tradition. Live A/V with filmmaker Pedro
     Maia.
 - display_name: Dumama
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2105,7 +2127,7 @@ slots:
   artist_ids:
   - dumama
 - display_name: Elischa Heller
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2114,7 +2136,7 @@ slots:
   artist_ids:
   - elischa-heller
 - display_name: Everything Is Psychedelic
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2123,7 +2145,7 @@ slots:
   artist_ids:
   - everything-is-psychedelic
 - display_name: ∈Y∋ + C.O.L.O
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2134,7 +2156,7 @@ slots:
   - c-o-l-o
   collab_notes: Yamantaka Eye (Boredoms/Hanatarash) + C.O.L.O visuals (Cosmic Lab, Osaka). "Face-melting and mind-warping."
 - display_name: Jennifer Walton
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2143,7 +2165,7 @@ slots:
   artist_ids:
   - jennifer-walton
 - display_name: Kim Gordon
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2152,7 +2174,7 @@ slots:
   artist_ids:
   - kim-gordon
 - display_name: KMRU & Nick Verstand
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2164,7 +2186,7 @@ slots:
   project: '''As Nature'''
   collab_notes: KMRU's ambient soundscapes + Verstand's fabrics manipulated by airflow, lasers, LEDs, and smoke.
 - display_name: Laurel Halo & Julian Charrière
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2176,7 +2198,7 @@ slots:
   project: '''Midnight Zone'''
   collab_notes: Charrière's film on deep-sea mining threats with live Halo score. Minimalism, ambient, musique concrète, jazz.
 - display_name: Mark Fell & Pat Thomas
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2191,7 +2213,7 @@ slots:
     year: 2025
     label: Black Truffle
 - display_name: My New Band Believe
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2200,7 +2222,7 @@ slots:
   artist_ids:
   - my-new-band-believe
 - display_name: Nihiloxica
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2209,7 +2231,7 @@ slots:
   artist_ids:
   - nihiloxica
 - display_name: Park Jiha
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2218,7 +2240,7 @@ slots:
   artist_ids:
   - park-jiha
 - display_name: Raisa K
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2228,7 +2250,7 @@ slots:
   - raisa-k
   project: (Raisa Khan)
 - display_name: RAKTA
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2237,7 +2259,7 @@ slots:
   artist_ids:
   - rakta
 - display_name: RAKTA & Mette Rasmussen
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2248,7 +2270,7 @@ slots:
   - mette-rasmussen
   collab_notes: Norwegian-born Rasmussen — boundary-pushing sax improvisation. RAKTA's noise + improv sax pairing.
 - display_name: Sacred Lodge
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2257,7 +2279,7 @@ slots:
   artist_ids:
   - sacred-lodge
 - display_name: Sary Moussa Trio
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2267,7 +2289,7 @@ slots:
   - sary-moussa-trio
   project: (w/ Julia Sabra + Abed Kobeissi)
 - display_name: Shapednoise & Sevi Iko Dømochevsky
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2285,7 +2307,7 @@ slots:
     title: Absurd Matter 2
     year: 2025
 - display_name: Sombat Simla
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2294,7 +2316,7 @@ slots:
   artist_ids:
   - sombat-simla
 - display_name: Stemeseder Lillinger
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2303,7 +2325,7 @@ slots:
   artist_ids:
   - stemeseder-lillinger
 - display_name: Susu Laroche
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W2
@@ -2312,7 +2334,7 @@ slots:
   artist_ids:
   - susu-laroche
 - display_name: Suzan Peeters
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W2
@@ -2321,7 +2343,7 @@ slots:
   artist_ids:
   - suzan-peeters
 - display_name: Supersilent & Lawrence Abu Hamdan
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2332,7 +2354,7 @@ slots:
   - lawrence-abu-hamdan
   collab_notes: Norwegian quartet (feat. Deathprod) + Turner Prize-winning sonic researcher Abu Hamdan. World premiere.
 - display_name: Thomas Ankersmit
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W2
@@ -2342,7 +2364,7 @@ slots:
   - thomas-ankersmit
   project: '''The Tcherepnin Series'''
 - display_name: '33'
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2371,7 +2393,7 @@ slots:
   - anais-lossouarn
   project: '''DE CŒUR EN CHOEURS'''
 - display_name: Arnold Dreyblatt & Horse Lords
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2382,7 +2404,7 @@ slots:
   - horse-lords
   collab_notes: Collab FRKWYS Vol. 18 — Extended Field (Nov 2025, Rvng Intl). Intergenerational just intonation exploration.
 - display_name: Asian Dope Boys
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2392,7 +2414,7 @@ slots:
   - asian-dope-boys
   project: '''PHYSIS'''
 - display_name: AWICHAS
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2401,7 +2423,7 @@ slots:
   artist_ids:
   - awichas
 - display_name: Bby Eco
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2411,7 +2433,7 @@ slots:
   - bby-eco
   project: (Joris Benjamins)
 - display_name: Berlinde Deman
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2420,7 +2442,7 @@ slots:
   artist_ids:
   - berlinde-deman
 - display_name: Buttechno b2b Torus
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2432,7 +2454,7 @@ slots:
   collab_notes: Laak club programme (Sat night). Pavel Milyakov + Joeri Woudstra. Milyakov also performs as Ugnė Uma & Pavel
     Milyakov.
 - display_name: By Storm
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2441,7 +2463,7 @@ slots:
   artist_ids:
   - by-storm
 - display_name: Cello Octet Amsterdam feat. Shishani & Moor Mother
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2454,7 +2476,7 @@ slots:
   project: '''Borrowed Time'''
   collab_notes: New collab for eight celli, featuring Shishani's warm folk voice and Moor Mother's incisive spoken word.
 - display_name: Cerys Hafana
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2473,7 +2495,7 @@ slots:
   - colleen
   project: (Cécile Schott)
 - display_name: Devon Rexi meets John T. Gast
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2523,7 +2545,7 @@ slots:
   - floris-vanhoof
   project: '''Antenna'''
 - display_name: FRANKIE & Kelman Duran
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2539,7 +2561,7 @@ slots:
     year: 2026
     note: collab album
 - display_name: Hulubalang
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2549,7 +2571,7 @@ slots:
   - hulubalang
   project: (Kasimyn of Gabber Modus Operandi)
 - display_name: HxH
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2559,7 +2581,7 @@ slots:
   - hxh
   project: (Lester St. Louis + Chris Williams)
 - display_name: Immaculate Deception Of History
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2571,7 +2593,7 @@ slots:
   project: (Moor Mother & Hieroglyphic Being)
   collab_notes: Moor Mother's urgent poetics + Hieroglyphic Being's riotous cosmic techno/house. Deep spiritual grooves.
 - display_name: Jessica Ekomane
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2580,7 +2602,7 @@ slots:
   artist_ids:
   - jessica-ekomane
 - display_name: Joachim Badenhorst's Youran
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2599,7 +2621,7 @@ slots:
   - johannes-kreidler
   project: '''Jet Whistles / The Grand Exhalation'''
 - display_name: Kee Avil
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2609,7 +2631,7 @@ slots:
   - kee-avil
   project: (Vicky Mettler)
 - display_name: Khrystyna Kirik & Emma Rubikaite-Milasiute
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2621,7 +2643,7 @@ slots:
   project: '''Biophilic Vision'''
   collab_notes: Collaborative performance/installation. New commission for Rewire 2026.
 - display_name: Kode9 b2b Deena Abdelwahed
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2642,7 +2664,7 @@ slots:
   - koenraad-de-groot
   project: '''The Colour of Kameleon'''
 - display_name: Leila Bordreuil
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2661,7 +2683,7 @@ slots:
   - lena-kuzmich
   project: '''Photosynthesizer'''
 - display_name: M Alberto
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2671,7 +2693,7 @@ slots:
   - m-alberto
   project: '''Radio Vitó'''
 - display_name: Mammo
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2690,7 +2712,7 @@ slots:
   - mariska-de-groot
   project: '''BROM'''
 - display_name: Mireia Varón Gallofré
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2700,7 +2722,7 @@ slots:
   - mireia-varon-gallofre
   project: '''Not To Be Senseless: Skin Hunger'''
 - display_name: Moritz von Oswald
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2720,7 +2742,7 @@ slots:
     rating: 3.57
     votes: 1500
 - display_name: Natasha Pirard
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2729,7 +2751,7 @@ slots:
   artist_ids:
   - natasha-pirard
 - display_name: Nazar
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2738,7 +2760,7 @@ slots:
   artist_ids:
   - nazar
 - display_name: Nono Gigsta
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2747,7 +2769,7 @@ slots:
   artist_ids:
   - nono-gigsta
 - display_name: NVST
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2756,7 +2778,7 @@ slots:
   artist_ids:
   - nvst
 - display_name: OK Williams
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2766,7 +2788,7 @@ slots:
   - ok-williams
   project: (Kanyin)
 - display_name: Ouri
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2775,7 +2797,7 @@ slots:
   artist_ids:
   - ouri
 - display_name: Polina Medvedeva & Andreas Kühne
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2787,7 +2809,7 @@ slots:
   project: '''Facing the Spills'''
   collab_notes: Collaborative performance work. New project for Rewire 2026.
 - display_name: Sam Slater & guests
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2804,7 +2826,7 @@ slots:
     title: Lunng
     year: 2026
 - display_name: SANAM
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2813,7 +2835,7 @@ slots:
   artist_ids:
   - sanam
 - display_name: Sól Ey & Modelo62
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2835,7 +2857,7 @@ slots:
   artist_ids:
   - standing-on-the-corner
 - display_name: State OFFF
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2845,7 +2867,7 @@ slots:
   - state-offf
   project: '''Umzimba'''
 - display_name: The Bug & Dis Fig
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2856,7 +2878,7 @@ slots:
   - dis-fig
   collab_notes: Existing collab — In Blue (2020). Two major experimental music figures performing together.
 - display_name: The Silver Thread
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2870,7 +2892,7 @@ slots:
   project: (Shackleton + Zimpel + Belmannu + Udupa)
   collab_notes: Shackleton + Wacław Zimpel + Siddhartha Belmannu + Giridhar Udupa. Visuals by Pedro Maia.
 - display_name: Ugnė Uma & Pavel Milyakov
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
@@ -2881,7 +2903,7 @@ slots:
   - pavel-milyakov
   collab_notes: Collaborative performance pairing. Milyakov also performs as Buttechno b2b Torus at Laak.
 - display_name: Valentina Magaletti & YPY
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2899,7 +2921,7 @@ slots:
     title: Kansai Bruises
     year: 2025
 - display_name: WaqWaq Kingdom feat. VJ Kalma
-  day: null
+  day: Sat
   time: null
   stage: null
   wave: W3
@@ -2920,7 +2942,7 @@ slots:
     rating: 3.48
     votes: 501
 - display_name: weed420
-  day: null
+  day: Fri
   time: null
   stage: null
   wave: W3
@@ -2929,7 +2951,7 @@ slots:
   artist_ids:
   - weed420
 - display_name: Zeno van den Broek, Les Percussions de Strasbourg & HIIIT
-  day: null
+  day: Sun
   time: null
   stage: null
   wave: W3
