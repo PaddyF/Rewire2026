@@ -10,6 +10,21 @@ extension Color {
     static let rewireMuted = Color(hex: "666666")
     static let rewireBorder = Color(hex: "222222")
 
+    // Festival day colours
+    static let dayThu = Color(hex: "c8ff00")   // lime — matches rewireAccent
+    static let dayFri = Color(hex: "00d4ff")   // cyan — matches rewireSecondary
+    static let daySat = Color(hex: "ff6b35")   // orange — matches rewireTertiary
+    static let daySun = Color(hex: "b47fff")   // purple
+
+    static func dayColor(_ day: String?) -> Color {
+        guard let day else { return .rewireMuted }
+        if day.contains("Thu") && !day.contains("–") { return .dayThu }
+        if day.contains("Fri") && !day.contains("–") { return .dayFri }
+        if day.contains("Sat") && !day.contains("–") { return .daySat }
+        if day.contains("Sun") && !day.contains("–") { return .daySun }
+        return .rewireMuted  // multi-day or unknown
+    }
+
     static func waveColor(_ wave: String) -> Color {
         switch wave {
         case "W1": return .rewireAccent

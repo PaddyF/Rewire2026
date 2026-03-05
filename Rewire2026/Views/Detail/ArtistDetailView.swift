@@ -34,9 +34,8 @@ struct ArtistDetailView: View {
                     HStack(alignment: .top) {
                         HStack(spacing: 6) {
                             WaveBadge(wave: slot.wave)
-                            if let type = slot.type {
-                                TypeBadge(type: type)
-                            }
+                            if slot.isWorldPremiere { WorldPremiereBadge() }
+                            if let type = slot.performanceType { TypeBadge(type: type) }
                             if slot.requiresPlusTicket {
                                 Image(systemName: "ticket")
                                     .font(.system(size: 10))
@@ -119,14 +118,18 @@ struct ArtistDetailView: View {
                 }
 
                 // ── Timetable ────────────────────────────────────────────
-                if let day = slot.day, let time = slot.time {
+                if slot.day != nil || slot.time != nil || slot.stage != nil {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("SCHEDULE")
                             .font(.system(size: 10, weight: .bold, design: .monospaced))
                             .foregroundStyle(Color.rewireMuted)
                         HStack(spacing: 12) {
-                            Label(day, systemImage: "calendar")
-                            Label(time, systemImage: "clock")
+                            if let day = slot.day {
+                                Label(day, systemImage: "calendar")
+                            }
+                            if let time = slot.time {
+                                Label(time, systemImage: "clock")
+                            }
                             if let stage = slot.stage {
                                 Label(stage, systemImage: "mappin")
                             }

@@ -30,10 +30,10 @@ class ArtistStore: ObservableObject {
         _ slots: [Slot],
         artists: [String: Artist],
         searchText: String,
-        wave: String?
+        day: String?
     ) -> [Slot] {
         slots.filter { slot in
-            if let wave, slot.wave != wave { return false }
+            if let day, !(slot.day?.contains(day) ?? false) { return false }
             guard !searchText.isEmpty else { return true }
             let q = searchText.lowercased()
             let participantText = slot.artistIds

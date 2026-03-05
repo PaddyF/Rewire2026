@@ -6,30 +6,33 @@ struct LineupView: View {
     @Query private var allUserData: [UserArtistData]
 
     @State private var searchText = ""
-    @State private var selectedWave: String? = nil
+    @State private var selectedDay: String? = nil
 
     private var filteredSlots: [Slot] {
         ArtistStore.filtered(store.lineup.slots, artists: store.lineup.artists,
-                             searchText: searchText, wave: selectedWave)
+                             searchText: searchText, day: selectedDay)
     }
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Wave filter chips
+                // Day filter chips
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 6) {
-                        FilterChip(title: "ALL", isSelected: selectedWave == nil) {
-                            selectedWave = nil
+                        FilterChip(title: "ALL", isSelected: selectedDay == nil) {
+                            selectedDay = nil
                         }
-                        FilterChip(title: "WAVE 1", isSelected: selectedWave == "W1", color: .rewireAccent) {
-                            selectedWave = selectedWave == "W1" ? nil : "W1"
+                        FilterChip(title: "THU", isSelected: selectedDay == "Thu", color: .dayThu) {
+                            selectedDay = selectedDay == "Thu" ? nil : "Thu"
                         }
-                        FilterChip(title: "WAVE 2", isSelected: selectedWave == "W2", color: .rewireSecondary) {
-                            selectedWave = selectedWave == "W2" ? nil : "W2"
+                        FilterChip(title: "FRI", isSelected: selectedDay == "Fri", color: .dayFri) {
+                            selectedDay = selectedDay == "Fri" ? nil : "Fri"
                         }
-                        FilterChip(title: "WAVE 3", isSelected: selectedWave == "W3", color: .rewireTertiary) {
-                            selectedWave = selectedWave == "W3" ? nil : "W3"
+                        FilterChip(title: "SAT", isSelected: selectedDay == "Sat", color: .daySat) {
+                            selectedDay = selectedDay == "Sat" ? nil : "Sat"
+                        }
+                        FilterChip(title: "SUN", isSelected: selectedDay == "Sun", color: .daySun) {
+                            selectedDay = selectedDay == "Sun" ? nil : "Sun"
                         }
                     }
                     .padding(.horizontal, 16)

@@ -26,7 +26,7 @@ struct ArtistRowView: View {
                     }
                 }
                 Spacer()
-                WaveBadge(wave: slot.wave)
+                DayBadge(day: slot.day)
             }
 
             if !genrePreview.isEmpty {
@@ -37,9 +37,8 @@ struct ArtistRowView: View {
             }
 
             HStack(spacing: 6) {
-                if let type = slot.type {
-                    TypeBadge(type: type)
-                }
+                if slot.isWorldPremiere { WorldPremiereBadge() }
+                if let type = slot.performanceType { TypeBadge(type: type) }
                 Spacer()
                 if let rating = userData?.mustSeeRating, rating > 0 {
                     HStack(spacing: 2) {

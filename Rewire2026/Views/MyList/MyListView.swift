@@ -84,7 +84,7 @@ struct MyListRowView: View {
                     }
                 }
                 Spacer()
-                WaveBadge(wave: slot.wave)
+                DayBadge(day: slot.day)
             }
 
             HStack {

@@ -25,3 +25,4 @@ Data/lineup.json
 __pycache__/
 *.pyc
 .env
+Data/.claude/

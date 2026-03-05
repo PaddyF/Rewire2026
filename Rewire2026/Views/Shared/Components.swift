@@ -1,5 +1,37 @@
 import SwiftUI
 
+// MARK: - World Premiere Badge
+
+struct WorldPremiereBadge: View {
+    var body: some View {
+        HStack(spacing: 3) {
+            Image(systemName: "star.fill")
+                .font(.system(size: 8))
+            Text("WORLD PREMIERE")
+                .font(.system(size: 10, weight: .bold, design: .monospaced))
+        }
+        .foregroundStyle(Color.rewireBackground)
+        .padding(.horizontal, 6)
+        .padding(.vertical, 3)
+        .background(Color.rewireTertiary)
+    }
+}
+
+// MARK: - Day Badge
+
+struct DayBadge: View {
+    let day: String?
+
+    var body: some View {
+        Text(day?.uppercased() ?? "TBA")
+            .font(.system(size: 10, weight: .bold, design: .monospaced))
+            .foregroundStyle(day != nil ? Color.rewireBackground : Color.rewireMuted)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 3)
+            .background(Color.dayColor(day))
+    }
+}
+
 // MARK: - Wave Badge
 
 struct WaveBadge: View {

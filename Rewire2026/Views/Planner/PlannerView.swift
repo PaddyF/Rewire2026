@@ -107,7 +107,7 @@ struct PlannerPickRow: View {
 
     var body: some View {
         HStack(spacing: 10) {
-            WaveBadge(wave: slot.wave)
+            DayBadge(day: slot.day)
             VStack(alignment: .leading, spacing: 2) {
                 Text(slot.displayName)
                     .font(.system(size: 13, weight: .semibold, design: .monospaced))
