@@ -1,34 +1,3 @@
-# Rewire 2026 Lineup — source of truth
-# 9–12 April · The Hague · 15th Anniversary
-#
-# Two top-level collections:
-#
-#   artists:
-#     <slug>:
-#       name:       display name
-#       genres:     comma-separated string
-#       latest:     { title, year, label, artist, note, rating, votes }
-#       top_rated:  { title, year, label, artist, note, rating, votes }
-#       notes:      free-text paragraph
-#
-#   slots:
-#     - display_name:  how it appears on the poster
-#       day:           Thu | Fri | Sat | Sun  (or null if TBA); array for multi-day slots e.g. [Sat, Sun]
-#       time:          "HH:MM" 24h format (or null if TBA)
-#       stage:         venue/stage name (or null if TBA)
-#       wave:          W1 | W2 | W3
-#       type:          Live | DJ Set | Installation | World Premiere | etc.
-#       is_collab:     true if this slot features a collaboration between artists
-#       artist_ids:    list of artist slugs (references artists.<slug>)
-#       project:       subtitle / project name (optional)
-#       collab_notes:  notes specific to the collaboration (optional)
-#       collab_latest: release by the collab itself, not by individuals (optional)
-#       collab_top_rated: top-rated collab release (optional)
-
-
-
-
-
 artists:
   actress:
     name: Actress
@@ -146,6 +115,14 @@ artists:
     notes: London sextet founded in 2012 at the Royal College of Music, presenting UK premieres of Saariaho, Sciarrino, and
       Romitelli alongside new commissions that often incorporate electronics.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Signals
+      year: 2026
+      label: Another Timbre
+    top_rated:
+      title: Perfect Offering
+      year: 2023
+      label: NMC Recordings
   beverly-glenn-copeland:
     name: Beverly Glenn-Copeland
     genres: New Age, Progressive Electronic, Singer-Songwriter, Folk
@@ -188,6 +165,9 @@ artists:
     notes: Glasgow-born, Stockholm-based artist whose practice centres on the voice and body, developing Internal Singing
       — a technique exploring breath, touch, and the inhale as sonic material.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Body Lapse
+      year: 2025
   rian-treanor:
     name: Rian Treanor
     genres: Footwork, IDM, UK Bass
@@ -237,6 +217,10 @@ artists:
     notes: Paris-based 35-piece experimental orchestra founded by pianist Frédéric Blondy in 2011, uniting musicians from
       jazz, free improvisation, and contemporary classical for collective sonic research.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Laminaire
+      year: 2024
+      label: Relative Pitch Records
   civilistjavel:
     name: Civilistjävel!
     genres: Ambient, Ambient Dub, Dark Ambient
@@ -553,6 +537,10 @@ artists:
     notes: Novi Sad-born poet and performer whose voice spans bass to overtone screams; a central figure of international
       sound poetry since the 1970s with works in MoMA and the Tate.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Aki darazsakról álmodik / Bomba-effektus Le És föl
+      year: 1988
+      rating: 3.57
   svetlana-mara:
     name: Svetlana Maraš
     genres: Electroacoustic, Sound Art
@@ -953,6 +941,9 @@ artists:
     genres: Noise Rock, No Wave, Psychedelic Rock, Noise
     notes: Osaka-born vocalist Yamantaka Eye, frontman of Boredoms and Hanatarash, whose performances combine noise, psychedelic
       shamanism, and chaotic vocal extremes since the early 1980s.
+    latest:
+      title: recone
+      year: 2020
   c-o-l-o:
     name: C.O.L.O
     genres: Visual Art, A/V
@@ -1139,6 +1130,15 @@ artists:
     notes: Danish saxophonist Mette Rasmussen, based in Trondheim, pushes the physical limits of her instrument through extended
       techniques and preparations, working across free jazz, noise, and textural improvisation.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: The Sleep of Reason Produces Monsters
+      year: 2025
+    top_rated:
+      title: All The Ghosts At Once
+      year: 2015
+      label: Relative Pitch Records
+      rating: 3.52
+      votes: 21
   sacred-lodge:
     name: Sacred Lodge
     genres: Horrorcore, Post-Industrial, Trap Metal
@@ -1190,6 +1190,15 @@ artists:
     notes: Master khaen player Sombat Simla from Isan, Thailand—nicknamed 'the god of khene'—performs virtuosic molam folk
       music on the 16-pipe bamboo mouth organ, documented on Black Truffle in 2023.
     image_url: https://images.prismic.io/rewirefestival/aWj23wIvOtkhBnKP_SombatSilma_15_%C2%A9YasuhiroMorinaga_HD_02.jpg?auto=format,compress&rect=0,37,1866,980&w=1200&h=630
+    latest:
+      title: Master of Bamboo Mouth Organ - Isan, Thailand
+      year: 2023
+      label: Black Truffle
+    top_rated:
+      title: 'Master of Bamboo Mouth Organ: Sombat Simla (Isan, Thailand)'
+      year: 2018
+      rating: 3.02
+      votes: 2
   stemeseder-lillinger:
     name: Stemeseder Lillinger
     genres: Electroacoustic, Free Jazz, Contemporary Classical, Free Improvisation
@@ -1270,6 +1279,10 @@ artists:
     genres: Electronic, DJ
     notes: Emerging local DJ. Minimal public discography.
     image_url: https://images.prismic.io/rewirefestival/aZ3OtcFoBIGEgu4X_33.jpg?auto=format,compress&rect=0,2662,5464,2869&w=1200&h=630
+    latest:
+      title: Aire Du Maquis D'Em
+      year: 2024
+      label: Tanzprocesz
   aernoudt-jacobs:
     name: Aernoudt Jacobs
     genres: Sound Art, Electroacoustic, Acousmatic
@@ -1357,6 +1370,11 @@ artists:
     notes: Moscow-based Pavel Milyakov makes spacious, dystopian techno as Buttechno, drawing on the desolate suburban landscape
       and a lineage from Japanese noise to musique concrète.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: In Your Head
+      year: 2023
+      rating: 3.21
+      votes: 90
   torus:
     name: Torus
     genres: Ambient, Trance, Experimental Club, Electronic
@@ -1368,6 +1386,9 @@ artists:
     notes: The Hague artist Joeri Woudstra uses the Torus alias to reflect on pop culture politics through club music, blending
       trance and ambient into immersive, loop-driven sets.
     image_url: https://images.prismic.io/rewirefestival/Zfg8R8mUzjad_UiA_Torus.jpg?auto=format%2Ccompress&rect=0%2C750%2C1654%2C868&w=1200&h=630
+    latest:
+      title: Summer of Love (2024)
+      year: 2024
   by-storm:
     name: By Storm
     genres: Experimental Hip Hop, Neo-Psychedelia, Abstract Hip Hop, Electronic
@@ -1389,12 +1410,23 @@ artists:
     notes: Eight Amsterdam cellists committed to new music, with over 90 world premieres and collaborations ranging from Philip
       Glass to Michael Gordon and Kate Moore.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Sgt. Pepper's Lonely Hearts Club Band
+      year: 2023
+    top_rated:
+      title: Canto Ostinato
+      year: 2013
+      rating: 3.5
+      votes: 2
   shishani:
     name: Shishani
     genres: Afro-Soul, Contemporary Folk, Jazz, World Music
     notes: Namibian-Belgian singer Shishani Vranckx weaves Oshiwambo traditions with soul, jazz, and indie, using her music
       as a platform for social and political commentary.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Whispers
+      year: 2025
   cerys-hafana:
     name: Cerys Hafana
     genres: Welsh Folk Music, Chamber Folk, Minimalism, Harp
@@ -1428,17 +1460,46 @@ artists:
     notes: Amsterdam quintet Devon Rexi, a Mauskovic Dance Band spin-off, builds psych-funk grooves from pitch-shifted vocals,
       dub bass, and post-punk percussion.
     image_url: https://images.prismic.io/rewirefestival/f169b7f3-aaa8-4e40-9157-22adc1c05884_Devon+Rexi.jpeg?auto=compress,format&rect=0,206,679,356&w=1200&h=630
+    latest:
+      title: Breathstep
+      year: 2026
+      label: Accidental Meetings
+    top_rated:
+      title: Tambal EP
+      year: 2022
+      label: South of North
+      rating: 3.54
+      votes: 18
   john-t-gast:
     name: John T. Gast
     genres: Ambient, Electronic
     notes: Elusive London composer John T. Gast makes esoteric ambient and experimental electronic music, known for ties to
       Dean Blunt and releases on Planet Mu and Blackest Ever Black.
     image_url: https://images.prismic.io/rewirefestival/ZmNkYTYxZTQtODFlNS00NDFiLTg2ZmMtOGY2ZGM0Y2U2YmY5_gast.jpg?auto=compress,format&rect=0,175,800,450&w=1200&h=675
+    latest:
+      title: Infant
+      year: 2025
+      label: 5 Gate Temple
+    top_rated:
+      title: Infant
+      year: 2025
+      rating: 3.67
+      votes: 34
   dim-garden:
     name: Dim Garden
     genres: Electronic, DJ
     notes: Local Hague DJ. Laak club programme. Minimal public discography.
     image_url: https://images.prismic.io/rewirefestival/aZ8JWMFoBIGEgx8v_DimGarden.jpg?auto=format,compress&rect=0,218,520,273&w=1200&h=630
+    latest:
+      title: The Art of DX7
+      year: 2025
+      label: Nightwind Records
+    top_rated:
+      title: A Dauntless Sprite Descends
+      year: 2022
+      label: Italo Moderni
+      rating: 3.45
+      votes: 11
   felix-bell:
     name: Felix Bell
     genres: Electroacoustic, Experimental
@@ -1462,6 +1523,14 @@ artists:
     genres: Sound Art, Electroacoustic, Film, Visual Art
     notes: Belgian audiovisual artist. Installation explores radio waves and transmission. Proximity Music.
     image_url: https://images.prismic.io/rewirefestival/aZ3TOsFoBIGEgu71_FlorisVanhoof-creditsKristofVrancken.jpg?auto=format,compress&rect=0,1081,2839,1490&w=1200&h=630
+    latest:
+      title: Falala Falderiere Falderaldera
+      year: 2020
+      label: Takuroku
+    top_rated:
+      title: The Fluid Computer
+      year: 2019
+      label: KRAAK
   frankie:
     name: FRANKIE
     genres: Art Pop, Cello, Electroacoustic
@@ -1516,6 +1585,12 @@ artists:
     notes: Chicago South Side producer Jamal Moss channels the city's Ron Hardy lineage through acid house, industrial noise,
       free jazz, and EBM on his prolific Mathematics Recordings label.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Cosmic Bebop
+      year: 2016
+      label: RVNG Intl.
+      rating: 3.2
+      votes: 269
   jessica-ekomane:
     name: Jessica Ekomane
     genres: Minimalism, Electronic, Electroacoustic
@@ -1577,6 +1652,14 @@ artists:
     notes: Berlin-based Ukrainian sound artist who transforms everyday sonority using electronic hardware, double bass samples,
       voice, and field recordings in improvised performance and installation.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: State of Latitude
+      year: 2026
+      label: Standard Deviation
+    top_rated:
+      title: Sub-sur-face
+      year: 2024
+      label: Liky Pid Nohamy
   emma-rubikaite-milasiute:
     name: Emma Rubikaite-Milasiute
     genres: Performance, Electroacoustic
@@ -1767,12 +1850,24 @@ artists:
     genres: Electroacoustic, Free Improvisation, Sound Art, Experimental Electronic
     notes: Amsterdam-based composer, sound artist, and drummer who makes electroacoustic music through field improvisation,
       including site-specific recordings in Murmansk with nuclear submarines and decaying harbours.
+    latest:
+      title: Transients I/O
+      year: 2022
   sam-slater:
     name: Sam Slater
     genres: Electroacoustic, Experimental Electronic, Contemporary Classical, Sound Art
     notes: Berlin-based British composer who studied experimental composition at Leeds, collaborated with Jóhann Jóhannsson,
       and won Grammy Awards as score producer for Joker and Chernobyl.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Lunng
+      year: 2026
+      label: Mt. Brings Death
+    top_rated:
+      title: Wrong Airport Ghost
+      year: 2018
+      rating: 2.87
+      votes: 46
   sanam:
     name: SANAM
     genres: Arabic Music, Post-Rock, Experimental Rock, Psychedelic, Avant-Garde Jazz
@@ -1797,6 +1892,15 @@ artists:
     notes: Amsterdam ensemble founded in 2003 that commissions and premieres interdisciplinary new works, functioning as a
       laboratory where composers, visual artists, and performers build tailor-made pieces together.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Moving
+      year: 2025
+      label: Deadland Records
+    top_rated:
+      title: Adjacent Sound
+      year: 2022
+      rating: 3.23
+      votes: 53
   standing-on-the-corner:
     name: Standing on the Corner
     genres: Abstract Hip Hop, Free Jazz, Experimental Hip Hop, Art Ensemble
@@ -1834,6 +1938,10 @@ artists:
     notes: Kevin Martin's project blends maximalist dancehall vocals, sub-bass pressure and noise abrasion, with London Zoo
       (2008) on Ninja Tune cementing his reputation for brutal, speaker-destroying club music.
     image_url: https://images.prismic.io/rewirefestival/2acdd879-cb97-41a6-aa73-e002ea79d135_THE+BUG+Lead+Press+Shot+Large+FIRE+Credit+-+Caroline+Lessire+2%281%29.jpg?auto=compress,format&rect=0,299,6400,3600&w=1200&h=675
+    latest:
+      title: Machine
+      year: 2024
+      label: Relapse Records
   dis-fig:
     name: Dis Fig
     genres: Industrial Noise, Noise, Club Music, Experimental Electronic
@@ -1883,17 +1991,34 @@ artists:
     notes: Siddhartha Belmannu is a Bengaluru-born Hindustani classical vocalist trained in the Gwalior-Kirana gharana, whose
       three-octave voice features on collaborative albums with Shackleton and Wacław Zimpel.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: In The Cell of Dreams (Live Version)
+      year: 2025
+      label: Wrecked
+    top_rated:
+      title: In The Cell of Dreams
+      year: 2023
+      rating: 3.18
+      votes: 129
   giridhar-udupa:
     name: Giridhar Udupa
     genres: Carnatic, Percussion, Ghatam
     notes: Giridhar Udupa is a Carnatic ghatam master who has performed in over fifty countries, moving freely between South
       and North Indian classical traditions as well as jazz, flamenco and world music.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: My Name Is Giridhar Udupa
+      year: 2024
+      label: 7K!
   ugn-uma:
     name: Ugnė Uma
     genres: Experimental, Avant-Folk, Free Jazz, Electronic, Vocal
     notes: Ugnė Uma is a Vilnius-based vocalist and composer whose work draws on Lithuania's underground jazz and folk scenes,
       experimental poetry and electronics, including a 2023 album with saxophonist Sam Gendel.
+    latest:
+      title: Rage Love Strange Love / Someone Call Donna
+      year: 2025
+      label: Somewhere Press
   pavel-milyakov:
     name: Pavel Milyakov
     genres: Post-Industrial, Ambient, Noise, Electronic, Techno
@@ -2001,6 +2126,9 @@ artists:
     notes: Founded in 1962, Les Percussions de Strasbourg is a six-percussionist French ensemble that has commissioned and
       premiered over 250 contemporary works, including Xenakis's Pléïades and pieces by Stockhausen.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Minimal
+      year: 2025
   hiiit:
     name: HIIIT
     genres: Contemporary Classical, Percussion Ensemble, Experimental, New Music
@@ -2013,6 +2141,15 @@ artists:
     notes: Egyptian poet, vocalist, and improviser based between Cairo and Europe. Fuses Arabic poetry with free jazz and
       noise in high-intensity live performances that blur the line between ritual and concert.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    latest:
+      title: Dying Is the Internet
+      year: 2026
+      label: Dekmantel
+    top_rated:
+      title: Notice a Tiny Scratch for the Blue Behind
+      year: 2022
+      rating: 3.28
+      votes: 253
   batu:
     name: Batu
     genres: UK Bass, Techno, Broken Beat, Club
@@ -2023,6 +2160,11 @@ artists:
     notes: Bristol-born producer and founder of the Timedance label. Makes bass-heavy, textured club music that sits between
       UK garage, broken techno, and left-field electronics. Central figure in the Bristol underground.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Opal
+      year: 2022
+      rating: 3.25
+      votes: 292
   jasss:
     name: JASSS
     genres: Industrial Techno, EBM, New Beat, Noise
@@ -2033,12 +2175,26 @@ artists:
     notes: Barcelona-based producer and DJ Sara Dziri. Releases on Cómeme and Rue De Plaisance; known for abrasive industrial
       techno, EBM, and new beat that carries an unmistakably confrontational energy on the dancefloor.
     image_url: https://images.prismic.io/rewirefestival/MjkwZjZmYWItMGFmZi00ZTAwLTk5YWItNjhhZDk0MTc0Yjk1_jasss_rewire2.png?auto=compress,format&rect=67,0,1067,600&w=1200&h=675
+    top_rated:
+      title: Weightless
+      year: 2017
+      label: iDEAL Recordings
+      rating: 3.36
+      votes: 607
   cevdet-erek:
     name: Cevdet Erek
     genres: Sound Art, Percussion, Installation, Experimental
     notes: Istanbul-born artist and architect whose work investigates rhythm, space, and the phenomenology of sound. Has presented
       large-scale installations at Documenta 14 and major international venues; merges visual art and acoustic architecture.
     image_url: https://images.prismic.io/rewirefestival/abKQl1xvIZEnjmfO_CevdetErek%27%EA%9C%B4ccidentGrotesque%27.jpg?auto=format,compress&rect=0,153,2157,1132&w=1200&h=630
+    latest:
+      title: çepeçerçeve
+      year: 2023
+    top_rated:
+      title: Davul
+      year: 2017
+      rating: 3.58
+      votes: 350
   chinnamasta:
     name: Chinnamasta
     genres: Experimental, Electroacoustic, Electronic
@@ -2049,6 +2205,10 @@ artists:
     genres: Contemporary Classical, Harp, Experimental, Electroacoustic
     notes: French harpist and composer who extends the instrument into electronic and acousmatic territory, creating work
       that moves between concert music and sound installation.
+    latest:
+      title: L'Engoulevent
+      year: 2025
+      label: un je-ne-sais-quoi
   deforrest-brown-jr:
     name: DeForrest Brown Jr.
     genres: Techno, Noise, Industrial, Experimental Electronic
@@ -2059,6 +2219,12 @@ artists:
     notes: US musician, producer, and theorist who records as Speaker Music and Synoptic Audio. Informed by Black American
       drumline aesthetics and techno history; author of 'Assembling a Black Counter Culture'.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Black Nationalist Sonic Weaponry
+      year: 2020
+      label: Planet Mu
+      rating: 3.49
+      votes: 34
   dirtydms:
     name: Dirtydms
     genres: Club, UK Bass, Experimental Electronic
@@ -2105,6 +2271,12 @@ artists:
     notes: Osaka-born experimental rock group led by Masaki Matsumura. Combine noise rock, psychedelia, and ritual energy;
       known for relentlessly intense live performances and an anarchic DIY ethos.
     image_url: https://images.prismic.io/rewirefestival/aamaFVxvIZEnjXdc_GEZAN.jpeg?auto=format,compress&rect=0,1006,2064,1084&w=1200&h=630
+    top_rated:
+      title: 狂 (Klue)
+      year: 2020
+      label: 十三月
+      rating: 3.49
+      votes: 2528
   matthew-herbert:
     name: Matthew Herbert
     genres: Electroacoustic, Big Band, Conceptual, Electronic
@@ -2137,6 +2309,13 @@ artists:
     genres: Club, Electronic, Experimental
     notes: DJ and producer operating in experimental club music, drawing from footwork, juke, and left-field electronics.
     image_url: https://images.prismic.io/rewirefestival/aamZX1xvIZEnjXcW_Jespfur.jpg?auto=format,compress&rect=0,157,2412,1266&w=1200&h=630
+    latest:
+      title: Pedestrians Of Bright Silence
+      year: 2024
+      label: 10k
+    top_rated:
+      title: Pedestrians Of Bright Silence
+      year: 2024
   lucy-railton:
     name: Lucy Railton
     genres: Contemporary Classical, Cello, Electroacoustic, Drone
@@ -2147,6 +2326,12 @@ artists:
     notes: London-based cellist and composer who extends the cello into electronic and noise territory. Works closely with
       composers including Cevdet Erek and Oliver Coates; her recordings blend acoustic minimalism with tape manipulation.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: Paradise 94
+      year: 2018
+      label: Modern Love
+      rating: 3.05
+      votes: 116
   charlie-hope:
     name: Charlie Hope
     genres: Contemporary Classical, Experimental, Electroacoustic
@@ -2163,18 +2348,34 @@ artists:
     notes: Johannesburg-based DJ and producer whose sets blend South African club music — gqom, amapiano — with industrial
       electronics and global bass music. A key figure in the Johannesburg underground scene.
     image_url: https://images.prismic.io/rewirefestival/abA7-VxvIZEnjiT8_Moesha1Credit%40LeaHopp%40hopp.jpeg?auto=format,compress&rect=0,113,1600,840&w=1200&h=630
+    latest:
+      title: Jazz Club
+      year: 2025
+      label: Hakuna Kulala
   mark-ijzerman:
     name: Mark IJzerman
     genres: Sound Art, Installation, Electroacoustic, Ambient
     notes: Dutch new-media artist based in Rotterdam. Creates immersive sound and light installations that explore perception,
       space, and the materiality of sound; presented internationally at art institutions and festivals.
     image_url: https://images.prismic.io/rewirefestival/ZGE0N2IxNGYtOTU5Ni00Nzk3LWJjODMtZDZmYWViOTg5ODJm_mark-ijzerman-rewire-2019.png?auto=compress,format&rect=0,206,1500,788&w=1200&h=630
+    latest:
+      title: Flounder Maps
+      year: 2025
+      label: Anterior Insula / Le Pacifique
   meetsysteem:
     name: Meetsysteem
     genres: Experimental, Electronic, Contemporary
     notes: Dutch experimental collective whose work merges electronic music, visual art, and performance in often site-specific
       or durational contexts.
     image_url: https://images.prismic.io/rewirefestival/Z8F5i57c43Q3gW4y_2025_MEETSYSTEEM_36.jpg?auto=format,compress&rect=0,2718,5584,2932&w=1200&h=630
+    latest:
+      title: Gekleed In Donker, Ze Vroegen Niks
+      year: 2025
+      label: Nous'klaer Audio
+    top_rated:
+      title: Cr:GO
+      year: 2020
+      label: Nous'klaer Audio
   pebblle:
     name: Pebblle
     genres: Electronic, Club, Experimental
@@ -2185,11 +2386,26 @@ artists:
     genres: Performance, Experimental, Electronic
     notes: Interdisciplinary artist working across sound performance, body, and electronics.
     image_url: https://images.prismic.io/rewirefestival/aamg4FxvIZEnjXnF_ROLROLROL.jpg?auto=format,compress&rect=0,641,2700,1418&w=1200&h=630
+    latest:
+      title: Dinner
+      year: 2025
+      label: Ilian Tape
+    top_rated:
+      title: Music
+      year: 2023
   sijya:
     name: Sijya
     genres: Club, Electronic, UK Bass
     notes: DJ and producer known for genre-fluid sets drawing from club music, UK bass, and experimental electronics.
     image_url: https://images.prismic.io/rewirefestival/abBDLVxvIZEnjidA_SijyaPress-5.jpg?auto=format,compress&rect=0,1392,3840,2016&w=1200&h=630
+    latest:
+      title: Leather & Brass
+      year: 2025
+      label: One Little Independent Records
+    top_rated:
+      title: Young Hate
+      year: 2022
+      label: Accidental Records
   slikback:
     name: Slikback
     genres: Club, Tekno, Experimental Electronic, African Club
@@ -2200,6 +2416,11 @@ artists:
     notes: Ugandan-born, Kampala and Nairobi-based DJ and producer associated with the Nyege Nyege collective. Makes relentless,
       mutant club music that fuses footwork, tekno, and East African rhythms at extreme speeds.
     image_url: https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630
+    top_rated:
+      title: CONDENSE
+      year: 2022
+      rating: 3.5
+      votes: 105
   maltdisney:
     name: maltdisney
     genres: Club, Electronic, Experimental
@@ -2215,16 +2436,42 @@ artists:
     genres: Club, Electronic, Experimental
     notes: DJ and producer working across club and experimental electronic music.
     image_url: https://images.prismic.io/rewirefestival/aamfrlxvIZEnjXk__TonyBontana.JPG?auto=format,compress&rect=0,1790,3641,1912&w=1200&h=630
+    latest:
+      title: My Name
+      year: 2026
+      label: Everything is Perfect Records
+    top_rated:
+      title: Our Day Will Come
+      year: 2019
+      rating: 3.41
+      votes: 285
   violeta-garcia:
     name: Violeta García
     genres: Electronic, Experimental, Electroacoustic
     notes: Argentine-born, Barcelona-based composer and sound artist. Creates dense electronic works that explore texture,
       noise, and the body through a feminist lens; active in both the experimental and club music scenes.
+    latest:
+      title: IN / OUT
+      year: 2025
+      label: Les Disques Bongo Joe
+    top_rated:
+      title: Fobia
+      year: 2022
+      rating: 3.25
+      votes: 8
   yatta:
     name: YATTA
     genres: Performance, Electronic, Experimental
     notes: Artist and performer whose work blends electronic sound, performance, and visual art.
     image_url: https://images.prismic.io/rewirefestival/MDZhNzY1YTktZjUwZS00MWI4LTkzZmItMzI5ZTUyMTRmMzk1_yatta.jpg?auto=compress,format&rect=0,118,1000,563&w=1200&h=675
+    latest:
+      title: Palm Wine
+      year: 2024
+    top_rated:
+      title: Palm Wine
+      year: 2024
+      rating: 3.39
+      votes: 135
   yb3l:
     name: Yb3L
     genres: Electronic, Club, Experimental
