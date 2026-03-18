@@ -109,6 +109,39 @@ struct ArtistDetailView: View {
                     ParticipantSection(artist: artist, showDivider: true)
                 }
 
+                // ── Conflict Warning (once timetable data exists) ─────────────────
+                let conflictingSlots = store.conflicts(for: slot, allUserData: allUserData)
+                if !conflictingSlots.isEmpty {
+                    VStack(alignment: .leading, spacing: 6) {
+                        HStack(spacing: 6) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .font(.system(size: 11))
+                                .foregroundStyle(Color.rewireTertiary)
+                            Text("SCHEDULE CONFLICT")
+                                .font(.system(size: 10, weight: .bold, design: .monospaced))
+                                .foregroundStyle(Color.rewireTertiary)
+                        }
+                        ForEach(conflictingSlots, id: \.id) { conflict in
+                            HStack(spacing: 4) {
+                                Text("•").foregroundStyle(Color.rewireTertiary)
+                                Text(conflict.displayName)
+                                if let t = conflict.time {
+                                    Text("· \(t)").foregroundStyle(Color.rewireMuted)
+                                }
+                            }
+                            .font(.system(size: 12, design: .monospaced))
+                            .foregroundStyle(Color.rewireText)
+                        }
+                    }
+                    .padding(12)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.rewireTertiary.opacity(0.1))
+                    .overlay(Rectangle().stroke(Color.rewireTertiary.opacity(0.4), lineWidth: 1))
+                    .padding(.horizontal, 16)
+                    .padding(.bottom, 8)
+                    dividerLine
+                }
+
                 // ── Plus Ticket Warning ──────────────────────────────────
                 if slot.requiresPlusTicket {
                     PlusTicketWarning()
@@ -189,7 +222,30 @@ private struct ParticipantSection: View {
     let showDivider: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 0) {
+            // Hero image (full-width, no side padding)
+            if let imageUrl = artist.imageUrl, let url = URL(string: imageUrl) {
+                AsyncImage(url: url) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 200)
+                            .clipped()
+                    case .empty:
+                        Rectangle()
+                            .fill(Color.rewireSurface)
+                            .frame(height: 200)
+                            .overlay(ProgressView().tint(Color.rewireMuted))
+                    default:
+                        EmptyView()
+                    }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: 12) {
             Text(artist.name)
                 .font(.system(size: 15, weight: .bold, design: .monospaced))
                 .foregroundStyle(Color.rewireText)
@@ -221,5 +277,6 @@ private struct ParticipantSection: View {
         if showDivider {
             Rectangle().fill(Color.rewireBorder).frame(height: 1)
         }
+        } // outer VStack
     }
 }

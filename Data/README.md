@@ -23,6 +23,7 @@ artists:
   actress:
     name: Actress
     genres: "IDM, Dub Techno, Glitch, Ambient, Abstract Hip-Hop"
+    image_url: "https://www.rewirefestival.nl/..."   # optional
     latest:
       title: Darren J. Cunningham / Statik
       year: 2024
@@ -109,12 +110,18 @@ python fill_gaps.py --dry-run
 # Export gaps for a field as JSON (for Claude Code to research)
 python fill_gaps.py --field notes --export /tmp/notes_gaps.json
 python fill_gaps.py --field genres --export /tmp/genre_gaps.json
+python fill_gaps.py --field image --export /tmp/image_gaps.json
 python fill_gaps.py --field perf_type --export /tmp/perf_type_gaps.json
 python fill_gaps.py --field top_rated --export /tmp/rym_gaps.json
 
 # Apply a filled JSON back to lineup.yaml
 python fill_gaps.py --field notes --apply /tmp/notes_results.json
+python fill_gaps.py --field image --apply /tmp/image_results.json
 python fill_gaps.py --field perf_type --apply /tmp/perf_type_results.json
+
+# Verify our notes against official Rewire artist pages
+python fill_gaps.py --verify
+python fill_gaps.py --verify --artist "Moor Mother"  # single artist
 
 # After filling, recompile
 python build.py
@@ -124,8 +131,9 @@ python build.py
 
 | `--field` | Detects | Fills |
 |---|---|---|
-| `notes` | artists with no bio or < 20 chars | `notes` string |
+| `notes` | artists with no bio or < 60 chars | `notes` string |
 | `genres` | artists with < 3 genres | `genres` string |
+| `image` | artists with no `image_url` | `image_url` string |
 | `top_rated` | missing RYM top-rated release | `top_rated` block |
 | `latest` | missing latest release | `latest` block |
 | `perf_type` | World Premiere slots with no `type` | `type` string |
@@ -136,6 +144,13 @@ For `notes` / `genres`:
 ```json
 [
   { "slug": "actress", "notes": "Bio text…", "genres": "IDM, Dub Techno, Glitch" }
+]
+```
+
+For `image`:
+```json
+[
+  { "slug": "actress", "image_url": "https://www.rewirefestival.nl/..." }
 ]
 ```
 
@@ -167,6 +182,7 @@ struct Artist: Codable {
     let latest: Release?
     let topRated: Release?   // JSON key: top_rated
     let notes: String?
+    let imageUrl: String?    // JSON key: image_url
 }
 
 struct Slot: Codable {

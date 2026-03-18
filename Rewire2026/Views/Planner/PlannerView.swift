@@ -140,8 +140,86 @@ struct PlannerPickRow: View {
 }
 
 struct ScheduleGridView: View {
+    @EnvironmentObject var store: ArtistStore
+    @Query private var allUserData: [UserArtistData]
+    @State private var selectedDay: String = "Thu"
+
+    private let days = ["Thu", "Fri", "Sat", "Sun"]
+
+    private var pickedSlotIds: Set<String> {
+        Set(allUserData.filter { $0.isBookmarked || $0.mustSeeRating > 0 }.map { $0.artistId })
+    }
+
+    private var picksForDay: [Slot] {
+        store.lineup.slots
+            .filter { pickedSlotIds.contains($0.id) && $0.day?.contains(selectedDay) == true }
+            .sorted {
+                switch ($0.time, $1.time) {
+                case let (a?, b?): return a < b
+                case (nil, _?):   return false
+                case (_?, nil):   return true
+                default:          return $0.displayName.localizedCompare($1.displayName) == .orderedAscending
+                }
+            }
+    }
+
     var body: some View {
-        Text("Schedule grid")
-            .foregroundStyle(Color.rewireMuted)
+        VStack(spacing: 0) {
+            // Day selector
+            HStack(spacing: 0) {
+                ForEach(days, id: \.self) { day in
+                    let isSelected = selectedDay == day
+                    Button { selectedDay = day } label: {
+                        VStack(spacing: 4) {
+                            Text(day.uppercased())
+                                .font(.system(size: 13, weight: .bold, design: .monospaced))
+                                .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted)
+                            Rectangle()
+                                .fill(isSelected ? Color.dayColor(day) : Color.clear)
+                                .frame(height: 2)
+                        }
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .background(Color.rewireSurface)
+
+            Divider().background(Color.rewireBorder)
+
+            if picksForDay.isEmpty {
+                VStack(spacing: 16) {
+                    Spacer()
+                    Text("_ _ _")
+                        .font(.system(size: 24, weight: .light, design: .monospaced))
+                        .foregroundStyle(Color.rewireBorder)
+                    Text("NO PICKS FOR \(selectedDay.uppercased())")
+                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .foregroundStyle(Color.rewireMuted)
+                    Text("Rate or bookmark artists in the Lineup tab")
+                        .font(.system(size: 11, design: .monospaced))
+                        .foregroundStyle(Color.rewireMuted.opacity(0.6))
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color.rewireBackground)
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: 0) {
+                        ForEach(picksForDay) { slot in
+                            let userData = allUserData.first { $0.artistId == slot.id }
+                            NavigationLink(destination: ArtistDetailView(slot: slot)) {
+                                ScheduleSlotRow(slot: slot, userData: userData)
+                            }
+                            .buttonStyle(.plain)
+                            Divider().background(Color.rewireBorder)
+                        }
+                    }
+                    .padding(.bottom, 32)
+                }
+                .background(Color.rewireBackground)
+            }
+        }
     }
 }

@@ -6,13 +6,14 @@ Native SwiftUI iOS app for tracking the [Rewire festival](https://rewire.nl) lin
 
 - **Lineup** — searchable, filterable list of 166 artists with wave badges, genre tags, and performance types
 - **My List** — bookmarked and rated artists, sorted by Must See rating
-- **Planner** — shows your picks now; switches to a day-by-day schedule grid once the timetable drops
+- **Planner** — shows your picks now; switches to a day-by-day schedule grid once the timetable drops, with conflict detection for overlapping bookmarked slots
 
 Each artist detail view has:
 - 5-star "Must See" rating (persists across app restarts)
 - Personal notes text field (persists across app restarts)
 - Bookmark toggle
-- Release info (latest + top-rated), bio, Plus Ticket warning, World Premiere badge
+- Hero image (when `image_url` is populated), release info, bio, Plus Ticket warning, World Premiere badge
+- Schedule conflict warning (once timetable data exists)
 
 ## Requirements
 
@@ -53,7 +54,7 @@ Rewire2026/
 │   ├── Schedule/
 │   │   └── ScheduleView.swift   # Day-by-day grid (shown once timetable drops)
 │   └── Shared/
-│       └── Components.swift     # WorldPremiereBadge, TypeBadge, DayBadge, WaveBadge…
+│       └── Components.swift     # WorldPremiereBadge, TypeBadge, DayBadge, WaveBadge, ScheduleSlotRow…
 ├── Theme/
 │   └── AppTheme.swift           # Color palette, Color(hex:) extension
 └── Resources/
@@ -109,6 +110,7 @@ Populate `day`, `time`, and `stage` on each slot in `lineup.yaml`, then rebuild.
 | `name` | String | Display name |
 | `genres` | String? | Comma-separated genre tags |
 | `notes` | String? | Bio paragraph |
+| `imageUrl` | String? | Photo URL (from Rewire artist page) |
 | `latest` | Release? | Most recent record |
 | `topRated` | Release? | Highest-rated record (RYM data) |
 

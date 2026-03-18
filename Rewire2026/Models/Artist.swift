@@ -20,6 +20,7 @@ struct Artist: Codable {
     let latest: Release?
     let topRated: Release?   // JSON key: top_rated (decoded via .convertFromSnakeCase)
     let notes: String?
+    let imageUrl: String?    // JSON key: image_url
 
     var genreList: [String] {
         genres?.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) } ?? []

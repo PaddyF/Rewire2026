@@ -10,6 +10,7 @@
 		01A646717EF54DFD44BBA9DB /* LineupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F02C88B33596687185687F /* LineupView.swift */; };
 		1059D2B2DD7D8DC51993AFD1 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B00176E3A74952D768E2C /* AppTheme.swift */; };
 		201B88B7A888B8A14850DF78 /* FilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEF106A9A3EEAEE3A1C81E2 /* FilterTests.swift */; };
+		540A66B941F04F5880EBBB96 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */; };
 		54C0D5B0A0371506796D9FF3 /* RewireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B1DB0389E7273A8F44BE85 /* RewireApp.swift */; };
 		745480EC25CD28C603A09A3A /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74460411E5771DCE6E4FE380 /* Components.swift */; };
 		753FA025C715C928657B21B7 /* UserArtistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53E2D770409855FF1F0272 /* UserArtistData.swift */; };
@@ -21,7 +22,6 @@
 		A5EDE7EE05FD7BFDA90B7AAC /* ArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272501D4238772FEA1B3A054 /* ArtistDetailView.swift */; };
 		AE0B8634046CAD3AC8A1FC52 /* ArtistDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C93A3AC6B183311DC1EFE /* ArtistDataTests.swift */; };
 		C9ACBB07F5DCBD03EF0BF461 /* MustSeeRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B65FC28ACDF205E293B4 /* MustSeeRatingView.swift */; };
-		540A66B941F04F5880EBBB96 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */; };
 		DE175B0FB2A6536808CB9B2A /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CF97AB1313BE4F33A9D4D4 /* MyListView.swift */; };
 		F2202653E39BBAF49B526E98 /* lineup.json in Resources */ = {isa = PBXBuildFile; fileRef = D8A411123AC5629CDDDB6E7F /* lineup.json */; };
 		FDF25325E562E379DC5CB7CD /* ArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895BFB9BB5E35B84251CCC3 /* ArtistRowView.swift */; };
@@ -52,7 +52,7 @@
 		A86C59F36A4BD08C42A5D552 /* PlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerView.swift; sourceTree = "<group>"; };
 		BCCD5DBF07E44763AAD7DFAF /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		BEC6B65FC28ACDF205E293B4 /* MustSeeRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustSeeRatingView.swift; sourceTree = "<group>"; };
-		C0C7A15D9E005A7732565A16 /* Rewire2026.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Rewire2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C7A15D9E005A7732565A16 /* Rewire2026.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rewire2026.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835E8890EAF01C9D15E0671 /* UserArtistDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtistDataTests.swift; sourceTree = "<group>"; };
 		D8A411123AC5629CDDDB6E7F /* lineup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lineup.json; sourceTree = "<group>"; };
 		E23D3F55B6A04D0DF43C14DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -243,7 +243,6 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					AE8D572AECBEA936275A112F = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -506,7 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YA458W27MQ;
 				INFOPLIST_FILE = Rewire2026/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,7 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = YA458W27MQ;
 				INFOPLIST_FILE = Rewire2026/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (

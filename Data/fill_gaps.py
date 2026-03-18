@@ -20,6 +20,7 @@ Two workflows are supported:
   --artist          Target a single artist by name (substring match)
 """
 
+import html
 import json
 import os
 import re
@@ -350,6 +351,10 @@ def needs_genre_fill(artist: dict) -> bool:
     if is_visual_artist(artist):
         return False
     return len([x for x in g.split(",") if x.strip()]) < THIN_THRESHOLD
+
+
+def needs_image_fill(artist: dict) -> bool:
+    return not artist.get("image_url")
 
 
 def needs_perf_type_fill(slot: dict) -> bool:
@@ -696,6 +701,8 @@ def run_summary(data: dict):
         if needs_notes_fill(a)
         and not any(p in (a.get("notes") or "").lower() for p in NOTES_SKIP_PHRASES)
     ]
+    # Image gaps
+    image_gaps = [a["name"] for a in artists.values() if needs_image_fill(a)]
     # Perf type gaps
     perf_gaps = [s["display_name"] for s in slots if needs_perf_type_fill(s)]
     # Timetable gaps
@@ -719,6 +726,8 @@ def run_summary(data: dict):
     for name in notes_gaps:
         print(f"    {name}")
 
+    print(f"\n▸ Images (missing image_url)  — {len(image_gaps)} artist(s)")
+
     print(f"\n▸ Perf type (World Premiere, no type)  — {len(perf_gaps)} slot(s)")
     for name in perf_gaps:
         print(f"    {name}")
@@ -728,9 +737,9 @@ def run_summary(data: dict):
     print(f"    time : {len(time_gaps)} slot(s) missing")
     print(f"    stage: {len(stage_gaps)} slot(s) missing")
 
-    total = len(rym_gaps) + len(genre_gaps) + len(notes_gaps) + len(perf_gaps)
+    total = len(rym_gaps) + len(genre_gaps) + len(notes_gaps) + len(image_gaps) + len(perf_gaps)
     print(f"\n{'═' * 60}")
-    print(f"  {total} artist/slot gaps across RYM, genres, notes, perf_type")
+    print(f"  {total} artist/slot gaps across RYM, genres, notes, images, perf_type")
     print(f"  (timetable gaps excluded — awaiting official release)")
     print("═" * 60)
 
@@ -757,6 +766,10 @@ def apply_result(artist: dict, result: dict) -> dict:
 def run(args):
     data = load_yaml()
 
+    if args.verify:
+        run_verify(data, args)
+        return
+
     if args.export:
         run_export(data, args)
         return
@@ -768,6 +781,9 @@ def run(args):
         run_summary(data)
         return
 
+    if args.field == "image":
+        run_image(data, args)
+        return
     if args.field == "genres":
         run_genres(data, args)
         return
@@ -896,6 +912,20 @@ def run_export(data: dict, args):
         ]
         desc = f"{len(rows)} slot(s) needing performance type"
 
+    elif field == "image":
+        targets = {s: a for s, a in artists.items() if args.artist is None or args.artist.lower() in a["name"].lower()}
+        rows = [
+            {
+                "slug": slug,
+                "name": a["name"],
+                "rewire_url": f"https://www.rewirefestival.nl/artist/{rewire_slug(a['name'])}",
+                "existing_image_url": a.get("image_url") or "",
+            }
+            for slug, a in targets.items()
+            if needs_image_fill(a)
+        ]
+        desc = f"{len(rows)} artist(s) needing image_url"
+
     elif field in ("latest", "top_rated"):
         targets = {s: a for s, a in artists.items() if args.artist is None or args.artist.lower() in a["name"].lower()}
         rows = [
@@ -958,6 +988,18 @@ def run_apply(data: dict, args):
                 artist["genres"] = entry["genres"]
                 total_changes += 1
 
+    elif field == "image":
+        for entry in results:
+            slug = entry.get("slug")
+            if slug not in artists:
+                print(f"  ? Unknown slug: {slug!r} — skipping")
+                continue
+            artist = artists[slug]
+            if "image_url" in entry and entry["image_url"]:
+                artist["image_url"] = entry["image_url"]
+                print(f"  ✓ {artist['name']}: image_url = {entry['image_url']!r}")
+                total_changes += 1
+
     elif field == "perf_type":
         slot_map = {s["display_name"]: s for s in slots}
         for entry in results:
@@ -989,6 +1031,161 @@ def run_apply(data: dict, args):
         print("\n↳ No changes to write.")
 
 
+# ─── Image fetcher ────────────────────────────────────────────────────────────
+
+def run_image(data: dict, args):
+    """Fetch og:image from each artist's Rewire page and store as image_url."""
+    artists = data["artists"]
+
+    if args.artist:
+        targets = {s: a for s, a in artists.items() if args.artist.lower() in a["name"].lower()}
+        if not targets:
+            print(f"No artist matching '{args.artist}' found.")
+            sys.exit(1)
+    else:
+        targets = {s: a for s, a in artists.items() if needs_image_fill(a)}
+
+    if not targets:
+        print("✓ All artists already have image_url!")
+        return
+
+    print(f"Fetching images for {len(targets)} artist(s)...\n")
+
+    if args.dry_run:
+        for slug, artist in targets.items():
+            url = f"https://www.rewirefestival.nl/artist/{rewire_slug(artist['name'])}"
+            print(f"  {artist['name']}  →  {url}")
+        return
+
+    total_changes = 0
+    for i, (slug, artist) in enumerate(targets.items(), 1):
+        name = artist["name"]
+        print(f"[{i}/{len(targets)}] {name}... ", end="", flush=True)
+
+        page_html = _fetch_rewire_page(name)
+        if not page_html:
+            print("✗ fetch failed")
+            continue
+
+        img_url = _extract_og_image(page_html)
+        if img_url:
+            artist["image_url"] = img_url
+            print(f"✓  {img_url}")
+            total_changes += 1
+        else:
+            print("↳ no og:image found")
+
+        if i < len(targets):
+            time.sleep(0.5)
+
+    if total_changes > 0:
+        save_yaml(data)
+        print(f"\n✓ Wrote image_url for {total_changes} artist(s) → {SRC}")
+        print("  Run  python build.py && cp lineup.json ../Rewire2026/Resources/lineup.json")
+    else:
+        print("\n↳ No changes to write.")
+
+
+# ─── Verify ───────────────────────────────────────────────────────────────────
+
+def _fetch_rewire_page(name: str) -> str | None:
+    """Fetch an artist's Rewire page and return the page text, or None on failure."""
+    url = f"https://www.rewirefestival.nl/artist/{rewire_slug(name)}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return resp.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        return None
+
+
+def _extract_og_description(page_html: str) -> str:
+    """Extract og:description meta content from page HTML."""
+    match = re.search(
+        r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']',
+        page_html, re.IGNORECASE
+    )
+    if not match:
+        match = re.search(
+            r'<meta[^>]+content=["\'](.*?)["\'][^>]+property=["\']og:description["\']',
+            page_html, re.IGNORECASE
+        )
+    if match:
+        return html.unescape(match.group(1)).strip()
+    return ""
+
+
+def _extract_og_image(page_html: str) -> str:
+    """Extract og:image meta content from page HTML."""
+    match = re.search(
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\'](.*?)["\']',
+        page_html, re.IGNORECASE
+    )
+    if not match:
+        match = re.search(
+            r'<meta[^>]+content=["\'](.*?)["\'][^>]+property=["\']og:image["\']',
+            page_html, re.IGNORECASE
+        )
+    if match:
+        return html.unescape(match.group(1)).strip()
+    return ""
+
+
+def run_verify(data: dict, args):
+    """Fetch Rewire artist pages and print our notes/genres alongside page descriptions."""
+    artists = data["artists"]
+
+    if args.artist:
+        targets = {s: a for s, a in artists.items() if args.artist.lower() in a["name"].lower()}
+        if not targets:
+            print(f"No artist matching '{args.artist}' found.")
+            sys.exit(1)
+    else:
+        # Only verify artists that have notes (otherwise there's nothing to compare)
+        targets = {s: a for s, a in artists.items() if a.get("notes")}
+
+    print(f"Verifying {len(targets)} artist(s) against Rewire pages...\n")
+
+    mismatches = []
+    for slug, artist in targets.items():
+        name = artist["name"]
+        our_notes = (artist.get("notes") or "").strip()
+        our_genres = (artist.get("genres") or "").strip()
+        url = f"https://www.rewirefestival.nl/artist/{rewire_slug(name)}"
+
+        page_html = _fetch_rewire_page(name)
+        page_desc = _extract_og_description(page_html) if page_html else ""
+
+        print(f"── {name}")
+        if not page_html:
+            print(f"   FETCH : failed ({url})")
+        elif not page_desc:
+            print(f"   PAGE  : (no description found on page)")
+        else:
+            print(f"   PAGE  : {page_desc[:200]}")
+
+        print(f"   OURS  : {our_notes[:200] or '(none)'}")
+        print(f"   GENRES: {our_genres or '(none)'}")
+
+        if page_desc and our_notes:
+            # Flag if our notes don't share words with the page description
+            page_words = set(re.findall(r'\w{5,}', page_desc.lower()))
+            our_words  = set(re.findall(r'\w{5,}', our_notes.lower()))
+            overlap = page_words & our_words
+            if len(overlap) < 2:
+                print(f"   ⚠ LOW OVERLAP — may need review (shared words: {overlap or 'none'})")
+                mismatches.append(name)
+
+        print()
+        time.sleep(0.5)
+
+    if mismatches:
+        print(f"{'─' * 50}")
+        print(f"⚠ {len(mismatches)} artist(s) flagged for review:")
+        for name in mismatches:
+            print(f"    {name}")
+
+
 # ─── CLI ──────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
@@ -996,11 +1193,13 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run",  action="store_true", help="Print gap summary without writing anything")
     parser.add_argument("--artist",   type=str, default=None, help="Target a single artist by name (substring match)")
     parser.add_argument("--field",    type=str, default=None,
-                        choices=["latest", "top_rated", "genres", "timetable", "notes", "perf_type"],
+                        choices=["latest", "top_rated", "genres", "timetable", "notes", "perf_type", "image"],
                         help="Field to fill")
     parser.add_argument("--export",   type=str, default=None, metavar="FILE",
                         help="Export gap data as JSON for Claude Code to research (use with --field)")
     parser.add_argument("--apply",    type=str, default=None, metavar="FILE",
                         help="Apply Claude Code research results from JSON file (use with --field)")
+    parser.add_argument("--verify",   action="store_true",
+                        help="Fetch Rewire artist pages and compare our notes/genres against them")
     args = parser.parse_args()
     run(args)

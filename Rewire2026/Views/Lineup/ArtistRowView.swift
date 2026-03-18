@@ -12,7 +12,28 @@ struct ArtistRowView: View {
             .map { $0.joined(separator: " · ") } ?? ""
     }
 
+    private var thumbnailUrl: URL? {
+        slot.artistIds.first.flatMap { artists[$0]?.imageUrl }.flatMap { URL(string: $0) }
+    }
+
     var body: some View {
+        HStack(alignment: .top, spacing: 10) {
+            // Thumbnail — only shown when image_url is populated
+            if let url = thumbnailUrl {
+                AsyncImage(url: url) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image.resizable().aspectRatio(contentMode: .fill)
+                    case .empty:
+                        Color.rewireSurface
+                    default:
+                        Color.rewireSurface
+                    }
+                }
+                .frame(width: 48, height: 48)
+                .clipped()
+            }
+
         VStack(alignment: .leading, spacing: 6) {
             HStack(alignment: .top, spacing: 8) {
                 VStack(alignment: .leading, spacing: 2) {
@@ -56,6 +77,7 @@ struct ArtistRowView: View {
                 }
             }
         }
+        } // HStack
         .padding(.vertical, 4)
     }
 }
