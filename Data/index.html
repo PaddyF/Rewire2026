@@ -12,6 +12,8 @@
     --text: #e8e8e0; --muted: #666;
     --w1: #c8ff00; --w2: #00d4ff; --w3: #ff6b35;
     --collab: #e066ff;
+    --thu: #c8ff00; --fri: #00d4ff; --sat: #ff6b35; --sun: #b66dff;
+    --ins: #a0c4ff; --dj: #caffbf; --b2b: #ffd166;
     --row-hover: #1a1a1a;
   }
 
@@ -65,11 +67,17 @@
     cursor: pointer; padding: 6px 12px; transition: all .12s;
   }
   button:hover { border-color: #444; color: var(--text); }
-  button.active-all { border-color: var(--text); color: var(--text); background: #1a1a1a; }
-  button.active-w1  { border-color: var(--w1); color: var(--w1); background: rgba(200,255,0,.06); }
-  button.active-w2  { border-color: var(--w2); color: var(--w2); background: rgba(0,212,255,.06); }
-  button.active-w3  { border-color: var(--w3); color: var(--w3); background: rgba(255,107,53,.06); }
+  button.active-all    { border-color: var(--text);   color: var(--text);   background: #1a1a1a; }
+  button.active-Thu    { border-color: var(--thu);    color: var(--thu);    background: rgba(200,255,0,.06); }
+  button.active-Fri    { border-color: var(--fri);    color: var(--fri);    background: rgba(0,212,255,.06); }
+  button.active-Sat    { border-color: var(--sat);    color: var(--sat);    background: rgba(255,107,53,.06); }
+  button.active-Sun    { border-color: var(--sun);    color: var(--sun);    background: rgba(182,109,255,.06); }
   button.active-collab { border-color: var(--collab); color: var(--collab); background: rgba(224,102,255,.06); }
+  button.active-ins    { border-color: var(--ins);    color: var(--ins);    background: rgba(160,196,255,.08); }
+  button.active-dj     { border-color: var(--dj);     color: var(--dj);     background: rgba(202,255,191,.08); }
+  button.active-b2b    { border-color: var(--b2b);    color: var(--b2b);    background: rgba(255,209,102,.08); }
+
+  .filter-sep { width: 1px; background: var(--border); align-self: stretch; margin: 0 4px; }
 
   .stats {
     font-family: 'Space Mono', monospace; font-size: 10px;
@@ -189,11 +197,18 @@
       <input type="text" id="search" placeholder="Search artists, genres, albums…">
     </div>
     <div class="filter-group">
-      <button id="btn-all" class="active-all" onclick="setWave('all')">All</button>
-      <button id="btn-w1"  onclick="setWave('W1')">W1</button>
-      <button id="btn-w2"  onclick="setWave('W2')">W2</button>
-      <button id="btn-w3"  onclick="setWave('W3')">W3</button>
-      <button id="btn-collab" onclick="setWave('collab')">Collabs</button>
+      <button id="btn-all"    class="active-all" onclick="setDay('all')">All</button>
+      <button id="btn-Thu"    onclick="setDay('Thu')">Thu</button>
+      <button id="btn-Fri"    onclick="setDay('Fri')">Fri</button>
+      <button id="btn-Sat"    onclick="setDay('Sat')">Sat</button>
+      <button id="btn-Sun"    onclick="setDay('Sun')">Sun</button>
+      <button id="btn-collab" onclick="setDay('collab')">Collabs</button>
+    </div>
+    <div class="filter-sep"></div>
+    <div class="filter-group">
+      <button id="btn-ins" onclick="toggleType('ins')">Installation</button>
+      <button id="btn-dj"  onclick="toggleType('dj')">DJ Set</button>
+      <button id="btn-b2b" onclick="toggleType('b2b')">B2B</button>
     </div>
     <span class="stats" id="stats"></span>
   </div>
@@ -221,7 +236,8 @@
 // ─── State ───────────────────────────────────────────────────────────────────
 let ARTISTS = {};
 let SLOTS = [];
-let cw = 'all';
+let cd = 'all';   // day filter: 'all' | 'Thu' | 'Fri' | 'Sat' | 'Sun' | 'collab'
+let ct = null;    // type filter: null | 'ins' | 'dj' | 'b2b'
 let cs = { col: 'wave', dir: 1 };
 let sv = '';
 
@@ -374,8 +390,20 @@ function render() {
   const q = sv.toLowerCase();
 
   let rows = SLOTS.filter(s => {
-    if (cw === 'collab' && !s.is_collab) return false;
-    if (cw !== 'all' && cw !== 'collab' && s.wave !== cw) return false;
+    // Day / collab filter
+    if (cd === 'collab') { if (!s.is_collab) return false; }
+    else if (cd !== 'all') {
+      const days = Array.isArray(s.day) ? s.day : (s.day ? [s.day] : []);
+      if (!days.includes(cd)) return false;
+    }
+    // Type filter (toggleable, independent of day)
+    if (ct) {
+      const t = (s.type || '').toLowerCase();
+      const n = s.display_name.toLowerCase();
+      if (ct === 'ins' && !t.includes('installation')) return false;
+      if (ct === 'dj'  && (!t.includes('dj') || n.includes('b2b'))) return false;
+      if (ct === 'b2b' && !n.includes('b2b')) return false;
+    }
     if (!q) return true;
     return searchHay(s).includes(q);
   });
@@ -462,13 +490,22 @@ function sb(col) {
   render();
 }
 
-function setWave(wave) {
-  cw = wave;
-  ['all', 'w1', 'w2', 'w3', 'collab'].forEach(w => {
-    const btn = document.getElementById('btn-' + w);
+function setDay(day) {
+  cd = day;
+  ['all', 'Thu', 'Fri', 'Sat', 'Sun', 'collab'].forEach(d => {
+    const btn = document.getElementById('btn-' + d);
     if (!btn) return;
-    btn.className = '';
-    if (w === wave.toLowerCase()) btn.className = 'active-' + w;
+    btn.className = (d === day) ? 'active-' + d : '';
+  });
+  render();
+}
+
+function toggleType(type) {
+  ct = (ct === type) ? null : type;
+  ['ins', 'dj', 'b2b'].forEach(t => {
+    const btn = document.getElementById('btn-' + t);
+    if (!btn) return;
+    btn.className = (ct === t) ? 'active-' + t : '';
   });
   render();
 }
