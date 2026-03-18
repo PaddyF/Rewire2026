@@ -13,8 +13,7 @@ DerivedData/
 .swiftpm/
 Packages/
 
-# Generated data
-Data/lineup.json
+# Generated data (lineup.json tracked so GitHub Pages can serve it)
 
 # macOS
 .DS_Store
