@@ -23,13 +23,15 @@ jobs:
       - name: Compile lineup.yaml → lineup.json
         run: python Data/build.py
 
-      - name: Copy to app resources
-        run: cp Data/lineup.json Rewire2026/Resources/lineup.json
+      - name: Copy to app resources and GitHub Pages
+        run: |
+          cp Data/lineup.json Rewire2026/Resources/lineup.json
+          cp Data/lineup.json docs/lineup.json
 
       - name: Commit updated JSON files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Data/lineup.json Rewire2026/Resources/lineup.json
+          git add Data/lineup.json Rewire2026/Resources/lineup.json docs/lineup.json
           git diff --cached --quiet || git commit -m "chore: rebuild lineup.json [skip ci]"
           git push
