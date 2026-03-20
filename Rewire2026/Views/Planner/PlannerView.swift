@@ -146,6 +146,16 @@ struct ScheduleGridView: View {
 
     private let days = ["Thu", "Fri", "Sat", "Sun"]
 
+    private var picksPerDay: [String: Int] {
+        var counts: [String: Int] = [:]
+        for day in days {
+            counts[day] = store.lineup.slots
+                .filter { pickedSlotIds.contains($0.id) && $0.day?.contains(day) == true }
+                .count
+        }
+        return counts
+    }
+
     private var pickedSlotIds: Set<String> {
         Set(allUserData.filter { $0.isBookmarked || $0.mustSeeRating > 0 }.map { $0.artistId })
     }
@@ -174,6 +184,11 @@ struct ScheduleGridView: View {
                             Text(day.uppercased())
                                 .font(.system(size: 13, weight: .bold, design: .monospaced))
                                 .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted)
+                            if let count = picksPerDay[day], count > 0 {
+                                Text("\(count)")
+                                    .font(.system(size: 9, weight: .medium, design: .monospaced))
+                                    .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted.opacity(0.6))
+                            }
                             Rectangle()
                                 .fill(isSelected ? Color.dayColor(day) : Color.clear)
                                 .frame(height: 2)
@@ -207,18 +222,112 @@ struct ScheduleGridView: View {
             } else {
                 ScrollView {
                     LazyVStack(spacing: 0) {
-                        ForEach(picksForDay) { slot in
+                        // Conflict banner
+                        let dayConflicts = picksForDay.filter { !store.conflicts(for: $0, allUserData: allUserData).isEmpty }
+                        if !dayConflicts.isEmpty {
+                            HStack(spacing: 8) {
+                                Image(systemName: "exclamationmark.triangle.fill")
+                                    .foregroundStyle(Color.orange)
+                                Text("\(dayConflicts.count) conflicting \(dayConflicts.count == 1 ? "pick" : "picks")")
+                                    .font(.system(size: 12, weight: .medium, design: .monospaced))
+                                    .foregroundStyle(Color.orange)
+                            }
+                            .padding(10)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color.orange.opacity(0.12))
+                            .overlay(Rectangle().stroke(Color.orange.opacity(0.4), lineWidth: 1))
+                        }
+
+                        ForEach(Array(picksForDay.enumerated()), id: \.element.id) { index, slot in
                             let userData = allUserData.first { $0.artistId == slot.id }
+                            let conflicts = store.conflicts(for: slot, allUserData: allUserData)
                             NavigationLink(destination: ArtistDetailView(slot: slot)) {
                                 ScheduleSlotRow(slot: slot, userData: userData)
+                                    .overlay(alignment: .topTrailing) {
+                                        if !conflicts.isEmpty {
+                                            HStack(spacing: 2) {
+                                                Image(systemName: "exclamationmark.triangle.fill")
+                                                    .font(.system(size: 9))
+                                                Text("\(conflicts.count)")
+                                                    .font(.system(size: 9, weight: .bold, design: .monospaced))
+                                            }
+                                            .foregroundStyle(Color.orange)
+                                            .padding(6)
+                                        }
+                                    }
                             }
                             .buttonStyle(.plain)
                             Divider().background(Color.rewireBorder)
+
+                            // Gap indicator
+                            if index < picksForDay.count - 1 {
+                                let next = picksForDay[index + 1]
+                                GapIndicator(from: slot, to: next)
+                            }
                         }
                     }
                     .padding(.bottom, 32)
                 }
                 .background(Color.rewireBackground)
+            }
+        }
+    }
+
+    private func minutesBetween(_ a: Slot, _ b: Slot) -> Int? {
+        guard let t1 = a.time, let t2 = b.time else { return nil }
+        let p1 = t1.split(separator: ":").compactMap { Int($0) }
+        let p2 = t2.split(separator: ":").compactMap { Int($0) }
+        guard p1.count == 2, p2.count == 2 else { return nil }
+        return (p2[0] * 60 + p2[1]) - (p1[0] * 60 + p1[1])
+    }
+
+    private func walkTimeBetween(_ a: Slot, _ b: Slot) -> Int? {
+        guard let sa = a.stage, let sb = b.stage else { return nil }
+        return VenueWalkTimes.walkingMinutes(fromStage: sa, toStage: sb)
+    }
+
+    private func GapIndicator(from a: Slot, to b: Slot) -> some View {
+        let gap = minutesBetween(a, b)
+        let walk = walkTimeBetween(a, b)
+        let showWalk = walk != nil && walk! > 0
+
+        return Group {
+            if let gap, gap > 60 || (showWalk && gap > 0) {
+                let hours = gap / 60
+                let mins = gap % 60
+                let gapText = hours > 0
+                    ? (mins > 0 ? "\(hours)h \(mins)m gap" : "\(hours)h gap")
+                    : "\(mins)m gap"
+
+                if showWalk {
+                    let walkMins = walk!
+                    let buffer = gap - walkMins
+                    let walkColor: Color = buffer <= 0
+                        ? .rewireTertiary
+                        : buffer <= 15 ? .orange : .rewireMuted.opacity(0.5)
+
+                    HStack(spacing: 4) {
+                        Text(gapText)
+                            .foregroundStyle(Color.rewireMuted.opacity(0.5))
+                        Text("·")
+                            .foregroundStyle(Color.rewireMuted.opacity(0.3))
+                        Image(systemName: "figure.walk")
+                            .foregroundStyle(walkColor)
+                        Text("\(walkMins) min")
+                            .foregroundStyle(walkColor)
+                    }
+                    .font(.system(size: 10, design: .monospaced))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 6)
+                } else {
+                    if gap > 60 {
+                        Text(gapText)
+                            .font(.system(size: 10, design: .monospaced))
+                            .foregroundStyle(Color.rewireMuted.opacity(0.5))
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 6)
+                    }
+                }
             }
         }
     }
