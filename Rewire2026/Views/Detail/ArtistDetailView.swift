@@ -27,9 +27,9 @@ struct ArtistDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 12) {
 
-                // ── Header ───────────────────────────────────────────────
+                // ── Header card ─────────────────────────────────────
                 VStack(alignment: .leading, spacing: 10) {
                     HStack(alignment: .top) {
                         HStack(spacing: 6) {
@@ -55,61 +55,54 @@ struct ArtistDetailView: View {
                     }
 
                     Text(slot.displayName)
-                        .font(.system(size: 22, weight: .bold, design: .monospaced))
+                        .font(.rewireTitle(24))
                         .foregroundStyle(Color.rewireText)
 
                     if let project = slot.project, !project.isEmpty {
                         Text(project)
-                            .font(.system(size: 13, design: .monospaced))
+                            .font(.rewireBody(13))
                             .foregroundStyle(Color.rewireMuted)
                     }
                 }
                 .padding(16)
+                .cardStyle()
 
-                dividerLine
-
-                // ── Must See Rating ──────────────────────────────────────
+                // ── Must See Rating card ────────────────────────────
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("MUST SEE")
-                        .font(.system(size: 10, weight: .bold, design: .monospaced))
-                        .foregroundStyle(Color.rewireMuted)
+                    Text("MUST SEE").sectionHeader()
                     MustSeeRatingView(rating: userData?.mustSeeRating ?? 0) { newRating in
                         getOrCreate().mustSeeRating = newRating
                     }
                 }
                 .padding(16)
+                .cardStyle()
 
-                dividerLine
-
-                // ── Collab info (if collab) ──────────────────────────────
+                // ── Collab info ─────────────────────────────────────
                 if slot.isCollab {
-                    if let notes = slot.collabNotes, !notes.isEmpty {
-                        Text(notes)
-                            .font(.system(size: 14))
-                            .foregroundStyle(Color.rewireText)
-                            .lineSpacing(5)
-                            .padding(16)
-                    }
-                    if slot.collabLatest != nil || slot.collabTopRated != nil {
-                        VStack(alignment: .leading, spacing: 14) {
-                            if let rel = slot.collabLatest {
-                                ReleaseRow(label: "COLLAB LATEST", release: rel)
-                            }
-                            if let rel = slot.collabTopRated {
-                                ReleaseRow(label: "COLLAB TOP RATED", release: rel)
-                            }
+                    VStack(alignment: .leading, spacing: 12) {
+                        if let notes = slot.collabNotes, !notes.isEmpty {
+                            Text(notes)
+                                .font(.system(size: 14))
+                                .foregroundStyle(Color.rewireText)
+                                .lineSpacing(5)
                         }
-                        .padding(16)
+                        if let rel = slot.collabLatest {
+                            ReleaseRow(label: "COLLAB LATEST", release: rel)
+                        }
+                        if let rel = slot.collabTopRated {
+                            ReleaseRow(label: "COLLAB TOP RATED", release: rel)
+                        }
                     }
-                    dividerLine
+                    .padding(16)
+                    .cardStyle()
                 }
 
-                // ── Participants ─────────────────────────────────────────
+                // ── Participants ────────────────────────────────────
                 ForEach(Array(participants.enumerated()), id: \.offset) { _, artist in
-                    ParticipantSection(artist: artist, showDivider: true)
+                    ParticipantSection(artist: artist)
                 }
 
-                // ── Conflict Warning (once timetable data exists) ─────────────────
+                // ── Conflict Warning ────────────────────────────────
                 let conflictingSlots = store.conflicts(for: slot, allUserData: allUserData)
                 if !conflictingSlots.isEmpty {
                     VStack(alignment: .leading, spacing: 6) {
@@ -118,67 +111,58 @@ struct ArtistDetailView: View {
                                 .font(.system(size: 11))
                                 .foregroundStyle(Color.rewireTertiary)
                             Text("SCHEDULE CONFLICT")
-                                .font(.system(size: 10, weight: .bold, design: .monospaced))
+                                .font(.rewireData(10, weight: .bold))
                                 .foregroundStyle(Color.rewireTertiary)
                         }
                         ForEach(conflictingSlots, id: \.id) { conflict in
                             HStack(spacing: 4) {
                                 Text("•").foregroundStyle(Color.rewireTertiary)
                                 Text(conflict.displayName)
-                                if let t = conflict.time {
+                                if let t = conflict.formattedTime {
                                     Text("· \(t)").foregroundStyle(Color.rewireMuted)
                                 }
                             }
-                            .font(.system(size: 12, design: .monospaced))
+                            .font(.rewireData(12))
                             .foregroundStyle(Color.rewireText)
                         }
                     }
                     .padding(12)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color.rewireTertiary.opacity(0.1))
-                    .overlay(Rectangle().stroke(Color.rewireTertiary.opacity(0.4), lineWidth: 1))
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 8)
-                    dividerLine
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.rewireTertiary.opacity(0.4), lineWidth: 1))
                 }
 
-                // ── Plus Ticket Warning ──────────────────────────────────
+                // ── Plus Ticket Warning ─────────────────────────────
                 if slot.requiresPlusTicket {
                     PlusTicketWarning()
-                        .padding(.horizontal, 16)
-                        .padding(.bottom, 16)
-                    dividerLine
                 }
 
-                // ── Timetable ────────────────────────────────────────────
+                // ── Timetable card ──────────────────────────────────
                 if slot.day != nil || slot.time != nil || slot.stage != nil {
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("SCHEDULE")
-                            .font(.system(size: 10, weight: .bold, design: .monospaced))
-                            .foregroundStyle(Color.rewireMuted)
+                        Text("SCHEDULE").sectionHeader()
                         HStack(spacing: 12) {
                             if let day = slot.day {
                                 Label(day, systemImage: "calendar")
                             }
-                            if let time = slot.time {
+                            if let time = slot.formattedTime {
                                 Label(time, systemImage: "clock")
                             }
                             if let stage = slot.stage {
                                 Label(stage, systemImage: "mappin")
                             }
                         }
-                        .font(.system(size: 13, design: .monospaced))
+                        .font(.rewireData(13))
                         .foregroundStyle(Color.rewireText)
                     }
                     .padding(16)
-                    dividerLine
+                    .cardStyle()
                 }
 
-                // ── Personal Notes ───────────────────────────────────────
+                // ── Personal Notes card ─────────────────────────────
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("PERSONAL NOTES")
-                        .font(.system(size: 10, weight: .bold, design: .monospaced))
-                        .foregroundStyle(Color.rewireMuted)
+                    Text("PERSONAL NOTES").sectionHeader()
 
                     TextEditor(text: $notesText)
                         .focused($notesFocused)
@@ -188,7 +172,11 @@ struct ArtistDetailView: View {
                         .font(.system(size: 14))
                         .frame(minHeight: 100)
                         .padding(10)
-                        .overlay(Rectangle().stroke(notesFocused ? Color.rewireAccent : Color.rewireBorder, lineWidth: 1))
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(notesFocused ? Color.rewireAccent : Color.rewireBorder, lineWidth: 1)
+                        )
                         .onChange(of: notesText) { _, new in
                             let current = userData?.personalNotes ?? ""
                             if new != current { getOrCreate().personalNotes = new }
@@ -196,12 +184,15 @@ struct ArtistDetailView: View {
 
                     if notesFocused {
                         Button("Done") { notesFocused = false }
-                            .font(.system(size: 12, design: .monospaced))
+                            .font(.rewireData(12))
                             .foregroundStyle(Color.rewireAccent)
                     }
                 }
                 .padding(16)
+                .cardStyle()
             }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
         }
         .background(Color.rewireBackground)
         .navigationBarTitleDisplayMode(.inline)
@@ -209,21 +200,16 @@ struct ArtistDetailView: View {
         .toolbarBackground(Color.rewireSurface, for: .navigationBar)
         .onAppear { notesText = userData?.personalNotes ?? "" }
     }
-
-    private var dividerLine: some View {
-        Rectangle().fill(Color.rewireBorder).frame(height: 1)
-    }
 }
 
 // MARK: - Participant section (one artist's profile block)
 
 private struct ParticipantSection: View {
     let artist: Artist
-    let showDivider: Bool
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            // Hero image (full-width, no side padding)
+            // Hero image with gradient overlay
             if let imageUrl = artist.imageUrl, let url = URL(string: imageUrl) {
                 AsyncImage(url: url) { phase in
                     switch phase {
@@ -234,8 +220,15 @@ private struct ParticipantSection: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 200)
                             .clipped()
+                            .overlay(
+                                LinearGradient(
+                                    colors: [.clear, .clear, Color.rewireSurface],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                            )
                     case .empty:
-                        Rectangle()
+                        RoundedRectangle(cornerRadius: 12)
                             .fill(Color.rewireSurface)
                             .frame(height: 200)
                             .overlay(ProgressView().tint(Color.rewireMuted))
@@ -246,37 +239,34 @@ private struct ParticipantSection: View {
             }
 
             VStack(alignment: .leading, spacing: 12) {
-            Text(artist.name)
-                .font(.system(size: 15, weight: .bold, design: .monospaced))
-                .foregroundStyle(Color.rewireText)
+                Text(artist.name)
+                    .font(.rewireTitle(15))
+                    .foregroundStyle(Color.rewireText)
 
-            if !artist.genreList.isEmpty {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 6) {
-                        ForEach(artist.genreList, id: \.self) { GenreTag(text: $0) }
+                if !artist.genreList.isEmpty {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 6) {
+                            ForEach(artist.genreList, id: \.self) { GenreTag(text: $0) }
+                        }
+                    }
+                }
+
+                if let notes = artist.notes, !notes.isEmpty {
+                    Text(notes)
+                        .font(.rewireBody(13))
+                        .foregroundStyle(Color.rewireMuted)
+                        .lineSpacing(4)
+                }
+
+                if artist.latest != nil || artist.topRated != nil {
+                    VStack(alignment: .leading, spacing: 10) {
+                        if let rel = artist.latest   { ReleaseRow(label: "LATEST",     release: rel) }
+                        if let rel = artist.topRated { ReleaseRow(label: "TOP RATED",  release: rel) }
                     }
                 }
             }
-
-            if let notes = artist.notes, !notes.isEmpty {
-                Text(notes)
-                    .font(.system(size: 13))
-                    .foregroundStyle(Color.rewireMuted)
-                    .lineSpacing(4)
-            }
-
-            if artist.latest != nil || artist.topRated != nil {
-                VStack(alignment: .leading, spacing: 10) {
-                    if let rel = artist.latest   { ReleaseRow(label: "LATEST",     release: rel) }
-                    if let rel = artist.topRated { ReleaseRow(label: "TOP RATED",  release: rel) }
-                }
-            }
+            .padding(16)
         }
-        .padding(16)
-
-        if showDivider {
-            Rectangle().fill(Color.rewireBorder).frame(height: 1)
-        }
-        } // outer VStack
+        .cardStyle()
     }
 }

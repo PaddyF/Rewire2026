@@ -4,6 +4,7 @@ import SwiftData
 struct PlannerView: View {
     @EnvironmentObject var store: ArtistStore
     @Query private var allUserData: [UserArtistData]
+    @State private var showTimeline = true
 
     private var hasTimetable: Bool {
         store.lineup.slots.contains { $0.day != nil }
@@ -23,7 +24,11 @@ struct PlannerView: View {
         NavigationStack {
             Group {
                 if hasTimetable {
-                    ScheduleGridView()
+                    if showTimeline {
+                        TimelineView()
+                    } else {
+                        ScheduleGridView()
+                    }
                 } else {
                     preTimetableView
                 }
@@ -32,8 +37,19 @@ struct PlannerView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("PLANNER")
-                        .font(.system(size: 15, weight: .bold, design: .monospaced))
+                        .font(.rewireTitle(15))
                         .foregroundStyle(Color.rewireAccent)
+                }
+                if hasTimetable {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            showTimeline.toggle()
+                        } label: {
+                            Image(systemName: showTimeline ? "list.bullet" : "calendar.day.timeline.leading")
+                                .font(.system(size: 14))
+                                .foregroundStyle(Color.rewireAccent)
+                        }
+                    }
                 }
             }
             .toolbarBackground(.visible, for: .navigationBar)
@@ -51,17 +67,16 @@ struct PlannerView: View {
                             .font(.system(size: 20))
                             .foregroundStyle(Color.rewireAccent)
                         Text("TIMETABLE COMING SOON")
-                            .font(.system(size: 13, weight: .bold, design: .monospaced))
+                            .font(.rewireData(13, weight: .bold))
                             .foregroundStyle(Color.rewireAccent)
                     }
                     Text("The full schedule (day, stage, times) hasn't been released yet. Once it drops, this screen will show a day-by-day grid with conflict detection.")
-                        .font(.system(size: 13))
+                        .font(.rewireBody(13))
                         .foregroundStyle(Color.rewireMuted)
                         .lineSpacing(4)
                 }
                 .padding(16)
-                .background(Color.rewireSurface)
-                .overlay(Rectangle().stroke(Color.rewireAccent.opacity(0.3), lineWidth: 1))
+                .cardStyle(dayColor: .rewireAccent)
                 .padding(.horizontal, 16)
                 .padding(.top, 16)
 
@@ -71,10 +86,10 @@ struct PlannerView: View {
                             .font(.system(size: 40))
                             .foregroundStyle(Color.rewireMuted)
                         Text("No picks yet")
-                            .font(.system(size: 14, design: .monospaced))
+                            .font(.rewireTitle(14))
                             .foregroundStyle(Color.rewireMuted)
                         Text("Rate or bookmark artists in the Lineup tab to see them here.")
-                            .font(.system(size: 12))
+                            .font(.rewireBody(12))
                             .foregroundStyle(Color.rewireMuted)
                             .multilineTextAlignment(.center)
                             .padding(.horizontal, 40)
@@ -82,17 +97,16 @@ struct PlannerView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, 30)
                 } else {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("YOUR PICKS SO FAR")
-                            .font(.system(size: 10, weight: .bold, design: .monospaced))
-                            .foregroundStyle(Color.rewireMuted)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("YOUR PICKS SO FAR").sectionHeader()
                             .padding(.horizontal, 16)
-                            .padding(.bottom, 8)
 
-                        ForEach(myPicks, id: \.slot.id) { item in
-                            PlannerPickRow(slot: item.slot, userData: item.userData)
-                            Rectangle().fill(Color.rewireBorder).frame(height: 1)
+                        LazyVStack(spacing: 8) {
+                            ForEach(myPicks, id: \.slot.id) { item in
+                                PlannerPickRow(slot: item.slot, userData: item.userData)
+                            }
                         }
+                        .padding(.horizontal, 16)
                     }
                 }
             }
@@ -105,16 +119,18 @@ struct PlannerPickRow: View {
     let slot: Slot
     let userData: UserArtistData
 
+    private var dayColor: Color { Color.slotDayColor(slot.day) }
+
     var body: some View {
         HStack(spacing: 10) {
             DayBadge(day: slot.day)
             VStack(alignment: .leading, spacing: 2) {
                 Text(slot.displayName)
-                    .font(.system(size: 13, weight: .semibold, design: .monospaced))
+                    .font(.rewireTitle(13))
                     .foregroundStyle(Color.rewireText)
                 if let type = slot.type {
                     Text(type)
-                        .font(.system(size: 11))
+                        .font(.rewireBody(11))
                         .foregroundStyle(Color.rewireMuted)
                 }
             }
@@ -134,8 +150,8 @@ struct PlannerPickRow: View {
                     .foregroundStyle(Color.rewireSecondary)
             }
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 10)
+        .padding(12)
+        .cardStyle(dayColor: dayColor)
     }
 }
 
@@ -175,32 +191,7 @@ struct ScheduleGridView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // Day selector
-            HStack(spacing: 0) {
-                ForEach(days, id: \.self) { day in
-                    let isSelected = selectedDay == day
-                    Button { selectedDay = day } label: {
-                        VStack(spacing: 4) {
-                            Text(day.uppercased())
-                                .font(.system(size: 13, weight: .bold, design: .monospaced))
-                                .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted)
-                            if let count = picksPerDay[day], count > 0 {
-                                Text("\(count)")
-                                    .font(.system(size: 9, weight: .medium, design: .monospaced))
-                                    .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted.opacity(0.6))
-                            }
-                            Rectangle()
-                                .fill(isSelected ? Color.dayColor(day) : Color.clear)
-                                .frame(height: 2)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 10)
-                    }
-                    .buttonStyle(.plain)
-                }
-            }
-            .background(Color.rewireSurface)
-
+            DaySelector(days: days, selectedDay: $selectedDay, picksPerDay: picksPerDay)
             Divider().background(Color.rewireBorder)
 
             if picksForDay.isEmpty {
@@ -210,10 +201,10 @@ struct ScheduleGridView: View {
                         .font(.system(size: 24, weight: .light, design: .monospaced))
                         .foregroundStyle(Color.rewireBorder)
                     Text("NO PICKS FOR \(selectedDay.uppercased())")
-                        .font(.system(size: 12, weight: .bold, design: .monospaced))
+                        .font(.rewireData(12, weight: .bold))
                         .foregroundStyle(Color.rewireMuted)
                     Text("Rate or bookmark artists in the Lineup tab")
-                        .font(.system(size: 11, design: .monospaced))
+                        .font(.rewireBody(11))
                         .foregroundStyle(Color.rewireMuted.opacity(0.6))
                     Spacer()
                 }
@@ -221,7 +212,7 @@ struct ScheduleGridView: View {
                 .background(Color.rewireBackground)
             } else {
                 ScrollView {
-                    LazyVStack(spacing: 0) {
+                    LazyVStack(spacing: 8) {
                         // Conflict banner
                         let dayConflicts = picksForDay.filter { !store.conflicts(for: $0, allUserData: allUserData).isEmpty }
                         if !dayConflicts.isEmpty {
@@ -229,13 +220,14 @@ struct ScheduleGridView: View {
                                 Image(systemName: "exclamationmark.triangle.fill")
                                     .foregroundStyle(Color.orange)
                                 Text("\(dayConflicts.count) conflicting \(dayConflicts.count == 1 ? "pick" : "picks")")
-                                    .font(.system(size: 12, weight: .medium, design: .monospaced))
+                                    .font(.rewireData(12))
                                     .foregroundStyle(Color.orange)
                             }
                             .padding(10)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .background(Color.orange.opacity(0.12))
-                            .overlay(Rectangle().stroke(Color.orange.opacity(0.4), lineWidth: 1))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.orange.opacity(0.4), lineWidth: 1))
                         }
 
                         ForEach(Array(picksForDay.enumerated()), id: \.element.id) { index, slot in
@@ -249,7 +241,7 @@ struct ScheduleGridView: View {
                                                 Image(systemName: "exclamationmark.triangle.fill")
                                                     .font(.system(size: 9))
                                                 Text("\(conflicts.count)")
-                                                    .font(.system(size: 9, weight: .bold, design: .monospaced))
+                                                    .font(.rewireData(9, weight: .bold))
                                             }
                                             .foregroundStyle(Color.orange)
                                             .padding(6)
@@ -257,7 +249,6 @@ struct ScheduleGridView: View {
                                     }
                             }
                             .buttonStyle(.plain)
-                            Divider().background(Color.rewireBorder)
 
                             // Gap indicator
                             if index < picksForDay.count - 1 {
@@ -266,7 +257,8 @@ struct ScheduleGridView: View {
                             }
                         }
                     }
-                    .padding(.bottom, 32)
+                    .padding(.vertical, 8)
+                    .padding(.bottom, 24)
                 }
                 .background(Color.rewireBackground)
             }
@@ -316,13 +308,13 @@ struct ScheduleGridView: View {
                         Text("\(walkMins) min")
                             .foregroundStyle(walkColor)
                     }
-                    .font(.system(size: 10, design: .monospaced))
+                    .font(.rewireData(10))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 6)
                 } else {
                     if gap > 60 {
                         Text(gapText)
-                            .font(.system(size: 10, design: .monospaced))
+                            .font(.rewireData(10))
                             .foregroundStyle(Color.rewireMuted.opacity(0.5))
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 6)

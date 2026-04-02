@@ -34,6 +34,15 @@ extension Color {
         }
     }
 
+    static func slotDayColor(_ day: String?) -> Color {
+        guard let day else { return .rewireMuted }
+        if day.contains("Thu") { return .dayThu }
+        if day.contains("Fri") { return .dayFri }
+        if day.contains("Sat") { return .daySat }
+        if day.contains("Sun") { return .daySun }
+        return .rewireMuted
+    }
+
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
@@ -46,5 +55,75 @@ extension Color {
         default: (a, r, g, b) = (255, 255, 255, 255)
         }
         self.init(.sRGB, red: Double(r)/255, green: Double(g)/255, blue: Double(b)/255, opacity: Double(a)/255)
+    }
+}
+
+// MARK: - Font helpers
+
+extension Font {
+    static func rewireTitle(_ size: CGFloat) -> Font {
+        .system(size: size, weight: .bold, design: .rounded)
+    }
+    static func rewireBody(_ size: CGFloat) -> Font {
+        .system(size: size, weight: .regular)
+    }
+    static func rewireData(_ size: CGFloat, weight: Font.Weight = .medium) -> Font {
+        .system(size: size, weight: weight, design: .monospaced)
+    }
+}
+
+// MARK: - View modifiers
+
+extension View {
+    func cardStyle(dayColor: Color = .rewireBorder) -> some View {
+        self
+            .background(Color.rewireSurface)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .shadow(color: dayColor.opacity(0.15), radius: 8, y: 2)
+    }
+
+    func sectionHeader() -> some View {
+        self
+            .font(.rewireData(10, weight: .bold))
+            .foregroundStyle(Color.rewireMuted)
+            .textCase(.uppercase)
+    }
+}
+
+// MARK: - Day Selector (shared component)
+
+struct DaySelector: View {
+    let days: [String]
+    @Binding var selectedDay: String
+    var picksPerDay: [String: Int]? = nil
+
+    var body: some View {
+        HStack(spacing: 0) {
+            ForEach(days, id: \.self) { day in
+                let isSelected = selectedDay == day
+                Button { selectedDay = day } label: {
+                    VStack(spacing: 4) {
+                        Text(day.uppercased())
+                            .font(.rewireData(13, weight: .bold))
+                            .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted)
+                        if let count = picksPerDay?[day], count > 0 {
+                            Text("\(count)")
+                                .font(.rewireData(9))
+                                .foregroundStyle(isSelected ? Color.dayColor(day) : Color.rewireMuted.opacity(0.6))
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 10)
+                    .background(
+                        Capsule()
+                            .fill(isSelected ? Color.dayColor(day).opacity(0.2) : Color.clear)
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 4)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .background(Color.rewireSurface)
     }
 }

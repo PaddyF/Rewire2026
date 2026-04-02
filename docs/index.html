@@ -5,16 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rewire 2026 Lineup</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 
   :root {
-    --bg: #0a0a0a; --surface: #111; --border: #222;
+    --bg: #0a0a0a; --surface: #111; --surface2: #161616; --border: #222;
     --text: #e8e8e0; --muted: #666;
     --w1: #c8ff00; --w2: #00d4ff; --w3: #ff6b35;
     --collab: #e066ff;
     --thu: #c8ff00; --fri: #00d4ff; --sat: #ff6b35; --sun: #b66dff;
     --ins: #a0c4ff; --dj: #caffbf; --b2b: #ffd166;
     --row-hover: #1a1a1a;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-pill: 100px;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,13 +32,13 @@
   .header {
     padding: 2rem 2rem 1.5rem;
     border-bottom: 1px solid var(--border);
-    display: flex; flex-direction: column; gap: 1rem;
+    display: flex; flex-direction: column; gap: 1.25rem;
   }
   .title-row { display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap; }
   h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: 1.1rem; font-weight: 700;
-    letter-spacing: .08em; text-transform: uppercase; color: var(--w1);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem; font-weight: 700;
+    letter-spacing: .04em; text-transform: uppercase; color: var(--w1);
   }
   .subtitle {
     font-family: 'Space Mono', monospace;
@@ -47,37 +50,39 @@
   /* ── Search ── */
   .search-wrap { position: relative; flex: 1; min-width: 200px; max-width: 360px; }
   .search-wrap svg {
-    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
     color: var(--muted); pointer-events: none;
   }
   input[type="text"] {
     width: 100%; background: var(--surface); border: 1px solid var(--border);
     color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 13px;
-    padding: 7px 12px 7px 34px; outline: none; transition: border-color .15s;
+    padding: 8px 14px 8px 36px; outline: none; transition: border-color .15s, box-shadow .15s;
+    border-radius: var(--radius-pill);
   }
-  input[type="text"]:focus { border-color: var(--w1); }
+  input[type="text"]:focus { border-color: var(--w1); box-shadow: 0 0 12px rgba(200,255,0,.1); }
   input[type="text"]::placeholder { color: var(--muted); }
 
   /* ── Filter buttons ── */
-  .filter-group { display: flex; gap: 4px; }
+  .filter-group { display: flex; gap: 6px; }
   button {
     font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700;
     letter-spacing: .06em; text-transform: uppercase;
     border: 1px solid var(--border); background: transparent; color: var(--muted);
-    cursor: pointer; padding: 6px 12px; transition: all .12s;
+    cursor: pointer; padding: 6px 14px; transition: all .15s;
+    border-radius: var(--radius-pill);
   }
   button:hover { border-color: #444; color: var(--text); }
-  button.active-all    { border-color: var(--text);   color: var(--text);   background: #1a1a1a; }
-  button.active-Thu    { border-color: var(--thu);    color: var(--thu);    background: rgba(200,255,0,.06); }
-  button.active-Fri    { border-color: var(--fri);    color: var(--fri);    background: rgba(0,212,255,.06); }
-  button.active-Sat    { border-color: var(--sat);    color: var(--sat);    background: rgba(255,107,53,.06); }
-  button.active-Sun    { border-color: var(--sun);    color: var(--sun);    background: rgba(182,109,255,.06); }
-  button.active-collab { border-color: var(--collab); color: var(--collab); background: rgba(224,102,255,.06); }
-  button.active-ins    { border-color: var(--ins);    color: var(--ins);    background: rgba(160,196,255,.08); }
-  button.active-dj     { border-color: var(--dj);     color: var(--dj);     background: rgba(202,255,191,.08); }
-  button.active-b2b    { border-color: var(--b2b);    color: var(--b2b);    background: rgba(255,209,102,.08); }
+  button.active-all    { border-color: var(--text);   color: var(--bg);     background: var(--text); }
+  button.active-Thu    { border-color: var(--thu);    color: var(--bg);     background: var(--thu); }
+  button.active-Fri    { border-color: var(--fri);    color: var(--bg);     background: var(--fri); }
+  button.active-Sat    { border-color: var(--sat);    color: var(--bg);     background: var(--sat); }
+  button.active-Sun    { border-color: var(--sun);    color: var(--bg);     background: var(--sun); }
+  button.active-collab { border-color: var(--collab); color: var(--bg);     background: var(--collab); }
+  button.active-ins    { border-color: var(--ins);    color: var(--bg);     background: var(--ins); }
+  button.active-dj     { border-color: var(--dj);     color: var(--bg);     background: var(--dj); }
+  button.active-b2b    { border-color: var(--b2b);    color: var(--bg);     background: var(--b2b); }
 
-  .filter-sep { width: 1px; background: var(--border); align-self: stretch; margin: 0 4px; }
+  .filter-sep { width: 1px; background: var(--border); align-self: stretch; margin: 0 4px; border-radius: 1px; }
 
   .stats {
     font-family: 'Space Mono', monospace; font-size: 10px;
@@ -86,81 +91,118 @@
   }
 
   /* ── Table ── */
-  .table-wrap { overflow-x: auto; }
-  table { width: 100%; border-collapse: collapse; }
-  thead { position: sticky; top: 0; z-index: 10; background: var(--surface); }
+  .table-wrap { overflow-x: auto; padding: 0 1rem; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+  thead { position: sticky; top: 0; z-index: 10; }
+  thead tr { background: var(--surface); }
   th {
     font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700;
     text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
-    padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border);
+    padding: 10px 14px; text-align: left;
     white-space: nowrap; user-select: none; cursor: pointer; transition: color .12s;
+    background: var(--surface);
   }
+  th:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+  th:last-child  { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
   th:hover { color: var(--text); }
   th.sorted { color: var(--w1); }
   th .si { opacity: .4; margin-left: 4px; font-size: 9px; }
   th.sorted .si { opacity: 1; }
 
-  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
-  tr.slot-row:hover td { background: var(--row-hover); }
-  tr:last-child td { border-bottom: none; }
+  td {
+    padding: 12px 14px; vertical-align: top;
+    background: var(--surface);
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+  td:first-child {
+    border-left: 1px solid transparent;
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+  }
+  td:last-child {
+    border-right: 1px solid transparent;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  }
+  tr.slot-row { transition: transform .1s; }
+  tr.slot-row:hover td {
+    background: var(--surface2);
+    border-color: var(--border);
+  }
+  tr.slot-row:hover td:first-child { border-left-color: var(--border); }
+  tr.slot-row:hover td:last-child  { border-right-color: var(--border); }
 
   /* ── Cell types ── */
-  .cn { font-weight: 500; font-size: 13.5px; color: #f0f0e8; min-width: 160px; max-width: 220px; }
-  .proj { font-size: 11px; color: var(--muted); margin-top: 2px; font-style: italic; }
+  .cn { font-weight: 600; font-size: 13.5px; color: #f0f0e8; min-width: 160px; max-width: 220px; }
+  .proj { font-size: 11px; color: var(--muted); margin-top: 3px; font-style: italic; }
 
   .wb {
     display: inline-block; font-family: 'Space Mono', monospace;
     font-size: 9px; font-weight: 700; letter-spacing: .08em;
-    padding: 2px 7px; border: 1px solid;
+    padding: 3px 10px; border-radius: var(--radius-pill);
   }
-  .wb-W1 { color: var(--w1); border-color: var(--w1); background: rgba(200,255,0,.06); }
-  .wb-W2 { color: var(--w2); border-color: var(--w2); background: rgba(0,212,255,.06); }
-  .wb-W3 { color: var(--w3); border-color: var(--w3); background: rgba(255,107,53,.06); }
+  .wb-W1 { color: var(--bg); background: var(--w1); }
+  .wb-W2 { color: var(--bg); background: var(--w2); }
+  .wb-W3 { color: var(--bg); background: var(--w3); }
 
   .cb {
     display: inline-block; font-family: 'Space Mono', monospace;
     font-size: 9px; font-weight: 700; letter-spacing: .06em;
-    padding: 2px 7px; border: 1px solid var(--collab);
-    color: var(--collab); background: rgba(224,102,255,.06);
+    padding: 3px 10px; border-radius: var(--radius-pill);
+    color: var(--bg); background: var(--collab);
     margin-left: 6px;
   }
 
   .tt {
     display: inline-block; font-family: 'Space Mono', monospace;
     font-size: 9px; letter-spacing: .05em; text-transform: uppercase;
-    color: var(--muted); border: 1px solid #2a2a2a; padding: 2px 7px; white-space: nowrap;
+    color: var(--muted); background: var(--surface2); border: 1px solid #2a2a2a;
+    padding: 3px 10px; white-space: nowrap; border-radius: var(--radius-pill);
   }
-  .tt.pr  { color: #ffd166; border-color: rgba(255,209,102,.3); }
-  .tt.ins { color: #a0c4ff; border-color: rgba(160,196,255,.3); }
-  .tt.dj  { color: #caffbf; border-color: rgba(202,255,191,.3); }
+  .tt.pr  { color: #ffd166; border-color: rgba(255,209,102,.3); background: rgba(255,209,102,.08); }
+  .tt.ins { color: #a0c4ff; border-color: rgba(160,196,255,.3); background: rgba(160,196,255,.08); }
+  .tt.dj  { color: #caffbf; border-color: rgba(202,255,191,.3); background: rgba(202,255,191,.08); }
 
   .sched {
     font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted);
     white-space: nowrap; min-width: 90px;
   }
   .sched .day { color: var(--text); font-weight: 500; }
+  .sched .day-badge {
+    display: inline-block; font-family: 'Space Mono', monospace;
+    font-size: 10px; font-weight: 700; letter-spacing: .04em;
+    padding: 2px 8px; border-radius: var(--radius-pill);
+    color: var(--bg); margin-right: 4px;
+  }
 
-  .gen { font-size: 12px; color: #aaa; min-width: 140px; max-width: 200px; line-height: 1.5; }
+  .gen {
+    font-size: 12px; color: #aaa; min-width: 140px; max-width: 200px; line-height: 1.6;
+  }
+  .genre-pill {
+    display: inline-block; font-size: 10px; color: var(--text);
+    background: var(--bg); border: 1px solid var(--border);
+    padding: 2px 8px; border-radius: var(--radius-pill); margin: 1px 2px;
+    white-space: nowrap;
+  }
 
   .rel { font-size: 12px; min-width: 140px; max-width: 200px; line-height: 1.7; color: #bbb; }
-  .rel .ti { color: #e0e0d8; font-style: italic; }
+  .rel .ti { color: #e0e0d8; }
   .rel .rt { display: block; font-family: 'Space Mono', monospace; font-size: 10px; color: var(--w1); }
   .rel .meta { color: var(--muted); font-size: 11px; }
-  .rel .dash { color: #444; }
+  .rel .dash { color: #333; }
 
   .no { font-size: 12px; color: #888; min-width: 160px; max-width: 280px; line-height: 1.6; }
 
   /* ── Collab participant rows ── */
   .participant-row td {
     padding: 4px 14px 4px 14px;
-    border-bottom: 1px solid #1a1a1a;
     background: #0d0d0d;
     font-size: 12px;
+    border-radius: 0;
   }
-  .participant-row:last-child td {
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-  }
+  .participant-row td:first-child { border-radius: 0; }
+  .participant-row td:last-child  { border-radius: 0; }
+  .participant-row:last-child td:first-child { border-radius: 0 0 0 var(--radius-sm); }
+  .participant-row:last-child td:last-child  { border-radius: 0 0 var(--radius-sm) 0; }
   .p-name {
     font-family: 'Space Mono', monospace; font-size: 11px;
     color: var(--collab); letter-spacing: .03em; padding-left: 16px;
@@ -241,6 +283,8 @@ let ct = null;    // type filter: null | 'ins' | 'dj' | 'b2b'
 let cs = { col: 'wave', dir: 1 };
 let sv = '';
 
+const DAY_COLORS = { Thu: '#c8ff00', Fri: '#00d4ff', Sat: '#ff6b35', Sun: '#b66dff' };
+
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
 function typeClass(t) {
@@ -271,10 +315,20 @@ function renderRelease(rel) {
 
 function renderSchedule(slot) {
   if (!slot.day && !slot.time) return '<span class="dash">TBA</span>';
-  const day = slot.day ? `<span class="day">${slot.day}</span>` : '';
-  const time = slot.time || '';
+  const dayColor = DAY_COLORS[slot.day] || '#666';
+  const day = slot.day
+    ? `<span class="day-badge" style="background:${dayColor}">${slot.day}</span>`
+    : '';
+  const time = slot.time ? `<span style="color:var(--text)">${slot.time}</span>` : '';
   const stage = slot.stage ? `<br><span class="meta">${slot.stage}</span>` : '';
-  return `<span class="sched">${day} ${time}${stage}</span>`;
+  return `<span class="sched">${day}${time}${stage}</span>`;
+}
+
+function renderGenres(genres) {
+  if (!genres) return '';
+  return genres.split(',').map(g => g.trim()).filter(Boolean)
+    .map(g => `<span class="genre-pill">${g}</span>`)
+    .join('');
 }
 
 /** Get combined genres for a slot by merging all participant genres. */
@@ -283,7 +337,6 @@ function slotGenres(slot) {
     const a = ARTISTS[slot.artist_ids[0]];
     return a ? (a.genres || '') : '';
   }
-  // For collabs, combine unique genres from all participants
   const allGenres = new Set();
   for (const aid of slot.artist_ids) {
     const a = ARTISTS[aid];
@@ -301,7 +354,6 @@ function slotLatest(slot) {
     const a = ARTISTS[slot.artist_ids[0]];
     return a ? a.latest : null;
   }
-  // For collabs without a collab release, pick the first participant with one
   for (const aid of slot.artist_ids) {
     const a = ARTISTS[aid];
     if (a && a.latest) return { ...a.latest, artist: a.latest.artist || a.name };
@@ -316,7 +368,6 @@ function slotTopRated(slot) {
     const a = ARTISTS[slot.artist_ids[0]];
     return a ? a.top_rated : null;
   }
-  // For collabs, pick the highest rated across participants
   let best = null;
   let bestRating = 0;
   for (const aid of slot.artist_ids) {
@@ -345,7 +396,6 @@ function searchHay(slot) {
     slot.display_name, slot.project, slot.wave, slot.type,
     slotGenres(slot), slotNotes(slot),
   ];
-  // Add all participant data
   for (const aid of slot.artist_ids) {
     const a = ARTISTS[aid];
     if (!a) continue;
@@ -353,7 +403,6 @@ function searchHay(slot) {
     const relText = r => r ? [r.title, r.artist, r.label, r.note, r.year].filter(Boolean).join(' ') : '';
     parts.push(relText(a.latest), relText(a.top_rated));
   }
-  // Add collab release data
   if (slot.collab_latest) {
     parts.push([slot.collab_latest.title, slot.collab_latest.artist, slot.collab_latest.year].filter(Boolean).join(' '));
   }
@@ -390,13 +439,11 @@ function render() {
   const q = sv.toLowerCase();
 
   let rows = SLOTS.filter(s => {
-    // Day / collab filter
     if (cd === 'collab') { if (!s.is_collab) return false; }
     else if (cd !== 'all') {
       const days = Array.isArray(s.day) ? s.day : (s.day ? [s.day] : []);
       if (!days.includes(cd)) return false;
     }
-    // Type filter (toggleable, independent of day)
     if (ct) {
       const t = (s.type || '').toLowerCase();
       const n = s.display_name.toLowerCase();
@@ -428,9 +475,11 @@ function render() {
     const latest = slotLatest(s);
     const topRated = slotTopRated(s);
     const notes = slotNotes(s);
+    const dayColor = DAY_COLORS[s.day] || '#666';
+    const glowStyle = s.day ? `box-shadow: 0 2px 12px ${dayColor}10` : '';
 
     html += `
-    <tr class="slot-row">
+    <tr class="slot-row" style="${glowStyle}">
       <td class="cn">
         ${s.display_name}
         ${s.is_collab ? '<span class="cb">COLLAB</span>' : ''}
@@ -439,13 +488,12 @@ function render() {
       <td>${renderSchedule(s)}</td>
       <td><span class="wb wb-${s.wave}">${s.wave}</span></td>
       <td><span class="tt ${typeClass(s.type)}">${s.type || ''}</span></td>
-      <td class="gen">${genres}</td>
+      <td class="gen">${renderGenres(genres)}</td>
       <td class="rel">${renderRelease(latest)}</td>
       <td class="rel">${renderRelease(topRated)}</td>
       <td class="no">${notes}</td>
     </tr>`;
 
-    // For collabs, render participant sub-rows
     if (s.is_collab && s.artist_ids.length > 1) {
       for (const aid of s.artist_ids) {
         const a = ARTISTS[aid];
@@ -456,7 +504,7 @@ function render() {
           <td></td>
           <td></td>
           <td></td>
-          <td class="gen" style="font-size:11px;color:#777">${a.genres || ''}</td>
+          <td class="gen" style="font-size:11px;color:#777">${renderGenres(a.genres)}</td>
           <td class="rel" style="font-size:11px">${renderRelease(a.latest)}</td>
           <td class="rel" style="font-size:11px">${renderRelease(a.top_rated)}</td>
           <td class="no" style="font-size:11px">${a.notes || ''}</td>
@@ -525,7 +573,6 @@ fetch('lineup.json')
   .then(data => {
     ARTISTS = data.artists || {};
     SLOTS = data.slots || [];
-    // Initial sort by wave
     document.getElementById('th-wave').classList.add('sorted');
     document.getElementById('si-wave').textContent = '↑';
     render();

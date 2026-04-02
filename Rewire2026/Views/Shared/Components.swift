@@ -9,12 +9,13 @@ struct WorldPremiereBadge: View {
             Image(systemName: "star.fill")
                 .font(.system(size: 8))
             Text("WORLD PREMIERE")
-                .font(.system(size: 10, weight: .bold, design: .monospaced))
+                .font(.rewireData(10, weight: .bold))
         }
         .foregroundStyle(Color.rewireBackground)
-        .padding(.horizontal, 6)
-        .padding(.vertical, 3)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
         .background(Color.rewireTertiary)
+        .clipShape(Capsule())
     }
 }
 
@@ -25,11 +26,12 @@ struct DayBadge: View {
 
     var body: some View {
         Text(day?.uppercased() ?? "TBA")
-            .font(.system(size: 10, weight: .bold, design: .monospaced))
+            .font(.rewireData(10, weight: .bold))
             .foregroundStyle(day != nil ? Color.rewireBackground : Color.rewireMuted)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 3)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
             .background(Color.dayColor(day))
+            .clipShape(Capsule())
     }
 }
 
@@ -40,11 +42,12 @@ struct WaveBadge: View {
 
     var body: some View {
         Text(wave)
-            .font(.system(size: 10, weight: .bold, design: .monospaced))
+            .font(.rewireData(10, weight: .bold))
             .foregroundStyle(Color.rewireBackground)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 3)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
             .background(Color.waveColor(wave))
+            .clipShape(Capsule())
     }
 }
 
@@ -83,11 +86,12 @@ struct TypeBadge: View {
 
     var body: some View {
         Text(type)
-            .font(.system(size: 10, weight: .medium, design: .monospaced))
+            .font(.rewireData(10))
             .foregroundStyle(textColor)
-            .padding(.horizontal, 6)
-            .padding(.vertical, 3)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
             .background(color)
+            .clipShape(Capsule())
             .lineLimit(1)
     }
 }
@@ -103,13 +107,14 @@ struct FilterChip: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 12, weight: .medium, design: .monospaced))
+                .font(.rewireData(12))
                 .foregroundStyle(isSelected ? Color.rewireBackground : color)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 7)
                 .background(isSelected ? color : Color.rewireSurface)
+                .clipShape(Capsule())
                 .overlay(
-                    Rectangle()
+                    Capsule()
                         .stroke(isSelected ? color : Color.rewireBorder, lineWidth: 1)
                 )
         }
@@ -124,12 +129,13 @@ struct GenreTag: View {
 
     var body: some View {
         Text(text)
-            .font(.system(size: 10, weight: .regular, design: .monospaced))
+            .font(.rewireBody(10))
             .foregroundStyle(Color.rewireText)
-            .padding(.horizontal, 7)
-            .padding(.vertical, 3)
+            .padding(.horizontal, 9)
+            .padding(.vertical, 4)
             .background(Color.rewireSurface)
-            .overlay(Rectangle().stroke(Color.rewireBorder, lineWidth: 1))
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(Color.rewireBorder, lineWidth: 1))
     }
 }
 
@@ -162,16 +168,16 @@ struct ReleaseRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
             Text(label)
-                .font(.system(size: 9, weight: .bold, design: .monospaced))
+                .font(.rewireData(9, weight: .bold))
                 .foregroundStyle(Color.rewireMuted)
             if !titleLine.isEmpty {
                 Text(titleLine)
-                    .font(.system(size: 13, weight: .medium))
+                    .font(.rewireBody(13))
                     .foregroundStyle(Color.rewireText)
             }
             if !metaLine.isEmpty {
                 Text(metaLine)
-                    .font(.system(size: 11, design: .monospaced))
+                    .font(.rewireData(11))
                     .foregroundStyle(Color.rewireMuted)
             }
         }
@@ -184,44 +190,47 @@ struct ScheduleSlotRow: View {
     let slot: Slot
     let userData: UserArtistData?
 
+    private var dayColor: Color { Color.slotDayColor(slot.day) }
+
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             // Time column
             VStack(alignment: .trailing, spacing: 2) {
-                if let time = slot.time {
+                if let time = slot.formattedTime {
                     Text(time)
-                        .font(.system(size: 13, weight: .semibold, design: .monospaced))
-                        .foregroundStyle(Color.dayColor(slot.day))
+                        .font(.rewireData(13, weight: .semibold))
+                        .foregroundStyle(dayColor)
                 } else {
                     Text("TBA")
-                        .font(.system(size: 11, design: .monospaced))
+                        .font(.rewireData(11))
                         .foregroundStyle(Color.rewireBorder)
                 }
                 if let stage = slot.stage {
                     Text(stage)
-                        .font(.system(size: 9, design: .monospaced))
+                        .font(.rewireBody(9))
                         .foregroundStyle(Color.rewireMuted)
                         .multilineTextAlignment(.trailing)
+                        .lineLimit(2)
                 }
             }
-            .frame(width: 56, alignment: .trailing)
+            .frame(width: 72, alignment: .trailing)
 
-            // Accent line
-            Rectangle()
-                .fill(Color.dayColor(slot.day))
-                .frame(width: 2)
+            // Accent line — rounded
+            RoundedRectangle(cornerRadius: 1.5)
+                .fill(dayColor)
+                .frame(width: 3)
                 .padding(.top, 3)
 
             // Content
             VStack(alignment: .leading, spacing: 5) {
                 Text(slot.displayName)
-                    .font(.system(size: 14, weight: .semibold, design: .monospaced))
+                    .font(.rewireTitle(14))
                     .foregroundStyle(Color.rewireText)
                     .multilineTextAlignment(.leading)
 
                 if let project = slot.project {
                     Text(project)
-                        .font(.system(size: 11, design: .monospaced))
+                        .font(.rewireBody(11))
                         .foregroundStyle(Color.rewireMuted)
                 }
 
@@ -250,9 +259,9 @@ struct ScheduleSlotRow: View {
                     .padding(.top, 2)
             }
         }
+        .padding(14)
+        .cardStyle(dayColor: dayColor)
         .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background(Color.rewireBackground)
     }
 }
 
@@ -264,12 +273,13 @@ struct PlusTicketWarning: View {
             Image(systemName: "ticket")
                 .foregroundStyle(Color.rewireTertiary)
             Text("Requires Plus Ticket")
-                .font(.system(size: 12, weight: .medium, design: .monospaced))
+                .font(.rewireData(12))
                 .foregroundStyle(Color.rewireTertiary)
         }
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.rewireTertiary.opacity(0.12))
-        .overlay(Rectangle().stroke(Color.rewireTertiary.opacity(0.4), lineWidth: 1))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.rewireTertiary.opacity(0.4), lineWidth: 1))
     }
 }

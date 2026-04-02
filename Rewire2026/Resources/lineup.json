@@ -1198,24 +1198,10 @@
       "notes": "Sheffield-based electronic musician Mark Fell builds non-repetitive structures from algorithmic and pattern-generating systems, drawing equally on computational theory and the rhythmic logic of house and techno.",
       "image_url": "https://images.prismic.io/rewirefestival/NTU4MTE0NzEtZGY4MC00NDRkLTkwZjQtYzY1YTZjZTFiNDY3_mark-fell--rewire-2019--001.jpg?auto=compress,format&rect=0,150,436,245&w=1200&h=675"
     },
-    "pat-thomas": {
-      "name": "Pat Thomas",
-      "genres": "Free Jazz, Free Improvisation, Piano",
-      "latest": {
-        "title": "Reality Is Not a Theory",
-        "year": 2025,
-        "label": "Black Truffle",
-        "artist": "Mark Fell & Pat Thomas"
-      },
-      "top_rated": {
-        "title": "And",
-        "year": 1997,
-        "artist": "Derek Bailey, Pat Thomas, Steve Noble",
-        "rating": 3.65,
-        "votes": 45
-      },
-      "notes": "Oxford-born pianist Pat Thomas bridges free improvisation, jazz, dub, and electronic noise, having collaborated with Derek Bailey and developed an electronics practice alongside his acoustic work since the late 1980s.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+    "okkyung-lee": {
+      "name": "Okkyung Lee",
+      "genres": "Free Improvisation, Electroacoustic, Noise, Experimental",
+      "notes": "Korean-born, New York-based cellist and composer who extends the instrument into noise, improvisation, and electroacoustic territory, with releases on Ideologic Organ and Shelter Press."
     },
     "my-new-band-believe": {
       "name": "My New Band Believe",
@@ -2871,6 +2857,8 @@
     {
       "display_name": "Actress & Suzanne Ciani",
       "day": "Thu",
+      "time": "22:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2885,6 +2873,8 @@
     {
       "display_name": "Alejandra Cárdenas",
       "day": "Sat",
+      "time": "19:45",
+      "stage": "Nieuwe Kerk",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -2896,6 +2886,8 @@
     {
       "display_name": "Apparitions",
       "day": "Sat",
+      "time": "17:15",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live (EU Debut)",
       "is_collab": false,
@@ -2906,6 +2898,8 @@
     {
       "display_name": "Armand Hammer",
       "day": "Fri",
+      "time": "23:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2916,6 +2910,8 @@
     {
       "display_name": "Ash Fure",
       "day": "Sat",
+      "time": "14:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W1",
       "type": "Live / Performance",
       "is_collab": false,
@@ -2927,6 +2923,8 @@
     {
       "display_name": "Beatrice Dillon & Explore Ensemble",
       "day": "Sun",
+      "time": "16:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2940,6 +2938,8 @@
     {
       "display_name": "Beverly Glenn-Copeland",
       "day": "Sat",
+      "time": "18:30",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2951,6 +2951,8 @@
     {
       "display_name": "Blawan",
       "day": "Sat",
+      "time": "25:15",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live Set",
       "is_collab": false,
@@ -2961,6 +2963,8 @@
     {
       "display_name": "Cara Tolmie & Rian Treanor",
       "day": "Sat",
+      "time": "24:30",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2978,6 +2982,8 @@
     {
       "display_name": "Caterina Barbieri & MFO",
       "day": "Thu",
+      "time": "21:05",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2991,6 +2997,8 @@
     {
       "display_name": "Caterina Barbieri with ONCEIM",
       "day": "Thu",
+      "time": "20:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -3004,6 +3012,8 @@
     {
       "display_name": "Civilistjävel! & Mayssa Jallad",
       "day": "Sun",
+      "time": "22:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -3017,6 +3027,8 @@
     {
       "display_name": "Einstürzende Neubauten",
       "day": "Sun",
+      "time": "21:50",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live (Plus Ticket)",
       "is_collab": false,
@@ -3027,6 +3039,8 @@
     {
       "display_name": "Eliana Glass",
       "day": "Sun",
+      "time": "15:30",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3037,6 +3051,8 @@
     {
       "display_name": "Eraserhead x Xiu Xiu",
       "day": "Sat",
+      "time": "22:05",
+      "stage": "Amare – Danstheater",
       "wave": "W1",
       "type": "Live Reinterpretation",
       "is_collab": true,
@@ -3048,6 +3064,8 @@
     {
       "display_name": "ex_libris",
       "day": "Sat",
+      "time": "24:30",
+      "stage": "Concordia",
       "wave": "W1",
       "world_premiere": true,
       "type": "Live A/V",
@@ -3059,6 +3077,8 @@
     {
       "display_name": "feeo",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3070,6 +3090,8 @@
     {
       "display_name": "Fine",
       "day": "Fri",
+      "time": "19:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3080,6 +3102,8 @@
     {
       "display_name": "Flur",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3090,6 +3114,8 @@
     {
       "display_name": "ganavya",
       "day": "Sat",
+      "time": "23:00",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3103,6 +3129,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "17:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Two Shows",
       "is_collab": false,
@@ -3114,6 +3142,8 @@
     {
       "display_name": "Hilary Woods",
       "day": "Sat",
+      "time": "21:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3124,6 +3154,8 @@
     {
       "display_name": "james K",
       "day": "Sat",
+      "time": "21:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3135,6 +3167,8 @@
     {
       "display_name": "Jim O'Rourke & Eiko Ishibashi",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Amare – Danstheater",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -3152,6 +3186,8 @@
     {
       "display_name": "JJJJJerome Ellis",
       "day": "Fri",
+      "time": "20:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3162,6 +3198,8 @@
     {
       "display_name": "Joanne Robertson & Oliver Coates",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "Grote Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -3174,6 +3212,8 @@
     {
       "display_name": "Joshua Chuquimia Crampton",
       "day": "Sun",
+      "time": "17:30",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3184,6 +3224,8 @@
     {
       "display_name": "Juana Molina",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3194,6 +3236,8 @@
     {
       "display_name": "Katalin Ladik & Svetlana Maraš",
       "day": "Sat",
+      "time": "18:55",
+      "stage": "Korzo – Zaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -3206,6 +3250,8 @@
     {
       "display_name": "KAVARI",
       "day": "Fri",
+      "time": "26:15",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -3217,6 +3263,8 @@
     {
       "display_name": "KUNTARI",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "Concordia",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3227,6 +3275,8 @@
     {
       "display_name": "La Rat",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "The Grey Space – Basement",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3237,6 +3287,8 @@
     {
       "display_name": "Los Thuthanaka",
       "day": "Sat",
+      "time": "22:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3247,6 +3299,8 @@
     {
       "display_name": "Malibu",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Grote Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3258,6 +3312,8 @@
     {
       "display_name": "Mayssa Jallad",
       "day": "Fri",
+      "time": "22:30",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live (trio)",
       "is_collab": false,
@@ -3268,6 +3324,8 @@
     {
       "display_name": "Milkweed",
       "day": "Fri",
+      "time": "21:15",
+      "stage": "Koorenhuis",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3278,6 +3336,8 @@
     {
       "display_name": "ØKSE feat. billy woods",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -3291,6 +3351,8 @@
     {
       "display_name": "Oneohtrix Point Never",
       "day": "Fri",
+      "time": "23:45",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live A/V (Plus Ticket)",
       "is_collab": false,
@@ -3301,6 +3363,8 @@
     {
       "display_name": "Purelink",
       "day": "Sat",
+      "time": "19:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3312,6 +3376,8 @@
     {
       "display_name": "Raúl Refree & Niño de Elche",
       "day": "Fri",
+      "time": "25:05",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": true,
@@ -3334,6 +3400,8 @@
     {
       "display_name": "Smerz",
       "day": "Fri",
+      "time": "21:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3344,6 +3412,8 @@
     {
       "display_name": "Sumac & Moor Mother",
       "day": "Sat",
+      "time": "20:55",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -3362,6 +3432,8 @@
     {
       "display_name": "Tortoise",
       "day": "Fri",
+      "time": "19:00",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3372,6 +3444,8 @@
     {
       "display_name": "Tracey",
       "day": "Fri",
+      "time": "22:10",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": false,
@@ -3382,6 +3456,8 @@
     {
       "display_name": "WRENS",
       "day": "Fri",
+      "time": "23:10",
+      "stage": "Koorenhuis",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3395,6 +3471,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "19:45",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3405,6 +3483,8 @@
     {
       "display_name": "Acopia",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3415,6 +3495,8 @@
     {
       "display_name": "Chunky Move",
       "day": "Fri",
+      "time": "17:40",
+      "stage": "Amare – Danstheater",
       "wave": "W2",
       "type": "Dance Performance",
       "is_collab": false,
@@ -3426,6 +3508,8 @@
     {
       "display_name": "Dagmar Zuniga",
       "day": "Fri",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3436,6 +3520,8 @@
     {
       "display_name": "Drew McDowall & Pedro Maia",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "Grote Kerk",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3448,6 +3534,8 @@
     {
       "display_name": "Dumama",
       "day": "Sat",
+      "time": "21:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3458,6 +3546,8 @@
     {
       "display_name": "Elischa Heller",
       "day": "Sat",
+      "time": "23:05",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3468,6 +3558,8 @@
     {
       "display_name": "Everything Is Psychedelic",
       "day": "Sat",
+      "time": "21:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3478,6 +3570,8 @@
     {
       "display_name": "∈Y∋ + C.O.L.O",
       "day": "Fri",
+      "time": "25:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3490,6 +3584,8 @@
     {
       "display_name": "Jennifer Walton",
       "day": "Sun",
+      "time": "19:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3500,6 +3596,8 @@
     {
       "display_name": "Kim Gordon",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W2",
       "world_premiere": true,
       "is_collab": false,
@@ -3511,6 +3609,8 @@
     {
       "display_name": "KMRU & Nick Verstand",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W2",
       "world_premiere": true,
       "type": "A/V",
@@ -3525,6 +3625,8 @@
     {
       "display_name": "Laurel Halo & Julian Charrière",
       "day": "Sat",
+      "time": "19:50",
+      "stage": "Amare – Danstheater",
       "wave": "W2",
       "world_premiere": true,
       "is_collab": true,
@@ -3537,25 +3639,24 @@
       "type": "Live A/V"
     },
     {
-      "display_name": "Mark Fell & Pat Thomas",
+      "display_name": "Mark Fell & Okkyung Lee",
       "day": "Sun",
+      "time": "14:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W2",
       "type": "Live",
       "is_collab": true,
       "artist_ids": [
         "mark-fell",
-        "pat-thomas"
+        "okkyung-lee"
       ],
-      "collab_notes": "\"Algorithmic and improvised music for computer and piano.\" First recorded collaboration between the two.",
-      "collab_latest": {
-        "title": "Reality Is Not a Theory",
-        "year": 2025,
-        "label": "Black Truffle"
-      }
+      "collab_notes": "Replacement for Pat Thomas (cancelled). Fell's algorithmic systems meet Lee's extended cello techniques."
     },
     {
       "display_name": "My New Band Believe",
       "day": "Sat",
+      "time": "24:45",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3566,6 +3667,8 @@
     {
       "display_name": "Nihiloxica",
       "day": "Fri",
+      "time": "24:30",
+      "stage": "PAARD I",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3576,6 +3679,8 @@
     {
       "display_name": "Park Jiha",
       "day": "Fri",
+      "time": "23:45",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live (solo)",
       "is_collab": false,
@@ -3586,6 +3691,8 @@
     {
       "display_name": "Raisa K",
       "day": "Sat",
+      "time": "21:55",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3597,6 +3704,8 @@
     {
       "display_name": "RAKTA",
       "day": "Sun",
+      "time": "20:15",
+      "stage": "Concordia",
       "wave": "W2",
       "type": "Live (performs twice)",
       "is_collab": false,
@@ -3607,6 +3716,8 @@
     {
       "display_name": "RAKTA & Mette Rasmussen",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (2nd set)",
       "is_collab": true,
@@ -3619,6 +3730,8 @@
     {
       "display_name": "Sacred Lodge",
       "day": "Sat",
+      "time": "22:45",
+      "stage": "The Grey Space – Basement",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3629,6 +3742,8 @@
     {
       "display_name": "Sary Moussa Trio",
       "day": "Sat",
+      "time": "25:00",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3640,6 +3755,8 @@
     {
       "display_name": "Shapednoise & Sevi Iko Dømochevsky",
       "day": "Fri",
+      "time": "24:00",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3661,6 +3778,8 @@
     {
       "display_name": "Sombat Simla",
       "day": "Sat",
+      "time": "19:40",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3671,6 +3790,8 @@
     {
       "display_name": "Stemeseder Lillinger",
       "day": "Sat",
+      "time": "19:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3681,6 +3802,8 @@
     {
       "display_name": "Susu Laroche",
       "day": "Fri",
+      "time": "21:50",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3691,6 +3814,8 @@
     {
       "display_name": "Suzan Peeters",
       "day": "Sat",
+      "time": "17:10",
+      "stage": "Nieuwe Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3701,6 +3826,8 @@
     {
       "display_name": "Supersilent & Lawrence Abu Hamdan",
       "day": "Sun",
+      "time": "19:50",
+      "stage": "Amare – Concertzaal",
       "wave": "W2",
       "world_premiere": true,
       "type": "A/V",
@@ -3714,6 +3841,8 @@
     {
       "display_name": "Thomas Ankersmit",
       "day": "Sun",
+      "time": "21:00",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3725,6 +3854,8 @@
     {
       "display_name": "33",
       "day": "Sun",
+      "time": "16:15",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3740,6 +3871,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Pulchri Studio",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3756,6 +3889,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Amare – Swing",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3767,6 +3902,8 @@
     {
       "display_name": "Arnold Dreyblatt & Horse Lords",
       "day": "Sat",
+      "time": "22:05",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3779,6 +3916,8 @@
     {
       "display_name": "Asian Dope Boys",
       "day": "Sat",
+      "time": "18:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "8-hour Performance",
       "is_collab": false,
@@ -3790,6 +3929,8 @@
     {
       "display_name": "AWICHAS",
       "day": "Sun",
+      "time": "21:15",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3800,6 +3941,8 @@
     {
       "display_name": "Bby Eco",
       "day": "Fri",
+      "time": "20:10",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3811,6 +3954,8 @@
     {
       "display_name": "Berlinde Deman",
       "day": "Sun",
+      "time": "17:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3821,6 +3966,8 @@
     {
       "display_name": "Buttechno b2b Torus",
       "day": "Sat",
+      "time": "25:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -3833,6 +3980,8 @@
     {
       "display_name": "By Storm",
       "day": "Fri",
+      "time": "21:45",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3843,6 +3992,8 @@
     {
       "display_name": "Cello Octet Amsterdam feat. Shishani & Moor Mother",
       "day": "Sun",
+      "time": "19:15",
+      "stage": "Lutherse Kerk",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -3858,6 +4009,8 @@
     {
       "display_name": "Cerys Hafana",
       "day": "Fri",
+      "time": "24:20",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3871,6 +4024,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "22:10",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3882,6 +4037,8 @@
     {
       "display_name": "Devon Rexi meets John T. Gast",
       "day": "Fri",
+      "time": "19:10",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3902,6 +4059,9 @@
     },
     {
       "display_name": "Dim Garden",
+      "day": "Sat",
+      "time": "23:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3916,6 +4076,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "12:00",
+      "stage": "Das Leben am Haverkamp",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -3936,6 +4098,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Duitse Kerk",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3947,6 +4111,8 @@
     {
       "display_name": "FRANKIE & Kelman Duran",
       "day": "Fri",
+      "time": "18:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3964,6 +4130,8 @@
     {
       "display_name": "Hulubalang",
       "day": "Fri",
+      "time": "23:30",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3975,6 +4143,8 @@
     {
       "display_name": "HxH",
       "day": "Sat",
+      "time": "24:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3986,6 +4156,8 @@
     {
       "display_name": "Immaculate Deception Of History",
       "day": "Sun",
+      "time": "16:45",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live (Sunday)",
       "is_collab": true,
@@ -3999,6 +4171,8 @@
     {
       "display_name": "Jessica Ekomane",
       "day": "Sat",
+      "time": "22:15",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4009,6 +4183,8 @@
     {
       "display_name": "Joachim Badenhorst's Youran",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Nieuwe Kerk",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4024,6 +4200,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "West Den Haag – Auditorium",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -4035,6 +4213,8 @@
     {
       "display_name": "Kee Avil",
       "day": "Sat",
+      "time": "18:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4046,6 +4226,8 @@
     {
       "display_name": "Khrystyna Kirik & Emma Rubikaite-Milasiute",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -4059,6 +4241,8 @@
     {
       "display_name": "Kode9 b2b Deena Abdelwahed",
       "day": "Fri",
+      "time": "25:30",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -4076,6 +4260,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Paleiskerk",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -4087,6 +4273,8 @@
     {
       "display_name": "Leila Bordreuil",
       "day": "Sun",
+      "time": "14:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4102,6 +4290,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Pulchri Studio",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -4113,6 +4303,8 @@
     {
       "display_name": "M Alberto",
       "day": "Sun",
+      "time": "16:05",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Performance / Music Theatre",
       "is_collab": false,
@@ -4124,6 +4316,8 @@
     {
       "display_name": "Mammo",
       "day": "Fri",
+      "time": "23:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4135,9 +4329,12 @@
       "display_name": "Mariska de Groot",
       "day": [
         "Thu",
+        "Fri",
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Quartair",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -4149,6 +4346,8 @@
     {
       "display_name": "Mireia Varón Gallofré",
       "day": "Sun",
+      "time": "17:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "Performance",
       "is_collab": false,
@@ -4160,6 +4359,8 @@
     {
       "display_name": "Moritz von Oswald",
       "day": "Fri",
+      "time": "20:05",
+      "stage": "Grote Kerk",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Grote Kerk)",
       "is_collab": true,
@@ -4183,6 +4384,8 @@
     {
       "display_name": "Natasha Pirard",
       "day": "Fri",
+      "time": "21:05",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4193,6 +4396,8 @@
     {
       "display_name": "Nazar",
       "day": "Fri",
+      "time": "25:00",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4203,6 +4408,8 @@
     {
       "display_name": "Nono Gigsta",
       "day": "Sat",
+      "time": "27:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -4213,6 +4420,8 @@
     {
       "display_name": "NVST",
       "day": "Fri",
+      "time": "26:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4223,6 +4432,8 @@
     {
       "display_name": "OK Williams",
       "day": "Sat",
+      "time": "29:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -4233,7 +4444,12 @@
     },
     {
       "display_name": "Ouri",
-      "day": "Sat",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
+      "time": "18:00",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4244,6 +4460,8 @@
     {
       "display_name": "Polina Medvedeva & Andreas Kühne",
       "day": "Fri",
+      "time": "18:45",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -4257,6 +4475,8 @@
     {
       "display_name": "Sam Slater & guests",
       "day": "Fri",
+      "time": "21:25",
+      "stage": "Amare – Concertzaal",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Amare)",
       "is_collab": true,
@@ -4277,6 +4497,8 @@
     {
       "display_name": "SANAM",
       "day": "Sun",
+      "time": "18:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4287,6 +4509,8 @@
     {
       "display_name": "Sól Ey & Modelo62",
       "day": "Sat",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -4304,6 +4528,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "18:00",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4314,6 +4540,8 @@
     {
       "display_name": "State OFFF",
       "day": "Sat",
+      "time": "25:30",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4325,6 +4553,8 @@
     {
       "display_name": "The Bug & Dis Fig",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -4337,6 +4567,8 @@
     {
       "display_name": "The Silver Thread",
       "day": "Sat",
+      "time": "17:00",
+      "stage": "Amare – Danstheater",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -4352,6 +4584,8 @@
     {
       "display_name": "Ugnė Uma & Pavel Milyakov",
       "day": "Sun",
+      "time": "14:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -4364,6 +4598,8 @@
     {
       "display_name": "Valentina Magaletti & YPY",
       "day": "Fri",
+      "time": "23:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -4385,6 +4621,8 @@
     {
       "display_name": "WaqWaq Kingdom feat. VJ Kalma",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live A/V",
       "is_collab": true,
@@ -4409,6 +4647,8 @@
     {
       "display_name": "weed420",
       "day": "Fri",
+      "time": "20:00",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4419,6 +4659,8 @@
     {
       "display_name": "Zeno van den Broek, Les Percussions de Strasbourg & HIIIT",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -4433,6 +4675,9 @@
     },
     {
       "display_name": "Abdullah Miniawy Trio",
+      "day": "Fri",
+      "time": "22:30",
+      "stage": "Nieuwe Kerk",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4443,6 +4688,9 @@
     },
     {
       "display_name": "Batu b2b JASSS",
+      "day": "Sat",
+      "time": "26:15",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4466,6 +4714,9 @@
     },
     {
       "display_name": "Chinnamasta",
+      "day": "Sat",
+      "time": "25:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4475,6 +4726,9 @@
     },
     {
       "display_name": "Clément Vercelletto",
+      "day": "Fri",
+      "time": "19:20",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4486,6 +4740,8 @@
     {
       "display_name": "Dirtydms b2b Helmond Lang",
       "day": "Fri",
+      "time": "24:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4511,6 +4767,9 @@
     },
     {
       "display_name": "GEZAN",
+      "day": "Fri",
+      "time": "20:10",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4521,6 +4780,9 @@
     },
     {
       "display_name": "Herbert & Momoko",
+      "day": "Sun",
+      "time": "16:20",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4533,6 +4795,9 @@
     },
     {
       "display_name": "Jasmín",
+      "day": "Fri",
+      "time": "24:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4542,6 +4807,12 @@
     },
     {
       "display_name": "Jespfur",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
+      "time": "21:20",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4551,6 +4822,9 @@
     },
     {
       "display_name": "Lucy Railton, Charlie Hope & Rebecca Salvadori",
+      "day": "Sat",
+      "time": "15:45",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W3",
       "type": "Live A/V",
       "world_premiere": true,
@@ -4564,6 +4838,9 @@
     },
     {
       "display_name": "mi-el",
+      "day": "Sat",
+      "time": "26:30",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4574,6 +4851,9 @@
     },
     {
       "display_name": "MOESHA 13",
+      "day": "Sat",
+      "time": "24:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4584,6 +4864,9 @@
     },
     {
       "display_name": "Mark IJzerman",
+      "day": "Sun",
+      "time": "18:45",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4593,6 +4876,9 @@
     },
     {
       "display_name": "Meetsysteem & Band",
+      "day": "Sun",
+      "time": "15:15",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4603,6 +4889,9 @@
     },
     {
       "display_name": "Pebblle",
+      "day": "Sat",
+      "time": "25:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4612,6 +4901,9 @@
     },
     {
       "display_name": "ROLROLROL",
+      "day": "Sun",
+      "time": "19:00",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4621,6 +4913,9 @@
     },
     {
       "display_name": "Sijya",
+      "day": "Fri",
+      "time": "21:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4631,6 +4926,9 @@
     },
     {
       "display_name": "Slikback feat. maltdisney & Tasya",
+      "day": "Sat",
+      "time": "24:10",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4644,6 +4942,9 @@
     },
     {
       "display_name": "Speaker Music",
+      "day": "Sat",
+      "time": "24:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4666,6 +4967,9 @@
     },
     {
       "display_name": "Tony Bontana",
+      "day": "Sun",
+      "time": "19:30",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4676,6 +4980,9 @@
     },
     {
       "display_name": "Violeta García",
+      "day": "Fri",
+      "time": "22:45",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4686,6 +4993,9 @@
     },
     {
       "display_name": "YATTA",
+      "day": "Sun",
+      "time": "15:20",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4695,6 +5005,9 @@
     },
     {
       "display_name": "Yb3L",
+      "day": "Sat",
+      "time": "27:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,

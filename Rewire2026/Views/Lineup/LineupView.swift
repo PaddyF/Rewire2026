@@ -42,7 +42,7 @@ struct LineupView: View {
 
                 HStack {
                     Text("\(filteredSlots.count) of \(store.lineup.slots.count) acts")
-                        .font(.system(size: 10, design: .monospaced))
+                        .font(.rewireBody(10))
                         .foregroundStyle(Color.rewireMuted)
                     Spacer()
                 }
@@ -50,20 +50,21 @@ struct LineupView: View {
                 .padding(.vertical, 6)
                 .background(Color.rewireBackground)
 
-                Divider().background(Color.rewireBorder)
-
-                List(filteredSlots) { slot in
-                    let userData = allUserData.first { $0.artistId == slot.id }
-                    NavigationLink(destination: ArtistDetailView(slot: slot)) {
-                        ArtistRowView(slot: slot,
-                                      artists: store.lineup.artists,
-                                      userData: userData)
+                ScrollView {
+                    LazyVStack(spacing: 8) {
+                        ForEach(filteredSlots) { slot in
+                            let userData = allUserData.first { $0.artistId == slot.id }
+                            NavigationLink(destination: ArtistDetailView(slot: slot)) {
+                                ArtistRowView(slot: slot,
+                                              artists: store.lineup.artists,
+                                              userData: userData)
+                            }
+                            .buttonStyle(.plain)
+                        }
                     }
-                    .listRowBackground(Color.rewireBackground)
-                    .listRowSeparatorTint(Color.rewireBorder)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
                 }
-                .listStyle(.plain)
-                .scrollContentBackground(.hidden)
                 .background(Color.rewireBackground)
             }
             .searchable(text: $searchText, prompt: "Search artists, genres…")
@@ -72,10 +73,10 @@ struct LineupView: View {
                 ToolbarItem(placement: .principal) {
                     VStack(spacing: 1) {
                         Text("REWIRE 2026")
-                            .font(.system(size: 15, weight: .bold, design: .monospaced))
+                            .font(.rewireTitle(15))
                             .foregroundStyle(Color.rewireAccent)
                         Text("The Hague · April 2026")
-                            .font(.system(size: 9, design: .monospaced))
+                            .font(.rewireBody(9))
                             .foregroundStyle(Color.rewireMuted)
                     }
                 }

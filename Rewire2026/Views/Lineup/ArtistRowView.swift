@@ -16,68 +16,79 @@ struct ArtistRowView: View {
         slot.artistIds.first.flatMap { artists[$0]?.imageUrl }.flatMap { URL(string: $0) }
     }
 
+    private var dayColor: Color { Color.slotDayColor(slot.day) }
+
     var body: some View {
-        HStack(alignment: .top, spacing: 10) {
-            // Thumbnail — only shown when image_url is populated
-            if let url = thumbnailUrl {
-                AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image.resizable().aspectRatio(contentMode: .fill)
-                    case .empty:
-                        Color.rewireSurface
-                    default:
-                        Color.rewireSurface
-                    }
-                }
-                .frame(width: 48, height: 48)
-                .clipped()
-            }
+        HStack(spacing: 0) {
+            // Left accent bar
+            RoundedRectangle(cornerRadius: 2)
+                .fill(dayColor)
+                .frame(width: 3)
+                .padding(.vertical, 6)
 
-        VStack(alignment: .leading, spacing: 6) {
-            HStack(alignment: .top, spacing: 8) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(slot.displayName)
-                        .font(.system(size: 14, weight: .semibold, design: .monospaced))
-                        .foregroundStyle(Color.rewireText)
-                    if let project = slot.project, !project.isEmpty {
-                        Text(project)
-                            .font(.system(size: 11, design: .monospaced))
+            HStack(alignment: .top, spacing: 10) {
+                // Thumbnail
+                if let url = thumbnailUrl {
+                    AsyncImage(url: url) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image.resizable().aspectRatio(contentMode: .fill)
+                        case .empty:
+                            Color.rewireSurface
+                        default:
+                            Color.rewireSurface
+                        }
+                    }
+                    .frame(width: 48, height: 48)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
+
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack(alignment: .top, spacing: 8) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(slot.displayName)
+                                .font(.rewireTitle(15))
+                                .foregroundStyle(Color.rewireText)
+                            if let project = slot.project, !project.isEmpty {
+                                Text(project)
+                                    .font(.rewireBody(11))
+                                    .foregroundStyle(Color.rewireMuted)
+                            }
+                        }
+                        Spacer()
+                        DayBadge(day: slot.day)
+                    }
+
+                    if !genrePreview.isEmpty {
+                        Text(genrePreview)
+                            .font(.rewireBody(11))
                             .foregroundStyle(Color.rewireMuted)
+                            .lineLimit(1)
                     }
-                }
-                Spacer()
-                DayBadge(day: slot.day)
-            }
 
-            if !genrePreview.isEmpty {
-                Text(genrePreview)
-                    .font(.system(size: 11))
-                    .foregroundStyle(Color.rewireMuted)
-                    .lineLimit(1)
-            }
-
-            HStack(spacing: 6) {
-                if slot.isWorldPremiere { WorldPremiereBadge() }
-                if let type = slot.performanceType { TypeBadge(type: type) }
-                Spacer()
-                if let rating = userData?.mustSeeRating, rating > 0 {
-                    HStack(spacing: 2) {
-                        ForEach(1...5, id: \.self) { i in
-                            Image(systemName: i <= rating ? "star.fill" : "star")
-                                .font(.system(size: 9))
-                                .foregroundStyle(i <= rating ? Color.rewireAccent : Color.rewireBorder)
+                    HStack(spacing: 6) {
+                        if slot.isWorldPremiere { WorldPremiereBadge() }
+                        if let type = slot.performanceType { TypeBadge(type: type) }
+                        Spacer()
+                        if let rating = userData?.mustSeeRating, rating > 0 {
+                            HStack(spacing: 2) {
+                                ForEach(1...5, id: \.self) { i in
+                                    Image(systemName: i <= rating ? "star.fill" : "star")
+                                        .font(.system(size: 9))
+                                        .foregroundStyle(i <= rating ? Color.rewireAccent : Color.rewireBorder)
+                                }
+                            }
+                        }
+                        if userData?.isBookmarked == true {
+                            Image(systemName: "bookmark.fill")
+                                .font(.system(size: 11))
+                                .foregroundStyle(Color.rewireSecondary)
                         }
                     }
                 }
-                if userData?.isBookmarked == true {
-                    Image(systemName: "bookmark.fill")
-                        .font(.system(size: 11))
-                        .foregroundStyle(Color.rewireSecondary)
-                }
             }
+            .padding(10)
         }
-        } // HStack
-        .padding(.vertical, 4)
+        .cardStyle(dayColor: dayColor)
     }
 }

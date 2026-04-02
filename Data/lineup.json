@@ -132,7 +132,17 @@
       "name": "Explore Ensemble",
       "genres": "Contemporary Classical, Acoustic Ensemble",
       "notes": "London sextet founded in 2012 at the Royal College of Music, presenting UK premieres of Saariaho, Sciarrino, and Romitelli alongside new commissions that often incorporate electronics.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Signals",
+        "year": 2026,
+        "label": "Another Timbre"
+      },
+      "top_rated": {
+        "title": "Perfect Offering",
+        "year": 2023,
+        "label": "NMC Recordings"
+      }
     },
     "beverly-glenn-copeland": {
       "name": "Beverly Glenn-Copeland",
@@ -181,7 +191,11 @@
         "artist": "Rian Treanor & Cara Tolmie"
       },
       "notes": "Glasgow-born, Stockholm-based artist whose practice centres on the voice and body, developing Internal Singing — a technique exploring breath, touch, and the inhale as sonic material.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Body Lapse",
+        "year": 2025
+      }
     },
     "rian-treanor": {
       "name": "Rian Treanor",
@@ -235,7 +249,12 @@
         "votes": 188
       },
       "notes": "Paris-based 35-piece experimental orchestra founded by pianist Frédéric Blondy in 2011, uniting musicians from jazz, free improvisation, and contemporary classical for collective sonic research.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Laminaire",
+        "year": 2024,
+        "label": "Relative Pitch Records"
+      }
     },
     "civilistjavel": {
       "name": "Civilistjävel!",
@@ -600,7 +619,12 @@
         "note": "compilation of archival recordings"
       },
       "notes": "Novi Sad-born poet and performer whose voice spans bass to overtone screams; a central figure of international sound poetry since the 1970s with works in MoMA and the Tate.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Aki darazsakról álmodik / Bomba-effektus Le És föl",
+        "year": 1988,
+        "rating": 3.57
+      }
     },
     "svetlana-mara": {
       "name": "Svetlana Maraš",
@@ -1067,7 +1091,11 @@
     "eye": {
       "name": "∈Y∋",
       "genres": "Noise Rock, No Wave, Psychedelic Rock, Noise",
-      "notes": "Osaka-born vocalist Yamantaka Eye, frontman of Boredoms and Hanatarash, whose performances combine noise, psychedelic shamanism, and chaotic vocal extremes since the early 1980s."
+      "notes": "Osaka-born vocalist Yamantaka Eye, frontman of Boredoms and Hanatarash, whose performances combine noise, psychedelic shamanism, and chaotic vocal extremes since the early 1980s.",
+      "latest": {
+        "title": "recone",
+        "year": 2020
+      }
     },
     "c-o-l-o": {
       "name": "C.O.L.O",
@@ -1170,24 +1198,10 @@
       "notes": "Sheffield-based electronic musician Mark Fell builds non-repetitive structures from algorithmic and pattern-generating systems, drawing equally on computational theory and the rhythmic logic of house and techno.",
       "image_url": "https://images.prismic.io/rewirefestival/NTU4MTE0NzEtZGY4MC00NDRkLTkwZjQtYzY1YTZjZTFiNDY3_mark-fell--rewire-2019--001.jpg?auto=compress,format&rect=0,150,436,245&w=1200&h=675"
     },
-    "pat-thomas": {
-      "name": "Pat Thomas",
-      "genres": "Free Jazz, Free Improvisation, Piano",
-      "latest": {
-        "title": "Reality Is Not a Theory",
-        "year": 2025,
-        "label": "Black Truffle",
-        "artist": "Mark Fell & Pat Thomas"
-      },
-      "top_rated": {
-        "title": "And",
-        "year": 1997,
-        "artist": "Derek Bailey, Pat Thomas, Steve Noble",
-        "rating": 3.65,
-        "votes": 45
-      },
-      "notes": "Oxford-born pianist Pat Thomas bridges free improvisation, jazz, dub, and electronic noise, having collaborated with Derek Bailey and developed an electronics practice alongside his acoustic work since the late 1980s.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+    "okkyung-lee": {
+      "name": "Okkyung Lee",
+      "genres": "Free Improvisation, Electroacoustic, Noise, Experimental",
+      "notes": "Korean-born, New York-based cellist and composer who extends the instrument into noise, improvisation, and electroacoustic territory, with releases on Ideologic Organ and Shelter Press."
     },
     "my-new-band-believe": {
       "name": "My New Band Believe",
@@ -1281,7 +1295,18 @@
       "name": "Mette Rasmussen",
       "genres": "Free Improvisation, Free Jazz, Saxophone",
       "notes": "Danish saxophonist Mette Rasmussen, based in Trondheim, pushes the physical limits of her instrument through extended techniques and preparations, working across free jazz, noise, and textural improvisation.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "The Sleep of Reason Produces Monsters",
+        "year": 2025
+      },
+      "top_rated": {
+        "title": "All The Ghosts At Once",
+        "year": 2015,
+        "label": "Relative Pitch Records",
+        "rating": 3.52,
+        "votes": 21
+      }
     },
     "sacred-lodge": {
       "name": "Sacred Lodge",
@@ -1340,7 +1365,18 @@
       "name": "Sombat Simla",
       "genres": "Molam, Thai Traditional Music, Folk",
       "notes": "Master khaen player Sombat Simla from Isan, Thailand—nicknamed 'the god of khene'—performs virtuosic molam folk music on the 16-pipe bamboo mouth organ, documented on Black Truffle in 2023.",
-      "image_url": "https://images.prismic.io/rewirefestival/aWj23wIvOtkhBnKP_SombatSilma_15_%C2%A9YasuhiroMorinaga_HD_02.jpg?auto=format,compress&rect=0,37,1866,980&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aWj23wIvOtkhBnKP_SombatSilma_15_%C2%A9YasuhiroMorinaga_HD_02.jpg?auto=format,compress&rect=0,37,1866,980&w=1200&h=630",
+      "latest": {
+        "title": "Master of Bamboo Mouth Organ - Isan, Thailand",
+        "year": 2023,
+        "label": "Black Truffle"
+      },
+      "top_rated": {
+        "title": "Master of Bamboo Mouth Organ: Sombat Simla (Isan, Thailand)",
+        "year": 2018,
+        "rating": 3.02,
+        "votes": 2
+      }
     },
     "stemeseder-lillinger": {
       "name": "Stemeseder Lillinger",
@@ -1435,7 +1471,12 @@
       "name": "33",
       "genres": "Electronic, DJ",
       "notes": "Emerging local DJ. Minimal public discography.",
-      "image_url": "https://images.prismic.io/rewirefestival/aZ3OtcFoBIGEgu4X_33.jpg?auto=format,compress&rect=0,2662,5464,2869&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aZ3OtcFoBIGEgu4X_33.jpg?auto=format,compress&rect=0,2662,5464,2869&w=1200&h=630",
+      "latest": {
+        "title": "Aire Du Maquis D'Em",
+        "year": 2024,
+        "label": "Tanzprocesz"
+      }
     },
     "aernoudt-jacobs": {
       "name": "Aernoudt Jacobs",
@@ -1535,7 +1576,13 @@
         "artist": "Buttechno & Triš"
       },
       "notes": "Moscow-based Pavel Milyakov makes spacious, dystopian techno as Buttechno, drawing on the desolate suburban landscape and a lineage from Japanese noise to musique concrète.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "In Your Head",
+        "year": 2023,
+        "rating": 3.21,
+        "votes": 90
+      }
     },
     "torus": {
       "name": "Torus",
@@ -1547,7 +1594,11 @@
         "note": "#651 of 2020"
       },
       "notes": "The Hague artist Joeri Woudstra uses the Torus alias to reflect on pop culture politics through club music, blending trance and ambient into immersive, loop-driven sets.",
-      "image_url": "https://images.prismic.io/rewirefestival/Zfg8R8mUzjad_UiA_Torus.jpg?auto=format%2Ccompress&rect=0%2C750%2C1654%2C868&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Zfg8R8mUzjad_UiA_Torus.jpg?auto=format%2Ccompress&rect=0%2C750%2C1654%2C868&w=1200&h=630",
+      "latest": {
+        "title": "Summer of Love (2024)",
+        "year": 2024
+      }
     },
     "by-storm": {
       "name": "By Storm",
@@ -1571,13 +1622,27 @@
       "name": "Cello Octet Amsterdam",
       "genres": "Contemporary Classical, Chamber Music",
       "notes": "Eight Amsterdam cellists committed to new music, with over 90 world premieres and collaborations ranging from Philip Glass to Michael Gordon and Kate Moore.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Sgt. Pepper's Lonely Hearts Club Band",
+        "year": 2023
+      },
+      "top_rated": {
+        "title": "Canto Ostinato",
+        "year": 2013,
+        "rating": 3.5,
+        "votes": 2
+      }
     },
     "shishani": {
       "name": "Shishani",
       "genres": "Afro-Soul, Contemporary Folk, Jazz, World Music",
       "notes": "Namibian-Belgian singer Shishani Vranckx weaves Oshiwambo traditions with soul, jazz, and indie, using her music as a platform for social and political commentary.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Whispers",
+        "year": 2025
+      }
     },
     "cerys-hafana": {
       "name": "Cerys Hafana",
@@ -1615,19 +1680,54 @@
       "name": "Devon Rexi",
       "genres": "Post-Punk, Krautrock, Dub, No Wave, Psychedelic Funk",
       "notes": "Amsterdam quintet Devon Rexi, a Mauskovic Dance Band spin-off, builds psych-funk grooves from pitch-shifted vocals, dub bass, and post-punk percussion.",
-      "image_url": "https://images.prismic.io/rewirefestival/f169b7f3-aaa8-4e40-9157-22adc1c05884_Devon+Rexi.jpeg?auto=compress,format&rect=0,206,679,356&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/f169b7f3-aaa8-4e40-9157-22adc1c05884_Devon+Rexi.jpeg?auto=compress,format&rect=0,206,679,356&w=1200&h=630",
+      "latest": {
+        "title": "Breathstep",
+        "year": 2026,
+        "label": "Accidental Meetings"
+      },
+      "top_rated": {
+        "title": "Tambal EP",
+        "year": 2022,
+        "label": "South of North",
+        "rating": 3.54,
+        "votes": 18
+      }
     },
     "john-t-gast": {
       "name": "John T. Gast",
       "genres": "Ambient, Electronic",
       "notes": "Elusive London composer John T. Gast makes esoteric ambient and experimental electronic music, known for ties to Dean Blunt and releases on Planet Mu and Blackest Ever Black.",
-      "image_url": "https://images.prismic.io/rewirefestival/ZmNkYTYxZTQtODFlNS00NDFiLTg2ZmMtOGY2ZGM0Y2U2YmY5_gast.jpg?auto=compress,format&rect=0,175,800,450&w=1200&h=675"
+      "image_url": "https://images.prismic.io/rewirefestival/ZmNkYTYxZTQtODFlNS00NDFiLTg2ZmMtOGY2ZGM0Y2U2YmY5_gast.jpg?auto=compress,format&rect=0,175,800,450&w=1200&h=675",
+      "latest": {
+        "title": "Infant",
+        "year": 2025,
+        "label": "5 Gate Temple"
+      },
+      "top_rated": {
+        "title": "Infant",
+        "year": 2025,
+        "rating": 3.67,
+        "votes": 34
+      }
     },
     "dim-garden": {
       "name": "Dim Garden",
       "genres": "Electronic, DJ",
       "notes": "Local Hague DJ. Laak club programme. Minimal public discography.",
-      "image_url": "https://images.prismic.io/rewirefestival/aZ8JWMFoBIGEgx8v_DimGarden.jpg?auto=format,compress&rect=0,218,520,273&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aZ8JWMFoBIGEgx8v_DimGarden.jpg?auto=format,compress&rect=0,218,520,273&w=1200&h=630",
+      "latest": {
+        "title": "The Art of DX7",
+        "year": 2025,
+        "label": "Nightwind Records"
+      },
+      "top_rated": {
+        "title": "A Dauntless Sprite Descends",
+        "year": 2022,
+        "label": "Italo Moderni",
+        "rating": 3.45,
+        "votes": 11
+      }
     },
     "felix-bell": {
       "name": "Felix Bell",
@@ -1651,7 +1751,17 @@
       "name": "Floris Vanhoof",
       "genres": "Sound Art, Electroacoustic, Film, Visual Art",
       "notes": "Belgian audiovisual artist. Installation explores radio waves and transmission. Proximity Music.",
-      "image_url": "https://images.prismic.io/rewirefestival/aZ3TOsFoBIGEgu71_FlorisVanhoof-creditsKristofVrancken.jpg?auto=format,compress&rect=0,1081,2839,1490&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aZ3TOsFoBIGEgu71_FlorisVanhoof-creditsKristofVrancken.jpg?auto=format,compress&rect=0,1081,2839,1490&w=1200&h=630",
+      "latest": {
+        "title": "Falala Falderiere Falderaldera",
+        "year": 2020,
+        "label": "Takuroku"
+      },
+      "top_rated": {
+        "title": "The Fluid Computer",
+        "year": 2019,
+        "label": "KRAAK"
+      }
     },
     "frankie": {
       "name": "FRANKIE",
@@ -1715,7 +1825,14 @@
         "year": 2025
       },
       "notes": "Chicago South Side producer Jamal Moss channels the city's Ron Hardy lineage through acid house, industrial noise, free jazz, and EBM on his prolific Mathematics Recordings label.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Cosmic Bebop",
+        "year": 2016,
+        "label": "RVNG Intl.",
+        "rating": 3.2,
+        "votes": 269
+      }
     },
     "jessica-ekomane": {
       "name": "Jessica Ekomane",
@@ -1785,7 +1902,17 @@
       "name": "Khrystyna Kirik",
       "genres": "Electroacoustic Improvisation, Experimental Electronic, Sound Art, Free Improvisation",
       "notes": "Berlin-based Ukrainian sound artist who transforms everyday sonority using electronic hardware, double bass samples, voice, and field recordings in improvised performance and installation.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "State of Latitude",
+        "year": 2026,
+        "label": "Standard Deviation"
+      },
+      "top_rated": {
+        "title": "Sub-sur-face",
+        "year": 2024,
+        "label": "Liky Pid Nohamy"
+      }
     },
     "emma-rubikaite-milasiute": {
       "name": "Emma Rubikaite-Milasiute",
@@ -2002,13 +2129,28 @@
     "andreas-kuhne": {
       "name": "Andreas Kühne",
       "genres": "Electroacoustic, Free Improvisation, Sound Art, Experimental Electronic",
-      "notes": "Amsterdam-based composer, sound artist, and drummer who makes electroacoustic music through field improvisation, including site-specific recordings in Murmansk with nuclear submarines and decaying harbours."
+      "notes": "Amsterdam-based composer, sound artist, and drummer who makes electroacoustic music through field improvisation, including site-specific recordings in Murmansk with nuclear submarines and decaying harbours.",
+      "latest": {
+        "title": "Transients I/O",
+        "year": 2022
+      }
     },
     "sam-slater": {
       "name": "Sam Slater",
       "genres": "Electroacoustic, Experimental Electronic, Contemporary Classical, Sound Art",
       "notes": "Berlin-based British composer who studied experimental composition at Leeds, collaborated with Jóhann Jóhannsson, and won Grammy Awards as score producer for Joker and Chernobyl.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Lunng",
+        "year": 2026,
+        "label": "Mt. Brings Death"
+      },
+      "top_rated": {
+        "title": "Wrong Airport Ghost",
+        "year": 2018,
+        "rating": 2.87,
+        "votes": 46
+      }
     },
     "sanam": {
       "name": "SANAM",
@@ -2035,7 +2177,18 @@
       "name": "Modelo62",
       "genres": "Contemporary Classical, Ensemble",
       "notes": "Amsterdam ensemble founded in 2003 that commissions and premieres interdisciplinary new works, functioning as a laboratory where composers, visual artists, and performers build tailor-made pieces together.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Moving",
+        "year": 2025,
+        "label": "Deadland Records"
+      },
+      "top_rated": {
+        "title": "Adjacent Sound",
+        "year": 2022,
+        "rating": 3.23,
+        "votes": 53
+      }
     },
     "standing-on-the-corner": {
       "name": "Standing on the Corner",
@@ -2078,7 +2231,12 @@
         "votes": 2699
       },
       "notes": "Kevin Martin's project blends maximalist dancehall vocals, sub-bass pressure and noise abrasion, with London Zoo (2008) on Ninja Tune cementing his reputation for brutal, speaker-destroying club music.",
-      "image_url": "https://images.prismic.io/rewirefestival/2acdd879-cb97-41a6-aa73-e002ea79d135_THE+BUG+Lead+Press+Shot+Large+FIRE+Credit+-+Caroline+Lessire+2%281%29.jpg?auto=compress,format&rect=0,299,6400,3600&w=1200&h=675"
+      "image_url": "https://images.prismic.io/rewirefestival/2acdd879-cb97-41a6-aa73-e002ea79d135_THE+BUG+Lead+Press+Shot+Large+FIRE+Credit+-+Caroline+Lessire+2%281%29.jpg?auto=compress,format&rect=0,299,6400,3600&w=1200&h=675",
+      "latest": {
+        "title": "Machine",
+        "year": 2024,
+        "label": "Relapse Records"
+      }
     },
     "dis-fig": {
       "name": "Dis Fig",
@@ -2133,18 +2291,39 @@
       "name": "Siddhartha Belmannu",
       "genres": "Hindustani Classical, Carnatic Music, Indian Classical, Vocal",
       "notes": "Siddhartha Belmannu is a Bengaluru-born Hindustani classical vocalist trained in the Gwalior-Kirana gharana, whose three-octave voice features on collaborative albums with Shackleton and Wacław Zimpel.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "In The Cell of Dreams (Live Version)",
+        "year": 2025,
+        "label": "Wrecked"
+      },
+      "top_rated": {
+        "title": "In The Cell of Dreams",
+        "year": 2023,
+        "rating": 3.18,
+        "votes": 129
+      }
     },
     "giridhar-udupa": {
       "name": "Giridhar Udupa",
       "genres": "Carnatic, Percussion, Ghatam",
       "notes": "Giridhar Udupa is a Carnatic ghatam master who has performed in over fifty countries, moving freely between South and North Indian classical traditions as well as jazz, flamenco and world music.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "My Name Is Giridhar Udupa",
+        "year": 2024,
+        "label": "7K!"
+      }
     },
     "ugn-uma": {
       "name": "Ugnė Uma",
       "genres": "Experimental, Avant-Folk, Free Jazz, Electronic, Vocal",
-      "notes": "Ugnė Uma is a Vilnius-based vocalist and composer whose work draws on Lithuania's underground jazz and folk scenes, experimental poetry and electronics, including a 2023 album with saxophonist Sam Gendel."
+      "notes": "Ugnė Uma is a Vilnius-based vocalist and composer whose work draws on Lithuania's underground jazz and folk scenes, experimental poetry and electronics, including a 2023 album with saxophonist Sam Gendel.",
+      "latest": {
+        "title": "Rage Love Strange Love / Someone Call Donna",
+        "year": 2025,
+        "label": "Somewhere Press"
+      }
     },
     "pavel-milyakov": {
       "name": "Pavel Milyakov",
@@ -2263,7 +2442,11 @@
         "note": "Xenakis; #270 of 1987"
       },
       "notes": "Founded in 1962, Les Percussions de Strasbourg is a six-percussionist French ensemble that has commissioned and premiered over 250 contemporary works, including Xenakis's Pléïades and pieces by Stockhausen.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Minimal",
+        "year": 2025
+      }
     },
     "hiiit": {
       "name": "HIIIT",
@@ -2275,7 +2458,18 @@
       "name": "Abdullah Miniawy",
       "genres": "Experimental, Spoken Word, Free Jazz, Electroacoustic",
       "notes": "Egyptian poet, vocalist, and improviser based between Cairo and Europe. Fuses Arabic poetry with free jazz and noise in high-intensity live performances that blur the line between ritual and concert.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "latest": {
+        "title": "Dying Is the Internet",
+        "year": 2026,
+        "label": "Dekmantel"
+      },
+      "top_rated": {
+        "title": "Notice a Tiny Scratch for the Blue Behind",
+        "year": 2022,
+        "rating": 3.28,
+        "votes": 253
+      }
     },
     "batu": {
       "name": "Batu",
@@ -2286,7 +2480,13 @@
         "label": "Timedance"
       },
       "notes": "Bristol-born producer and founder of the Timedance label. Makes bass-heavy, textured club music that sits between UK garage, broken techno, and left-field electronics. Central figure in the Bristol underground.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Opal",
+        "year": 2022,
+        "rating": 3.25,
+        "votes": 292
+      }
     },
     "jasss": {
       "name": "JASSS",
@@ -2297,13 +2497,30 @@
         "label": "Cómeme"
       },
       "notes": "Barcelona-based producer and DJ Sara Dziri. Releases on Cómeme and Rue De Plaisance; known for abrasive industrial techno, EBM, and new beat that carries an unmistakably confrontational energy on the dancefloor.",
-      "image_url": "https://images.prismic.io/rewirefestival/MjkwZjZmYWItMGFmZi00ZTAwLTk5YWItNjhhZDk0MTc0Yjk1_jasss_rewire2.png?auto=compress,format&rect=67,0,1067,600&w=1200&h=675"
+      "image_url": "https://images.prismic.io/rewirefestival/MjkwZjZmYWItMGFmZi00ZTAwLTk5YWItNjhhZDk0MTc0Yjk1_jasss_rewire2.png?auto=compress,format&rect=67,0,1067,600&w=1200&h=675",
+      "top_rated": {
+        "title": "Weightless",
+        "year": 2017,
+        "label": "iDEAL Recordings",
+        "rating": 3.36,
+        "votes": 607
+      }
     },
     "cevdet-erek": {
       "name": "Cevdet Erek",
       "genres": "Sound Art, Percussion, Installation, Experimental",
       "notes": "Istanbul-born artist and architect whose work investigates rhythm, space, and the phenomenology of sound. Has presented large-scale installations at Documenta 14 and major international venues; merges visual art and acoustic architecture.",
-      "image_url": "https://images.prismic.io/rewirefestival/abKQl1xvIZEnjmfO_CevdetErek%27%EA%9C%B4ccidentGrotesque%27.jpg?auto=format,compress&rect=0,153,2157,1132&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/abKQl1xvIZEnjmfO_CevdetErek%27%EA%9C%B4ccidentGrotesque%27.jpg?auto=format,compress&rect=0,153,2157,1132&w=1200&h=630",
+      "latest": {
+        "title": "çepeçerçeve",
+        "year": 2023
+      },
+      "top_rated": {
+        "title": "Davul",
+        "year": 2017,
+        "rating": 3.58,
+        "votes": 350
+      }
     },
     "chinnamasta": {
       "name": "Chinnamasta",
@@ -2314,7 +2531,12 @@
     "clement-vercelletto": {
       "name": "Clément Vercelletto",
       "genres": "Contemporary Classical, Harp, Experimental, Electroacoustic",
-      "notes": "French harpist and composer who extends the instrument into electronic and acousmatic territory, creating work that moves between concert music and sound installation."
+      "notes": "French harpist and composer who extends the instrument into electronic and acousmatic territory, creating work that moves between concert music and sound installation.",
+      "latest": {
+        "title": "L'Engoulevent",
+        "year": 2025,
+        "label": "un je-ne-sais-quoi"
+      }
     },
     "deforrest-brown-jr": {
       "name": "DeForrest Brown Jr.",
@@ -2325,7 +2547,14 @@
         "label": "Room40"
       },
       "notes": "US musician, producer, and theorist who records as Speaker Music and Synoptic Audio. Informed by Black American drumline aesthetics and techno history; author of 'Assembling a Black Counter Culture'.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Black Nationalist Sonic Weaponry",
+        "year": 2020,
+        "label": "Planet Mu",
+        "rating": 3.49,
+        "votes": 34
+      }
     },
     "dirtydms": {
       "name": "Dirtydms",
@@ -2375,7 +2604,14 @@
         "year": 2023
       },
       "notes": "Osaka-born experimental rock group led by Masaki Matsumura. Combine noise rock, psychedelia, and ritual energy; known for relentlessly intense live performances and an anarchic DIY ethos.",
-      "image_url": "https://images.prismic.io/rewirefestival/aamaFVxvIZEnjXdc_GEZAN.jpeg?auto=format,compress&rect=0,1006,2064,1084&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aamaFVxvIZEnjXdc_GEZAN.jpeg?auto=format,compress&rect=0,1006,2064,1084&w=1200&h=630",
+      "top_rated": {
+        "title": "狂 (Klue)",
+        "year": 2020,
+        "label": "十三月",
+        "rating": 3.49,
+        "votes": 2528
+      }
     },
     "matthew-herbert": {
       "name": "Matthew Herbert",
@@ -2410,7 +2646,16 @@
       "name": "Jespfur",
       "genres": "Club, Electronic, Experimental",
       "notes": "DJ and producer operating in experimental club music, drawing from footwork, juke, and left-field electronics.",
-      "image_url": "https://images.prismic.io/rewirefestival/aamZX1xvIZEnjXcW_Jespfur.jpg?auto=format,compress&rect=0,157,2412,1266&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aamZX1xvIZEnjXcW_Jespfur.jpg?auto=format,compress&rect=0,157,2412,1266&w=1200&h=630",
+      "latest": {
+        "title": "Pedestrians Of Bright Silence",
+        "year": 2024,
+        "label": "10k"
+      },
+      "top_rated": {
+        "title": "Pedestrians Of Bright Silence",
+        "year": 2024
+      }
     },
     "lucy-railton": {
       "name": "Lucy Railton",
@@ -2421,7 +2666,14 @@
         "label": "Modern Love"
       },
       "notes": "London-based cellist and composer who extends the cello into electronic and noise territory. Works closely with composers including Cevdet Erek and Oliver Coates; her recordings blend acoustic minimalism with tape manipulation.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "Paradise 94",
+        "year": 2018,
+        "label": "Modern Love",
+        "rating": 3.05,
+        "votes": 116
+      }
     },
     "charlie-hope": {
       "name": "Charlie Hope",
@@ -2439,19 +2691,39 @@
       "name": "MOESHA 13",
       "genres": "Gqom, Club, Experimental Electronic, Afrofuturism",
       "notes": "Johannesburg-based DJ and producer whose sets blend South African club music — gqom, amapiano — with industrial electronics and global bass music. A key figure in the Johannesburg underground scene.",
-      "image_url": "https://images.prismic.io/rewirefestival/abA7-VxvIZEnjiT8_Moesha1Credit%40LeaHopp%40hopp.jpeg?auto=format,compress&rect=0,113,1600,840&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/abA7-VxvIZEnjiT8_Moesha1Credit%40LeaHopp%40hopp.jpeg?auto=format,compress&rect=0,113,1600,840&w=1200&h=630",
+      "latest": {
+        "title": "Jazz Club",
+        "year": 2025,
+        "label": "Hakuna Kulala"
+      }
     },
     "mark-ijzerman": {
       "name": "Mark IJzerman",
       "genres": "Sound Art, Installation, Electroacoustic, Ambient",
       "notes": "Dutch new-media artist based in Rotterdam. Creates immersive sound and light installations that explore perception, space, and the materiality of sound; presented internationally at art institutions and festivals.",
-      "image_url": "https://images.prismic.io/rewirefestival/ZGE0N2IxNGYtOTU5Ni00Nzk3LWJjODMtZDZmYWViOTg5ODJm_mark-ijzerman-rewire-2019.png?auto=compress,format&rect=0,206,1500,788&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/ZGE0N2IxNGYtOTU5Ni00Nzk3LWJjODMtZDZmYWViOTg5ODJm_mark-ijzerman-rewire-2019.png?auto=compress,format&rect=0,206,1500,788&w=1200&h=630",
+      "latest": {
+        "title": "Flounder Maps",
+        "year": 2025,
+        "label": "Anterior Insula / Le Pacifique"
+      }
     },
     "meetsysteem": {
       "name": "Meetsysteem",
       "genres": "Experimental, Electronic, Contemporary",
       "notes": "Dutch experimental collective whose work merges electronic music, visual art, and performance in often site-specific or durational contexts.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z8F5i57c43Q3gW4y_2025_MEETSYSTEEM_36.jpg?auto=format,compress&rect=0,2718,5584,2932&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z8F5i57c43Q3gW4y_2025_MEETSYSTEEM_36.jpg?auto=format,compress&rect=0,2718,5584,2932&w=1200&h=630",
+      "latest": {
+        "title": "Gekleed In Donker, Ze Vroegen Niks",
+        "year": 2025,
+        "label": "Nous'klaer Audio"
+      },
+      "top_rated": {
+        "title": "Cr:GO",
+        "year": 2020,
+        "label": "Nous'klaer Audio"
+      }
     },
     "pebblle": {
       "name": "Pebblle",
@@ -2463,13 +2735,32 @@
       "name": "ROLROLROL",
       "genres": "Performance, Experimental, Electronic",
       "notes": "Interdisciplinary artist working across sound performance, body, and electronics.",
-      "image_url": "https://images.prismic.io/rewirefestival/aamg4FxvIZEnjXnF_ROLROLROL.jpg?auto=format,compress&rect=0,641,2700,1418&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aamg4FxvIZEnjXnF_ROLROLROL.jpg?auto=format,compress&rect=0,641,2700,1418&w=1200&h=630",
+      "latest": {
+        "title": "Dinner",
+        "year": 2025,
+        "label": "Ilian Tape"
+      },
+      "top_rated": {
+        "title": "Music",
+        "year": 2023
+      }
     },
     "sijya": {
       "name": "Sijya",
       "genres": "Club, Electronic, UK Bass",
       "notes": "DJ and producer known for genre-fluid sets drawing from club music, UK bass, and experimental electronics.",
-      "image_url": "https://images.prismic.io/rewirefestival/abBDLVxvIZEnjidA_SijyaPress-5.jpg?auto=format,compress&rect=0,1392,3840,2016&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/abBDLVxvIZEnjidA_SijyaPress-5.jpg?auto=format,compress&rect=0,1392,3840,2016&w=1200&h=630",
+      "latest": {
+        "title": "Leather & Brass",
+        "year": 2025,
+        "label": "One Little Independent Records"
+      },
+      "top_rated": {
+        "title": "Young Hate",
+        "year": 2022,
+        "label": "Accidental Records"
+      }
     },
     "slikback": {
       "name": "Slikback",
@@ -2480,7 +2771,13 @@
         "label": "Nyege Nyege Tapes"
       },
       "notes": "Ugandan-born, Kampala and Nairobi-based DJ and producer associated with the Nyege Nyege collective. Makes relentless, mutant club music that fuses footwork, tekno, and East African rhythms at extreme speeds.",
-      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/Z02N1pbqstJ978MC_241112-Rewire-2025-Atmo-Images-16by9-1.jpg?auto=format,compress&rect=0,36,1920,1008&w=1200&h=630",
+      "top_rated": {
+        "title": "CONDENSE",
+        "year": 2022,
+        "rating": 3.5,
+        "votes": 105
+      }
     },
     "maltdisney": {
       "name": "maltdisney",
@@ -2498,18 +2795,50 @@
       "name": "Tony Bontana",
       "genres": "Club, Electronic, Experimental",
       "notes": "DJ and producer working across club and experimental electronic music.",
-      "image_url": "https://images.prismic.io/rewirefestival/aamfrlxvIZEnjXk__TonyBontana.JPG?auto=format,compress&rect=0,1790,3641,1912&w=1200&h=630"
+      "image_url": "https://images.prismic.io/rewirefestival/aamfrlxvIZEnjXk__TonyBontana.JPG?auto=format,compress&rect=0,1790,3641,1912&w=1200&h=630",
+      "latest": {
+        "title": "My Name",
+        "year": 2026,
+        "label": "Everything is Perfect Records"
+      },
+      "top_rated": {
+        "title": "Our Day Will Come",
+        "year": 2019,
+        "rating": 3.41,
+        "votes": 285
+      }
     },
     "violeta-garcia": {
       "name": "Violeta García",
       "genres": "Electronic, Experimental, Electroacoustic",
-      "notes": "Argentine-born, Barcelona-based composer and sound artist. Creates dense electronic works that explore texture, noise, and the body through a feminist lens; active in both the experimental and club music scenes."
+      "notes": "Argentine-born, Barcelona-based composer and sound artist. Creates dense electronic works that explore texture, noise, and the body through a feminist lens; active in both the experimental and club music scenes.",
+      "latest": {
+        "title": "IN / OUT",
+        "year": 2025,
+        "label": "Les Disques Bongo Joe"
+      },
+      "top_rated": {
+        "title": "Fobia",
+        "year": 2022,
+        "rating": 3.25,
+        "votes": 8
+      }
     },
     "yatta": {
       "name": "YATTA",
       "genres": "Performance, Electronic, Experimental",
       "notes": "Artist and performer whose work blends electronic sound, performance, and visual art.",
-      "image_url": "https://images.prismic.io/rewirefestival/MDZhNzY1YTktZjUwZS00MWI4LTkzZmItMzI5ZTUyMTRmMzk1_yatta.jpg?auto=compress,format&rect=0,118,1000,563&w=1200&h=675"
+      "image_url": "https://images.prismic.io/rewirefestival/MDZhNzY1YTktZjUwZS00MWI4LTkzZmItMzI5ZTUyMTRmMzk1_yatta.jpg?auto=compress,format&rect=0,118,1000,563&w=1200&h=675",
+      "latest": {
+        "title": "Palm Wine",
+        "year": 2024
+      },
+      "top_rated": {
+        "title": "Palm Wine",
+        "year": 2024,
+        "rating": 3.39,
+        "votes": 135
+      }
     },
     "yb3l": {
       "name": "Yb3L",
@@ -2528,6 +2857,8 @@
     {
       "display_name": "Actress & Suzanne Ciani",
       "day": "Thu",
+      "time": "22:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2542,6 +2873,8 @@
     {
       "display_name": "Alejandra Cárdenas",
       "day": "Sat",
+      "time": "19:45",
+      "stage": "Nieuwe Kerk",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -2553,6 +2886,8 @@
     {
       "display_name": "Apparitions",
       "day": "Sat",
+      "time": "17:15",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live (EU Debut)",
       "is_collab": false,
@@ -2563,6 +2898,8 @@
     {
       "display_name": "Armand Hammer",
       "day": "Fri",
+      "time": "23:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2573,6 +2910,8 @@
     {
       "display_name": "Ash Fure",
       "day": "Sat",
+      "time": "14:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W1",
       "type": "Live / Performance",
       "is_collab": false,
@@ -2584,6 +2923,8 @@
     {
       "display_name": "Beatrice Dillon & Explore Ensemble",
       "day": "Sun",
+      "time": "16:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2597,6 +2938,8 @@
     {
       "display_name": "Beverly Glenn-Copeland",
       "day": "Sat",
+      "time": "18:30",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2608,6 +2951,8 @@
     {
       "display_name": "Blawan",
       "day": "Sat",
+      "time": "25:15",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live Set",
       "is_collab": false,
@@ -2618,6 +2963,8 @@
     {
       "display_name": "Cara Tolmie & Rian Treanor",
       "day": "Sat",
+      "time": "24:30",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2635,6 +2982,8 @@
     {
       "display_name": "Caterina Barbieri & MFO",
       "day": "Thu",
+      "time": "21:05",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2648,6 +2997,8 @@
     {
       "display_name": "Caterina Barbieri with ONCEIM",
       "day": "Thu",
+      "time": "20:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2661,6 +3012,8 @@
     {
       "display_name": "Civilistjävel! & Mayssa Jallad",
       "day": "Sun",
+      "time": "22:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2674,6 +3027,8 @@
     {
       "display_name": "Einstürzende Neubauten",
       "day": "Sun",
+      "time": "21:50",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live (Plus Ticket)",
       "is_collab": false,
@@ -2684,6 +3039,8 @@
     {
       "display_name": "Eliana Glass",
       "day": "Sun",
+      "time": "15:30",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2694,6 +3051,8 @@
     {
       "display_name": "Eraserhead x Xiu Xiu",
       "day": "Sat",
+      "time": "22:05",
+      "stage": "Amare – Danstheater",
       "wave": "W1",
       "type": "Live Reinterpretation",
       "is_collab": true,
@@ -2705,6 +3064,8 @@
     {
       "display_name": "ex_libris",
       "day": "Sat",
+      "time": "24:30",
+      "stage": "Concordia",
       "wave": "W1",
       "world_premiere": true,
       "type": "Live A/V",
@@ -2716,6 +3077,8 @@
     {
       "display_name": "feeo",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2727,6 +3090,8 @@
     {
       "display_name": "Fine",
       "day": "Fri",
+      "time": "19:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2737,6 +3102,8 @@
     {
       "display_name": "Flur",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2747,6 +3114,8 @@
     {
       "display_name": "ganavya",
       "day": "Sat",
+      "time": "23:00",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2760,6 +3129,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "17:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Two Shows",
       "is_collab": false,
@@ -2771,6 +3142,8 @@
     {
       "display_name": "Hilary Woods",
       "day": "Sat",
+      "time": "21:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2781,6 +3154,8 @@
     {
       "display_name": "james K",
       "day": "Sat",
+      "time": "21:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2792,6 +3167,8 @@
     {
       "display_name": "Jim O'Rourke & Eiko Ishibashi",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Amare – Danstheater",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2809,6 +3186,8 @@
     {
       "display_name": "JJJJJerome Ellis",
       "day": "Fri",
+      "time": "20:15",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2819,6 +3198,8 @@
     {
       "display_name": "Joanne Robertson & Oliver Coates",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "Grote Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2831,6 +3212,8 @@
     {
       "display_name": "Joshua Chuquimia Crampton",
       "day": "Sun",
+      "time": "17:30",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2841,6 +3224,8 @@
     {
       "display_name": "Juana Molina",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2851,6 +3236,8 @@
     {
       "display_name": "Katalin Ladik & Svetlana Maraš",
       "day": "Sat",
+      "time": "18:55",
+      "stage": "Korzo – Zaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -2863,6 +3250,8 @@
     {
       "display_name": "KAVARI",
       "day": "Fri",
+      "time": "26:15",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live A/V",
       "is_collab": false,
@@ -2874,6 +3263,8 @@
     {
       "display_name": "KUNTARI",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "Concordia",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2884,6 +3275,8 @@
     {
       "display_name": "La Rat",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "The Grey Space – Basement",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2894,6 +3287,8 @@
     {
       "display_name": "Los Thuthanaka",
       "day": "Sat",
+      "time": "22:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2904,6 +3299,8 @@
     {
       "display_name": "Malibu",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Grote Kerk",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2915,6 +3312,8 @@
     {
       "display_name": "Mayssa Jallad",
       "day": "Fri",
+      "time": "22:30",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "type": "Live (trio)",
       "is_collab": false,
@@ -2925,6 +3324,8 @@
     {
       "display_name": "Milkweed",
       "day": "Fri",
+      "time": "21:15",
+      "stage": "Koorenhuis",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2935,6 +3336,8 @@
     {
       "display_name": "ØKSE feat. billy woods",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W1",
       "world_premiere": true,
       "is_collab": true,
@@ -2948,6 +3351,8 @@
     {
       "display_name": "Oneohtrix Point Never",
       "day": "Fri",
+      "time": "23:45",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live A/V (Plus Ticket)",
       "is_collab": false,
@@ -2958,6 +3363,8 @@
     {
       "display_name": "Purelink",
       "day": "Sat",
+      "time": "19:00",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -2969,6 +3376,8 @@
     {
       "display_name": "Raúl Refree & Niño de Elche",
       "day": "Fri",
+      "time": "25:05",
+      "stage": "Lutherse Kerk",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": true,
@@ -2991,6 +3400,8 @@
     {
       "display_name": "Smerz",
       "day": "Fri",
+      "time": "21:10",
+      "stage": "PAARD I",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3001,6 +3412,8 @@
     {
       "display_name": "Sumac & Moor Mother",
       "day": "Sat",
+      "time": "20:55",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": true,
@@ -3019,6 +3432,8 @@
     {
       "display_name": "Tortoise",
       "day": "Fri",
+      "time": "19:00",
+      "stage": "Amare – Concertzaal",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3029,6 +3444,8 @@
     {
       "display_name": "Tracey",
       "day": "Fri",
+      "time": "22:10",
+      "stage": "PAARD II",
       "wave": "W1",
       "type": "Live (Dutch Premiere)",
       "is_collab": false,
@@ -3039,6 +3456,8 @@
     {
       "display_name": "WRENS",
       "day": "Fri",
+      "time": "23:10",
+      "stage": "Koorenhuis",
       "wave": "W1",
       "type": "Live",
       "is_collab": false,
@@ -3052,6 +3471,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "19:45",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3062,6 +3483,8 @@
     {
       "display_name": "Acopia",
       "day": "Sat",
+      "time": "20:00",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3072,6 +3495,8 @@
     {
       "display_name": "Chunky Move",
       "day": "Fri",
+      "time": "17:40",
+      "stage": "Amare – Danstheater",
       "wave": "W2",
       "type": "Dance Performance",
       "is_collab": false,
@@ -3083,6 +3508,8 @@
     {
       "display_name": "Dagmar Zuniga",
       "day": "Fri",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3093,6 +3520,8 @@
     {
       "display_name": "Drew McDowall & Pedro Maia",
       "day": "Fri",
+      "time": "22:15",
+      "stage": "Grote Kerk",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3105,6 +3534,8 @@
     {
       "display_name": "Dumama",
       "day": "Sat",
+      "time": "21:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3115,6 +3546,8 @@
     {
       "display_name": "Elischa Heller",
       "day": "Sat",
+      "time": "23:05",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3125,6 +3558,8 @@
     {
       "display_name": "Everything Is Psychedelic",
       "day": "Sat",
+      "time": "21:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3135,6 +3570,8 @@
     {
       "display_name": "∈Y∋ + C.O.L.O",
       "day": "Fri",
+      "time": "25:00",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3147,6 +3584,8 @@
     {
       "display_name": "Jennifer Walton",
       "day": "Sun",
+      "time": "19:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (with band)",
       "is_collab": false,
@@ -3157,6 +3596,8 @@
     {
       "display_name": "Kim Gordon",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Amare – Concertzaal",
       "wave": "W2",
       "world_premiere": true,
       "is_collab": false,
@@ -3168,6 +3609,8 @@
     {
       "display_name": "KMRU & Nick Verstand",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W2",
       "world_premiere": true,
       "type": "A/V",
@@ -3182,6 +3625,8 @@
     {
       "display_name": "Laurel Halo & Julian Charrière",
       "day": "Sat",
+      "time": "19:50",
+      "stage": "Amare – Danstheater",
       "wave": "W2",
       "world_premiere": true,
       "is_collab": true,
@@ -3194,25 +3639,24 @@
       "type": "Live A/V"
     },
     {
-      "display_name": "Mark Fell & Pat Thomas",
+      "display_name": "Mark Fell & Okkyung Lee",
       "day": "Sun",
+      "time": "14:30",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W2",
       "type": "Live",
       "is_collab": true,
       "artist_ids": [
         "mark-fell",
-        "pat-thomas"
+        "okkyung-lee"
       ],
-      "collab_notes": "\"Algorithmic and improvised music for computer and piano.\" First recorded collaboration between the two.",
-      "collab_latest": {
-        "title": "Reality Is Not a Theory",
-        "year": 2025,
-        "label": "Black Truffle"
-      }
+      "collab_notes": "Replacement for Pat Thomas (cancelled). Fell's algorithmic systems meet Lee's extended cello techniques."
     },
     {
       "display_name": "My New Band Believe",
       "day": "Sat",
+      "time": "24:45",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3223,6 +3667,8 @@
     {
       "display_name": "Nihiloxica",
       "day": "Fri",
+      "time": "24:30",
+      "stage": "PAARD I",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3233,6 +3679,8 @@
     {
       "display_name": "Park Jiha",
       "day": "Fri",
+      "time": "23:45",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live (solo)",
       "is_collab": false,
@@ -3243,6 +3691,8 @@
     {
       "display_name": "Raisa K",
       "day": "Sat",
+      "time": "21:55",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3254,6 +3704,8 @@
     {
       "display_name": "RAKTA",
       "day": "Sun",
+      "time": "20:15",
+      "stage": "Concordia",
       "wave": "W2",
       "type": "Live (performs twice)",
       "is_collab": false,
@@ -3264,6 +3716,8 @@
     {
       "display_name": "RAKTA & Mette Rasmussen",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live (2nd set)",
       "is_collab": true,
@@ -3276,6 +3730,8 @@
     {
       "display_name": "Sacred Lodge",
       "day": "Sat",
+      "time": "22:45",
+      "stage": "The Grey Space – Basement",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3286,6 +3742,8 @@
     {
       "display_name": "Sary Moussa Trio",
       "day": "Sat",
+      "time": "25:00",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3297,6 +3755,8 @@
     {
       "display_name": "Shapednoise & Sevi Iko Dømochevsky",
       "day": "Fri",
+      "time": "24:00",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "Live A/V",
       "is_collab": true,
@@ -3318,6 +3778,8 @@
     {
       "display_name": "Sombat Simla",
       "day": "Sat",
+      "time": "19:40",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3328,6 +3790,8 @@
     {
       "display_name": "Stemeseder Lillinger",
       "day": "Sat",
+      "time": "19:00",
+      "stage": "Koorenhuis",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3338,6 +3802,8 @@
     {
       "display_name": "Susu Laroche",
       "day": "Fri",
+      "time": "21:50",
+      "stage": "Korzo – Studio",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3348,6 +3814,8 @@
     {
       "display_name": "Suzan Peeters",
       "day": "Sat",
+      "time": "17:10",
+      "stage": "Nieuwe Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3358,6 +3826,8 @@
     {
       "display_name": "Supersilent & Lawrence Abu Hamdan",
       "day": "Sun",
+      "time": "19:50",
+      "stage": "Amare – Concertzaal",
       "wave": "W2",
       "world_premiere": true,
       "type": "A/V",
@@ -3371,6 +3841,8 @@
     {
       "display_name": "Thomas Ankersmit",
       "day": "Sun",
+      "time": "21:00",
+      "stage": "Lutherse Kerk",
       "wave": "W2",
       "type": "Live",
       "is_collab": false,
@@ -3382,6 +3854,8 @@
     {
       "display_name": "33",
       "day": "Sun",
+      "time": "16:15",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3397,6 +3871,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Pulchri Studio",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3413,6 +3889,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Amare – Swing",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3424,6 +3902,8 @@
     {
       "display_name": "Arnold Dreyblatt & Horse Lords",
       "day": "Sat",
+      "time": "22:05",
+      "stage": "Theater aan het Spui – Zaal 1",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3436,6 +3916,8 @@
     {
       "display_name": "Asian Dope Boys",
       "day": "Sat",
+      "time": "18:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "8-hour Performance",
       "is_collab": false,
@@ -3447,6 +3929,8 @@
     {
       "display_name": "AWICHAS",
       "day": "Sun",
+      "time": "21:15",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3457,6 +3941,8 @@
     {
       "display_name": "Bby Eco",
       "day": "Fri",
+      "time": "20:10",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3468,6 +3954,8 @@
     {
       "display_name": "Berlinde Deman",
       "day": "Sun",
+      "time": "17:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3478,6 +3966,8 @@
     {
       "display_name": "Buttechno b2b Torus",
       "day": "Sat",
+      "time": "25:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -3490,6 +3980,8 @@
     {
       "display_name": "By Storm",
       "day": "Fri",
+      "time": "21:45",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3500,6 +3992,8 @@
     {
       "display_name": "Cello Octet Amsterdam feat. Shishani & Moor Mother",
       "day": "Sun",
+      "time": "19:15",
+      "stage": "Lutherse Kerk",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -3515,6 +4009,8 @@
     {
       "display_name": "Cerys Hafana",
       "day": "Fri",
+      "time": "24:20",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3528,6 +4024,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "22:10",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3539,6 +4037,8 @@
     {
       "display_name": "Devon Rexi meets John T. Gast",
       "day": "Fri",
+      "time": "19:10",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3559,6 +4059,9 @@
     },
     {
       "display_name": "Dim Garden",
+      "day": "Sat",
+      "time": "23:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3573,6 +4076,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "12:00",
+      "stage": "Das Leben am Haverkamp",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -3593,6 +4098,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Duitse Kerk",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3604,6 +4111,8 @@
     {
       "display_name": "FRANKIE & Kelman Duran",
       "day": "Fri",
+      "time": "18:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3621,6 +4130,8 @@
     {
       "display_name": "Hulubalang",
       "day": "Fri",
+      "time": "23:30",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3632,6 +4143,8 @@
     {
       "display_name": "HxH",
       "day": "Sat",
+      "time": "24:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3643,6 +4156,8 @@
     {
       "display_name": "Immaculate Deception Of History",
       "day": "Sun",
+      "time": "16:45",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live (Sunday)",
       "is_collab": true,
@@ -3656,6 +4171,8 @@
     {
       "display_name": "Jessica Ekomane",
       "day": "Sat",
+      "time": "22:15",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3666,6 +4183,8 @@
     {
       "display_name": "Joachim Badenhorst's Youran",
       "day": "Fri",
+      "time": "20:20",
+      "stage": "Nieuwe Kerk",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3681,6 +4200,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "West Den Haag – Auditorium",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3692,6 +4213,8 @@
     {
       "display_name": "Kee Avil",
       "day": "Sat",
+      "time": "18:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3703,6 +4226,8 @@
     {
       "display_name": "Khrystyna Kirik & Emma Rubikaite-Milasiute",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -3716,6 +4241,8 @@
     {
       "display_name": "Kode9 b2b Deena Abdelwahed",
       "day": "Fri",
+      "time": "25:30",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "DJ B2B",
       "is_collab": true,
@@ -3733,6 +4260,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Paleiskerk",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3744,6 +4273,8 @@
     {
       "display_name": "Leila Bordreuil",
       "day": "Sun",
+      "time": "14:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3759,6 +4290,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Pulchri Studio",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3770,6 +4303,8 @@
     {
       "display_name": "M Alberto",
       "day": "Sun",
+      "time": "16:05",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Performance / Music Theatre",
       "is_collab": false,
@@ -3781,6 +4316,8 @@
     {
       "display_name": "Mammo",
       "day": "Fri",
+      "time": "23:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3792,9 +4329,12 @@
       "display_name": "Mariska de Groot",
       "day": [
         "Thu",
+        "Fri",
         "Sat",
         "Sun"
       ],
+      "time": "16:00",
+      "stage": "Quartair",
       "wave": "W3",
       "type": "Installation",
       "is_collab": false,
@@ -3806,6 +4346,8 @@
     {
       "display_name": "Mireia Varón Gallofré",
       "day": "Sun",
+      "time": "17:00",
+      "stage": "Amare – Studio",
       "wave": "W3",
       "type": "Performance",
       "is_collab": false,
@@ -3817,6 +4359,8 @@
     {
       "display_name": "Moritz von Oswald",
       "day": "Fri",
+      "time": "20:05",
+      "stage": "Grote Kerk",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Grote Kerk)",
       "is_collab": true,
@@ -3840,6 +4384,8 @@
     {
       "display_name": "Natasha Pirard",
       "day": "Fri",
+      "time": "21:05",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3850,6 +4396,8 @@
     {
       "display_name": "Nazar",
       "day": "Fri",
+      "time": "25:00",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3860,6 +4408,8 @@
     {
       "display_name": "Nono Gigsta",
       "day": "Sat",
+      "time": "27:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3870,6 +4420,8 @@
     {
       "display_name": "NVST",
       "day": "Fri",
+      "time": "26:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3880,6 +4432,8 @@
     {
       "display_name": "OK Williams",
       "day": "Sat",
+      "time": "29:00",
+      "stage": "Laak",
       "wave": "W3",
       "type": "DJ Set",
       "is_collab": false,
@@ -3890,7 +4444,12 @@
     },
     {
       "display_name": "Ouri",
-      "day": "Sat",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
+      "time": "18:00",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3901,6 +4460,8 @@
     {
       "display_name": "Polina Medvedeva & Andreas Kühne",
       "day": "Fri",
+      "time": "18:45",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -3914,6 +4475,8 @@
     {
       "display_name": "Sam Slater & guests",
       "day": "Fri",
+      "time": "21:25",
+      "stage": "Amare – Concertzaal",
       "wave": "W3",
       "type": "Live (Fri 10 Apr, Amare)",
       "is_collab": true,
@@ -3934,6 +4497,8 @@
     {
       "display_name": "SANAM",
       "day": "Sun",
+      "time": "18:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3944,6 +4509,8 @@
     {
       "display_name": "Sól Ey & Modelo62",
       "day": "Sat",
+      "time": "18:00",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -3961,6 +4528,8 @@
         "Sat",
         "Sun"
       ],
+      "time": "18:00",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3971,6 +4540,8 @@
     {
       "display_name": "State OFFF",
       "day": "Sat",
+      "time": "25:30",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -3982,6 +4553,8 @@
     {
       "display_name": "The Bug & Dis Fig",
       "day": "Sun",
+      "time": "18:00",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -3994,6 +4567,8 @@
     {
       "display_name": "The Silver Thread",
       "day": "Sat",
+      "time": "17:00",
+      "stage": "Amare – Danstheater",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -4009,6 +4584,8 @@
     {
       "display_name": "Ugnė Uma & Pavel Milyakov",
       "day": "Sun",
+      "time": "14:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Performance",
       "is_collab": true,
@@ -4021,6 +4598,8 @@
     {
       "display_name": "Valentina Magaletti & YPY",
       "day": "Fri",
+      "time": "23:15",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "is_collab": true,
@@ -4042,6 +4621,8 @@
     {
       "display_name": "WaqWaq Kingdom feat. VJ Kalma",
       "day": "Sat",
+      "time": "23:15",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live A/V",
       "is_collab": true,
@@ -4066,6 +4647,8 @@
     {
       "display_name": "weed420",
       "day": "Fri",
+      "time": "20:00",
+      "stage": "PAARD II",
       "wave": "W3",
       "type": "Live",
       "is_collab": false,
@@ -4076,6 +4659,8 @@
     {
       "display_name": "Zeno van den Broek, Les Percussions de Strasbourg & HIIIT",
       "day": "Sun",
+      "time": "15:00",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "world_premiere": true,
       "is_collab": true,
@@ -4090,6 +4675,9 @@
     },
     {
       "display_name": "Abdullah Miniawy Trio",
+      "day": "Fri",
+      "time": "22:30",
+      "stage": "Nieuwe Kerk",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4100,6 +4688,9 @@
     },
     {
       "display_name": "Batu b2b JASSS",
+      "day": "Sat",
+      "time": "26:15",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4123,6 +4714,9 @@
     },
     {
       "display_name": "Chinnamasta",
+      "day": "Sat",
+      "time": "25:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4132,6 +4726,9 @@
     },
     {
       "display_name": "Clément Vercelletto",
+      "day": "Fri",
+      "time": "19:20",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4143,6 +4740,8 @@
     {
       "display_name": "Dirtydms b2b Helmond Lang",
       "day": "Fri",
+      "time": "24:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4168,6 +4767,9 @@
     },
     {
       "display_name": "GEZAN",
+      "day": "Fri",
+      "time": "20:10",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4178,6 +4780,9 @@
     },
     {
       "display_name": "Herbert & Momoko",
+      "day": "Sun",
+      "time": "16:20",
+      "stage": "Concordia",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4190,6 +4795,9 @@
     },
     {
       "display_name": "Jasmín",
+      "day": "Fri",
+      "time": "24:30",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4199,6 +4807,12 @@
     },
     {
       "display_name": "Jespfur",
+      "day": [
+        "Sat",
+        "Sun"
+      ],
+      "time": "21:20",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4208,6 +4822,9 @@
     },
     {
       "display_name": "Lucy Railton, Charlie Hope & Rebecca Salvadori",
+      "day": "Sat",
+      "time": "15:45",
+      "stage": "Koninklijke Schouwburg",
       "wave": "W3",
       "type": "Live A/V",
       "world_premiere": true,
@@ -4221,6 +4838,9 @@
     },
     {
       "display_name": "mi-el",
+      "day": "Sat",
+      "time": "26:30",
+      "stage": "PAARD II",
       "wave": "W2",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4231,6 +4851,9 @@
     },
     {
       "display_name": "MOESHA 13",
+      "day": "Sat",
+      "time": "24:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4241,6 +4864,9 @@
     },
     {
       "display_name": "Mark IJzerman",
+      "day": "Sun",
+      "time": "18:45",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4250,6 +4876,9 @@
     },
     {
       "display_name": "Meetsysteem & Band",
+      "day": "Sun",
+      "time": "15:15",
+      "stage": "Koorenhuis",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4260,6 +4889,9 @@
     },
     {
       "display_name": "Pebblle",
+      "day": "Sat",
+      "time": "25:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4269,6 +4901,9 @@
     },
     {
       "display_name": "ROLROLROL",
+      "day": "Sun",
+      "time": "19:00",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4278,6 +4913,9 @@
     },
     {
       "display_name": "Sijya",
+      "day": "Fri",
+      "time": "21:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4288,6 +4926,9 @@
     },
     {
       "display_name": "Slikback feat. maltdisney & Tasya",
+      "day": "Sat",
+      "time": "24:10",
+      "stage": "PAARD I",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4301,6 +4942,9 @@
     },
     {
       "display_name": "Speaker Music",
+      "day": "Sat",
+      "time": "24:45",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4323,6 +4967,9 @@
     },
     {
       "display_name": "Tony Bontana",
+      "day": "Sun",
+      "time": "19:30",
+      "stage": "Korzo – Studio",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,
@@ -4333,6 +4980,9 @@
     },
     {
       "display_name": "Violeta García",
+      "day": "Fri",
+      "time": "22:45",
+      "stage": "Korzo – Zaal",
       "wave": "W3",
       "type": "Live",
       "world_premiere": false,
@@ -4343,6 +4993,9 @@
     },
     {
       "display_name": "YATTA",
+      "day": "Sun",
+      "time": "15:20",
+      "stage": "Theater aan het Spui – Zaal 2",
       "wave": "W3",
       "world_premiere": false,
       "is_collab": false,
@@ -4352,6 +5005,9 @@
     },
     {
       "display_name": "Yb3L",
+      "day": "Sat",
+      "time": "27:00",
+      "stage": "The Grey Space – Basement",
       "wave": "W3",
       "type": "DJ Set",
       "world_premiere": false,

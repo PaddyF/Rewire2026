@@ -21,15 +21,18 @@ struct MyListView: View {
                 if myList.isEmpty {
                     emptyState
                 } else {
-                    List(myList, id: \.slot.id) { item in
-                        NavigationLink(destination: ArtistDetailView(slot: item.slot)) {
-                            MyListRowView(slot: item.slot, userData: item.userData)
+                    ScrollView {
+                        LazyVStack(spacing: 8) {
+                            ForEach(myList, id: \.slot.id) { item in
+                                NavigationLink(destination: ArtistDetailView(slot: item.slot)) {
+                                    MyListRowView(slot: item.slot, userData: item.userData)
+                                }
+                                .buttonStyle(.plain)
+                            }
                         }
-                        .listRowBackground(Color.rewireBackground)
-                        .listRowSeparatorTint(Color.rewireBorder)
+                        .padding(.horizontal, 16)
+                        .padding(.vertical, 8)
                     }
-                    .listStyle(.plain)
-                    .scrollContentBackground(.hidden)
                     .background(Color.rewireBackground)
                 }
             }
@@ -37,7 +40,7 @@ struct MyListView: View {
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Text("MY LIST")
-                        .font(.system(size: 15, weight: .bold, design: .monospaced))
+                        .font(.rewireTitle(15))
                         .foregroundStyle(Color.rewireAccent)
                 }
             }
@@ -53,10 +56,10 @@ struct MyListView: View {
                 .font(.system(size: 48))
                 .foregroundStyle(Color.rewireMuted)
             Text("No picks yet")
-                .font(.system(size: 16, weight: .semibold, design: .monospaced))
+                .font(.rewireTitle(16))
                 .foregroundStyle(Color.rewireText)
             Text("Bookmark artists or give them a Must See rating to build your list.")
-                .font(.system(size: 13))
+                .font(.rewireBody(13))
                 .foregroundStyle(Color.rewireMuted)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)
@@ -70,48 +73,60 @@ struct MyListRowView: View {
     let slot: Slot
     let userData: UserArtistData
 
-    var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(slot.displayName)
-                        .font(.system(size: 14, weight: .semibold, design: .monospaced))
-                        .foregroundStyle(Color.rewireText)
-                    if let project = slot.project, !project.isEmpty {
-                        Text(project)
-                            .font(.system(size: 11, design: .monospaced))
-                            .foregroundStyle(Color.rewireMuted)
-                    }
-                }
-                Spacer()
-                DayBadge(day: slot.day)
-            }
+    private var dayColor: Color { Color.slotDayColor(slot.day) }
 
-            HStack {
-                if userData.mustSeeRating > 0 {
-                    HStack(spacing: 2) {
-                        ForEach(1...5, id: \.self) { i in
-                            Image(systemName: i <= userData.mustSeeRating ? "star.fill" : "star")
-                                .font(.system(size: 11))
-                                .foregroundStyle(i <= userData.mustSeeRating ? Color.rewireAccent : Color.rewireBorder)
+    var body: some View {
+        HStack(spacing: 0) {
+            // Left accent bar
+            RoundedRectangle(cornerRadius: 2)
+                .fill(dayColor)
+                .frame(width: 3)
+                .padding(.vertical, 6)
+
+            VStack(alignment: .leading, spacing: 6) {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(slot.displayName)
+                            .font(.rewireTitle(14))
+                            .foregroundStyle(Color.rewireText)
+                        if let project = slot.project, !project.isEmpty {
+                            Text(project)
+                                .font(.rewireBody(11))
+                                .foregroundStyle(Color.rewireMuted)
                         }
                     }
+                    Spacer()
+                    DayBadge(day: slot.day)
                 }
-                if userData.isBookmarked {
-                    Image(systemName: "bookmark.fill")
-                        .font(.system(size: 11))
-                        .foregroundStyle(Color.rewireSecondary)
-                }
-                Spacer()
-                if !userData.personalNotes.isEmpty {
-                    Text(userData.personalNotes)
-                        .font(.system(size: 11))
-                        .foregroundStyle(Color.rewireMuted)
-                        .lineLimit(1)
-                        .frame(maxWidth: 160, alignment: .trailing)
+
+                HStack {
+                    if userData.mustSeeRating > 0 {
+                        HStack(spacing: 2) {
+                            ForEach(1...5, id: \.self) { i in
+                                Image(systemName: i <= userData.mustSeeRating ? "star.fill" : "star")
+                                    .font(.system(size: 11))
+                                    .foregroundStyle(i <= userData.mustSeeRating ? Color.rewireAccent : Color.rewireBorder)
+                                    .shadow(color: Color.rewireAccent.opacity(i <= userData.mustSeeRating ? 0.4 : 0), radius: 4)
+                            }
+                        }
+                    }
+                    if userData.isBookmarked {
+                        Image(systemName: "bookmark.fill")
+                            .font(.system(size: 11))
+                            .foregroundStyle(Color.rewireSecondary)
+                    }
+                    Spacer()
+                    if !userData.personalNotes.isEmpty {
+                        Text(userData.personalNotes)
+                            .font(.rewireBody(11))
+                            .foregroundStyle(Color.rewireMuted)
+                            .lineLimit(1)
+                            .frame(maxWidth: 160, alignment: .trailing)
+                    }
                 }
             }
+            .padding(10)
         }
-        .padding(.vertical, 4)
+        .cardStyle(dayColor: dayColor)
     }
 }

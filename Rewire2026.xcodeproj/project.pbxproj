@@ -26,6 +26,7 @@
 		F2202653E39BBAF49B526E98 /* lineup.json in Resources */ = {isa = PBXBuildFile; fileRef = D8A411123AC5629CDDDB6E7F /* lineup.json */; };
 		FDF25325E562E379DC5CB7CD /* ArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895BFB9BB5E35B84251CCC3 /* ArtistRowView.swift */; };
 		B3D4E1A2F7C8901234567890 /* VenueWalkTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4E1A2F7C890ABCDEF1234 /* VenueWalkTimes.swift */; };
+		C1A2B3D4E5F60718293A4B5C /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B3C4E5F6071829A3B4C5D6 /* TimelineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F8F02C88B33596687185687F /* LineupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupView.swift; sourceTree = "<group>"; };
 		FE53E2D770409855FF1F0272 /* UserArtistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArtistData.swift; sourceTree = "<group>"; };
 		B3D4E1A2F7C890ABCDEF1234 /* VenueWalkTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueWalkTimes.swift; sourceTree = "<group>"; };
+		D2B3C4E5F6071829A3B4C5D6 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A86C59F36A4BD08C42A5D552 /* PlannerView.swift */,
+				D2B3C4E5F6071829A3B4C5D6 /* TimelineView.swift */,
 			);
 			path = Planner;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				915FC63F6F11E193195395CB /* PlannerView.swift in Sources */,
 				54C0D5B0A0371506796D9FF3 /* RewireApp.swift in Sources */,
 				540A66B941F04F5880EBBB96 /* ScheduleView.swift in Sources */,
+				C1A2B3D4E5F60718293A4B5C /* TimelineView.swift in Sources */,
 				753FA025C715C928657B21B7 /* UserArtistData.swift in Sources */,
 				B3D4E1A2F7C8901234567890 /* VenueWalkTimes.swift in Sources */,
 			);

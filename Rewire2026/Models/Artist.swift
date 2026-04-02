@@ -44,6 +44,14 @@ struct Slot: Codable {
     let collabLatest: Release?    // JSON: collab_latest
     let collabTopRated: Release?  // JSON: collab_top_rated
 
+    var formattedTime: String? {
+        guard let time else { return nil }
+        let parts = time.split(separator: ":").compactMap { Int($0) }
+        guard parts.count == 2 else { return time }
+        let h = parts[0] % 24
+        return String(format: "%d:%02d", h, parts[1])
+    }
+
     var requiresPlusTicket: Bool {
         (type ?? "").lowercased().contains("plus ticket")
     }
